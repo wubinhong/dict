@@ -4,7 +4,6 @@ from web.setting import FLASK_PORT, FLASK_DEBUG
 
 log = get_logger(__name__)
 
-
 if __name__ == '__main__':
     # 启动接口服务
     from web.rest import filter, demo

@@ -1,6 +1,9 @@
 --index-url=http://pypi.douban.com/simple
 --trusted-host=pypi.douban.com
+pytz
 # http://flask.palletsprojects.com/en/1.1.x/
 Flask==1.0.2
 # https://github.com/flasgger/flasgger
-flasgger
+flasgger==0.9.3
+# https://pypi.org/project/pymongo/
+pymongo==3.9.0

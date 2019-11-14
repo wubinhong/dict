@@ -1,4 +1,7 @@
+import datetime
+import pytz
 import logging
+local_tz = pytz.timezone('Asia/Shanghai')
 
 FORMAT = '%(asctime)s %(levelname)s %(process)d -- [%(threadName)s] [%(name)s:%(lineno)s] : %(message)s'
 
@@ -34,3 +37,13 @@ def right_just_dict(obj: dict, width=20) -> str:
         result += '{} : {}\n'.format(str(k).rjust(width), v)
     return result.strip('\n')
 
+
+def china_tz(dt: datetime) -> datetime:
+    """
+    返回东八区的中国时间
+    :param dt:
+    :return:
+    """
+    if dt.tzinfo is not None:
+        return dt.astimezone(local_tz)
+    return local_tz.localize(dt, is_dst=None)

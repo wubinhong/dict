@@ -3,6 +3,7 @@
 
 ## Python
 __pycache__
+.pytest_cache
 
 ## Visual Studio Code
 .vscode
