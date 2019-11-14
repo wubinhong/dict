@@ -16,11 +16,11 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log && ln -sf /dev/stderr /var/log/
 
 # Sync app
 RUN mkdir -p /app
-COPY ./docker/requirements.txt /app
+COPY ./docker/pip-requirements.txt /app
 COPY ./docker/dict-entrypoint.sh /usr/local/bin
 COPY ./backend/ /app
 WORKDIR /app
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r pip-requirements.txt
 EXPOSE 5000
 
 # Health check

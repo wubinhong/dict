@@ -1,3 +1,9 @@
 ## Idea
 .idea
 
+## Python
+__pycache__
+
+## Visual Studio Code
+.vscode
+
