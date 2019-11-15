@@ -1,7 +1,7 @@
 from collections import OrderedDict
 from os import environ
 
-from util import get_logger, right_just_dict
+from web.util import get_logger, right_just_dict
 
 log = get_logger(__name__)
 

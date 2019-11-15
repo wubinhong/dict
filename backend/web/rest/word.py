@@ -1,6 +1,6 @@
 from flask import request, jsonify
 
-from util import get_logger
+from web.util import get_logger
 from web.flask import flask
 from web.model import words
 
@@ -84,5 +84,5 @@ def put_word(name):
     w = request.json
     log.info('Put word: %s | %s', name, w)
     data = words.save(name, derivation=w.get('derivation'), chinese=w.get('chinese'), thesauri=w.get('thesauri'),
-               related_words=w.get('related_words'), similar_shaped_words=w.get('similar_shaped_words'))
+                      related_words=w.get('related_words'), similar_shaped_words=w.get('similar_shaped_words'))
     return jsonify(dict(rc=0, data=data, msg='success'))

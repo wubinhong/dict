@@ -4,8 +4,8 @@ from collections import OrderedDict
 
 from flask import g, request, jsonify
 
-from util.error import Error
-from util import get_logger
+from web.util.error import Error
+from web.util import get_logger
 from web.flask import flask
 
 log = get_logger(__name__)

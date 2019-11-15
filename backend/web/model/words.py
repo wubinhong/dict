@@ -1,11 +1,12 @@
 from datetime import datetime
 from pymongo import ASCENDING
-from util import china_tz, local_tz
+from web.util import china_tz, local_tz
 from web.flask import dict_db
 from bson.codec_options import CodecOptions
 
 # 配置datetime时区
-word_collection = dict_db.Word.with_options(codec_options=CodecOptions(tz_aware=True, tzinfo=local_tz))
+word_collection = dict_db.Word.with_options(
+    codec_options=CodecOptions(tz_aware=True, tzinfo=local_tz))
 
 # index setting
 word_collection.create_index([("name", ASCENDING)], unique=True)

@@ -1,7 +1,7 @@
 from flask import request, jsonify
 
-from util import get_logger
-from util import right_just_dict
+from web.util import get_logger
+from web.util import right_just_dict
 from web.flask import flask
 
 log = get_logger(__name__)

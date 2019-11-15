@@ -1,16 +1,20 @@
-from datetime import datetime
 from unittest import TestCase
 
 from bson import json_util
 
-from util import get_logger
+from web.util import get_logger
 from web.model import words
 
 log = get_logger(__name__)
 
 
 class TestWebModelWord(TestCase):
+    """
+    Test case for model word
+    """
+
     def test_save(self):
+        log.info('Test save start...')
         words.save(name='ascend', derivation='a+scend', chinese='上升, 促进22', thesauri='up, lift', related_words='',
                    similar_shaped_words='descend')
         words.save(name='descend', derivation='de+scend', chinese='下降', thesauri='down', related_words='',

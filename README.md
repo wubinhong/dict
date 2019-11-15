@@ -37,6 +37,10 @@ $ docker logs dict_server1
 $ docker exec -it dict_server1 bash 
 ```
 
-
+## Userful command line
+- Delete all __pycache__ directory
+```bash
+$ find . -type d -name __pycache__ -exec rm -r {} +
+```
 
 

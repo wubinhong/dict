@@ -6,7 +6,7 @@ from flasgger import Swagger
 from flask import Flask
 from pymongo import MongoClient
 
-from util import get_logger
+from web.util import get_logger
 from web.setting import MONGO_URI
 
 log = get_logger(__name__)
@@ -19,6 +19,7 @@ swagger = Swagger(flask)
 # pymongo
 dict_db = MongoClient(MONGO_URI, tz_aware=True)['dict']
 
+
 class JSONEncoder(json.JSONEncoder):
     """ extend json-encoder class"""
 
@@ -29,7 +30,6 @@ class JSONEncoder(json.JSONEncoder):
             return str(o)
         return json.JSONEncoder.default(self, o)
 
+
 # use the modified encoder class to handle ObjectId & datetime object while jsonifying the response.
 flask.json_encoder = JSONEncoder
-
-

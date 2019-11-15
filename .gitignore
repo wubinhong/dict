@@ -2,6 +2,7 @@
 .idea
 
 ## Python
+*.pyc
 __pycache__
 .pytest_cache
 

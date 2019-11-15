@@ -1,4 +1,4 @@
-from util import get_logger
+from web.util import get_logger
 from web.flask import flask
 from web.setting import FLASK_PORT, FLASK_DEBUG
 
