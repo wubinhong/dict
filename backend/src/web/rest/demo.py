@@ -27,7 +27,7 @@ def demo_hello():
       200:
         description: The person you called.
         schema:
-          $ref: Person
+          $ref: '#/definitions/Person'
     """
     info = {'Header[User-Agent]': request.headers.get('User-Agent'),
             'args': request.args,
@@ -75,9 +75,9 @@ def colors(palette):
         examples:
           rgb: ['red', 'green', 'blue']
       405:
-        description: Invalid input 
+        description: Invalid input
         schema:
-          $ref: Palette
+          $ref: '#/definitions/Palette'
     """
     all_colors = {
         'cmyk': ['cian', 'magenta', 'yellow', 'black'],
