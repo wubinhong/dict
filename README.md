@@ -43,4 +43,8 @@ $ docker exec -it dict_server1 bash
 $ find . -type d -name __pycache__ -exec rm -r {} +
 ```
 
+## Reference docs
+[vuejs](https://vuejs.org/v2/guide/)
+[element-ui](https://element.eleme.cn/#/zh-CN)
+
 

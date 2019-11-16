@@ -1,6 +1,6 @@
 <template>
 <header>
-    <el-menu theme="dark" mode="horizontal">
+    <el-menu class="el-menu--dark" theme="dark" mode="horizontal">
         <el-menu-item class="header-navicon" index="1">
             <el-button type="text" @click="openSidebar">
                 <i class="md-icon">menu</i>

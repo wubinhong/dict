@@ -1,4 +1,4 @@
-from flask import request, jsonify
+from flask import request, jsonify, make_response
 
 from web.util import get_logger
 from web.flask import flask
@@ -53,7 +53,9 @@ def get_words_fuzzy():
     keyword = request.args.get('keyword')
     skip = request.args.get('skip', type=int)
     limit = request.args.get('limit', type=int)
-    return jsonify(dict(rc=0, data=words.find_fuzzy(keyword, skip, limit), msg='success'))
+    resp = make_response(jsonify(dict(rc=0, data=words.find_fuzzy(keyword, skip, limit), msg='success')))
+    resp.headers['Access-Control-Allow-Origin'] = '*'
+    return resp
 
 
 @flask.route("/words/<string:name>", methods=["PUT"])

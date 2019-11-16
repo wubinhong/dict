@@ -10,9 +10,11 @@ import 'normalize.css' // normalize
 import 'whatwg-fetch' // polyfill
 import 'material-design-icons' // material icons, because Element-UI icons set is incomplete
 import 'styles/index.scss' // require styles using webpack alias
+import axios from 'axios' // http request component
 
 sync(store, router)
 Vue.use(Element, { locale })
+Vue.prototype.$axios = axios
 
 const app = new Vue({
   router,
