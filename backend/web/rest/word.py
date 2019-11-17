@@ -19,18 +19,28 @@ def get_words_fuzzy():
         properties:
           name:
             type: string
+            description: 单词
           derivation:
             type: string
+            description: 词根组成，如：a+scend
           chinese:
             type: string
+            description: 中文解释，多种解释使用逗号（,）分隔
           thesauri:
             type: string
+            description: 同义词，使用逗号（,）分隔
           related_words:
             type: string
+            description: 相关单词，使用逗号（,）分隔
           similar_shaped_words:
             type: string
+            description: 形状相识的单词，使用逗号（,）分隔
+          comment:
+            type: string
+            description: 其他备注
           created_at:
             type: datetime
+            description: 单词录入时间
     parameters:
       - name: keyword
         in: query
@@ -85,6 +95,35 @@ def put_word(name):
     """
     w = request.json
     log.info('Put word: %s | %s', name, w)
-    data = words.save(name, derivation=w.get('derivation'), chinese=w.get('chinese'), thesauri=w.get('thesauri'),
-                      related_words=w.get('related_words'), similar_shaped_words=w.get('similar_shaped_words'))
-    return jsonify(dict(rc=0, data=data, msg='success'))
+    return jsonify(dict(rc=0, data=words.save(w), msg='success'))
+
+
+@flask.route("/words/<string:name>", methods=["DELETE"])
+def delete_word(name):
+    """Delete word by name
+    As title
+    ---
+    definitions:
+      MongoRawResult:
+        type: object
+        properties:
+          n:
+            type: integer
+            description: The count of affected documents
+          ok:
+            type: integer
+            description: 1 for success
+    tags: [word]
+    parameters:
+      - name: name
+        description: 单词名字
+        in: path
+        type: string
+        required: true
+    responses:
+      200:
+        description: Delete word.
+        schema:
+          $ref: '#/definitions/MongoRawResult'
+    """
+    return jsonify(dict(rc=0, data=words.delete_by_name(name), msg='success'))

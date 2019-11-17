@@ -1,9 +1,14 @@
 from datetime import datetime
-from pymongo import ASCENDING
-from web.util import china_tz, local_tz
-from web.flask import dict_db
-from bson.codec_options import CodecOptions
 
+from bson import json_util
+from bson.codec_options import CodecOptions
+from pymongo import ASCENDING
+
+from web.flask import dict_db
+from web.util import china_tz, get_logger, local_tz
+from web.util.error import Error
+
+log = get_logger(__file__)
 # 配置datetime时区
 word_collection = dict_db.Word.with_options(
     codec_options=CodecOptions(tz_aware=True, tzinfo=local_tz))
@@ -13,28 +18,23 @@ word_collection.create_index([("name", ASCENDING)], unique=True)
 word_collection.create_index([("derivation", ASCENDING)])
 
 
-def save(name: str, derivation=None, chinese=None, thesauri=None, related_words=None,
-         similar_shaped_words=None):
+def save(word: dict):
     """
     Save a new word with field name as index
-    :param name: 单词
-    :param derivation: 词根组成，如：a+scend
-    :param chinese: 中文解释，多种解释使用逗号（,）分隔
-    :param thesauri: 同义词，使用逗号（,）分隔
-    :param related_words: 相关单词，使用逗号（,）分隔
-    :param similar_shaped_words: 形状相识的单词，使用逗号（,）分隔
     :return:
     """
-    new_word = dict(name=name, derivation=derivation, chinese=chinese, thesauri=thesauri, related_words=related_words,
-                    similar_shaped_words=similar_shaped_words, created_at=china_tz(datetime.now()))
+    name = word.get('name')
+    if not name:
+        raise Error(10001, 'Field name required!')
+    word['created_at'] = china_tz(datetime.now())
     w = word_collection.find_one({'name': name})
     if w:
-        new_word['created_at'] = w['created_at']
+        word['created_at'] = w['created_at']
         word_collection.update_one({'name': name}, {
-            "$set": new_word})
+            "$set": word})
     else:
-        word_collection.insert_one(new_word)
-    return new_word
+        word_collection.insert_one(word)
+    return word
 
 
 def find_fuzzy(keyword: str, skip: int, limit: int):
@@ -43,3 +43,9 @@ def find_fuzzy(keyword: str, skip: int, limit: int):
                                            {'related_words': {'$regex': keyword}},
                                            {'similar_shaped_words': {'$regex': keyword}}]}).skip(skip).limit(limit)
     return list(result)
+
+
+def delete_by_name(name: str):
+    result = word_collection.delete_one({'name': name}).raw_result
+    log.info('Delete document: %s | %s', name, result)
+    return result

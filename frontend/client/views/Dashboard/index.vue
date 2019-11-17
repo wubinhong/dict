@@ -15,12 +15,15 @@
                 </i>
                 <template slot-scope="{ item }">
                     <div class="name">{{ item.name }}</div>
-                    <el-breadcrumb separator="/">
+                    <el-breadcrumb separator-class="el-icon-arrow-right">
                         <el-breadcrumb-item class="word-detail">{{ item.derivation }}</el-breadcrumb-item>
                         <el-breadcrumb-item class="word-detail">{{ item.chinese }}</el-breadcrumb-item>
                         <el-breadcrumb-item class="word-detail">{{ item.thesauri }}</el-breadcrumb-item>
                         <el-breadcrumb-item class="word-detail">{{ item.related_words }}</el-breadcrumb-item>
                         <el-breadcrumb-item class="word-detail">{{ item.similar_shaped_words }}</el-breadcrumb-item>
+                        <el-breadcrumb-item class="word-detail">{{ item.comment }}</el-breadcrumb-item>
+
+                        <el-breadcrumb-item class="word-operation"><a href="javascript:void(0)" @click="onWordDelete">删除</a></el-breadcrumb-item>
                     </el-breadcrumb>
                 </template>
             </el-autocomplete>
@@ -45,6 +48,9 @@
                 </el-form-item>
                 <el-form-item label="近形词">
                     <el-input v-model="word.similar_shaped_words"></el-input>
+                </el-form-item>
+                <el-form-item label="备注">
+                    <el-input v-model="word.comment"></el-input>
                 </el-form-item>
 
                 <el-form-item>
@@ -75,6 +81,9 @@
             .word-detail {
                 font-size: 12px;
                 color: #b4b4b4;
+            }
+            .word-operation {
+                color: black;
             }
 
             .highlighted .addr {
@@ -126,7 +135,6 @@
             onWordSave(e) {
                 let vm = this;
                 let w = this.word;
-
                 this.$axios.put(String.format('/backend/words/{0}', w.name), w).then(response => {
                     if(response.status === 200 && response.data.rc === 0) {
                         vm.$notify({
@@ -144,6 +152,24 @@
             },
             onWordReset(e) {
                 this.word = {};
+            },
+            onWordDelete(e) {
+                let vm = this;
+                let w = this.word;
+                this.$axios.delete(String.format('/backend/words/{0}', w.name)).then(response => {
+                    if(response.status === 200 && response.data.rc === 0) {
+                        vm.$notify({
+                            title: '删除成功',
+                            type: 'success',
+                            duration: 1000
+                        });
+                    } else {
+                        vm.$notify.error({
+                            title: '错误',
+                            message: response.data.msg
+                        });
+                    }
+                });
             },
             handleIconClick(ev) {
                 console.log(ev);

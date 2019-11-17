@@ -1,13 +1,9 @@
 class Error(Exception):
     MAPS = {
-        10000: "income parameters error",
-        10001: "project not exists.",
-        10002: "host not exists.",
-        10003: "user not exists.",
-        10004: "deploy permission denied.",
-        10005: "Incomplete parameter",
-        # live module
-        10100: "Fail to just live channel time"
+        10000: "Income parameters error",
+        10001: "Lack of required parameter.",
+        # user module
+        10100: "Fail to xxx"
     }
 
     def __init__(self, code, msg=None):
