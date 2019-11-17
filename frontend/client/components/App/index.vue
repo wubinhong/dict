@@ -30,7 +30,6 @@
         computed: {
             ...mapState({
                 sidebarOpened: state => {
-                    console.log(state);
                     return state.ui.sidebarOpened
                 },
                 obfuscatorActive: state => {

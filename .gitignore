@@ -1,6 +1,9 @@
 ## Idea
 .idea
 
+# Mac
+.DS_Store
+
 ## Python
 *.pyc
 __pycache__

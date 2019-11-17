@@ -37,6 +37,8 @@ const devMiddleWare = require('webpack-dev-middleware')(compiler, {
     'Access-Control-Allow-Headers': '*'
   }
 })
+app.use('/backend', require('http-proxy-middleware')
+  ({ target: config.backendProxyTarget, pathRewrite: { '^/backend': '' }, secure: false, changeOrigin: true }))
 app.use(devMiddleWare)
 app.use(
   require('webpack-hot-middleware')(compiler, {
