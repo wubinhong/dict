@@ -26,4 +26,3 @@ if mode == 'product':
 
 log.info('Setting Info:\n%s' % right_just_dict(
     OrderedDict(mode=mode, FLASK_PORT=FLASK_PORT, FLASK_DEBUG=FLASK_DEBUG, MONGO_URI=MONGO_URI)))
-

@@ -2,7 +2,7 @@
 
 module.exports = {
   port: 4000,
-  title: 'Vue-Element-Starter',
+  title: '私人单词',
   // when you use electron please set to relative path like ./
   // otherwise only set to absolute path when you're using history mode
   publicPath: '/',

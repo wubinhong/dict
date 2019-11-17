@@ -137,16 +137,13 @@
                 let w = this.word;
                 this.$axios.put(String.format('/backend/words/{0}', w.name), w).then(response => {
                     if(response.status === 200 && response.data.rc === 0) {
-                        vm.$notify({
-                            title: '保存成功',
+                        vm.$message({
+                            message: '保存成功',
                             type: 'success',
                             duration: 1000
                         });
                     } else {
-                        vm.$notify.error({
-                            title: '错误',
-                            message: response.data.msg
-                        });
+                        vm.$message.error(response.data.msg);
                     }
                 });
             },
@@ -154,22 +151,26 @@
                 this.word = {};
             },
             onWordDelete(e) {
-                let vm = this;
-                let w = this.word;
-                this.$axios.delete(String.format('/backend/words/{0}', w.name)).then(response => {
-                    if(response.status === 200 && response.data.rc === 0) {
-                        vm.$notify({
-                            title: '删除成功',
-                            type: 'success',
-                            duration: 1000
-                        });
-                    } else {
-                        vm.$notify.error({
-                            title: '错误',
-                            message: response.data.msg
-                        });
-                    }
+                this.$confirm('此操作将永久删除单词, 是否继续?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    let vm = this;
+                    let w = this.word;
+                    this.$axios.delete(String.format('/backend/words/{0}', w.name)).then(response => {
+                        if(response.status === 200 && response.data.rc === 0) {
+                            vm.$message({
+                                message: '删除成功',
+                                type: 'success',
+                                duration: 1000
+                            });
+                        } else {
+                            vm.$message.error(response.data.msg);
+                        }
+                    });
                 });
+
             },
             handleIconClick(ev) {
                 console.log(ev);

@@ -4,7 +4,7 @@
         <div class="logo-container">
             <img class="logo" src="https://vuejs.org/images/logo.png" />
         </div>
-          <el-menu-item index="/">Dashboard</el-menu-item>
+          <el-menu-item index="/">我的单词</el-menu-item>
          <el-submenu index="1">
            <template slot="title">
                Categories
