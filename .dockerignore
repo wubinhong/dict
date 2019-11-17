@@ -1,0 +1,19 @@
+# exclude files and directories to increase the build’s performance,
+# since docker will send all file in the specified context to it's temp build directory and this will invoke enormous copy operations.
+
+# general
+.git
+.idea
+.vscode
+.DS_Store
+.pytest_cache
+
+# backend
+backend/test
+*/**/__pycache__
+*/**/*.pyc
+
+# frontend: only send frontend/dist to docker temp dir
+# */**/node_modules
+frontend
+!frontend/dist

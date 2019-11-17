@@ -28,8 +28,9 @@ service nginx start
 ## Launch python app
 originalArgOne="$1"
 if [ "$originalArgOne" = 'dict' ]; then
-    python3 /app/app.py
+    python3 /app/backend/app.py
     #python3 /app/app.py 1>/data/out.log 2>/data/err.log
+    exit 0
 fi
 
 exec "$@"
