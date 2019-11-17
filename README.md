@@ -26,10 +26,10 @@ docker build -t dict:v1 -f Dockerfile .
 docker run --name dict_server1 -d -p 9000:80 -v /data/container/db:/data/db -v /data/container/configdb:/data/configdb dict:v1
 ```
 
-> Importance: A `build.sh` shell script was written to make building work more convenient.
+> **Importance: A `build.sh` shell script was written to make building work more convenient.**
 
 ```bash
-./build
+./build <image|container|clean>
 ```
 
 - Checkout container
