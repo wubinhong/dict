@@ -15,6 +15,9 @@
             <p>Try Element</p>
         </el-dialog>
         <el-button @click="successNotify">Notification</el-button>
+        <input v-on:keyup.enter="vueSubmit" value="有enter事件">
+        <el-input @keyup.enter.native="elSubmit" value="有enter事件"></el-input>
+        <el-input value="无enter事件"></el-input>
     </div>
 </body>
 <!-- import Vue before Element -->
@@ -36,7 +39,14 @@
                     type: 'success',
                     duration: 0
                 });
+            },
+            vueSubmit: (e) => {
+                console.log('vueSubmit invoked!');
+            },
+            elSubmit: (e) => {
+                console.log('elSubmit invoked!');
             }
+
         }
     })
 </script>

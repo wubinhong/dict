@@ -32,25 +32,25 @@
         <div class="my-card-panel">
             <el-form ref="form" :model="word" label-width="80px">
                 <el-form-item label="单词">
-                    <el-input v-model="word.name"></el-input>
+                    <el-input @keyup.enter.native="onWordSave" v-model="word.name"></el-input>
                 </el-form-item>
                 <el-form-item label="词根">
-                    <el-input v-model="word.derivation"></el-input>
+                    <el-input @keyup.enter.native="onWordSave" v-model="word.derivation"></el-input>
                 </el-form-item>
                 <el-form-item label="中文解释">
-                    <el-input v-model="word.chinese"></el-input>
+                    <el-input @keyup.enter.native="onWordSave" v-model="word.chinese"></el-input>
                 </el-form-item>
                 <el-form-item label="同义词">
-                    <el-input v-model="word.thesauri"></el-input>
+                    <el-input @keyup.enter.native="onWordSave" v-model="word.thesauri"></el-input>
                 </el-form-item>
                 <el-form-item label="相关词">
-                    <el-input v-model="word.related_words"></el-input>
+                    <el-input @keyup.enter.native="onWordSave" v-model="word.related_words"></el-input>
                 </el-form-item>
                 <el-form-item label="近形词">
-                    <el-input v-model="word.similar_shaped_words"></el-input>
+                    <el-input @keyup.enter.native="onWordSave" v-model="word.similar_shaped_words"></el-input>
                 </el-form-item>
                 <el-form-item label="备注">
-                    <el-input v-model="word.comment"></el-input>
+                    <el-input @keyup.enter.native="onWordSave" v-model="word.comment"></el-input>
                 </el-form-item>
 
                 <el-form-item>
