@@ -40,14 +40,14 @@
         </div>
 
         <div class="my-card-panel">
-            <el-form ref="form" :model="word" label-width="80px">
-                <el-form-item label="单词">
-                    <el-input @keyup.enter.native="onWordSave" v-model="word.name"></el-input>
+            <el-form :rules="rules" ref="word" :model="word" label-width="60px">
+                <el-form-item label="单词" prop="name">
+                    <el-input @keyup.enter.native="onWordSave" v-model="word.name" ></el-input>
                 </el-form-item>
                 <el-form-item label="词根">
                     <el-input @keyup.enter.native="onWordSave" v-model="word.derivation"></el-input>
                 </el-form-item>
-                <el-form-item label="中文解释">
+                <el-form-item label="中文">
                     <el-input @keyup.enter.native="onWordSave" v-model="word.chinese"></el-input>
                 </el-form-item>
                 <el-form-item label="同义词">
@@ -112,7 +112,10 @@
         data() {
             return {
                 keyword: '',
-                word: {}
+                word: {},
+                rules: {
+                    name: [{ required: true, message: '单词名必填', trigger: 'blur' }]
+                }
             };
         },
         methods: {
@@ -145,16 +148,20 @@
             onWordSave(e) {
                 let vm = this;
                 let w = this.word;
-                this.$axios.put(String.format('/backend/words/{0}', w.name), w).then(response => {
-                    if(response.status === 200 && response.data.rc === 0) {
-                        vm.$message({
-                            message: '保存成功',
-                            type: 'success',
-                            duration: 1000
+                this.$refs.word.validate((valid) => {
+                    if(valid) {
+                        this.$axios.put(String.format('/backend/words/{0}', w.name), w).then(response => {
+                            if(response.status === 200 && response.data.rc === 0) {
+                                vm.$message({
+                                    message: '保存成功',
+                                    type: 'success',
+                                    duration: 1000
+                                });
+                                vm.word = {};
+                            } else {
+                                vm.$message.error(response.data.msg);
+                            }
                         });
-                        vm.word = {};
-                    } else {
-                        vm.$message.error(response.data.msg);
                     }
                 });
             },
