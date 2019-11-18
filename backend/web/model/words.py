@@ -28,10 +28,10 @@ def save(word: dict):
     if not name:
         raise Error(10001, 'Field name required!')
     word['created_at'] = china_tz(datetime.now())
+    if '_id' in word:
+        del word['_id']
     w = word_collection.find_one({'name': name})
     if w:
-        if '_id' in word:
-            del word['_id']
         word['created_at'] = w['created_at']
         word_collection.update_one({'_id': w['_id']}, {
             "$set": word})
