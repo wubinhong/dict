@@ -9,22 +9,32 @@
                 placeholder="请输入单词关键字，支持按单词、同义词、中文解释、相关词、近形词等内容模糊搜索"
                 @select="handleSelect">
                 <i
-                    class="el-icon-edit el-input__icon"
+                    class="el-icon-search el-input__icon"
                     slot="suffix"
                     @click="handleIconClick">
                 </i>
                 <template slot-scope="{ item }">
-                    <div class="name">{{ item.name }}</div>
-                    <el-breadcrumb separator-class="el-icon-arrow-right">
-                        <el-breadcrumb-item class="word-detail">{{ item.derivation }}</el-breadcrumb-item>
-                        <el-breadcrumb-item class="word-detail">{{ item.chinese }}</el-breadcrumb-item>
-                        <el-breadcrumb-item class="word-detail">{{ item.thesauri }}</el-breadcrumb-item>
-                        <el-breadcrumb-item class="word-detail">{{ item.related_words }}</el-breadcrumb-item>
-                        <el-breadcrumb-item class="word-detail">{{ item.similar_shaped_words }}</el-breadcrumb-item>
-                        <el-breadcrumb-item class="word-detail">{{ item.comment }}</el-breadcrumb-item>
+                    <!-- 变相处理数据为空的情况 -->
+                    <div style="color: #E6A23C;" v-if="item._id == null">
+                        没有匹配的单词，点击本条可添加单词 [ {{item.name}} ] 到下方表单！
+                    </div>
+                    <!-- 有数据时 -->
+                    <div v-else>
+                        <div class="name">{{ item.name }}</div>
+                        <el-breadcrumb separator-class="el-icon-arrow-right">
+                            <el-breadcrumb-item class="word-detail">{{ item.derivation }}</el-breadcrumb-item>
+                            <el-breadcrumb-item class="word-detail">{{ item.chinese }}</el-breadcrumb-item>
+                            <el-breadcrumb-item class="word-detail">{{ item.thesauri }}</el-breadcrumb-item>
+                            <el-breadcrumb-item class="word-detail">{{ item.related_words }}</el-breadcrumb-item>
+                            <el-breadcrumb-item class="word-detail">{{ item.similar_shaped_words }}</el-breadcrumb-item>
+                            <el-breadcrumb-item class="word-detail">{{ item.comment }}</el-breadcrumb-item>
 
-                        <el-breadcrumb-item class="word-operation"><a href="javascript:void(0)" @click="onWordDelete">删除</a></el-breadcrumb-item>
-                    </el-breadcrumb>
+                            <el-breadcrumb-item>
+                                <a class="el-link--danger" href="javascript:void(0)" @click="onWordDelete">删除</a>
+                            </el-breadcrumb-item>
+                        </el-breadcrumb>
+                    </div>
+
                 </template>
             </el-autocomplete>
         </div>
@@ -82,12 +92,8 @@
                 font-size: 12px;
                 color: #b4b4b4;
             }
-            .word-operation {
-                color: black;
-            }
-
-            .highlighted .addr {
-                color: #ddd;
+            .el-link--danger {
+                color:  #f56c6c;
             }
 
         }
@@ -105,7 +111,6 @@
     export default {
         data() {
             return {
-                restaurants: [],
                 keyword: '',
                 word: {}
             };
@@ -117,7 +122,12 @@
                     .then(response => {
                         if (response.status === 200 && response.data.rc === 0) {
                             // 调用 callback 返回建议列表的数据
-                            cb(response.data.data);
+                            let words = response.data.data;
+                            // 当数据为空时，推一条空数据进去，在模板那里根据这条空数据哪里生成一个处理空数据的element
+                            if(words.length == 0) {
+                                words.push({_id: null, name: queryString})
+                            }
+                            cb(words);
                         } else {
                             console.error(response);
                         }
@@ -130,7 +140,7 @@
             },
             handleSelect(item) {
                 this.word = item;
-                console.dir('select', item);
+                console.dir('handleSelect', item);
             },
             onWordSave(e) {
                 let vm = this;
@@ -173,6 +183,7 @@
 
             },
             handleIconClick(ev) {
+                console.log('handle icon click');
                 console.log(ev);
             }
         },

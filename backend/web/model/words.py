@@ -42,11 +42,9 @@ def save(word: dict):
 
 def find_fuzzy(keyword: str, skip: int, limit: int):
     regex = re.compile(keyword, re.IGNORECASE)
-    result = word_collection.find({'$or': [{'name': regex},
-                                           {'derivation': regex},
-                                           {'chinese': regex}, {
-                                               'thesauri': regex},
-                                           {'related_words': regex}, {'similar_shaped_words': regex}]}).skip(skip).limit(limit)
+    result = word_collection.find({'$or': [{'name': regex}, {'derivation': regex},
+                                           {'chinese': regex}, {'thesauri': regex}, {'related_words': regex},
+                                           {'similar_shaped_words': regex}, {'comment': regex}]}).skip(skip).limit(limit)
     return list(result)
 
 
