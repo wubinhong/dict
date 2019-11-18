@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Any subsequent(*) commands which fail will cause the shell script to exit immediately
+set -euxo pipefail
+
 ## Preparing before docker build
 prepare_before_docker_build() {
     echo "Make preparing jobs before docker build:"
