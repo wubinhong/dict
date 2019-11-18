@@ -152,6 +152,7 @@
                             type: 'success',
                             duration: 1000
                         });
+                        vm.word = {};
                     } else {
                         vm.$message.error(response.data.msg);
                     }
