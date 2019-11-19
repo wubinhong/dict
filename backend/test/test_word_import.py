@@ -49,19 +49,13 @@ class TestWordImport(TestCase):
         log.info('Handle line:\n---\n%s: %s\n---', line_number, sample)
         # ansi字符开头，后面紧跟一个括号()，括号里由英文字母、逗号、->、空格还有汉字组成
         # 处理带词根的，如 immense(im men(measure，测量)+se->, plugins, critic, 相关: bull, luxury, 形: hall, hallway)
-        for m in re.findall(r'\w+\([\w, +()，]+->, [\w, :]*\)', sample):
+        for m in re.findall(r'\w+\([\w, +()，]*->, [\w, :]*\)', sample):
             sample = sample.replace(m, '')  # Remove matched str
             # Handle match str: a new word with more detail
             # Generally speaking there will be just one element in this case
-            for m_g in re.findall(r'(\w+)\(([\w, +()，]+)->, ([\w, :]*)\)', m):
+            for m_g in re.findall(r'(\w+)\(([\w, +()，]*)->, ([\w, :]*)\)', m):
                 word = {'name': m_g[0].strip(), 'derivation': m_g[1], **self.handle_other(m_g[2])}
                 log.debug('Complicated bulk word analyze result: %s', word)
-                return_words.append(word)
-        # 处理不带词根的，如 immense(plugins, critic)
-        for m in re.findall(r'\w+\([\w, :]*\)', sample):        # 处理
-            sample = sample.replace(m, '')
-            for m_g in re.findall(r'(\w+)\(([\w, :]*)\)', m):
-                word = {'name': m_g[0], **self.handle_other(m_g[1])}
                 return_words.append(word)
         for w in sample.split(','):
             w = w.replace(' ', '').replace('\n', '')
@@ -69,6 +63,21 @@ class TestWordImport(TestCase):
                 return_words.append(dict(name=w))
         log.debug('Add other simple word: %s', return_words)
         return return_words
+
+    def upgrade_poor_format(self, sample):
+        """
+        For example: insulate, ethical(moral), ethnic(ethnical, racial, 形: ethic, ethic2), evenly(equally->, poor, good)
+        --> insulate, ethical(->, moral), ethnic(->, ethnical, racial, 形: ethic, ethic2), evenly(equally->, poor, good)
+        Just to make a format for method @handle_line
+        """
+        # sample = 'insulate, ethical(moral), ethnic(ethnical, racial, 形: ethic, ethic2), evenly(equally->, poor, good)'
+        # 以", "，或者回车"\n"结尾
+        for m in re.findall(r'\w+\([\w ,:]+\)(?:, |\n)', sample):
+            for m_g in re.findall(r'(\w+\()([\w ,:]+\)(?:, |\n))', m):
+                new_str = m_g[0] + '->, ' + m_g[1]
+                sample = sample.replace(m, new_str)
+        log.info('Sample upgraded: %s', sample)
+        return sample
 
     def test_regex(self):
         regex = re.compile(r'\d+\.\d*')
@@ -86,10 +95,11 @@ class TestWordImport(TestCase):
         re.findall(r'(\w+)\(([\w, +]*)\)', ex_str)
         # sample = 'jack, peer(dd->, aa->, bb, cc), couple, cradle, culminate(climax, peak, 形: accumulate), urban(metropolitan, civic, 相关: rural, suburb, exurban), critic '
         # sample = 'imaginative, imbalance, imitate, immense(im+men(measure)+se->, ), immerse(im+merse(merge)->, ), immigrant(im+migr(move)+ant->, ), impede(im+pede(foot)->, hinder), impetus(im+pet(拍打)+us->, 同词根: perpetuate), impress, impulse(im(onto)+pul(push)+se->, )'
-        sample = 'imitate, immense(im men(measure，测量)+se->, plugins, critic, 相关: bull, luxury, 形: hall, hallway), impetus, immense1(im men(measure，测量)+se->, ), immense2(kevin, lucy, 相关: sam, 形: coco)'
+        sample = 'committee(commission), compost, compromise, comprise, compulsory(obligatory, mandatory), communal(community->, public), compelling, concrete(specific, material)\n'
         # log.info('EE2:%s', self.handle_comma_str('     bull, luxury, , , plugins, critic, '))
         # log.info('EE: %s', self.handle_other('plugins,      critic, 相关: bull, luxury, 形: hall, hallway'))
-        log.info('Line handle result:\n<---\n%s\n<---', self.handle_line(1, sample))
+        line = self.upgrade_poor_format(sample)
+        log.info('Line handle result:\n<---\n%s\n<---', json_util.dumps(self.handle_line(1, line)))
 
     def test_import(self):
         word_coll = self.db.Word
@@ -97,8 +107,8 @@ class TestWordImport(TestCase):
         file = join(dirname(realpath(__file__)), 'seeds', 'data_word.txt')
         with open(file, 'r', ) as f:
             for i, line in enumerate(f):
-                if re.compile(r'\w+'):  # 单词行
-                    ret_words = self.handle_line(i + 1, line)
+                if re.search(r'^\w+', line):  # 单词行
+                    ret_words = self.handle_line(i + 1, self.upgrade_poor_format(line))
                     if ret_words:
                         for w in ret_words:
                             w_db = word_coll.find_one({'name': w.get('name')})

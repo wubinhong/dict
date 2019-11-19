@@ -120,7 +120,7 @@ incorporate(combine, contain, include, merge, join, integrate), indigenous(nativ
 
 ---
 innocent(naive, not guilty), innovative, inquiry(into quest->, investigation, enquiry), insight(perception, notion, idea), inspection(checking, examination), instantly(immediately, promptly, at once), instinct(intuition, natural ability), institute(establish, start, MIT), instruction(teaching, guide, coaching), instrument(surgical instruments, stringed instruments)
-	
+
 ---
 insulate(isolate, barrier), intact(integral, complete, untouched), integrate(unify, incorporate), intense(strong, passionate, fervent, dense, 形: intent), intermediate, isolate(separate, segregate)
 
@@ -245,7 +245,7 @@ destruction(ruin, devastation, demolition), detect(inspect, discern, spot, consc
 diameter(radius, circumference), diet, differ(vary), differentiate(distinguish, discriminate), digest(absorb), digit, dilemma(di(double)+lemma->, quandary, predicament), diligent(industrious, careful), dilute(deluge->, weaken)
 
 ---
-dimension(size), dine(eat, dinner), dinosaur(di(die)+saur(lizard)), dioxide(di+oxide->, ), diploma(certificate), disabled(deficient), disastrous(disaster->, devastating), discard(abandon, reject), discern(detect, distinguish), discourage(deter)
+dimension(size), dine(eat, dinner), dinosaur(di(die)+saur(lizard)->, ), dioxide(di+oxide->, ), diploma(certificate), disabled(deficient), disastrous(disaster->, devastating), discard(abandon, reject), discern(detect, distinguish), discourage(deter)
 
 ---
 discrepancy(dis+crep+ancy->, distinction, difference), discriminate(distinguish, separate), disguise(conceal, dissemble, 形: disassemble, dismantle), dispersal, disperse(dispel, scatter), displace(dislodge, dislocate), disposable, disproportionate(unbalanced), disseminate(disperse, circulate), dissertation(essay, thesis)
@@ -329,19 +329,19 @@ latitude(相关: longitude, attitude, altitude), layer(stratum), leaflet(brochur
 licence(liberty->, license), lifespan, lightweight, likelihood, limb(arm->, leg, wing), limitation(restriction), linger(wander), linguistic(lingu(language)+istic->, ), liquid(liqu(flow)+id->, ), literal(liter(letter)+al->, literacy)
 
 ---
-outstrip(out+s+trip->, precede), overdue(over+due(到期)->, ), overheads(上面头头们花费的), overlap(cover, lap), overload(burden), overstate(over+state(陈述)), overview(outline), overwhelming(overwhelm+ing->, dominate, irresistible), owe(own->, be in debt, due, ascribe), oxygen(oxy(acid)+gen->, )
+outstrip(out+s+trip->, precede), overdue(over+due(到期)->, ), overheads(上面头头们花费的), overlap(cover, lap), overload(burden), overstate(over+state(陈述)->, ), overview(outline), overwhelming(overwhelm+ing->, dominate, irresistible), owe(own->, be in debt, due, ascribe), oxygen(oxy(acid)+gen->, )
 
 ---
-ozone(oxygen->, ozone layer), literary(letter->, ), livestock(live+stock(储蓄，财产), cattle), lizard(dinosaur, reptile), loath(loa(lazy)+th->, unwilling, reluctant), locomotive(loco(location)+motive->, engine, motor), logic(log(言语，思维)+ic->, ), logo, luxurious(luxuri(luxury)+ous->, ), machinery(apparatus, appliance, engine)
+ozone(oxygen->, ozone layer), literary(letter->, ), livestock(live+stock(储蓄，财产)->, cattle), lizard(dinosaur, reptile), loath(loa(lazy)+th->, unwilling, reluctant), locomotive(loco(location)+motive->, engine, motor), logic(log(言语，思维)+ic->, ), logo, luxurious(luxuri(luxury)+ous->, ), machinery(apparatus, appliance, engine)
 
 ---
 magnify(magn(max,great)+ify->, enlarge, amplify), maintenance(mainten(maintain)+ance->, ), margin(mark->, ), marine(naval, maritime), massive, maternal(mater(mother)+nal->, motherly), mature(mat(mate)+ure->, ), maximise, mechanics, mediocre(medi(middle)+ocre->, ordinary)
 
 ---
-memorise(memory->, ), mental(ment(mind)+al->, ), mercy(money->, ), mess(mix->, confuse, muddle), metropolitan(metro(mother)+politan->, urban), milestone(cornerstone, keystone), mimic(mim(mime)+ic->, imitate), minimise(mini(minus)+mise), minister, misfortune(mis+fortune->, disaster)
+memorise(memory->, ), mental(ment(mind)+al->, ), mercy(money->, ), mess(mix->, confuse, muddle), metropolitan(metro(mother)+politan->, urban), milestone(cornerstone, keystone), mimic(mim(mime)+ic->, imitate), minimise(mini(minus)+mise->, ), minister, misfortune(mis+fortune->, disaster)
 
 ---
-mission(assignment), mobilise(mobil(mobile)+ise), mobility, mock(make fun of), modest(mode(manner)+st->, humble), modify(adapt, amend), molecule(mole(斑点)+cule->, atom), monitor, monopoly(mono(single)+poly(sell)->, 形: monotonous), monster(giant)
+mission(assignment), mobilise(mobil(mobile)+ise->, ), mobility, mock(make fun of), modest(mode(manner)+st->, humble), modify(adapt, amend), molecule(mole(斑点)+cule->, atom), monitor, monopoly(mono(single)+poly(sell)->, 形: monotonous), monster(giant)
 
 ---
 morale(moral->, ), mortal(mort(death)+al->, ), motivation, mountainous, myth(mystery->, legend), nationality, naturalistic(realistic), needy(poor), neglect(neg(no)+lect(select)->, ignore), negligible(neglig(neglect)+ible->, trivial)
