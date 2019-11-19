@@ -4,6 +4,31 @@ dict for IELTS preparation
 
 ## Dev mode
 
+### Backend
+
+> Note: All commands runned at this project root directory
+
+- Launch backend
+
+```bash
+python3 backend/app.py
+```
+
+- Run specified unittest method
+
+```bash
+python3 -m unittest -v test.test_word_import.TestWordImport.test_regex
+```
+
+- Export / import mongodb collection
+
+```bash
+# Export collection Word
+mongoexport --uri=mongodb://root:123456@127.0.0.1:27017/dict -c Word -o Word.json
+# Import Collection Word, Note: system import by _id by default and will skip docuemnt when encounting duplicate key, and new record will be import
+mongoimport --uri=mongodb://root:123456@127.0.0.1:27017/dict -c Word Word.json
+```
+
 ## Product mode with docker
 
 - Build docker image dict:v1 with Dockerfile and take current directory build context directory.

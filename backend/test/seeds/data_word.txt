@@ -1,0 +1,509 @@
+---
+climatic, cluster, column(volume), collapse, cognitive(cognize, recognize), coin(coinage, create, invent, make), coincide, combat, crash(crush, bump)
+
+---
+committee(commission), compost, compromise, comprise, compulsory(obligatory, mandatory), communal(community->, public), compelling, concrete(specific, material)
+
+---
+conquer(defeat, occupy), conscious(sensible, aware, mindful), conserve(reserve, save, spare), conservative(conventional, traditional), constitute(comprise, constitution), consistent(coincide, accordant), congress, confer, consecutive(coherent, consequent)
+
+---
+contemporary, contrast, contract(shrink, agreement), contact, constrain, contingent(conditional), convey, consult, convention, converse(conversation)
+
+---
+acclaim, accordance, acoustic, abrupt, aborigine(origin), accuracy, absence
+
+---
+advent, admission, affair, aerial, advocate
+
+---
+alley, allocate, ambiguous, alien, allergy, amateur
+
+---
+antenna, arena, appraisal, approve, approximate(appropriate), anthropology, apt(aptitude)
+
+---
+beam, battery, asset, bargain, attain, awkward
+
+---
+beneath, blanket, boom, bolt, bold, bond, bias, boost
+
+---
+bounce, bound, breed, bribe, bronze, bud, bully
+
+---
+bump(crash), bumper, bureaucratic, burst, buzz, cabin(shed)
+
+---
+canyon(valley, ravine), cast, catalogue, catalyst, cater, cathedral, cement, ceramic
+
+---
+chase, chip, clay
+
+---
+couple, cradle, convict, convince, counterpart(rival), corridor(hall, hallway), counsel(recommend, advice, suggestion)
+
+---
+crew(staff), cue, cube, cruise(voyage, journey), culminate(climax, peak, 形: accumulate), critic, critical, crystal, crucial(decisive), crush
+
+---
+decisive(crucial), debate(dispute), cure, curiosity, currency, dawn(daybreak, sunrise), cultivate, cushion, customs, debris(ruin, detritus, litter)
+
+---
+deliver(transport, convey, dispatch), deduce(conclude, infer), dedicate(devote, undertake, 形: delicate, indicate), delicate(elaborate), deem(reckon, consider, regard), deliberate(careful, cautious, intentional), delta, democratic
+
+---
+depart, deprive, determine, descend(ascend), denote(indicate, 形: devote), derive(obtain, originate, 形: deliver)
+
+---
+acute, agent
+
+---
+appeal, commit, commission, committee, coverage(media->, )
+
+---
+forge, engage, due, dismantle, dramatic
+
+---
+dispute, dissolve, dispiriting, disrupt(disturb), detrimental, dispense, diminish(dwindle, decline, lessen), dial
+
+---
+distinct, distort(twist), distract, distribute, diverse(diversity), divert(distract, revert), divorce
+
+---
+donate, drain, drastic(形: dramatic), ease
+
+---
+elaborate(thorough, delicate, careful, conscientious), elusive(hard, tough), embark(board, engage, dedicate, imbark), emphasise, emulate, encounter, endure(bear, suffer, tolerate)
+
+---
+energetic, entitle(grant, qualify, authorize, name), epic(heroic, splendid), equip, equivalent, eradicate(abolish, eliminate, scrap, wipe out, get rid of), erode(erosion), essence, esteem(estimate->, respect, appreciate)
+
+---
+ethical(moral), ethnic(ethnical, racial), evenly(equally), eventually(finally, ultimately), exotic(rare, unusual), expedition(travel, voyage, exploration), expertise(knowledge, professionalism), exterior(interior, outlook, appearance, external)
+
+---
+extraordinary(distinct, unique, special), extreme, fabric(fiber, cloth, textile), faculty(facility->, aptitude, capacity, personnel), fade(decline, vanish), faint(feeble, weak, pass out), faith(believe), fare(fair->, fee, proceed), federal(union)
+
+---
+gear, haul, litter, minor, mortality(mort)
+
+---
+nurture, overall, peer(appear->, beer, stare), pitch(picture->, pick, throw, degree, level), resort(resource->, ), shade(shadow->, 形: shape)
+
+---
+shed(shit->, drop, cabin), sheet(area, piece, layer), spare(sparse, reserve, conserve, standby, save), spin, spring
+
+---
+fertile(compost), flash, flush, fleet(Armada), fluctuate(antonymy: consistency), folk, forage(fodder, food)
+
+---
+formula, fortune(for tune->, chance, luck, opportunity), foster(nurture, cultivate), foyer(fire->, lobby), fraud(cheater), fulfill(realize, carry out)
+
+---
+fundamental, funnel(tunnel->, ), fur(hair->, ), furnish(furniture->, fur), genetic, genius, genuine, gevern
+
+---
+grain, grand(splendid, significant, magnificent), grind(grind into grain), grip(grab, grasp, catch, seize), guarantee(warrant), habitat(habit at->, ecosystem, ecology, inhabitant, dweller), hail(hello,cry->, a hail of bullets, hail from, stem from, come from)
+
+---
+halt(hold->, stop, pause), handout(hand out->, a class handout), harden(hard en->, solidify), harness(saddle), harvest(reap, gather), heighten(increase, raise, enhance, intensify), hemisphere, herd(herb->, fee herd with herb), heritage(legacy, tradition, 形: hesitate)
+
+---
+hesitate(reluctant), hint(cue, implication, evidence), hollow(hole), honour(honor), humanity, humor
+
+---
+illuminate(lighten, brighten, elucidate), illustrate(show, demonstrate, reveal, mean), immune(im municipal->, immunity), impact(hit, affect, 近: compact), impair(im pair->, damage, break, scratch), implement(tool, instrument, utensil, carry out), impose(enforce, demand, 形: compose, compost), incentive(encouragement, stimulus)
+
+---
+incorporate(combine, contain, include, merge, join, integrate), indigenous(native, original, indigene), infection(affection, effect, influence), ingredient(element, component, constituent), inhabit(dwell), inhabitant, initial, initiate
+
+---
+innocent(naive, not guilty), innovative, inquiry(into quest->, investigation, enquiry), insight(perception, notion, idea), inspection(checking, examination), instantly(immediately, promptly, at once), instinct(intuition, natural ability), institute(establish, start, MIT), instruction(teaching, guide, coaching), instrument(surgical instruments, stringed instruments)
+	
+---
+insulate(isolate, barrier), intact(integral, complete, untouched), integrate(unify, incorporate), intense(strong, passionate, fervent, dense, 形: intent), intermediate, isolate(separate, segregate)
+
+---
+jealously, judgement(discernment, acumen, insight), label(tag, ticket), launch(release, issue, public, deliver, convey), leap(jump, hop)
+
+---
+liable(be lable to sth or do sth), lobby(foyer, 相关: hall, hail), loyal(形: royal), magnetic(attractive, alluring, drawling), magnificent(splendid, grand), mammal(reptile, amphibian), manipulate(handle, operate, control), manoeuvre(steer, negotiate, manipulate)
+
+---
+means(method, way, by means of), Mediterranean, menace(threat, danger, bully), merge, migrate(emigrate, move), mine, miniature(compact)
+
+---
+moisture(moist, mist->, wetness, condensation, damp), momument(moment->, memorial, headstone), moral(ethical), mould(mold->, ), municipal(community->, urban, city)
+
+---
+mutual, noble, nutrient(nurture), occupation(conquest, conquer, ownership, possesion), offspring(descendant), opposition(oppose, opposite)
+
+---
+optimum(idea, optimal), orbit(rabbit->, circle, track), orchestra, outlet(out let->, ), outline(sketch, summerize, abstract), overhead, patronage(patron->, sponsorship)
+
+---
+penetrate(pen enter->, puncture, pierce, seep, perforate), permanent(constant, enduring, everlasting, eternal), pilot, plain(simple, unadorned, frugal), plausible(possible->, believable, paradoxical, implausible), plot(plan->, storyline, drama, mark), plough(cow->, plow), pole
+
+---
+pop(pop up, pop music), postgraduate(undergraduate, master, doctor), premises(premise->, property, building, estate), prescribe(stipulate, order, prescription), prey(quarry, victim), principal(main, primary, leading, principle), probe(proof->, explore), promotional
+
+---
+pump(形: bump), purchase(chase, buy, grip, lever), radical(thorough, complete), radioactive, realism, reception(recept, receive), reckon(deem, think, consider, regard as, suppose, believe), recognize(recognise, realize, acknowlege), relief(comfort, consolate, solace)
+
+---
+retail(re tail->, tailor), reveal(view->, disclose, show, indicate, illustrate), reverse(形: revert, divert, diverse), rival(competitor, counterpart, match, equal), roll, routine, royal(loyal, regal, imperial)
+
+---
+sail(launch), secrete(secret->, conceal, hide), sensation(sense->, stir, blockbuster), sensible(useful, helpful, practical), sheer(sharp->, steep, utter, 形: sheep)
+
+---
+shelf, shuttle(shutter), skeleton(frame, outline, sketch, skeptical), slip(slide), snap, sole(unique, only, single, exclude, 形: role, pole), spectrum, stack(heap, pile)
+
+---
+statistics, strand, stretch, struggle(endeavor), suffer(endure, bear), sum(gross), swan(black swan)
+
+---
+synthesis(combination, mixture, compound), tablet(slab, plaque, pill, capsule), tap(faucet, knock, pat, slap, exploit), temporal, terrace(patio, sundeck, balcony), texture(feel, touch, appearance, quality), theatre(playhouse, stage, hall, scene), tone(timbre, mood, 形: toe), tongue(tone->, )
+
+---
+transmit(transfer, transport, convey), trek(track->, tramp, journey, expedition, voyage), tune(turn->, 形: tone), tunnel(形: funnel)
+
+---
+absorption, venture, verbal(oral, spoken), viable(feasible, workable, practical, possible), vigorous(robust, thriving, 形: rigorous), vivid(bright, colorful, brilliant), witness
+
+---
+absorption(absorb->, ), accumulate(pile up, collect, amass), acid, aesthetic(artistic, tasteful), afflict(bother, burden, distress), agenda(schedule), airborne(flying)
+
+---
+alga(algae), allowance, amass(accumulate), ambition(aspiration), ambulance, amidst(amid->, among), amphibian(reptile, mammal), ample(abundant, sufficient, 形: amble), amused(entertain, cheerful)
+
+---
+amusement(mirth, merriment, entertainment), anchor(mainstay, linchpin), anecdote(tale, narrative), anniversary, antarctica(anti arctica->, arctic), anticipate(foresee, predict, 形: participate), antique(ancient, outmoded), ape(primate, simian, imitate, simulate, emulate), apparatus(equipment, tackle)
+
+---
+appeasement(ap+pease+ment->, appeasement policy), appliance(apply+ance->, machine, instrument), applicant, apprentice(trainee, novice, pupil), aptitude(talent, gift), archaeology(arch+aeo+logy->, ), architecture(building, construction), archive(record, annals), arithmetic(mathematic), arousal(stimulus, excitation)
+
+---
+ascertain(deduce, discover), ascribe(attribute, 形: describe, prescribe), ash, ashamed(shame->, guilty, embarrassed), aspiration(desire, yearning, ambition), assert, astonishing(amazing, astounding), attachment, attainment(achievement), attendance(participation)
+
+---
+audio(auditory, acoustic), authentic(genuine, valid), autonomy(self government, independence), aviation(flight, piloting), awesome(awe+some->, breath taking, magnificent, amazing, formidable), awful(awe+ful->, ), axis(形: axe), backlash(adverse reaction), bacteria(bacterium, microorganism, microbes)
+
+---
+bale(bundle, bunch, pack), ban(prohibit, forbit), banal(commonplace, ordinary), barbecue(cookout, weenie roast, 形: barber), barrier(impediment, obstacle, insulate), beacon(beach->, lighthouse, signal), beforehand(ahead, in advance), beg(pray, plead, implore), belt, beneficial(benefit->, valuable, profitable)
+
+---
+beneficiary, biographer, bizarre(odd, strange, weird), blade(cutting edge), blossom(bloom->, flourish, thrive, prosper), blur(blue->, 形: fur), bombard(bomb->, assail, assault, strike), bonus(perk, benefit, allowance), booth(boot->, ), botanist(botany->, )
+
+---
+boundary(bound->, border, edge, frontier, 形: bundle, bunch), brew(grow->, ), brick(block, firebrick, adobe), brochure(booklet, pamphlet, leaflet), browse(graze), Buddhism(buddha->, ), buffet(smorgasbord, selfServe), bulb, bulk(bucket->, majority), bulletin(bullet in->, bulletin board)
+
+---
+burglar(Hamburg, ), burial(bury->, interment), bush, cab(carriage->, cabin, 形: cap), cabinet(cabin, shed), calendar, canal(channel->, ), candidate(candid->, ), canteen(can+teen->, )
+
+---
+capitalism(capital->, ), capsule(cpas->, pill, tablet), carbohydrate(carbo+hydrate->, ), cassette(case+set->, recorder), casualty(casual->, victim, fatality), categorise(category->, classify), cavern(cave->, cavity), cease(cede->, stop, pause), census(inspectation, demographic), cereal(grain, crop)
+
+---
+ceremony, certify, chaos, charity, charter, chilled, chop, circumscribe
+
+---
+civic(city->, urban, 形: civil), clarity(clear->, ), clash(crash->, crush, confrontation, skirmish, fight), cliff(climb->, ), clown(clumsy->, comedian, jester, comic), clue(cue, hint), coarse(cough->, rough, scratchy), coexist(co+exist->, ), coherent(co+(adhere)->, consistent, cohere, adhere)
+
+---
+cohesion(unity, solidarity, coherence), coil(c+oil->, loop, twist, curl, spiral), collaborate(cooperate), collate(collect, accumulate, compare, revise), collision(collide->, clash, 相关: crash, bump, wreck), comedy(satire), commence(begin, start, embark on, launch), commentary(comment->, ), commerce(com+merchant->, trade, business)
+
+---
+commodity(common thing->, goods, product), commonplace(banal, ordinary, usual), commute(shuttle, travle, lessen, lighten, 形: mutual), compass(scope, range, magnetic compass), compassionate(com+passion+ate->, ), compatible(wellMatched, reconcilable), compensate(com+pens(spend)+ate->, counteract, recompense), compile(compose, edit), complain(com+pla(gue)+n->, lament, grumble, 形: explain), complement(comple(te)+ment->, supplement, 形: implement)
+
+---
+complexity, comply(com+ply(fold, bend)->, obey, conform), component(constitue), composition(compose->, ), comprehend(understand, apprehend), compression(com+press+ion->, ), conceal(con+ceal(seal)->, hide, disguise, 反: reveal), conceive(con+ceive->, compose, pregnant), concur(agree), condemn(denounce, convict, sentence)
+
+---
+condense(congeal), confine(con+fine(罚款)->, limit, circumscribe, restrict), confirm(prove, verify), conform(comply, adapt), confront(encounter, face), congestion(crowding, jam), conjunction(junction->, alignment), consensus(consent->, accordance, agreement), consequent(resultant), consist(compose)
+
+---
+conspicuous(spi->, perceptive, noticeable, discernible), contend(fight, compete, attend, assert), continuous, controversial(debatable), convenient(handy), coordinate(integrate, harmonize, cooperate), cornerstone(keystone, foundation), corporation
+
+---
+correlation(correct->, association), correspond(coincide, be consist of, match up), corrupt, council(committee, congress, 形: counsel), countless(numerous, innumerable), county, crane(derrick, winch, hoist), crater(hollow, bowl), creature, criterion(standard, gauge)
+
+---
+criticize(judge, assess, gauge), crowd(throng, mass, herd), crude(c+rude->, rough, raw, primitive), cumulative(accumulative), curriculum(course, program), curve(bend, curl, twist), dairy(形: diary), damp(moist, humid), decent(proper, acceptable), deception(deceit->, fraud, trickery)
+
+---
+declaration, deepen(strengthen), deficiency(insufficiency, shortage, scarcity), deficit(shortfall), deforestation, degradation, delivery, demographer(census), denounce(condemn, blame, censure)
+
+---
+depict(de+pict(ure)->, describe, illustrate, represent), deplete(de+plete->, exhaust, 反: complete), deploy, depth, descendant(descend+ant->, offspring, ancestor), designate(delegate, depute, assign), desirable, desperate(despairing), despise(scorn, detest, 形: despite), destination
+
+---
+destruction(ruin, devastation, demolition), detect(inspect, discern, spot, conscious, perceive), deter(discourage, dissuade, scare off, 形: defer), deteriorate(de+terior+ate->, decline), devastate(destruct, destroy), device, devise(conceive, intent), devour(de(down)+vour(吃)->, eat greedily, guzzle, gulp), dianose, diagram(chart, illustration, drawing)
+
+---
+diameter(radius, circumference), diet, differ(vary), differentiate(distinguish, discriminate), digest(absorb), digit, dilemma(di(double)+lemma->, quandary, predicament), diligent(industrious, careful), dilute(deluge->, weaken)
+
+---
+dimension(size), dine(eat, dinner), dinosaur(di(die)+saur(lizard)), dioxide(di+oxide->, ), diploma(certificate), disabled(deficient), disastrous(disaster->, devastating), discard(abandon, reject), discern(detect, distinguish), discourage(deter)
+
+---
+discrepancy(dis+crep+ancy->, distinction, difference), discriminate(distinguish, separate), disguise(conceal, dissemble, 形: disassemble, dismantle), dispersal, disperse(dispel, scatter), displace(dislodge, dislocate), disposable, disproportionate(unbalanced), disseminate(disperse, circulate), dissertation(essay, thesis)
+
+---
+distinctive, distinguished(eminent, famous), disturbance(disturb+ance->, interfere), division(divide->, ), domain(territory, field), dominate(govern, rule), drought(dro(drain)+ught(out)->, dry), durable(enduring), dweller(inhabitant, resident)
+
+---
+dwindle(diminish, decrease, decline), dye(eye->, colorant, pigment), dynasty(ancestry), earnest(serious, keen), echo(reverberation), echolocation, ecological(natural), ecosystem(terrestrial ecosystem)
+
+---
+elastic(pliant, flexible), electric, electron(neutron, proton), electronic, elevate(lift, raise, promote), eligibility(eligible, qualified), eliminate(terminate, eradicate), elite(elect->, best, gist), elucidate(e(out)+lucid+ate->, illustrate, elaborate)
+
+---
+embarrass(abash), embed(em+bed->, ), emerge(e(ex,out)+merge->, appear, emergency), eminent(distinguished), emit(eject, release), empire(em+pire(power)->, ), empirical(experimental), encase(en(in)+case->, ), enclose(surround), encode
+
+---
+encompass(en(in)+compass->, include, contain), endless(eternal, interminable), endorse(en(in)+dorse(back)->, support, sign), endurance(en(in)+dur(during)+ance->, strength), engrave(en+grave(cut)->, carve, inscribe), enhance(heighten, strengthen), enlarge(inflate, expand), enlighten(instruct, adivse, illuminate), enquiry(inquiry), enrich(enhance, better)
+
+---
+ensue(en(in)+sue(sequence)->, result, subsequent, consequent, consecutive, 形: ensure), entrepreneur, entrust(charge, endow), envision(plan, imagine), envy(jealousy), equality, equator(equa+tor->, ), erect(build, upright), erupt(e(ex,out)+rupt(break)->, explode)
+
+---
+escalate(e+scal(scale)+ate->, surge), estate(e+state(stand)->, asset), ethic(moral), evaporate(e(ex,out)+vapor+ate->, disappear, vanish), evergreen, evoke(cause, arouse, invoke), exacerbate(ex+acerb+ate->, worsen), exact(extract, extort), exaggerate(exa+ggerate->, overstate), exceptional(unusual)
+
+---
+excessive(extreme), exclusive(sole, only), excursion(trip, hike), exemplify(demostrate, illustrate), exempt(exem+pt->, immune), exert(exercise, use), exhaust(ex+haust->, ), expectancy, expense, explicit(clear, definite)
+
+---
+extinct(形: distinct), facial, facilitate(facility->, aid, promote), familiarise(acquaint), fatal(fate->, lethal, mortal), fatigue(fat+igue->, tireness), feasible(viable), feat(achievement), feeble(faint), fetus(embryo)
+
+---
+fibre(fiber, thread), fictional, fin, financial, fishery, fitness, flee(fly, run away), flora(plant, vegetation), flour, flourish(prosper, thrive)
+
+---
+folklore(legend), forbidding(hostile), forgo(waive, relinquish), forthcoming(impending), fossil(fo(for)+ssil(soil)->, relic), fragile(frag(farct,break)+ile->, weak, feeble), freight(fr+eight(weight)->, cargo, good), frontier, functional
+
+---
+galaxy, gallery, gap, garage(gar+age->, ), genre(gender->, style), glucose(gluc(grape)+ose->, carbohydrate, protein), grace(beauty, refinement, 形: graze), grapher, gravity(grav(grave)+ity->, seriousness)
+
+---
+graze(grass->, 形: grace), grease(geese->, lubricate), gross(whole, total), guidance, guideline, guilty, gymnasium, halve(half->, ), harbor, hardship
+
+---
+harmony, harsh(hard->, ), hatch(catch->, ), haven(heaven->, shelter), havoc(hawk->, devastation), heal(health->, cure, mend), hedge(h(high)+edge->, ), herb(形: herd), herbivore(herbi(herb)+vore->, vegetarian), hereditary(heredity->, inherited, inborn)
+
+---
+heredity(heritage, inheritance), heroic(hero->, ), hierarchy, hind(behind->, ), homogenous(homo+gene+ous->, ), hook(hold->, ), hospitality(hospital->, ), hostel(hotel->, ), hostile(aggressive), household(family)
+
+---
+hover(h(high)+over->, float), hue(color), hull(seed covering->, crust), humble(noble), humid(wet, moist, damp), hygienic(health->, sanitary), hypothesis(hypo(under)+the(theory)+sis->, theory), ignite(ignite to illuminate), ignorant(ig(no)+nor(know)+rant->, uninformed, illiterate, ignore), illiterate(il(no)+literate->, ignorant)
+
+---
+imaginative, imbalance, imitate, immense(im+men(measure)+se->, ), immerse(im+merse(merge)->, ), immigrant(im+migr(move)+ant->, ), impede(im+pede(foot)->, hinder), impetus(im+pet(拍打)+us->, 形: perpetuate), impress, impulse(im(onto)+pul(push)+se->, )
+
+---
+inadequate, inappropriate, incidence, incident, inclination, indifference, indispensable(in+dispens(dispense)+able->, integral, essential, vital), induce(persuade, cause), indulge(in(towards)+dulge(倒着)->, ), industrialise
+
+---
+inefficient(in+efficient->, ), inevitable(in+evita(avoid)+ble->, ), infancy(infan(infant)+cy->, ), inferior(infer(infra)+ior->, worse, deteriorate), infest(in(into)+fest(拍打)->, ), inflation(in+flat(blow)+ion->, ), influential(influence->, ), informal, informative(information->, ), infrastructure(infra+structure->, foundation)
+
+---
+ingenuity(ingenious->, ), inherit, inhibit(in+hab(hold)+it->, ), innate(in+nate(native)->, inborn), insomnia(insom(因丧母)+nia(病)->, ), inspiration(in+spir(breathe)+ation->, ), instalment(instal(安置)+ment->, )
+
+---
+integral(indispensable), intellectual(intellect+ual->, ), intend(in(toward)+tend(attend)->, ), intensify(in+tens(stretch)+ify->, ), intent(intend->, ), intention(purpose, goal), interact, interchangeable, interface, interfere(inter(between)+fere(fee)->, disturbance)
+
+---
+interior, interrupt, interval, intervene(inter(between)+vene(vent,come)->, interfere, mediate), intimate(inti(internal)+mate->, close, dear), intricately(in+tric(trick)+ate+ly->, ), intrigue(in+trigue(trick)->, ), intrinsic(intrin(intra, within)+sic->, inherent, innate, inborn), intuition(intui(into)+tion->, instinct), invader(in(into)+vade(走)+er->, aggressor, raider)
+
+---
+invaluable(in(not)+valu+able->, ), investigation, involved(in(into)+volv(roll)+ed->, 相关: evoke, invoke, dissolve), irony(iron+y->, ), irrational(ir+ration+al->, ), irrelevant, irreversible, irrigate(ir+rig(rain)+ate->, ), jeopardise, joint
+
+---
+journal(journey->, ), junction(junct(join)+ion->, ), justice(fairness), justify(prove, defend), keen(can->, sharp, acute), knowledgeable(well informed, educated, intelligent), landfill, landmark(milestone), laser, lateral(later(side)+al->, sideway, horizontal)
+
+---
+latitude(相关: longitude, attitude, altitude), layer(stratum), leaflet(brochure, booklet, pamphlet), lease(leave->, leasehold, rental), leather(feather->, skin, hide), legacy(leg(left)+acy->, heritage), legally, legislation(legislat(legislate)+ion->, ), legitimate(legal, lawful), lessen(reduce, lower)
+
+---
+licence(liberty->, license), lifespan, lightweight, likelihood, limb(arm->, leg, wing), limitation(restriction), linger(wander), linguistic(lingu(language)+istic->, ), liquid(liqu(flow)+id->, ), literal(liter(letter)+al->, literacy)
+
+---
+outstrip(out+s+trip->, precede), overdue(over+due(到期)->, ), overheads(上面头头们花费的), overlap(cover, lap), overload(burden), overstate(over+state(陈述)), overview(outline), overwhelming(overwhelm+ing->, dominate, irresistible), owe(own->, be in debt, due, ascribe), oxygen(oxy(acid)+gen->, )
+
+---
+ozone(oxygen->, ozone layer), literary(letter->, ), livestock(live+stock(储蓄，财产), cattle), lizard(dinosaur, reptile), loath(loa(lazy)+th->, unwilling, reluctant), locomotive(loco(location)+motive->, engine, motor), logic(log(言语，思维)+ic->, ), logo, luxurious(luxuri(luxury)+ous->, ), machinery(apparatus, appliance, engine)
+
+---
+magnify(magn(max,great)+ify->, enlarge, amplify), maintenance(mainten(maintain)+ance->, ), margin(mark->, ), marine(naval, maritime), massive, maternal(mater(mother)+nal->, motherly), mature(mat(mate)+ure->, ), maximise, mechanics, mediocre(medi(middle)+ocre->, ordinary)
+
+---
+memorise(memory->, ), mental(ment(mind)+al->, ), mercy(money->, ), mess(mix->, confuse, muddle), metropolitan(metro(mother)+politan->, urban), milestone(cornerstone, keystone), mimic(mim(mime)+ic->, imitate), minimise(mini(minus)+mise), minister, misfortune(mis+fortune->, disaster)
+
+---
+mission(assignment), mobilise(mobil(mobile)+ise), mobility, mock(make fun of), modest(mode(manner)+st->, humble), modify(adapt, amend), molecule(mole(斑点)+cule->, atom), monitor, monopoly(mono(single)+poly(sell)->, 形: monotonous), monster(giant)
+
+---
+morale(moral->, ), mortal(mort(death)+al->, ), motivation, mountainous, myth(mystery->, legend), nationality, naturalistic(realistic), needy(poor), neglect(neg(no)+lect(select)->, ignore), negligible(neglig(neglect)+ible->, trivial)
+
+---
+neighbourhood(district, community), neutral(neither->, ), nocturnal(noct(night)+urnal->, ), nomadic(nomad(itinerant, migrant)+ic->, ), nominal(nomi(name)+nal->, in name only, theoretical), norm(standard), normal, notable(nota(note,mark)+ble->, striking, outstanding), notational(notation(symbols,annotation)+al->, ), notion(idea, concept, 形: nation, notation)
+
+---
+notoriously(noto(note)+rious+ly->, disfamous, disreputable), numerous(numer(number)+ous->, plenty), nursery, obesity(ob(over)+es(ese, eat)+ity->, fatness, 相关: obese), obligation(duty), obnoxious(ob(to)+nox(toxin)+ious->, offensive), obscure(obs(over)+cure(covered)->, blur, conceal), obstacle(ob(against)+sta(stand)+cle->, bar, obstruction), occasion(occa(occur)+sion->, event, chance), occurrence(event, incident)
+
+---
+odd(old->, bizarre, weird), odor(smell), offend(of(against)+fend(strike)->, affront), omit(eliminate, exclude, 形: emit), operational, opt(option->, select), optical(opt(eye)+ical->, ), optimism(optim(optimum)+ism->, ), optimistic, optional
+
+---
+oral(verbal, written), organic(organ+ic->, living, biological), orient(adapt), orientation, originality(creativity, novelty), originate(begin, start), ornamental(orna(honour)+ment+al->, decorative), outlook(prospect), output, outrageous(out+rage+ous->, shocking, outrage, rage, anger)
+
+---
+panic(scare), paradox(para(parallel)+dox(diction)->, contradiction), parallel, paramount(para(超过)+mount->, ), parasite(paradise->, ), parliament(parlia(parley,音效怕累,谈话)+ment->, congress), partial, participate(involve), partnership, passionate
+
+---
+passive(passion,suffering->, negative), patent(protect->, ), patience(patien(patient,passion,suffering)+ce->, patient), pattern, pedestrian(ped(foot)+estrian->, ), pendulum(pendul(悬挂)+um->, pendular), peninsula(pen(almost)+insula(insulate)->, island), pension(pens(支付)+ion->, allowance), perceive(per(thorough)+ceive(take)->, feel, detect, discern), percentage(ratio, proportion)
+
+---
+perceptual(perceive->, mental), perennial(per(thorough)+ennial(annual)->, annual), periodic, perpetuate(per(thorough)+petu(push)+ate->, 相关: persevere, 形: impetus), persistently(per(thorough)+sis(stand)+ent+ly->, constantly, perpetually, 相关: persevere, 形: consistently), personalise(individualise), personnel(staff, faculty), perspective(per(thorough)+spect(see)+ive->, outlook), persuasive(persuade->, convincing, compelling), pervasive(per(thorough)+vas(vade)+ive->, prevalent)
+
+---
+pessimistic(pessi(passive)+mistic->, discouraged, gloomy), pest(insect), pesticide(pest+i+cide(kill)->, insecticide), petrol(gasoline), phenomenal(phenomen(phenomenon)+al->, extraordinary), photography(photo(光)+graph(写，记录)+y->, ), photosynthesis(photo+synthesis->, ), physiological(physi(物理的，身体的)+o(连接作用)+logical(学科)->, 形: biological, psychological), pigment(pig(picture)+ment->, dye, color), placement
+
+---
+plague(plague is black disease, torture, afflict), plantation(orchard), plastic, platform, pleasurable(enjoyable, pleasant), pliable(plastic->, flexible), poisonous(toxic), pollinate(pollin(pollen)+ate->, pollen), popularity, porous(por(pore)+ous->, permeable, spongy, 相关: pervasive, penetrate)
+
+---
+portable(port+able->, ), portion(port(part)+ion->, part, piece), portray(portrait->, describe, depict), possession(possess+ion->, ), postpone(post(past,after)+pone(put)->, ), potent(pot(put)+ent->, ), pottery(pott(pot)+ery->, pot, porcelain, ceramic), poverty(pover(poor)+ty->, ), practicable(feasible, workable), pragmatic(practical->, realistic)
+
+---
+precede(pre(before)+cede(go)->, outstrip), precedent, precious(preci(price)+ous->, valuable), predator(preda(prey)+tor->, prey), preferential(preference->, priority, prefer), prehistoric, preliminary, premier(primary->, paramount), premium(pre+mium(money)->, ), preoccupation(pre+occup(occupy)+ation->, obsession)
+
+---
+preservation(maintenance, conservation), prestige(pre(before)+stige(stage)->, fame, reputation), primitive(prime->, early, ancient), prior(pri(pre,before)+or->, preceding), priority(preference), privacy, privileged, probability(likelihood), procedure(process), proceed(pro(forward)+ceed(go)->, continue, progress)
+
+---
+procrastination(pro(tend)+crast(crust,壳))+ination->, delay, postponement), productive(fruitful), profession(profess(profit)+ion->, career, occupation), proficient(pro(forward)+fic(make,do)+ient->, competent), profitable, profound(pro(forward)+found->, deep, impressive), proliferate(pro(forward)+life+rate->, multiply), prolong(extend), promising(promis(promise)+ing->, potential), prone(pro(forward)+ne->, incline)
+
+---
+pronunciation(pro(forward)+nunci(announce)+ation->, pronounce), proper(appropriate, accurate), propose(pro(forward)+pose(放置)->, proposal), prospect(pro(forward)+spect(看)->, outlook, chance), prosperous(pro+sper(spire,呼吸，希望)+ous->, ), protein(pro+tein(tain)->, vitamin), prototype(proto(核心)+type(印刷)->, model, archetype), psychological
+
+---
+punishment(penalty), pupil, pursue(pur(pro,forward)+sue(follow)->, chase), puzzle(purplex->, mystify), pyramid(pyra(法老)+mid(made)->, ), qualify, quantify, quantity(amount, mass), questionnaire, radar
+
+---
+radiation(radi(ray)+ation->, ), radius, random, ratio, rational, ray, realm(rule->, kindom), reassure(re(again)+assure->, ), reckless(reck(care)+less->, rash), recommend(re(again)+commend(称赞)->, advocate)
+
+---
+recreational(re(again)+creation+nal->, ), recruit(re+cruit(create)->, ), rectangular(rect(right)+angul(angle)+ar->, triangular), recycle, redundant, reel(相关: wheel), refrain(re(back)+frain(free)->, ), refund(re(back)+fund->, reimburse), regime, reinforce(strengthen)
+
+---
+relate, relevant(re(加强)+lev(lever)+ant->, ), reliable(reli(rely)+able->, trustworthy), reliance, relics(re(back)+lics(leave)->, ), renaissance(re(again)+naiss(new)+ance->, ), renewable(recycling), renowned(re(again)+nowned->, well known), rental, repel(re(back)+pel(push)->, 相关: propel)
+
+---
+replenish(re(again)+plen(plenty)+ish->, ), replicate(re(again)+pli(ply)+cate->, ), represent(re(again)+present->, ), reproduce(copy, replicate), require(desire, ), rescue(re(again)+scure(secure)->, ), resemble(re(加强)+sem(seem)+ble->, like, akin, 近似: assemble, dissasemble, dissemble), reservoir(reserv(reserve)+oir->, ), residence(resid(reside)+ence->, habitant, inhabitant, dweller), residue(re(back)+sid(sit)+ue->, surplus)
+
+---
+resilience(re(again)+sili(leap)+ence->, flexibility), resolve, resonance(re(repeat)+son(sound)+ance->, reverberation, echo), resource, respond(re(back)+spond(sound)->, reply), respondent, restore, retain(re(加强)+tain(hold)->, keep, save), retreat(retract->, ), retrenchment(re(back)+trench(cut)+ment->, saving)
+
+---
+revenue(re(back)+venue(come)->, ), revise(re(again)+vise(view)->, alter, change), revolve(re(加强)+volve(roll)->, rotate, 形: resolve, involve), rhythm(rhyt(run,pace)+hm->, pattern, beat), rigorous(rigo(严格的)+ous->, sconscientious, diligent, strict, 形: vigorous), roam(Rome->, wander, ramble), robust(strong, vigorous), Roman, rotate(revolve), rudimentary(rudi(rude)+ment+ary->, basic, fundamental)
+
+---
+ruin, rural(country, 相关: urban, suburb), salary(sal(salt)+ary->, income, wage, payroll), sanitation(sani(sane)+tation->, hygiene, health), scarce(scant->, lack), scientifically, scout(sc(spy)+out->, detect), scrutiny(security->, observation, inspection), seafaring(sea+far(fare)+ing->, marine, nautical), seasonal(periodic)
+
+---
+secrecy, sector(sect(切开)+or->, field, realm), seemingly(seem+ingly->, apparently), segment(seg(sect,cut)+ment->, section, piece), seminar(semi(seed)+nar->, forum, conference), sensitive(conscious), sequence(sequ(follow)+ence->, series), settle(sett(sit)+le->, resolve, pay, colonize, inhabit), severity(sever(severe)+ity->, gravity, fury), sex(gender)
+
+---
+shallow(shal(shall,trend)+low->, ), sharp(shark->, keen, incisive), shatter(break, crack), shell(hull, armor), shelter(shel(shell)+ter->, haven), shrink(shr(shirt)+ink(墨水)->, cower), silent(quiet), silly(foolish, idiotic), silt(salt->, sediment), silver(shine->, 相关: silversmith)
+
+---
+simplicity, situated(sit+uat+ed->, located, installed), skyscraper(sky+scraper->, 相关: scrape), soar(sour->, ), soften, soil, solar(sol(sun)+ar->, ), sophisticated(sophomore->, advanced, complex), span(spin->, 相关: lifespan), specialise
+
+---
+spectacular(spectacul(spectacle)+ar->, impressive, grand), spiritual(spirit+ual->, divine, sacred), split(divide, separate), spouse(partner, mate), sprawl(sp(spread)+rawl(crawl)->, stretch), squeeze(s(死)+quee(queen)+ze->, crush, press), startling(surprising, 相关: startle), static(stat(stand)+ic->, still), stationary(station+ary->, fixed, static), steady(regular, settled)
+
+---
+steel(stay->, iron, stainless steel), stimulate(sti(stir)+mulate->, activate, 形: simulate), storm, straight(stretch->, consecutive), strengthen, stress, strict(rigorous), striking(outstanding, noticeable), strive(s+trive(drive)->, endeavor, 形: strike), subject
+
+---
+subsequent(sub(下面的)+sequ(跟随)+ent->, ensue, following, succeeding), substance(alloy, matter), substantial(substance->, ), successive(succeed->, consecutive, sequent, continuous), sudden(thunder->, abrupt), sufficient(suf+ficient->, abundant, enough), suitable(appropriate), summarise(sum up, outline), superior(greater, higher), supervise
+
+---
+supportive, surface(sur(above)+face->, ), surgeon(surgery->, ), surname(sur(above)+name->, ), surplus(sur(over)+plus->, extra, residue), survive(sur(suffer)+vive(live)->, ), suspect(sus(在下面)+pect(看)->, ), suspense(suspend->, ), sustainable(sustain->, renewable, recycling), swift(shift->, fast, rapid)
+
+---
+symbol, sympathetic(sym(mutual)+pathe(pathos)+tic->, approving), systematic(methodic), tackle(tack(take)+le->, undertake, deal with), talent(tal(tall)+ent->, prodigy, skill), taxi(tax+i->, ), telescope(tele(far)+scope->, ), temperate(temper+ate->, moderate), temple(church, mosque), temporary(tempo(time)+rary->, transient)
+
+---
+tendency(tend+ency->, trend, inclination), tennis(tenn(tain,take)+is->, volleyball, badminton), tension(tense->, ), terrestrial(terre(terrain)+strial->, 相关: aquatic, celestial, extraterrestrial), terrific(terri(使惊吓)+fic->, 相关: terror, terrify), territory(terri(terrain)+tory->, land, realm), theme(topic), theoretical(theory->, ), thesis(theme->, dissertation, essay), thorough(through->, complete)
+
+---
+threaten(threat+en->, menace, endanger, jeopardise), thrive(prosper, flourish), tide(time->, tidal, trend), timber(time->, timberline), timetable(time+table->, schedule, agenda), tissue(issue->, muscle tissue), title, toll(charge, fare, fee), touching(moving), tourism(相关: travel, agritourism)
+
+---
+toxic(tox+ic->, poisonous, venomous), traffic(相关: traffic jam, trafficker), tragic(tragedy->, fatal, disastrous), trainer, trait(trace->, feature, characteristic), tram(train,track->, trolley car, cable car), transcend(trans(over)+cend(爬)->, surpass, excel), transform(convert), transient(trans(穿过)+ient->, momentary, temporary), transition
+
+---
+transparent(trans(through,穿过)+parent(appear)->, clear), treadmill(tread(踩踏)+mill(磨坊)->, ), treatment, tremendous(trem(抖动)+endous(的)->, enormous, immense), trend, trial(try->, experiment, a murder trial), triangular(tri(三)+angular(有角的)->, ), trick(treat or trick), tropical(trop(转)+ical->, ), troublesome(annoying, irritating)
+
+---
+trousers(trouser->, ), tuition(tutor->, fees, coaching), tyre(tire, 相关: wheel), ultimate(ulti(ultra)+mate->, eventual, final), undergo(suffer, encounter), undermine(spoil, damage), undertake(dedicate, tackle, promise, agree), uniform(uni(单一的)+form->, ), unique(uni(单一)+que->, distinct, single, sole), unit
+
+---
+unprecedented(un(not)+precedent(先例)+ed->, unheard of), unusual(uncommon, unique), update, upgrade, urban(metropolitan, civic, 相关: rural, suburb, exurban), valid(legal, lawful), van(caravan->, ), variety(vari(vary)+ety->, ), vegetation, venue(ven(来)+ue->, 形: revenue, avenue)
+
+---
+Venus, vertical(erect, upright), via(way->, through), vicinity(village->, nearness, neighborhood), violent(intense, severe, 形: violin), visible, visual, vital(vit(life)+al->, fatal, essential, crucial), vocabulary(voca(vocal)+bulary(body)->, ), volcano(不敢去那儿->, active or extinct volcano)
+
+---
+voyage(voy(way)+age->, sail, cruise, expedition, trek), vulnerable(fragile, susceptible), waist(waste(容易长废肉的地方)->, ), wealthy(wealth+y->, rich, prosperous, affluent), website, weed(seed->, 相关: seaweed, alga), welfare(wel(well)+fare(饭菜)->, wellBeing), wellBeing(welfare), whale(sperm whale), wheel(reel->, grinding wheel, steering wheel)
+
+---
+width(wide->, ), wilderness(wild+er+ness->, ), wise(wide->, intelligent, clever), withstand(with(加强)+stand->, endure, tolerate), worm(warm->, ), worthwhile(worthy), zone(region, area), ankle(angle->, ), approval(ap(ad)+prov(prove,test)+al->, support), ascend(as(加强)+cend(climb,爬)->, 相关: descend)
+
+---
+astronomy(a+stro(star)+nomy->, space science), asymmetrical(a(not)+sym(together)+metri(measure)+cal->, inbalanced, 相关: symmetrical), atomic(atom+ic->, 相关: molecule), audit, augment(aug(increase)+ment->, expand, amplify 形: argument), automobile(auto(self)+mobile(动 )->, vehicle), await(a(to)+wait->, expect), bachelor, ballet, bandage(band(绷带)+age->, 形: bondage)
+
+---
+banquet(ban(bench)+quet(queen)->, feast, dinner), beard(bear+d->, moustache), bid(bet->, ), bloom, breadth(bread(broad)+th->, width, extent), brood(breed->, hatch), cashier, casual(cas(case)+ual->, occasional), censor(scissor->, examine), colonize(settle, migrate, inhabit)
+
+---
+combustion(com(together)+bust(burn)+ion->, burning, kindling, ignition), comic(comedy->, ), commonsense(common(普通的)+sense(认知)->, 相关: consensus), concede(con+cede->, compromise), conception(conceive->, pregnancy), concession(concede->, compromise, reduction), contaminate(con(together)+tamin(touch)+ate->, pollute, stain, infect, defile, foul), conversion(convert->, 形: conversation), crown(形: cow, crow), decay(de(not)+cay(care)->, decompose, rot, perish, fester, tooth decay, 形: delay)
+
+---
+deceive(cheat, betray), decompose(de(down)+compose->, decay, rot), defer(de(not)+fer(carry)->, postpone, delay, 形: deter), dental(dent(凹痕)+al->, teeth), detour(de(away)+tour->, bypass, 相关: contour), disapprove(dis(not)+approve->, oppose, disfavor), disclose(dis(not)+close->, reveal, expose), disqualify(dis(cancel)+qualify->, ), dormant(dorm+ant->, inactive, hibernating), edible(edi(eat)+ble->, eatable)
+
+---
+ejection(e(ex,out)+ject+ion->, ), elevation(elevat(elevate)+ion->, altitude), embassy(相关: ambassador), endeavor(en+deav(debt)+or->, strive, diligent), execute, expenditure(ex(out)+pend(spend)+iture->, cost, expense), extinguish(extinct->, ), fabulous(fabul(fable)+ous->, unbelievable, amazing), feminism(femin(female)+ism->, feminist), glacial(glacier->, )
+
+---
+glacier, hinder(hind(后面的)+er->, hamper, impede), inedible(in+edible(eatable)->, ), infect(in(into)+fect(affect)->, ), inflict(in(upon)+flict(strike)->, ), injection(in(into)+ject(投掷)+ion->, ), instability(in(not)+stabli(stable)+ty->, imbalanced), invalid(in(not)+val(value)+id->, 没有价值的, 无效的), jewellery(jewelry), Jupiter(相关: Mercury, Venus, Earth, Mars, Saturn, Uranus, Neptune)
+
+---
+lava(lave->, magma), leak, lethal(leth(勒死)+al->, fatal, mortal), liberal(liber(labor)+al->, open mind), magnet(magic->, ), merit(merry->, 形: mercy), microwave, mileage(mile+age->, ), misbehavior(mis(bad)+behavior->, ), mischief(mis(bad)+chief(head)->, )
+
+---
+misrepresent(mis(mistake)+represent->, misinterpret, distort), moderate(moder(measure)+ate->, temperate), modernize(modern+ize->, update), monotonous(mono(single)+ton(tone)+ous->, boring, tedious, repetitious), multicultural, multiply, mutate(mut(change)+ate->, change), mute(mu(呜呜呜)+te->, mime), mystify(myst(谜)+ify->, puzzle, baffle), naive
+
+---
+narrate(narr(know)+ate->, tell, describe, portray), nerve(nervous->, 形: never), neuron(nerve->, 相关: neural), neutralize(neutral(中立)+ize->, ), nourish(nutrition->, feed, nurture), obsession(ob(against)+sess(sit)+ion->, fixation), occasional(casual), occupant(occup(occupy)+ant->, inhabitant, dweller), offence(of(against)+fen(fend,打击)+ce->, insult), opponent(op(against)+po(post,put)+nent->, rival, competitor)
+
+---
+organ, overrate(over(超过)+rate(estimate)->, ), overshadow, overuse, overweight, pamphlet(pamph(paper)+let->, brochure, booklet, leaflet), particle(part+icle->, molecule, mote), pave(paw->, pavement), perceptive(perceive->, discerning, insightful, incisive), persevere(per(thorough)+severe->, persist)
+
+---
+pictorial(pictor(picture)+ial->, 相关: depict), pirate(private->, raider, privateer), poll(survey), posture(position, pose), practitioner(practice->, professor, practician), precaution(prevention), precipitate(pre(forward)+cip(cap)+itate->, ), predecessor(pre(preview)+decess(decease)+or->, ancestor, forerunner), predominate(dominate, control), pregnant(conceive)
+
+---
+premature(pre(before)+mature->, ), premise(pre(before)+mise->, precondition, 相关: conclusion, premises), preside(president->, ), privilege(privi+lege->, advantage, favor), prompt(pro(forward)+mpt(move)->, ), propel(pro(forward)+pel(push)->, push, shove, 相关: repel), provoke(pro(forward)+voke(voice)->, arouse, goad, evoke), prudent(provident,prude->, cautious, wary), publicize(public+ize->, broadcast, promote, advertise), pulse(pel,push->, throb, impulse)
+
+---
+punctual(punct(point)+ual->, accurate), purify(puri(pure)+fy->, refine, distill), quest(question->, exploit, investigate), quiz(quest->, game), quota(quote->, ), reactive, rebel(re(against)+bel(beat)->, insurgent, 形: repel), receptacle(recept(receive)+acle(article)->, container), referee(reference->, chief referee), refine(improve, purify, 形: confine)
+
+---
+regenerate(renew, revitalize, revive), remark, remedy(re(enhance)+medy(medical)->, cure, therapy), removal, resist(re(against)+sist(stand)->, oppose, defy), respective(re(各自)+spect(看，视角)+ive->, separate, individual), restrict, resume, revive(re(again)+vive(live)->, regenerate), rigid(rigor->, inflexible, stiff)
+
+---
+session, setting(configuration, surrounding), specimen(speci(species)+men->, sample), sprint(run, race, rush, 相关: sprinter), strait(channel, 形: portrait), structure, stylish(chic, fashionable), supplement(extra, spare), swamp(sponge->, engulf, 形: swan), terminate
