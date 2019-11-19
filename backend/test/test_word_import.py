@@ -105,7 +105,7 @@ class TestWordImport(TestCase):
         word_coll = self.db.Word
         log.info('word_coll: %s', word_coll)
         file = join(dirname(realpath(__file__)), 'seeds', 'data_word.txt')
-        with open(file, 'r', ) as f:
+        with open(file, 'r', encoding='utf-8') as f:
             for i, line in enumerate(f):
                 if re.search(r'^\w+', line):  # 单词行
                     ret_words = self.handle_line(i + 1, self.upgrade_poor_format(line))
