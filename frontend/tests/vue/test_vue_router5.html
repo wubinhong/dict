@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue router 5</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Passing Props to Route Components</h1>
+        <h2>参数传递</h2>
+        <p>
+            <div>
+                <router-link to="/">Home</router-link>
+            </div>
+            <div>
+                <router-link to="/user/11">Instead of coupling to $route:</router-link>
+            </div>
+            <div>
+                <router-link to="/user2/12">Decouple it by using props</router-link>
+            </div>
+            <div>
+                <router-link to="/user3/13">Decouple it by using props with named views</router-link>
+            </div>
+        </p>
+        <router-view></router-view>
+        <router-view name="sidebar" />
+    </div>
+</body>
+
+</html>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+<script>
+    const User = {
+        template: `
+        <div>
+            <h3>User {{ $route.params.id }}</h3>
+        </div>
+        `
+    }
+    const User2 = {
+        props: ['id'],
+        template: `
+        <div>
+            <h3>User2 $route.params.id: {{ $route.params.id }}; id:{{ id }}</h3>
+        </div>
+        `
+    }
+    const Sidebar = {
+        props: ['id'],
+        template: `
+        <h3>Sidebar page: {{id}}</h3>
+        `
+    }
+
+    const router = new VueRouter({
+        routes: [{
+            path: '/user/:id', component: User
+        }, {
+            path: '/user2/:id', component: User2, props: true
+        }, {
+            path: '/user3/:id',
+            components: {
+                default: User2, sidebar: Sidebar
+            },
+            props: {
+                default: true, sidebar: false
+            }
+        }]
+    })
+    router.beforeResolve((to, from, next) => {
+        // console.log('beforeResolve', to, from);
+        console.log('beforeResolve', this);
+        next()
+    })
+    const app = new Vue({
+        el: '#app',
+        router
+    })
+    console.log(app);
+</script>

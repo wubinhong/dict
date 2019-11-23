@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue router 3</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Named Views</h1>
+        <p>
+            <div>
+                <router-link to="/">Named Views</router-link>
+            </div>
+            <div>
+                <router-link to="/settings">Settings</router-link>
+            </div>
+            <div>
+                <router-link to="/settings/email">Settings -> email</router-link>
+            </div>
+            <div>
+                <router-link to="/settings/profile">Settings -> profile</router-link>
+            </div>
+        </p>
+        <div>默认view
+            <router-view class="view one"></router-view>
+        </div>
+        <div>view two
+            <router-view class="view two" name="a"></router-view>
+        </div>
+        <div>view three
+            <router-view class="view three" name="b"></router-view>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+<script>
+    const Foo = {
+        template: `
+        <h1>Foo page</h1>
+        `
+    }
+    const Bar = {
+        template: `
+        <h1>Bar page</h1>
+        `
+    }
+    const Baz = {
+        template: `
+        <div>ffff
+            <h1>Baz page</h1>
+        </div>
+        `
+    }
+    const UserSettings = {
+        template: `
+        <div>
+            <h1>UserSettings page</h1>
+            <router-view />
+            <router-view name="helper" />
+        </div>
+        `
+    }
+    const UserEmailsSubscriptions = {
+        template: `
+        <h1>UserEmailsSubscriptions page</h1>
+        `
+    }
+    const UserProfile = {
+        template: `
+        <h1>UserProfile page</h1>
+        `
+    }
+    const UserProfilePreview = {
+        template: `
+        <h1>UserProfilePreview page</h1>
+        `
+    }
+    const router = new VueRouter({
+        routes: [{
+            path: '/',
+            components: {
+                default: Foo,
+                a: Bar,
+                b: Baz
+            }
+        }, {
+            path: '/settings',
+            component: UserSettings,
+            children: [{
+                path: 'email', component: UserEmailsSubscriptions
+            }, {
+                path: 'profile',
+                components: {
+                    default: UserProfile,
+                    helper: UserProfilePreview
+                }
+            }]
+        }]
+    })
+    const app = new Vue({
+        // el: '#app',
+        router
+    }).$mount('#app')
+    console.log(app)
+</script>

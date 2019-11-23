@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue router demo</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>
+            <div>
+                <router-link to="/user/12">User base</router-link>
+            </div>
+            <div>
+                <router-link to="/user/12/profile">User profile</router-link>
+            </div>
+            <div>
+                <router-link to="/user/12/posts">User posts</router-link>
+            </div>
+            <div>
+                <router-link to="/user/12/foo">default user pages with no matched path pattern.</router-link>
+            </div>
+            <div><router-link :to="{ name: 'user', params: { id: 25 }}">User</router-link></div>
+        </p>
+        <router-view></router-view>
+
+        <button v-on:click="navi2">Navigation</button>
+        <input type="text" v-model="goNum">
+        <button v-on:click="go">Go back</button>
+    </div>
+</body>
+
+</html>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+<script>
+    const UserHome = {
+        template: `
+    <div class="user">
+        <h2>User home page!</h2>
+    </div>
+        `
+    }
+    const User = {
+        template: `
+    <div class="user">
+      <h2>User {{ $route.params.id }}</h2>
+      <router-view></router-view>
+    </div>
+  `
+    }
+    const UserPorfile = {
+        template: `
+    <div class="user">
+      <h2>This is user profile page</h2>
+    </div>
+        `
+    }
+    const UserPosts = {
+        template: `
+    <div class="user">
+        <h2>This is user posts page</h2>
+        <ul>
+            <li>111</li>
+            <li>22</li>
+            <li>333</li>
+        </ul>
+    </div>
+        `
+    }
+    const OtherPage = {
+        template: `
+        <div>
+            <h2>404</h2>
+        </div>
+        `
+    }
+    const Good = {
+        template: `
+        <div>
+            <h2>Good</h2>
+        </div>
+        `
+    }
+    const router = new VueRouter({
+        mode: 'hash',
+        routes: [{
+            path: '/user/:id', component: User,
+            children: [{
+                path: '', component: UserHome, name: 'user',
+            }, {
+                path: 'profile', component: UserPorfile
+            }, {
+                path: 'posts', component: UserPosts
+            }, {
+                path: '*', component: OtherPage
+            }]
+        }, {
+            path: '/good', component: Good, name: 'my_good'
+        }]
+    })
+    const app = new Vue({
+        router,
+        data: {
+            goNum: -1
+        },
+        methods: {
+            navi2: function() {
+                const userId = 15
+                // router.push({ path: 'home' })
+                // this.$router.push({name: 'my_good', params: {userId: 123}})
+                // this.$router.push({name: 'user', params: {userId, id: userId}, query: {age: 22}})
+                this.$router.push({ path: `/user/${userId}` }) // -> /user/123
+                console.log('navi', this.$router)
+                console.log(`Test quote programma: ${userId}`);
+            },
+            go: function() {
+                console.log(this)
+                this.$router.go(this.goNum)
+            },
+        }
+    }).$mount('#app')
+    console.log(app.$router)
+</script>

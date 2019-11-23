@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue router 4</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Redirect and Alias</h1>
+        <p>
+            <div>
+                <router-link to="/"> / -> /dashboard</router-link>
+            </div>
+            <div>
+                <router-link to="/index"> index -> /dashboard</router-link>
+            </div>
+            <div>
+                <router-link to="/foo">foo</router-link>
+            </div>
+            <div>
+                <router-link to="/bar">bar</router-link>
+            </div>
+            <div>
+                <router-link to="/bar2">bar2</router-link>
+            </div>
+        </p>
+        <router-view class="view one"></router-view>
+    </div>
+</body>
+
+</html>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+<script>
+    const Dashboard = {
+        template: `
+        <div>
+            <h1>Dashboard page</h1>
+        </div>
+        `
+    }
+    const Foo = {
+        template: `
+        <h1>Foo page</h1>
+        `
+    }
+    const Bar = {
+        template: `
+        <h1>Bar page: {{$router.history.current.fullPath}}</h1>
+        `,
+        beforeRouteEnter(to, from, next) {
+            console.log('beforeRouteEnter', this);
+            next()
+        }
+    }
+
+    const router = new VueRouter({
+        routes: [{
+            path: '/', redirect: '/dashboard'
+        }, {
+            path: '/index', redirect: { name: 'dash' }
+        }, {
+            path: '/dashboard', component: Dashboard, name: 'dash'
+        }, {
+            path: '/foo', component: Foo
+        }, {
+            path: '/bar', component: Bar, alias: '/bar2'
+        }]
+    })
+    const app = new Vue({
+        el: '#app',
+        router
+    })
+    console.log(app);
+</script>
