@@ -3,7 +3,7 @@
         <!-- <img src="./assets/logo.png" /> -->
         <!-- Basic layout -->
         <el-container>
-            <el-aside width="200px" style="background: #EBEEF5;">
+            <el-aside class="my-aside" style="width: 200px; background: #EBEEF5;">
                 <Sidebar />
             </el-aside>
             <el-container>
@@ -32,7 +32,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less">
 /** 高度撑满屏幕，需要父子容器都要: height: 100%; */
 html,
 body {
@@ -50,5 +50,12 @@ body {
 }
 .el-container {
     height: 100%;
+}
+
+/* hide aside when screen is smaller than a certain widht */
+@media screen and (max-width: 1024px) {
+    .my-aside {
+        display: none !important;
+    }
 }
 </style>

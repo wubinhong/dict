@@ -1,5 +1,5 @@
-FROM mongo:bionic
-MAINTAINER Binghong wu <wubinhong2012@gmail.com>
+FROM mongo:bionic AS base
+LABEL author="Binghong wu" email="<wubinhong2012@gmail.com>"
 
 # Timezone setting
 ENV TZ="Asia/Shanghai"
@@ -14,6 +14,8 @@ RUN apt-get install -y python3-pip python3-dev curl tree nginx-full && rm -rf /v
 # Nginx component setting: redirect logger to container's std in/out which can be checkeout out via command docker logs
 RUN ln -sf /dev/stdout /var/log/nginx/access.log && ln -sf /dev/stderr /var/log/nginx/error.log
 
+# Stage two building
+FROM dict:base AS app
 # Sync app
 RUN mkdir -p /app/backend /app/frontend
 COPY ./frontend/dist/ /app/frontend/

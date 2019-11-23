@@ -36,9 +36,10 @@ mongoimport --uri=mongodb://root:123456@127.0.0.1:27017/dict -c Word Word.json
 > Note: This process will be expected to be done at the host server.
 
 ```bash
+docker build --target base -t dict:base -f Dockerfile .
 (cd backend && find . -type d -name __pycache__ -exec rm -r {} + && find . -type f -name *.pyc -exec rm -r {} +)
 (cd frontend && npm install && npm run build)
-docker build -t dict:v1 -f Dockerfile .
+docker build --target app -t dict:v1 -f Dockerfile .
 ```
 
 - Build container with image built above.
@@ -54,7 +55,7 @@ docker run --name dict_server1 -d -p 9000:80 -v /data/container/db:/data/db -v /
 > **Importance: A `build.sh` shell script was written to make building work more convenient.**
 
 ```bash
-./build <image|container|clean>
+./build <image <base|app>|container>
 ```
 
 - Checkout container
