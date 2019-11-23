@@ -1,5 +1,6 @@
 <template>
     <div>
+        <img alt="Vue logo" src="../assets/logo.png">
         侧边栏组件
         <ul>
             <li><router-link to="/dashboard">Dashbaord</router-link></li>
