@@ -1,4 +1,4 @@
-# my-vue
+# Front end: created by @vue-cli
 
 ## Project setup
 ```
