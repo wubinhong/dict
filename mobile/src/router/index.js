@@ -1,14 +1,23 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Layout from '../views/Layout.vue'
+import Dashboard from '../views/Home/Dashboard.vue'
+// @ is an alias to /src
+import Settings from '@/views/Home/Settings.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: Home
+    name: 'layout',
+    redirect: {name: 'myBoard'},
+    component: Layout,
+    children: [{
+      path: 'home/dashboard', component: Dashboard, name: 'myBoard'
+    }, {
+      path: 'home/settings', component: Settings
+    }]
   },
   {
     path: '/about',
@@ -21,6 +30,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 })
 
