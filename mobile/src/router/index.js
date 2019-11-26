@@ -17,7 +17,7 @@ const routes = [
     children: [{
       path: 'dashboard', component: Dashboard, name: 'myBoard'
     }, {
-      path: 'dashboard/word/:name', component: WordDetail, name: 'wordDetail'
+      path: 'dashboard/word', component: WordDetail, name: 'wordDetail'
     }, {
       path: 'home/settings', component: Settings
     }]
