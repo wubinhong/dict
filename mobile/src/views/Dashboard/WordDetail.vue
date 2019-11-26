@@ -9,22 +9,33 @@
                     text
                     dismissible
                 >{{alert.message}}</v-alert>
-                <v-form ref="form" v-model="valid" lazy-validation>
-                    <v-text-field v-model="word.name" :rules="nameRules" label="单词"></v-text-field>
+                <v-hover>
+                    <template v-slot="{ hover }">
+                        <v-card :elevation="hover ? 24 : 6" class="mx-auto pa-6">
+                            <v-form ref="form" v-model="valid" lazy-validation>
+                                <v-text-field v-model="word.name" :rules="nameRules" label="单词"></v-text-field>
 
-                    <v-text-field v-model="word.derivation" label="词根"></v-text-field>
-                    <v-text-field v-model="word.chinese" label="中文"></v-text-field>
-                    <v-text-field v-model="word.thesauri" label="同义词"></v-text-field>
-                    <v-text-field v-model="word.related_words" label="相关词"></v-text-field>
-                    <v-text-field v-model="word.similar_shaped_words" label="近形词"></v-text-field>
-                    <v-text-field v-model="word.comment" label="备注"></v-text-field>
+                                <v-text-field v-model="word.derivation" label="词根"></v-text-field>
+                                <v-text-field v-model="word.chinese" label="中文"></v-text-field>
+                                <v-text-field v-model="word.thesauri" label="同义词"></v-text-field>
+                                <v-text-field v-model="word.related_words" label="相关词"></v-text-field>
+                                <v-text-field v-model="word.similar_shaped_words" label="近形词"></v-text-field>
+                                <v-text-field v-model="word.comment" label="备注"></v-text-field>
 
-                    <v-btn :disabled="!valid" color="primary" class="mr-4" @click="onWordSave">保存</v-btn>
-                    <v-btn color="warning" class="mr-4" @click="onWordReset">重置</v-btn>
-                    <v-btn color="teal" class="m4-4" @click="$router.go(-1)">
-                        <v-icon dark>mdi-arrow-left</v-icon>返回
-                    </v-btn>
-                </v-form>
+                                <v-btn
+                                    :disabled="!valid"
+                                    color="primary"
+                                    class="mr-4"
+                                    @click="onWordSave"
+                                >保存</v-btn>
+                                <v-btn color="warning" class="mr-4" @click="onWordReset">重置</v-btn>
+                                <v-btn color="teal" class="mr-4" @click="$router.go(-1)">
+                                    <v-icon dark>mdi-arrow-left</v-icon>返回
+                                </v-btn>
+                            </v-form>
+                        </v-card>
+                    </template>
+                </v-hover>
             </v-col>
         </v-row>
     </v-container>
@@ -57,21 +68,18 @@ export default {
                     .put(`/backend/words/${w.name}`, w)
                     .then(response => {
                         if (response.status === 200 && response.data.rc === 0) {
-                            vm.alert = {
-                                showed: true,
-                                type: 'success',
-                                message: response.data.msg
-                            };
-                            clearTimeout(vm.timeouter);
-                            setTimeout(() => {
-                                vm.$router.go(-1)
-                            }, 1000);
+                            vm.$router.go(-1);
                         } else {
                             vm.alert = {
                                 showed: true,
-                                type: 'error',
+                                type: "error",
                                 message: response.data.msg
                             };
+                            clearTimeout(vm.timeout)
+                            vm.timeout = setTimeout(() => {
+                                vm.alert.showed = false
+                            }, 1000);
+                            
                         }
                     });
             }

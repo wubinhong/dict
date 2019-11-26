@@ -41,7 +41,11 @@
 
         <v-app-bar app clipped-left>
             <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-            <v-toolbar-title>Application</v-toolbar-title>
+            <v-toolbar-title>私人字典</v-toolbar-title>
+            <v-spacer />
+            <v-btn color="indigo" dark fab small @click="$router.go(-1)">
+                <v-icon>mdi-arrow-left</v-icon>
+            </v-btn>
         </v-app-bar>
 
         <v-content>
@@ -62,8 +66,8 @@ export default {
     }),
     methods: {
         go(path) {
-            if(this.$route.path !== path) {
-                this.$router.push({path: path})
+            if (this.$route.path !== path) {
+                this.$router.push({ path: path });
             }
         }
     },
