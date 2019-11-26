@@ -17,3 +17,6 @@ backend/test
 # */**/node_modules
 frontend
 !frontend/dist
+
+mobile
+!mobile/dist

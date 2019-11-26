@@ -3,13 +3,16 @@
 # Any subsequent(*) commands which fail will cause the shell script to exit immediately
 set -euxo pipefail
 
+## Variables settings
+frontend_project="${3-mobile}"
+
 ## Preparing before docker build
 prepare_before_docker_build() {
     echo "Make preparing jobs before docker build:"
     echo "Clean up backend"
     (cd backend && find . -type d -name __pycache__ -exec rm -r {} + && find . -type f -name *.pyc -exec rm -r {} +)
-    echo "Build frontend page and package into dist"
-    (cd frontend && npm install && npm run build)
+    echo "Build frontend page <${frontend_project}> and package into dist"
+    (cd ${frontend_project} && npm install && npm run build)
 }
 
 ## Remove container and image
@@ -49,11 +52,11 @@ case "${1-''}" in
                 prepare_before_docker_build
                 remove_image_app
                 echo "Build docker image for dict with tag: ${image_app}"
-                docker build --target app -t ${image_app} -f Dockerfile .
+                docker build --target app -t ${image_app} --build-arg FRONTEND_PROJECT=${frontend_project} -f Dockerfile .
                 echo "Docker image <${image_app}> built successfully!"
                 ;;
             *)
-                echo "Usage: ./build.sh image <base|app>"
+                echo "Usage: ./build.sh image <base|app [frontend|mobile]>"
                 ;;
         esac
         ;;
@@ -64,6 +67,6 @@ case "${1-''}" in
         echo "Container <${container_name}> made successfully!"
         ;;
     *)
-        echo "Usage: ./build.sh <image <base|app>|container>"
+        echo "Usage: ./build.sh <image <base|app [frontend|mobile]>|container>"
         ;;
 esac

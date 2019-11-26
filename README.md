@@ -55,7 +55,7 @@ docker run --name dict_server1 -d -p 9000:80 -v /data/container/db:/data/db -v /
 > **Importance: A `build.sh` shell script was written to make building work more convenient.**
 
 ```bash
-./build <image <base|app>|container>
+./build <image <base|app [frontend|mobile]>|container>
 ```
 
 - Checkout container

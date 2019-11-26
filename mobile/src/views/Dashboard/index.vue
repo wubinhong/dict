@@ -123,7 +123,6 @@ export default {
             this.$axios.delete(`/backend/words/${this.deleteWordName}`).then(response => {
                 if (response.status === 200 && response.data.rc === 0) {
                     vm.dialog = false;
-                    console.log('query search', vm.keyword);
                     vm.querySearch(vm.keyword, 0)  // Reload data
                     vm.alert = {
                         showed: true,

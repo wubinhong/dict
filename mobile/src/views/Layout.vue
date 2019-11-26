@@ -52,7 +52,7 @@
             <router-view />
         </v-content>
 
-        <v-footer app>
+        <v-footer app v-show="false">
             <span>&copy; 2019</span>
         </v-footer>
     </v-app>

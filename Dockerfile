@@ -16,9 +16,13 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log && ln -sf /dev/stderr /var/log/
 
 # Stage two building
 FROM dict:base AS app
+
+# Parse argument
+## Which frontend project we should deploy
+ARG FRONTEND_PROJECT=frontend
 # Sync app
-RUN mkdir -p /app/backend /app/frontend
-COPY ./frontend/dist/ /app/frontend/
+RUN echo "FRONTEND_PROJECT: $FRONTEND_PROJECT" && mkdir -p /app/backend /app/frontend
+COPY ./$FRONTEND_PROJECT/dist/ /app/frontend/
 COPY ./backend/ /app/backend/
 COPY ./docker/pip-requirements.txt /app/backend
 COPY ./docker/dict-entrypoint.sh /usr/local/bin
