@@ -43,7 +43,7 @@
 
                 <div v-else class="d-flex pa-2">
                     <v-btn color="pink" width="100%" @click="onNewWordAdd">
-                        <v-icon>mdi-plus</v-icon>
+                        添加该单词到单词库
                     </v-btn>
                 </div>
             </v-list>
