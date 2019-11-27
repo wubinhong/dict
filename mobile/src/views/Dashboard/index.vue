@@ -135,16 +135,6 @@ export default {
                     vm.timeout2 = setTimeout(() => {
                         vm.alert.showed = false;
                     }, 1000);
-                } else {
-                    vm.alert = {
-                        showed: true,
-                        type: "error",
-                        message: response.data.msg
-                    };
-                    clearTimeout(vm.timeout2);
-                    vm.timeout2 = setTimeout(() => {
-                        vm.alert.showed = false;
-                    }, 1000);
                 }
             });
         }
