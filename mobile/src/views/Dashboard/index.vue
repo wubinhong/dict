@@ -20,7 +20,7 @@
                     shaped
                 >
                     <!-- <v-icon slot="prepend" color="green">mdi-magnify</v-icon> -->
-                    <v-icon slot="append" color="red">mdi-magnify</v-icon>
+                    <v-icon slot="append">mdi-magnify</v-icon>
                 </v-text-field>
 
                 <v-simple-table fixed-header height="600px" v-if="words.length !== 0">
@@ -91,7 +91,7 @@ export default {
         },
         querySearch(keyword, timeout) {
             // 用户输入停顿后再请求，而不是输入有变化就请求，防止频繁请求服务器
-            timeout = timeout || 1000
+            timeout = timeout || 800
             clearTimeout(this.timeout);
             this.timeout = setTimeout(() => {
                 this.$axios
