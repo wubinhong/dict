@@ -23,7 +23,7 @@
                     <v-icon slot="append" color="red">mdi-magnify</v-icon>
                 </v-text-field>
 
-                <v-simple-table dense fixed-header height="450px" v-if="words.length !== 0">
+                <v-simple-table fixed-header height="600px" v-if="words.length !== 0">
                     <template v-slot:default>
                         <thead>
                             <tr>

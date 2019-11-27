@@ -2,13 +2,6 @@
     <v-container>
         <v-row>
             <v-col>
-                <v-alert
-                    :type="alert.type"
-                    v-show="alert.showed"
-                    outlined
-                    text
-                    dismissible
-                >{{alert.message}}</v-alert>
                 <v-hover>
                     <template v-slot="{ hover }">
                         <v-card :elevation="hover ? 24 : 6" class="mx-auto pa-6">
@@ -38,6 +31,16 @@
                 </v-hover>
             </v-col>
         </v-row>
+        <v-snackbar
+            v-model="snackbar.showed"
+            top
+            multi-line
+            :color="snackbar.color"
+            :timeout="snackbar.timeout"
+        >
+            {{ snackbar.message }}
+            <v-btn dark text @click="snackbar.showed = false">Close</v-btn>
+        </v-snackbar>
     </v-container>
 </template>
 
@@ -52,9 +55,11 @@ export default {
             v => !!v || "Name is required",
             v => (v && v.length <= 10) || "Name must be less than 10 characters"
         ],
-        alert: {
+        snackbar: {
             showed: false,
-            message: "I'm a success alert."
+            color: 'success',
+            timeout: 1000,
+            message: "Snack bar message!"
         }
     }),
 
@@ -70,17 +75,23 @@ export default {
                         if (response.status === 200 && response.data.rc === 0) {
                             vm.$router.go(-1);
                         } else {
-                            vm.alert = {
+                            vm.snackbar = {
+                                ...vm.snackbar,
                                 showed: true,
-                                type: "error",
+                                color: "error",
                                 message: response.data.msg
                             };
                             clearTimeout(vm.timeout)
                             vm.timeout = setTimeout(() => {
-                                vm.alert.showed = false
+                                vm.snackbar.showed = false
                             }, 1000);
                             
                         }
+                    }).catch(response => {
+                        // Expand operation, avoid override other default props, .e.g. timeout
+                        vm.snackbar = {...vm.snackbar, showed: true, ...{
+                            message: response.response.statusText
+                        }}
                     });
             }
         },

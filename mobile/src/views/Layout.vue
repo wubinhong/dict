@@ -12,6 +12,14 @@
                         <v-list-item-title>Dashboard</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
+                <v-list-item link @click="go('/dashboard2')">
+                    <v-list-item-action>
+                        <v-icon>mdi-view-dashboard</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                        <v-list-item-title>Dashboard2</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
                 <v-list-item link @click="go('/home/settings')">
                     <v-list-item-action>
                         <v-icon>mdi-settings</v-icon>
@@ -43,7 +51,7 @@
             <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
             <v-toolbar-title>私人字典</v-toolbar-title>
             <v-spacer />
-            <v-btn color="indigo" dark fab small @click="$router.go(-1)">
+            <v-btn color="grey darken-2" fab small @click="$router.go(-1)">
                 <v-icon>mdi-arrow-left</v-icon>
             </v-btn>
         </v-app-bar>

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Layout from '../views/Layout.vue'
 import Dashboard from '../views/Dashboard/index.vue'
+import Dashboard2 from '../views/Dashboard/index2.vue'
 import WordDetail from '../views/Dashboard/WordDetail.vue'
 // @ is an alias to /src
 import Settings from '@/views/Home/Settings.vue'
@@ -16,6 +17,8 @@ const routes = [
     component: Layout,
     children: [{
       path: 'dashboard', component: Dashboard, name: 'myBoard'
+    }, {
+      path: 'dashboard2', component: Dashboard2, name: 'myBoard2'
     }, {
       path: 'dashboard/word', component: WordDetail, name: 'wordDetail'
     }, {
