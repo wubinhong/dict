@@ -53,7 +53,7 @@ export default {
         },
         nameRules: [
             v => !!v || "Name is required",
-            v => (v && v.length <= 10) || "Name must be less than 10 characters"
+            v => (v && v.length <= 100) || "Name must be less than 100 characters"
         ],
         snackbar: {
             showed: false,
