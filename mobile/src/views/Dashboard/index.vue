@@ -91,7 +91,7 @@ export default {
         },
         querySearch(keyword, timeout) {
             // 用户输入停顿后再请求，而不是输入有变化就请求，防止频繁请求服务器
-            timeout = timeout || 800
+            timeout = timeout || 500
             clearTimeout(this.timeout);
             this.timeout = setTimeout(() => {
                 this.$axios
