@@ -18,6 +18,7 @@
                     label="请输入单词"
                     filled
                     shaped
+                    :loading="loading"
                 >
                     <!-- <v-icon slot="prepend" color="green">mdi-magnify</v-icon> -->
                     <v-icon slot="append">mdi-magnify</v-icon>
@@ -74,6 +75,7 @@
 export default {
     data: () => ({
         keyword: "",
+        loading: false,
         words: [],
         dialog: false,
         alert: {
@@ -94,6 +96,7 @@ export default {
             timeout = timeout || 500
             clearTimeout(this.timeout);
             this.timeout = setTimeout(() => {
+                this.loading = true
                 this.$axios
                     .get(
                         `/backend/words/fuzzy?keyword=${keyword}&skip=0&limit=20`
@@ -102,9 +105,8 @@ export default {
                         if (response.status === 200 && response.data.rc === 0) {
                             // 调用 callback 返回建议列表的数据
                             this.words = response.data.data;
-                        } else {
-                            // console.error(response);
                         }
+                        this.loading = false
                     });
             }, timeout);
         },
@@ -149,23 +151,12 @@ export default {
     },
     created() {
         // queryString = queryString || ''
-        let vm = this;
         this.$axios
             .get(`/backend/words/fuzzy?keyword=${this.keyword}&skip=0&limit=20`)
             .then(response => {
                 if (response.status === 200 && response.data.rc === 0) {
                     // 调用 callback 返回建议列表的数据
                     this.words = response.data.data;
-                } else {
-                    vm.alert = {
-                        showed: true,
-                        type: "error",
-                        message: response.data.msg
-                    };
-                    clearTimeout(vm.timeout);
-                    vm.timeout = setTimeout(() => {
-                        vm.alert.showed = false;
-                    }, 1000);
                 }
             });
     }

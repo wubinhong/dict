@@ -2,6 +2,7 @@
 
 import Vue from 'vue';
 import axios from "axios";
+import store from '../store/index.js'
 
 // Full config:  https://github.com/axios/axios#request-config
 // axios.defaults.baseURL = process.env.baseURL || process.env.apiUrl || '';
@@ -31,10 +32,14 @@ _axios.interceptors.request.use(
 _axios.interceptors.response.use(
   function (response) {
     // Do something with response data
+    if (response.data.rc !== 0) {
+      store.commit('showSnackbar', { color: 'error', message: response.data.msg })
+    }
     return response;
   },
   function (error) {
     // Do something with response error
+    store.commit('showSnackbar', { color: 'error', message: error.message })
     return Promise.reject(error);
   }
 );

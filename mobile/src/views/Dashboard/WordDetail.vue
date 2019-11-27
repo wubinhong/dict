@@ -31,16 +31,6 @@
                 </v-hover>
             </v-col>
         </v-row>
-        <v-snackbar
-            v-model="snackbar.showed"
-            top
-            multi-line
-            :color="snackbar.color"
-            :timeout="snackbar.timeout"
-        >
-            {{ snackbar.message }}
-            <v-btn dark text @click="snackbar.showed = false">Close</v-btn>
-        </v-snackbar>
     </v-container>
 </template>
 
@@ -54,13 +44,7 @@ export default {
         nameRules: [
             v => !!v || "Name is required",
             v => (v && v.length <= 100) || "Name must be less than 100 characters"
-        ],
-        snackbar: {
-            showed: false,
-            color: 'success',
-            timeout: 1000,
-            message: "Snack bar message!"
-        }
+        ]
     }),
 
     methods: {
@@ -74,24 +58,7 @@ export default {
                     .then(response => {
                         if (response.status === 200 && response.data.rc === 0) {
                             vm.$router.go(-1);
-                        } else {
-                            vm.snackbar = {
-                                ...vm.snackbar,
-                                showed: true,
-                                color: "error",
-                                message: response.data.msg
-                            };
-                            clearTimeout(vm.timeout)
-                            vm.timeout = setTimeout(() => {
-                                vm.snackbar.showed = false
-                            }, 1000);
-                            
                         }
-                    }).catch(response => {
-                        // Expand operation, avoid override other default props, .e.g. timeout
-                        vm.snackbar = {...vm.snackbar, showed: true, ...{
-                            message: response.response.statusText
-                        }}
                     });
             }
         },

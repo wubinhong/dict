@@ -9,6 +9,7 @@
                 label="请输入单词，支持按所有字段模糊查询"
                 filled
                 fixed-header
+                :loading="loading"
                 color="yellow"
             >
                 <!-- <v-icon slot="prepend" color="green">mdi-magnify</v-icon> -->
@@ -31,7 +32,13 @@
 
                                 <v-list-item-action>
                                     <!-- <v-list-item-action-text v-text=""></v-list-item-action-text> -->
-                                    <v-btn small outlined fab color="red lighten-1" @click="onWordDeleteConfirm(word)">
+                                    <v-btn
+                                        small
+                                        outlined
+                                        fab
+                                        color="red lighten-1"
+                                        @click="onWordDeleteConfirm(word)"
+                                    >
                                         <v-icon>mdi-delete</v-icon>
                                     </v-btn>
                                 </v-list-item-action>
@@ -42,23 +49,10 @@
                 </v-list-item-group>
 
                 <div v-else class="d-flex pa-2">
-                    <v-btn color="pink" width="100%" @click="onNewWordAdd">
-                        添加该单词到单词库
-                    </v-btn>
+                    <v-btn color="pink" width="100%" @click="onNewWordAdd">添加该单词到单词库</v-btn>
                 </div>
             </v-list>
         </v-card>
-
-        <v-snackbar
-            v-model="snackbar.showed"
-            top
-            multi-line
-            :color="snackbar.color"
-            :timeout="snackbar.timeout"
-        >
-            {{ snackbar.message }}
-            <v-btn dark text @click="snackbar.showed = false">Close</v-btn>
-        </v-snackbar>
 
         <v-row justify="center">
             <v-dialog v-model="dialog" persistent max-width="320">
@@ -77,19 +71,17 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
     data: () => ({
         keyword: "",
         words: [],
         dialog: false,
-        snackbar: {
-            showed: false,
-            color: 'success',
-            timeout: 1000,
-            message: "Snack bar message!"
-        }
+        loading: false
     }),
     methods: {
+        ...mapMutations(["showSnackbar", "closeSnackbar"]),
         go(word) {
             // console.log(word);
             this.$router.push({
@@ -102,17 +94,17 @@ export default {
             timeout = timeout || 500;
             clearTimeout(this.timeout);
             this.timeout = setTimeout(() => {
+                this.loading = true
                 this.$axios
                     .get(
                         `/backend/words/fuzzy?keyword=${keyword}&skip=0&limit=20`
                     )
                     .then(response => {
-                        if (response.status === 200 && response.data.rc === 0) {
+                        if (response.data.rc === 0) {
                             // 调用 callback 返回建议列表的数据
                             this.words = response.data.data;
-                        } else {
-                            // console.error(response);
                         }
+                        this.loading = false
                     });
             }, timeout);
         },
@@ -134,48 +126,22 @@ export default {
                     if (response.status === 200 && response.data.rc === 0) {
                         vm.dialog = false;
                         vm.querySearch(vm.keyword, 0); // Reload data
-                        vm.snackbar = {
-                            showed: true,
+                        this.showSnackbar({
                             color: "success",
                             message: response.data.msg
-                        };
-                        clearTimeout(vm.timeout2);
-                        vm.timeout2 = setTimeout(() => {
-                            vm.snackbar.showed = false;
-                        }, 1000);
-                    } else {
-                        vm.snackbar = {
-                            showed: true,
-                            color: "error",
-                            message: response.data.msg
-                        };
-                        clearTimeout(vm.timeout2);
-                        vm.timeout2 = setTimeout(() => {
-                            vm.snackbar.showed = false;
-                        }, 1000);
+                        });
                     }
                 });
         }
     },
     created() {
         // queryString = queryString || ''
-        let vm = this;
         this.$axios
             .get(`/backend/words/fuzzy?keyword=${this.keyword}&skip=0&limit=20`)
             .then(response => {
                 if (response.status === 200 && response.data.rc === 0) {
                     // 调用 callback 返回建议列表的数据
                     this.words = response.data.data;
-                } else {
-                    vm.alert = {
-                        showed: true,
-                        type: "error",
-                        message: response.data.msg
-                    };
-                    clearTimeout(vm.timeout);
-                    vm.timeout = setTimeout(() => {
-                        vm.alert.showed = false;
-                    }, 1000);
                 }
             });
     }
