@@ -7,10 +7,10 @@
 </template>
 
 <script>
-import SnackbarStore from '@/components/SnackbarStore.vue'
+import SnackbarStore from "@/components/SnackbarStore.vue";
 export default {
     components: {
         SnackbarStore
     }
-}
+};
 </script>

@@ -148,5 +148,9 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+// 去掉不能选文本，不然mac不能使用三个手指点击look up单词了
+.v-list-item {
+    user-select: text;
+}
 </style>
