@@ -10,7 +10,7 @@ log = get_logger(__name__)
 @flask.route("/words/fuzzy", methods=["GET"])
 def get_words_fuzzy():
     """Get word list with fuzzy matching
-    As title
+    Sorted by field updated_at
     ---
     tags: [word]
     definitions:
@@ -41,6 +41,9 @@ def get_words_fuzzy():
           created_at:
             type: datetime
             description: 单词录入时间
+          created_at:
+            type: datetime
+            description: 单词最近一次更新（修订）的时间
     parameters:
       - name: keyword
         in: query

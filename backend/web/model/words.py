@@ -2,7 +2,7 @@ from datetime import datetime
 
 from bson import json_util
 from bson.codec_options import CodecOptions
-from pymongo import ASCENDING
+from pymongo import ASCENDING, DESCENDING
 
 from web.flask import dict_db
 from web.util import china_tz, get_logger, local_tz
@@ -25,6 +25,7 @@ def save(word: dict):
     :return:
     """
     name = word.get('name')
+    word['updated_at'] = china_tz(datetime.now())
     if not name:
         raise Error(10001, 'Field name required!')
     word['created_at'] = china_tz(datetime.now())
@@ -44,7 +45,7 @@ def find_fuzzy(keyword: str, skip: int, limit: int):
     regex = re.compile(keyword, re.IGNORECASE)
     result = word_collection.find({'$or': [{'name': regex}, {'derivation': regex},
                                            {'chinese': regex}, {'thesauri': regex}, {'related_words': regex},
-                                           {'similar_shaped_words': regex}, {'comment': regex}]}).skip(skip).limit(limit)
+                                           {'similar_shaped_words': regex}, {'comment': regex}]}).sort([("updated_at", DESCENDING)]).skip(skip).limit(limit)
     return list(result)
 
 
