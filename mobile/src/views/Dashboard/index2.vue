@@ -6,6 +6,7 @@
             <v-text-field
                 v-model="keyword"
                 @input="querySearch(keyword)"
+                ref="queryInput"
                 label="请输入单词，支持按所有字段模糊查询"
                 filled
                 fixed-header
@@ -144,6 +145,13 @@ export default {
                     this.words = response.data.data;
                 }
             });
+    },
+    mounted() {
+        window.onkeyup = (e) => {   // 用户按 "/" 键后，自动focus搜索框
+            if(e.key === '/') {
+                this.$refs.queryInput.focus()
+            }
+        }
     }
 };
 </script>

@@ -15,6 +15,7 @@
                 <v-text-field
                     v-model="keyword"
                     @input="querySearch(keyword)"
+                    ref="queryInput"
                     label="请输入单词"
                     filled
                     shaped
@@ -149,6 +150,13 @@ export default {
                     this.words = response.data.data;
                 }
             });
+    },
+    mounted() {
+        window.onkeyup = (e) => {   // 用户按 "/" 键后，自动focus搜索框
+            if(e.key === '/') {
+                this.$refs.queryInput.focus()
+            }
+        }
     }
 };
 </script>
