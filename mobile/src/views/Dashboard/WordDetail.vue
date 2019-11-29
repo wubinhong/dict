@@ -20,6 +20,7 @@
                                     color="primary"
                                     class="mr-4"
                                     @click="onWordSave"
+                                    ref="submitBtn"
                                 >保存</v-btn>
                                 <v-btn color="warning" class="mr-4" @click="onWordReset">重置</v-btn>
                                 <v-btn color="teal" class="mr-4" @click="$router.go(-1)">
@@ -43,7 +44,9 @@ export default {
         },
         nameRules: [
             v => !!v || "Name is required",
-            v => (v && v.length <= 100) || "Name must be less than 100 characters"
+            v =>
+                (v && v.length <= 100) ||
+                "Name must be less than 100 characters"
         ]
     }),
 
@@ -69,8 +72,14 @@ export default {
     created() {
         this.word = this.$route.query;
     },
-    mounted: () => {
-        // console.log('mounted', this)
+    mounted: function() {
+        window.onkeyup = e => {
+            // 用户按 "enter" 键后，自动提交表单
+            if (e.key === "Enter") {
+                this.$refs.submitBtn.click(document.createEvent("MouseEvent"));
+                // console.log(this.$refs.submitBtn.click())
+            }
+        };
     }
 };
 </script>
