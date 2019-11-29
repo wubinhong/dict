@@ -95,7 +95,7 @@ export default {
             timeout = timeout || 500;
             clearTimeout(this.timeout);
             this.timeout = setTimeout(() => {
-                this.loading = true
+                this.loading = true;
                 this.$axios
                     .get(
                         `/backend/words/fuzzy?keyword=${keyword}&skip=0&limit=20`
@@ -105,7 +105,7 @@ export default {
                             // 调用 callback 返回建议列表的数据
                             this.words = response.data.data;
                         }
-                        this.loading = false
+                        this.loading = false;
                     });
             }, timeout);
         },
@@ -147,11 +147,14 @@ export default {
             });
     },
     mounted() {
-        window.onkeyup = (e) => {   // 用户按 "/" 键后，自动focus搜索框
-            if(e.key === '/') {
-                this.$refs.queryInput.focus()
+        // Focus on query input automatically when page loaded.
+        this.$refs.queryInput.focus();
+        window.onkeyup = e => {
+            // 用户按 "/" 键后，自动focus搜索框
+            if (e.key === "/") {
+                this.$refs.queryInput.focus();
             }
-        }
+        };
     }
 };
 </script>

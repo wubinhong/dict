@@ -42,7 +42,12 @@
                                     {{ word.related_words }} > {{ word.similar_shaped_words }} > {{ word.comment }}
                                 </td>
                                 <td>
-                                    <v-btn x-small outlined color="error" @click="onWordDeleteConfirm(word)">删除</v-btn>
+                                    <v-btn
+                                        x-small
+                                        outlined
+                                        color="error"
+                                        @click="onWordDeleteConfirm(word)"
+                                    >删除</v-btn>
                                 </td>
                             </tr>
                         </tbody>
@@ -50,9 +55,7 @@
                 </v-simple-table>
 
                 <div v-else class="d-flex pa-2">
-                    <v-btn color="pink" width="100%" @click="onNewWordAdd">
-                        添加该单词到单词库
-                    </v-btn>
+                    <v-btn color="pink" width="100%" @click="onNewWordAdd">添加该单词到单词库</v-btn>
                 </div>
             </v-col>
         </v-row>
@@ -94,10 +97,10 @@ export default {
         },
         querySearch(keyword, timeout) {
             // 用户输入停顿后再请求，而不是输入有变化就请求，防止频繁请求服务器
-            timeout = timeout || 500
+            timeout = timeout || 500;
             clearTimeout(this.timeout);
             this.timeout = setTimeout(() => {
-                this.loading = true
+                this.loading = true;
                 this.$axios
                     .get(
                         `/backend/words/fuzzy?keyword=${keyword}&skip=0&limit=20`
@@ -107,7 +110,7 @@ export default {
                             // 调用 callback 返回建议列表的数据
                             this.words = response.data.data;
                         }
-                        this.loading = false
+                        this.loading = false;
                     });
             }, timeout);
         },
@@ -118,26 +121,28 @@ export default {
             });
         },
         onWordDeleteConfirm(word) {
-            this.dialog = true
-            this.deleteWordName = word.name
+            this.dialog = true;
+            this.deleteWordName = word.name;
         },
         onWordDelete() {
             let vm = this;
-            this.$axios.delete(`/backend/words/${this.deleteWordName}`).then(response => {
-                if (response.status === 200 && response.data.rc === 0) {
-                    vm.dialog = false;
-                    vm.querySearch(vm.keyword, 0)  // Reload data
-                    vm.alert = {
-                        showed: true,
-                        type: "success",
-                        message: response.data.msg
-                    };
-                    clearTimeout(vm.timeout2);
-                    vm.timeout2 = setTimeout(() => {
-                        vm.alert.showed = false;
-                    }, 1000);
-                }
-            });
+            this.$axios
+                .delete(`/backend/words/${this.deleteWordName}`)
+                .then(response => {
+                    if (response.status === 200 && response.data.rc === 0) {
+                        vm.dialog = false;
+                        vm.querySearch(vm.keyword, 0); // Reload data
+                        vm.alert = {
+                            showed: true,
+                            type: "success",
+                            message: response.data.msg
+                        };
+                        clearTimeout(vm.timeout2);
+                        vm.timeout2 = setTimeout(() => {
+                            vm.alert.showed = false;
+                        }, 1000);
+                    }
+                });
         }
     },
     created() {
@@ -152,11 +157,14 @@ export default {
             });
     },
     mounted() {
-        window.onkeyup = (e) => {   // 用户按 "/" 键后，自动focus搜索框
-            if(e.key === '/') {
-                this.$refs.queryInput.focus()
+        // Focus on query input automatically when page loaded.
+        this.$refs.queryInput.focus();
+        window.onkeyup = e => {
+            // 用户按 "/" 键后，自动focus搜索框
+            if (e.key === "/") {
+                this.$refs.queryInput.focus();
             }
-        }
+        };
     }
 };
 </script>
