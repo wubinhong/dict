@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vuetify demo</title>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/vuetify@1.0.19/dist/vuetify.min.css"> -->
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            text-align: center;
+        }
+        .scroll-y {
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Scrolling directive用法</h1>
+        <a href="https://v1.vuetifyjs.com/en/directives/scrolling">Vuetify scrolling directives</a>
+        <v-app id="inspire">
+            <div v-scroll:#scrolltarget2="onScroll"></div>
+            <div>
+                <v-layout column justify-center align-center>
+                    <v-subheader>Offset Top</v-subheader>
+                    {{ offsetTop }}
+                </v-layout>
+                <div id="scrolltarget2" style="max-height: 200px" class="light-green scroll-y">
+                    <div style="height: 500px"></div>
+                </div>
+            </div>
+
+            <div v-scroll:#scrolltarget3="onScroll2" style="text-align: center;">
+                {{offsetTop2}}
+            </div>
+            <div class="v-data-table v-data-table--fixed-header theme--light">
+                <div id="scrolltarget3" class="v-data-table__wrapper" style="height: 300px;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="text-left">Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(word, index) in words" :key="index">
+                                <td>{{ word }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </v-app>
+    </div>
+</body>
+
+</html>
+
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- <script src="https://unpkg.com/vuetify@1.0.19/dist/vuetify.min.js"></script> -->
+<script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+
+
+<script>
+    new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+        data: () => ({
+            offsetTop: 0,
+            offsetTop2: 0,
+            words: []
+        }),
+
+        methods: {
+            onScroll(e) {
+                console.log('onScroll')
+                this.offsetTop = e.target.scrollTop
+            },
+            onScroll2(e) {
+                console.log('onScroll2')
+                this.offsetTop2 = e.target.scrollTop
+            }
+        },
+        mounted() {
+            console.log('mount')
+            for (let index = 0; index < 20; index++) {
+                this.words.push('aaa' + index)
+            }
+        }
+    })
+</script>

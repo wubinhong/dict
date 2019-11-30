@@ -49,7 +49,8 @@
                     </template>
                 </v-list-item-group>
 
-                <div v-else class="d-flex pa-2">
+                <!-- 解决组件初次加载时，页面会闪一下添加单词按钮 -->
+                <div v-else-if="!loading" class="d-flex pa-2">
                     <v-btn color="light-green" width="100%" @click="onNewWordAdd">添加该单词到单词库</v-btn>
                 </div>
             </v-list>
@@ -79,9 +80,10 @@ export default {
         keyword: "",
         skip: 0,
         limit: 20,
+        reachEnd: false,
         words: [],
         dialog: false,
-        loading: false
+        loading: true
     }),
     methods: {
         ...mapMutations(["showSnackbar", "closeSnackbar"]),
@@ -114,6 +116,7 @@ export default {
             this.timeout = setTimeout(() => {
                 this.loading = true;
                 this.skip = 0;
+                this.reachEnd = false;
                 this.scrollWords([], keyword, this.skip, ajaxWords => {
                     this.words = ajaxWords;
                     this.loading = false;
@@ -163,10 +166,19 @@ export default {
             let element = document.documentElement;
             let reachBottomOfWindow =
                 element.scrollTop + window.innerHeight === element.offsetHeight;
-            if (reachBottomOfWindow) {
+            if (!this.reachEnd && reachBottomOfWindow) {
                 //appending data to the array
                 this.skip += this.limit;
-                this.scrollWords(this.words, this.keyword, this.skip);
+                this.scrollWords(
+                    this.words,
+                    this.keyword,
+                    this.skip,
+                    ajaxWords => {
+                        if (ajaxWords.length === 0) {
+                            this.reachEnd = true;
+                        }
+                    }
+                );
             }
         };
     }

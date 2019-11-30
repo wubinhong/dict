@@ -54,7 +54,8 @@
                     </template>
                 </v-simple-table>
 
-                <div v-else class="d-flex pa-2">
+                <!-- 解决组件初次加载时，页面会闪一下添加单词按钮 -->
+                <div v-else-if="!loading" class="d-flex pa-2">
                     <v-btn color="pink" width="100%" @click="onNewWordAdd">添加该单词到单词库</v-btn>
                 </div>
             </v-col>
@@ -79,7 +80,7 @@
 export default {
     data: () => ({
         keyword: "",
-        loading: false,
+        loading: true,
         words: [],
         dialog: false,
         alert: {
@@ -146,15 +147,7 @@ export default {
         }
     },
     created() {
-        // queryString = queryString || ''
-        this.$axios
-            .get(`/backend/words/fuzzy?keyword=${this.keyword}&skip=0&limit=20`)
-            .then(response => {
-                if (response.status === 200 && response.data.rc === 0) {
-                    // 调用 callback 返回建议列表的数据
-                    this.words = response.data.data;
-                }
-            });
+        this.querySearch(this.keyword, 0);
     },
     mounted() {
         // Focus on query input automatically when page loaded.
