@@ -50,7 +50,7 @@
                 </v-list-item-group>
 
                 <div v-else class="d-flex pa-2">
-                    <v-btn color="pink" width="100%" @click="onNewWordAdd">添加该单词到单词库</v-btn>
+                    <v-btn color="light-green" width="100%" @click="onNewWordAdd">添加该单词到单词库</v-btn>
                 </div>
             </v-list>
         </v-card>
@@ -77,6 +77,8 @@ import { mapMutations } from "vuex";
 export default {
     data: () => ({
         keyword: "",
+        skip: 0,
+        limit: 20,
         words: [],
         dialog: false,
         loading: false
@@ -90,23 +92,32 @@ export default {
                 query: word
             });
         },
+        scrollWords(words, keyword, skip, cb) {
+            this.$axios
+                .get(
+                    `/backend/words/fuzzy?keyword=${keyword}&skip=${skip}&limit=${this.limit}`
+                )
+                .then(response => {
+                    if (response.data.rc === 0) {
+                        // 调用 callback 返回建议列表的数据
+                        words.push(...response.data.data);
+                    }
+                    if (cb) {
+                        cb(response.data.data, words);
+                    }
+                });
+        },
         querySearch(keyword, timeout) {
             // 用户输入停顿后再请求，而不是输入有变化就请求，防止频繁请求服务器
             timeout = timeout || 500;
             clearTimeout(this.timeout);
             this.timeout = setTimeout(() => {
                 this.loading = true;
-                this.$axios
-                    .get(
-                        `/backend/words/fuzzy?keyword=${keyword}&skip=0&limit=20`
-                    )
-                    .then(response => {
-                        if (response.data.rc === 0) {
-                            // 调用 callback 返回建议列表的数据
-                            this.words = response.data.data;
-                        }
-                        this.loading = false;
-                    });
+                this.skip = 0;
+                this.scrollWords([], keyword, this.skip, ajaxWords => {
+                    this.words = ajaxWords;
+                    this.loading = false;
+                });
             }, timeout);
         },
         onNewWordAdd() {
@@ -136,15 +147,7 @@ export default {
         }
     },
     created() {
-        // queryString = queryString || ''
-        this.$axios
-            .get(`/backend/words/fuzzy?keyword=${this.keyword}&skip=0&limit=20`)
-            .then(response => {
-                if (response.status === 200 && response.data.rc === 0) {
-                    // 调用 callback 返回建议列表的数据
-                    this.words = response.data.data;
-                }
-            });
+        this.querySearch(this.keyword, 0);
     },
     mounted() {
         // Focus on query input automatically when page loaded.
@@ -153,6 +156,17 @@ export default {
             // 用户按 "/" 键后，自动focus搜索框
             if (e.key === "/") {
                 this.$refs.queryInput.focus();
+            }
+        };
+        // Infinite scroll implement
+        window.onscroll = () => {
+            let element = document.documentElement;
+            let reachBottomOfWindow =
+                element.scrollTop + window.innerHeight === element.offsetHeight;
+            if (reachBottomOfWindow) {
+                //appending data to the array
+                this.skip += this.limit;
+                this.scrollWords(this.words, this.keyword, this.skip);
             }
         };
     }
