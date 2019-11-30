@@ -49,6 +49,10 @@ def find_fuzzy(keyword: str, skip: int, limit: int):
     return list(result)
 
 
+def find_by_name(name: str):
+    return word_collection.find_one({'name': name})
+
+
 def delete_by_name(name: str):
     result = word_collection.delete_one({'name': name}).raw_result
     log.info('Delete document: %s | %s', name, result)

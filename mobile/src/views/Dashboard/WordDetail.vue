@@ -70,7 +70,19 @@ export default {
         }
     },
     created() {
-        this.word = this.$route.query;
+        let name = this.$route.query.name;
+        if (name) {
+            // Get word from remote server.
+            this.$axios.get(`/backend/words/${name}`).then(res => {
+                if (res.data.rc === 0) {
+                    this.word = res.data.data;
+                } else {
+                    this.word = {};
+                }
+            });
+        } else {
+            this.word = {};
+        }
     },
     mounted: function() {
         window.onkeyup = e => {

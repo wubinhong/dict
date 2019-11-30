@@ -11,14 +11,16 @@
                 filled
                 fixed-header
                 :loading="loading"
-                color="yellow"
             >
                 <!-- <v-icon slot="prepend" color="green">mdi-magnify</v-icon> -->
                 <v-icon slot="append">mdi-magnify</v-icon>
             </v-text-field>
+            <v-btn fab fixed top right color="indigo" class="add-btn" @click="onNewWordAdd()">
+                <v-icon dark>mdi-plus</v-icon>
+            </v-btn>
 
             <v-list two-line>
-                <v-list-item-group v-if="words.length !== 0" active-class="yellow--text">
+                <v-list-item-group v-if="words.length !== 0" active-class="blue--text">
                     <template v-for="(word, index) in words">
                         <v-list-item :key="word.name">
                             <template>
@@ -27,7 +29,7 @@
                                     <v-list-item-subtitle v-text="word.derivation"></v-list-item-subtitle>
                                     <!-- <v-list-item-subtitle v-text="word.chinese"></v-list-item-subtitle> -->
                                     <v-list-item-action-text
-                                        @click="go(word)"
+                                        @click="go(word.name)"
                                     >{{word.chinese}} > {{word.thesauri}} > {{word.related_words}} > {{word.similar_shaped_words}} > {{word.comment}}</v-list-item-action-text>
                                 </v-list-item-content>
 
@@ -51,7 +53,7 @@
 
                 <!-- 解决组件初次加载时，页面会闪一下添加单词按钮 -->
                 <div v-else-if="!loading" class="d-flex pa-2">
-                    <v-btn color="light-green" width="100%" @click="onNewWordAdd">添加该单词到单词库</v-btn>
+                    <v-btn color="indigo" width="100%" @click="onNewWordAdd(keyword)">添加该单词到单词库</v-btn>
                 </div>
             </v-list>
         </v-card>
@@ -101,11 +103,11 @@ export default {
     }),
     methods: {
         ...mapMutations(["showSnackbar", "closeSnackbar"]),
-        go(word) {
+        go(name) {
             // console.log(word);
             this.$router.push({
                 path: `/dashboard/word`,
-                query: word
+                query: {name: name}
             });
         },
         scrollWords(words, keyword, skip, cb) {
@@ -137,10 +139,10 @@ export default {
                 });
             }, timeout);
         },
-        onNewWordAdd() {
+        onNewWordAdd(name) {
             this.$router.push({
                 name: "wordDetail",
-                query: { name: this.keyword }
+                query: { name: name }
             });
         },
         onWordDeleteConfirm(word) {
@@ -206,5 +208,14 @@ export default {
 // 去掉不能选文本，不然mac不能使用三个手指点击look up单词了
 .v-list-item {
     user-select: text;
+}
+
+.add-btn {
+    margin-top: 70px;
+}
+@media screen and (max-width: 375px) {
+    .add-btn {
+        margin-top: 50px;
+    }
 }
 </style>

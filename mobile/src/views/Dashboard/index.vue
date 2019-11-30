@@ -25,6 +25,10 @@
                     <v-icon slot="append">mdi-magnify</v-icon>
                 </v-text-field>
 
+                <v-btn fab fixed top right color="indigo" class="add-btn" @click="onNewWordAdd()">
+                    <v-icon dark>mdi-plus</v-icon>
+                </v-btn>
+
                 <v-simple-table fixed-header height="600px" v-if="words.length !== 0">
                     <template v-slot:default>
                         <thead>
@@ -37,7 +41,7 @@
                         <tbody>
                             <tr v-for="(word, index) in words" :key="index">
                                 <td>{{ word.name }}</td>
-                                <td @click="go(word)">
+                                <td @click="go(word.name)">
                                     {{ word.derivation }} > {{ word.chinese }} > {{ word.thesauri }} >
                                     {{ word.related_words }} > {{ word.similar_shaped_words }} > {{ word.comment }}
                                 </td>
@@ -56,7 +60,7 @@
 
                 <!-- 解决组件初次加载时，页面会闪一下添加单词按钮 -->
                 <div v-else-if="!loading" class="d-flex pa-2">
-                    <v-btn color="pink" width="100%" @click="onNewWordAdd">添加该单词到单词库</v-btn>
+                    <v-btn color="indigo" width="100%" @click="onNewWordAdd(keyword)">添加该单词到单词库</v-btn>
                 </div>
             </v-col>
         </v-row>
@@ -89,11 +93,11 @@ export default {
         }
     }),
     methods: {
-        go(word) {
+        go(name) {
             // console.log(word);
             this.$router.push({
                 path: `/dashboard/word`,
-                query: word
+                query: {name: name}
             });
         },
         querySearch(keyword, timeout) {
@@ -115,10 +119,10 @@ export default {
                     });
             }, timeout);
         },
-        onNewWordAdd() {
+        onNewWordAdd(name) {
             this.$router.push({
                 name: "wordDetail",
-                query: { name: this.keyword }
+                query: { name: name }
             });
         },
         onWordDeleteConfirm(word) {
@@ -162,5 +166,13 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.add-btn {
+    margin-top: 70px;
+}
+@media screen and (max-width: 375px) {
+    .add-btn {
+        margin-top: 60px;
+    }
+}
 </style>

@@ -71,6 +71,27 @@ def get_words_fuzzy():
     return resp
 
 
+@flask.route("/words/<string:name>", methods=["GET"])
+def get_word_by_name(name):
+    """Get word detail by name
+    As title
+    ---
+    tags: [word]
+    parameters:
+      - name: name
+        description: 单词名字
+        in: path
+        type: string
+        required: true
+    responses:
+      200:
+        description: Word matched.
+        schema:
+          $ref: '#/definitions/Word'
+    """
+    return jsonify(dict(rc=0, data=words.find_by_name(name), msg='success'))
+
+
 @flask.route("/words/<string:name>", methods=["PUT"])
 def put_word(name):
     """Save word and update if exits
