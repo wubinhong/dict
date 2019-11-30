@@ -47,10 +47,13 @@
             </v-list>
         </v-navigation-drawer>
 
-        <v-app-bar app clipped-left>
+        <v-app-bar app clipped-left v-model="bar">
             <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
             <v-toolbar-title>私人字典</v-toolbar-title>
             <v-spacer />
+            <v-btn color="grey darken-2" fab small @click="bar = false">
+                <v-icon>mdi-eye-off</v-icon>
+            </v-btn>
             <v-btn color="grey darken-2" fab small @click="$router.go(-1)">
                 <v-icon>mdi-arrow-left</v-icon>
             </v-btn>
@@ -70,7 +73,8 @@
 export default {
     props: {},
     data: () => ({
-        drawer: null
+        drawer: null,
+        bar: true
     }),
     methods: {
         go(path) {
