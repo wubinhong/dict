@@ -56,7 +56,19 @@
             </v-list>
         </v-card>
 
-        <v-alert text outlined type="warning"  style="margin-top: 20px; text-align: center;" prominent border="left" v-if="noMoreData">你碰到我底线了！</v-alert>
+        <v-alert
+            text
+            outlined
+            prominent
+            type="warning"
+            style="margin-top: 20px; text-align: center;"
+            border="left"
+            v-if="noMoreData"
+        >你碰到我底线了！</v-alert>
+
+        <v-btn fixed fab bottom right color="pink" @click="scrollToTop">
+            <v-icon>mdi-chevron-up</v-icon>
+        </v-btn>
 
         <v-row justify="center">
             <v-dialog v-model="dialog" persistent max-width="320">
@@ -149,6 +161,9 @@ export default {
                         });
                     }
                 });
+        },
+        scrollToTop() {
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         }
     },
     created() {
