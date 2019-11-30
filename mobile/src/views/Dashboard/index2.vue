@@ -56,6 +56,8 @@
             </v-list>
         </v-card>
 
+        <v-alert text outlined type="warning"  style="margin-top: 20px; text-align: center;" prominent border="left" v-if="noMoreData">你碰到我底线了！</v-alert>
+
         <v-row justify="center">
             <v-dialog v-model="dialog" persistent max-width="320">
                 <v-card>
@@ -80,7 +82,7 @@ export default {
         keyword: "",
         skip: 0,
         limit: 20,
-        reachEnd: false,
+        noMoreData: false,
         words: [],
         dialog: false,
         loading: true
@@ -116,7 +118,7 @@ export default {
             this.timeout = setTimeout(() => {
                 this.loading = true;
                 this.skip = 0;
-                this.reachEnd = false;
+                this.noMoreData = false;
                 this.scrollWords([], keyword, this.skip, ajaxWords => {
                     this.words = ajaxWords;
                     this.loading = false;
@@ -166,7 +168,7 @@ export default {
             let element = document.documentElement;
             let reachBottomOfWindow =
                 element.scrollTop + window.innerHeight === element.offsetHeight;
-            if (!this.reachEnd && reachBottomOfWindow) {
+            if (!this.noMoreData && reachBottomOfWindow) {
                 //appending data to the array
                 this.skip += this.limit;
                 this.scrollWords(
@@ -175,7 +177,7 @@ export default {
                     this.skip,
                     ajaxWords => {
                         if (ajaxWords.length === 0) {
-                            this.reachEnd = true;
+                            this.noMoreData = true;
                         }
                     }
                 );
