@@ -64,6 +64,9 @@
                 </div>
             </v-col>
         </v-row>
+        <v-btn fixed fab bottom right color="pink" @click="loadMoreData">
+            <v-icon>mdi-unfold-more-horizontal</v-icon>
+        </v-btn>
         <v-row justify="center">
             <v-dialog v-model="dialog" persistent max-width="320">
                 <v-card>
@@ -81,9 +84,14 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
     data: () => ({
         keyword: "",
+        skip: 0,
+        limit: 20,
+        noMoreData: false,
         loading: true,
         words: [],
         dialog: false,
@@ -93,12 +101,28 @@ export default {
         }
     }),
     methods: {
+        ...mapMutations(["showSnackbar"]),
         go(name) {
             // console.log(word);
             this.$router.push({
                 path: `/dashboard/word`,
-                query: {name: name}
+                query: { name: name }
             });
+        },
+        scrollWords(words, keyword, skip, cb) {
+            this.$axios
+                .get(
+                    `/backend/words/fuzzy?keyword=${keyword}&skip=${skip}&limit=${this.limit}`
+                )
+                .then(response => {
+                    if (response.data.rc === 0) {
+                        // 调用 callback 返回建议列表的数据
+                        words.push(...response.data.data);
+                    }
+                    if (cb) {
+                        cb(response.data.data, words);
+                    }
+                });
         },
         querySearch(keyword, timeout) {
             // 用户输入停顿后再请求，而不是输入有变化就请求，防止频繁请求服务器
@@ -106,18 +130,33 @@ export default {
             clearTimeout(this.timeout);
             this.timeout = setTimeout(() => {
                 this.loading = true;
-                this.$axios
-                    .get(
-                        `/backend/words/fuzzy?keyword=${keyword}&skip=0&limit=20`
-                    )
-                    .then(response => {
-                        if (response.status === 200 && response.data.rc === 0) {
-                            // 调用 callback 返回建议列表的数据
-                            this.words = response.data.data;
-                        }
-                        this.loading = false;
-                    });
+                this.skip = 0;
+                this.noMoreData = false;
+                this.scrollWords([], keyword, this.skip, ajaxWords => {
+                    this.words = ajaxWords;
+                    this.loading = false;
+                });
             }, timeout);
+        },
+        loadMoreData() {
+            if (this.noMoreData) {
+                this.showSnackbar({
+                    color: "error",
+                    message: "No more data!"
+                });
+            } else {
+                this.skip += this.limit;
+                this.scrollWords(
+                    this.words,
+                    this.keyword,
+                    this.skip,
+                    ajaxWords => {
+                        if (ajaxWords.length === 0) {
+                            this.noMoreData = true;
+                        }
+                    }
+                );
+            }
         },
         onNewWordAdd(name) {
             this.$router.push({
