@@ -69,7 +69,7 @@ export default {
     props: {},
     data: () => ({
         drawer: null,
-        collapseOnScroll: true
+        collapseOnScroll: false
     }),
     methods: {
         go(path) {
