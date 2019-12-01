@@ -82,13 +82,13 @@ export default {
         if (name) {
             // Get word from remote server.
             this.$axios.get(`/backend/words/${name}`).then(res => {
-                if (res.data.rc === 0) {
+                if (res.data.rc === 0 && res.data.data) {
                     this.word = res.data.data;
-                } else {
-                    this.word = {};
+                } else {    // 新建的单词，带了name参数过来
+                    this.word = {name: name};
                 }
             });
-        } else {
+        } else {    // 新建单词，没有name参数
             this.word = {};
         }
     },
