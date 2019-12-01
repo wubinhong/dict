@@ -43,9 +43,10 @@ def save(word: dict):
 
 def find_fuzzy(keyword: str, skip: int, limit: int):
     regex = re.compile(keyword, re.IGNORECASE)
+    sorts = [("hardship", DESCENDING), ("updated_at", DESCENDING)]
     result = word_collection.find({'$or': [{'name': regex}, {'derivation': regex},
                                            {'chinese': regex}, {'thesauri': regex}, {'related_words': regex},
-                                           {'similar_shaped_words': regex}, {'comment': regex}]}).sort([("updated_at", DESCENDING)]).skip(skip).limit(limit)
+                                           {'similar_shaped_words': regex}, {'comment': regex}]}).sort(sorts).skip(skip).limit(limit)
     return list(result)
 
 

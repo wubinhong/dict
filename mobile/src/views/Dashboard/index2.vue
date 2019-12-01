@@ -10,6 +10,7 @@
                 label="请输入单词，支持按所有字段模糊查询"
                 filled
                 fixed-header
+                hide-details
                 :loading="loading"
             >
                 <!-- <v-icon slot="prepend" color="green">mdi-magnify</v-icon> -->

@@ -14,7 +14,15 @@
                                 <v-text-field v-model="word.related_words" label="相关词"></v-text-field>
                                 <v-text-field v-model="word.similar_shaped_words" label="近形词"></v-text-field>
                                 <v-text-field v-model="word.comment" label="备注"></v-text-field>
-
+                                <v-slider
+                                    v-model="word.hardship"
+                                    :label="`难度`"
+                                    thumb-label
+                                    style="padding: 12px 0"
+                                    color="orange darken-3"
+                                    thumb-color="red"
+                                    prepend-icon="mdi-shield-star-outline"
+                                ></v-slider>
                                 <v-btn
                                     :disabled="!valid"
                                     color="primary"

@@ -38,6 +38,9 @@ def get_words_fuzzy():
           comment:
             type: string
             description: 其他备注
+          hardship:
+            type: string
+            description: 难度（陌生度，总分100）
           created_at:
             type: datetime
             description: 单词录入时间
