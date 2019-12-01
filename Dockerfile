@@ -3,6 +3,8 @@ LABEL author="Binghong wu" email="<wubinhong2012@gmail.com>"
 
 # Timezone setting
 ENV TZ="Asia/Shanghai"
+# There are tree locales (C, C.UTF-8, POSIX) in image(mongo:bionic), so just take C.UTF-8 as default locale.
+ENV LANG="C.UTF-8" LC_ALL="C.UTF-8" LC_LANG="C.UTF-8" PYTHONIOENCODING="UTF-8"
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Basic flask environment
