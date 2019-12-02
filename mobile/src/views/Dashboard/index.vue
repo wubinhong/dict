@@ -43,7 +43,7 @@
                                 <td>{{ word.name }}</td>
                                 <td @click="go(word.name)">
                                     {{ word.derivation }} > {{ word.chinese }} > {{ word.thesauri }} >
-                                    {{ word.related_words }} > {{ word.similar_shaped_words }} > {{ word.comment }}
+                                    {{ word.related_words }} > {{ word.similar_shaped_words }} > {{ word.comment }} > {{word.hardship}}
                                 </td>
                                 <td>
                                     <v-btn
