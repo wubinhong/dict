@@ -129,8 +129,10 @@ export default {
                     if (response.data.rc === 0) {
                         // 调用 callback 返回建议列表的数据
                         words.push(...response.data.data);
-                        if(response.data.data.length < this.limit) {
-                            this.noMoreData = true
+                        if (response.data.data.length < this.limit) {
+                            this.noMoreData = true;
+                        } else {
+                            this.noMoreData = false;
                         }
                     }
                     if (cb) {
@@ -145,7 +147,6 @@ export default {
             this.timeout = setTimeout(() => {
                 this.loading = true;
                 this.skip = 0;
-                this.noMoreData = false;
                 this.scrollWords([], keyword, this.skip, ajaxWords => {
                     this.words = ajaxWords;
                     this.loading = false;
@@ -160,11 +161,7 @@ export default {
                 });
             } else {
                 this.skip += this.limit;
-                this.scrollWords(
-                    this.words,
-                    this.keyword,
-                    this.skip
-                );
+                this.scrollWords(this.words, this.keyword, this.skip);
             }
         },
         onNewWordAdd(name) {
