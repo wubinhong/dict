@@ -29,7 +29,7 @@
                     <v-icon dark>mdi-plus</v-icon>
                 </v-btn>
 
-                <v-simple-table fixed-header height="600px" v-if="words.length !== 0">
+                <v-simple-table fixed-header height="700px" v-if="words.length !== 0">
                     <template v-slot:default>
                         <thead>
                             <tr>
@@ -52,6 +52,16 @@
                                         color="error"
                                         @click="onWordDeleteConfirm(word)"
                                     >删除</v-btn>
+                                </td>
+                            </tr>
+                            <tr v-if="!noMoreData" @click="loadMoreData">
+                                <td colspan="3">
+                                    <v-alert
+                                        :color="`success`"
+                                        style="margin: 16px 0; text-align: center; cursor: pointer;"
+                                        outlined
+                                        text
+                                    >点击加载更多数据。。。</v-alert>
                                 </td>
                             </tr>
                         </tbody>
@@ -110,6 +120,7 @@ export default {
             });
         },
         scrollWords(words, keyword, skip, cb) {
+            keyword = keyword.trim();
             this.$axios
                 .get(
                     `/backend/words/fuzzy?keyword=${keyword}&skip=${skip}&limit=${this.limit}`
@@ -153,6 +164,10 @@ export default {
                     ajaxWords => {
                         if (ajaxWords.length === 0) {
                             this.noMoreData = true;
+                            this.showSnackbar({
+                                color: "error",
+                                message: "No more data!"
+                            });
                         }
                     }
                 );

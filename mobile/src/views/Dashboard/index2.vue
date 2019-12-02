@@ -19,7 +19,7 @@
                 <v-icon dark>mdi-plus</v-icon>
             </v-btn>
 
-            <v-list two-line>
+            <v-list two-line dense>
                 <v-list-item-group v-if="words.length !== 0" active-class="blue--text">
                     <template v-for="(word, index) in words">
                         <v-list-item :key="word.name">
@@ -27,7 +27,6 @@
                                 <v-list-item-content>
                                     <v-list-item-title v-text="word.name"></v-list-item-title>
                                     <v-list-item-subtitle v-text="word.derivation"></v-list-item-subtitle>
-                                    <!-- <v-list-item-subtitle v-text="word.chinese"></v-list-item-subtitle> -->
                                     <v-list-item-action-text
                                         @click="go(word.name)"
                                     >{{word.chinese}} > {{word.thesauri}} > {{word.related_words}} > {{word.similar_shaped_words}} > {{word.comment}}</v-list-item-action-text>
@@ -111,6 +110,7 @@ export default {
             });
         },
         scrollWords(words, keyword, skip, cb) {
+            keyword = keyword.trim()
             this.$axios
                 .get(
                     `/backend/words/fuzzy?keyword=${keyword}&skip=${skip}&limit=${this.limit}`
