@@ -129,6 +129,9 @@ export default {
                     if (response.data.rc === 0) {
                         // 调用 callback 返回建议列表的数据
                         words.push(...response.data.data);
+                        if(response.data.data.length < this.limit) {
+                            this.noMoreData = true
+                        }
                     }
                     if (cb) {
                         cb(response.data.data, words);
@@ -160,16 +163,7 @@ export default {
                 this.scrollWords(
                     this.words,
                     this.keyword,
-                    this.skip,
-                    ajaxWords => {
-                        if (ajaxWords.length === 0) {
-                            this.noMoreData = true;
-                            this.showSnackbar({
-                                color: "error",
-                                message: "No more data!"
-                            });
-                        }
-                    }
+                    this.skip
                 );
             }
         },
