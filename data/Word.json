@@ -1,20 +1,20 @@
-{"_id":{"$oid":"5dd0f305ccd87024195eed32"},"name":"astronomy","derivation":"a+stro(star)+nomy(学问) --> 天文学","chinese":"天文学","thesauri":"space science","related_words":"astronomer, astronaut, astronomical","created_at":{"$date":"2019-11-17T07:13:09.535Z"}}
-{"_id":{"$oid":"5dd10704a0cc8458c635c253"},"name":"weed","derivation":"seed种子，杂草","chinese":"野草，杂草","thesauri":"grass","related_words":"alga, seaweed, sea","created_at":{"$date":"2019-11-17T08:38:28.262Z"},"updated_at":{"$date":"2019-11-29T09:29:22.244Z"}}
+{"_id":{"$oid":"5dd0f305ccd87024195eed32"},"name":"astronomy","derivation":"a+stro(star)+nomy(学问) --> 天文学","chinese":"天文学","thesauri":"space science","related_words":"astronomer, astronaut, astronomical","created_at":{"$date":"2019-11-17T07:13:09.535Z"},"hardship":7,"updated_at":{"$date":"2019-12-01T13:49:38.721Z"}}
+{"_id":{"$oid":"5dd10704a0cc8458c635c253"},"name":"weed","derivation":"seed种子，杂草","chinese":"野草，杂草","thesauri":"grass","related_words":"alga, seaweed, sea","created_at":{"$date":"2019-11-17T08:38:28.262Z"},"updated_at":{"$date":"2019-12-01T13:22:13.683Z"},"hardship":3}
 {"_id":{"$oid":"5dd1514d9ed684247e994124"},"name":"venue","chinese":"场地","related_words":"","similar_shaped_words":"revenue, avenue","derivation":"ven(来)+ue","created_at":{"$date":"2019-11-17T13:55:25.276Z"}}
 {"_id":{"$oid":"5dd152939ed684247e994125"},"name":"unprecedented","derivation":"un(not)+precedent(先例)+ed","chinese":"空前的，史无前例的","thesauri":"unheard of","created_at":{"$date":"2019-11-17T14:00:51.149Z"}}
 {"_id":{"$oid":"5dd153049ed684247e994126"},"name":"urban","thesauri":"metropolitan, civic","chinese":"都市的","related_words":"rural, suburb, exurban","created_at":{"$date":"2019-11-17T14:02:44.8Z"}}
 {"_id":{"$oid":"5dd1539f9ed684247e994127"},"name":"valid","chinese":"有效的，合法的","thesauri":"legal, lawful","created_at":{"$date":"2019-11-17T14:05:19.161Z"},"derivation":"value->"}
 {"_id":{"$oid":"5dd1597244916c1929a97113"},"name":"vegetation","created_at":{"$date":"2019-11-17T14:30:10.965Z"},"chinese":"植物、植被","related_words":"vegetarian, herbivore"}
 {"_id":{"$oid":"5dd15a1c44916c1929a97114"},"name":"herbivore","derivation":"herbi(herb)+vore","related_words":"vegetarian","chinese":"[动] 食草动物","created_at":{"$date":"2019-11-17T14:33:00.32Z"}}
-{"_id":{"$oid":"5dd15b0d44916c1929a97115"},"name":"flora","derivation":"","chinese":"植物区系；植物群","related_words":"plant, vegetation","created_at":{"$date":"2019-11-17T14:37:01.464Z"}}
+{"_id":{"$oid":"5dd15b0d44916c1929a97115"},"name":"flora","derivation":"","chinese":"植物区系；植物群","related_words":"plant, vegetation","created_at":{"$date":"2019-11-17T14:37:01.464Z"},"hardship":10,"similar_shaped_words":"flour","updated_at":{"$date":"2019-12-02T07:46:03.482Z"}}
 {"_id":{"$oid":"5dd16a3744916c1929a97116"},"name":"van","chinese":"厢式货车，面包车，商务车","related_words":"caravan（全）","created_at":{"$date":"2019-11-17T15:41:43.936Z"},"comment":"we need to rent a furniture van to move all your belonging to your new apartment."}
 {"_id":{"$oid":"5dd16beb44916c1929a97117"},"name":"variety","derivation":"vari(vary，相异，变化)+ety","chinese":"多样性","related_words":"vary, various, variance（差异、分歧）","created_at":{"$date":"2019-11-17T15:48:59.546Z"}}
-{"_id":{"$oid":"5dd16d1844916c1929a97118"},"name":"spectacular","derivation":"spectacul(spectacle) + ar","chinese":"壮观的，场面宏大的","thesauri":"impressive, striking, grand","related_words":"spectacle","comment":"spectacular scenery","created_at":{"$date":"2019-11-17T15:54:00.078Z"}}
+{"_id":{"$oid":"5dd16d1844916c1929a97118"},"name":"spectacular","derivation":"spectacul(spectacle) + ar","chinese":"壮观的，场面宏大的","thesauri":"impressive, striking, grand","related_words":"spectacle","comment":"spectacular scenery","created_at":{"$date":"2019-11-17T15:54:00.078Z"},"hardship":4,"updated_at":{"$date":"2019-12-01T15:14:14.071Z"}}
 {"_id":{"$oid":"5dd16e7444916c1929a97119"},"name":"spiritual","derivation":"spirit+ual","chinese":"精神上的","thesauri":"divine, sacred","created_at":{"$date":"2019-11-17T15:59:48.03Z"}}
-{"_id":{"$oid":"5dd16edb44916c1929a9711a"},"name":"spouse","derivation":"spouse(死把式) -> 配偶（死了也要在一起）","chinese":"配偶","thesauri":"couple, mate, partner","created_at":{"$date":"2019-11-17T16:01:31.504Z"}}
-{"_id":{"$oid":"5dd16f5d44916c1929a9711b"},"name":"sprawl","derivation":"sp+rawl","chinese":"伸展四肢，四仰八叉","thesauri":"stretch","created_at":{"$date":"2019-11-17T16:03:41.161Z"}}
-{"_id":{"$oid":"5dd1703744916c1929a9711c"},"name":"squeeze","derivation":"近形联想：s(死) + quee(看做queen) + ze","chinese":"压榨，挤","thesauri":"crush, press","comment":"to squeeze a tube of toothpaste.","created_at":{"$date":"2019-11-17T16:07:19.945Z"}}
-{"_id":{"$oid":"5dd170c344916c1929a9711d"},"name":"startling","derivation":"start + ling -> 突然开始，让人吃惊 -> 令人吃惊","chinese":"令人吃惊","thesauri":"surprising","related_words":"startle","created_at":{"$date":"2019-11-17T16:09:39.089Z"}}
+{"_id":{"$oid":"5dd16edb44916c1929a9711a"},"name":"spouse","derivation":"spouse(死把式) -> 配偶（死了也要在一起）","chinese":"配偶","thesauri":"couple, mate, partner","created_at":{"$date":"2019-11-17T16:01:31.504Z"},"hardship":10,"updated_at":{"$date":"2019-12-01T15:14:46.127Z"}}
+{"_id":{"$oid":"5dd16f5d44916c1929a9711b"},"name":"sprawl","derivation":"sp+rawl","chinese":"伸展四肢，四仰八叉","thesauri":"stretch","created_at":{"$date":"2019-11-17T16:03:41.161Z"},"comment":"he sprawled on a sofa in the living room.","hardship":4,"updated_at":{"$date":"2019-12-01T15:18:19.427Z"}}
+{"_id":{"$oid":"5dd1703744916c1929a9711c"},"name":"squeeze","derivation":"近形联想：s(死) + quee(看做queen) + ze","chinese":"压榨，挤","thesauri":"crush, press","comment":"to squeeze a tube of toothpaste.","created_at":{"$date":"2019-11-17T16:07:19.945Z"},"hardship":10,"updated_at":{"$date":"2019-12-01T15:19:42.918Z"}}
+{"_id":{"$oid":"5dd170c344916c1929a9711d"},"name":"startling","derivation":"start + ling -> 突然开始，让人吃惊 -> 令人吃惊","chinese":"令人吃惊","thesauri":"surprising","related_words":"startle","created_at":{"$date":"2019-11-17T16:09:39.089Z"},"hardship":12,"updated_at":{"$date":"2019-12-01T15:20:43.909Z"}}
 {"_id":{"$oid":"5dd1712944916c1929a9711e"},"name":"stationary","derivation":"station（驻地、驻守）+ + ary --> 总是驻守同一驻地的","chinese":"静止的","thesauri":"fix, static","created_at":{"$date":"2019-11-17T16:11:21.868Z"}}
 {"_id":{"$oid":"5dd172bc362ca54af81a9dfa"},"name":"invader","derivation":"in(into)+vade(走)+er","chinese":"侵略者","thesauri":"aggressor, raider","similar_shaped_words":"pervasive","created_at":{"$date":"2019-11-17T16:18:04.87Z"}}
 {"_id":{"$oid":"5dd1730b362ca54af81a9dfb"},"name":"pervasive","derivation":"per(thorough)+vas(vade)+ive","chinese":"弥漫的，普遍的","thesauri":"prevalent","similar_shaped_words":"invader","created_at":{"$date":"2019-11-17T16:19:23.166Z"}}
@@ -55,7 +55,7 @@
 {"_id":{"$oid":"5dd2a0c0c92646d153dc4f51"},"name":"licence","derivation":"liberty->","chinese":"许可证","thesauri":"license","created_at":{"$date":"2019-11-18T13:46:40.902Z"}}
 {"_id":{"$oid":"5dd2a16bc92646d153dc4f52"},"name":"lifespan","derivation":"life(生命) + span(跨度)","chinese":"寿命","thesauri":"lifecycle","created_at":{"$date":"2019-11-18T13:49:31.959Z"}}
 {"_id":{"$oid":"5dd2a1edc92646d153dc4f53"},"name":"likelihood","derivation":"likeli(likely) + hood","chinese":"可能性","thesauri":"probability, possibility","related_words":"","created_at":{"$date":"2019-11-18T13:51:41.645Z"}}
-{"_id":{"$oid":"5dd2a263c92646d153dc4f54"},"name":"limb","derivation":"arm","chinese":"肢，臂，翅膀","thesauri":"arm, leg, wing","related_words":"limber","similar_shaped_words":"thin, fin","created_at":{"$date":"2019-11-18T13:53:39.66Z"}}
+{"_id":{"$oid":"5dd2a263c92646d153dc4f54"},"name":"limb","derivation":"arm","chinese":"肢，臂，翅膀","thesauri":"arm, leg, wing","related_words":"limber","similar_shaped_words":"thin, fin","created_at":{"$date":"2019-11-18T13:53:39.66Z"},"hardship":9,"updated_at":{"$date":"2019-12-02T07:49:59.324Z"}}
 {"_id":{"$oid":"5dd2a2d7c92646d153dc4f55"},"name":"literal","derivation":"","chinese":"字面的，确确实实的","created_at":{"$date":"2019-11-18T13:55:35.081Z"},"related_words":"literary"}
 {"_id":{"$oid":"5dd2a395c92646d153dc4f56"},"name":"linguistic","derivation":"lingu(language) + istic","chinese":"语言学的","thesauri":"semantic, lingual","created_at":{"$date":"2019-11-18T13:58:45.33Z"}}
 {"_id":{"$oid":"5dd2a408c92646d153dc4f57"},"name":"linger","chinese":"徘徊，逗留，留存","thesauri":"stroll, roam, wander, ramble","created_at":{"$date":"2019-11-18T14:00:40.203Z"}}
@@ -86,8 +86,8 @@
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe94d"},"name":"conscious","thesauri":"sensible,  aware,  mindful","created_at":{"$date":"2019-11-19T13:59:11.872Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe94e"},"name":"constitute","thesauri":"comprise,  constitution","created_at":{"$date":"2019-11-19T13:59:11.875Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe94f"},"name":"consistent","thesauri":"coincide,  accordant","created_at":{"$date":"2019-11-19T13:59:11.877Z"}}
-{"_id":{"$oid":"5dd3f52f8003acab8a2fe950"},"name":"consecutive","thesauri":"coherent,  consequent","created_at":{"$date":"2019-11-19T13:59:11.878Z"}}
-{"_id":{"$oid":"5dd3f52f8003acab8a2fe951"},"name":"congress","created_at":{"$date":"2019-11-19T13:59:11.879Z"}}
+{"_id":{"$oid":"5dd3f52f8003acab8a2fe950"},"name":"consecutive","thesauri":"coherent,  consequent","created_at":{"$date":"2019-11-19T13:59:11.878Z"},"comment":"","updated_at":{"$date":"2019-11-29T16:14:18.947Z"}}
+{"_id":{"$oid":"5dd3f52f8003acab8a2fe951"},"name":"congress","created_at":{"$date":"2019-11-19T13:59:11.879Z"},"similar_shaped_words":"congest, congestion","updated_at":{"$date":"2019-11-30T11:26:36.835Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe952"},"name":"confer","created_at":{"$date":"2019-11-19T13:59:11.881Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe953"},"name":"contract","thesauri":"shrink,  agreement","created_at":{"$date":"2019-11-19T13:59:11.883Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe954"},"name":"contingent","thesauri":"conditional","created_at":{"$date":"2019-11-19T13:59:11.884Z"}}
@@ -102,7 +102,7 @@
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe95d"},"name":"aborigine","thesauri":"origin","created_at":{"$date":"2019-11-19T13:59:11.897Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe95e"},"name":"acclaim","created_at":{"$date":"2019-11-19T13:59:11.898Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe95f"},"name":"accordance","created_at":{"$date":"2019-11-19T13:59:11.899Z"}}
-{"_id":{"$oid":"5dd3f52f8003acab8a2fe960"},"name":"acoustic","created_at":{"$date":"2019-11-19T13:59:11.901Z"},"thesauri":"audio"}
+{"_id":{"$oid":"5dd3f52f8003acab8a2fe960"},"name":"acoustic","created_at":{"$date":"2019-11-19T13:59:11.901Z"},"thesauri":"audio","hardship":6,"updated_at":{"$date":"2019-12-01T13:38:33.861Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe961"},"name":"abrupt","created_at":{"$date":"2019-11-19T13:59:11.902Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe962"},"name":"accuracy","created_at":{"$date":"2019-11-19T13:59:11.903Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe963"},"name":"absence","created_at":{"$date":"2019-11-19T13:59:11.904Z"}}
@@ -110,11 +110,11 @@
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe965"},"name":"admission","created_at":{"$date":"2019-11-19T13:59:11.907Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe966"},"name":"affair","created_at":{"$date":"2019-11-19T13:59:11.908Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe967"},"name":"aerial","created_at":{"$date":"2019-11-19T13:59:11.909Z"}}
-{"_id":{"$oid":"5dd3f52f8003acab8a2fe968"},"name":"advocate","created_at":{"$date":"2019-11-19T13:59:11.911Z"}}
+{"_id":{"$oid":"5dd3f52f8003acab8a2fe968"},"name":"advocate","created_at":{"$date":"2019-11-19T13:59:11.911Z"},"hardship":8,"thesauri":"v. support, recommend;    n. proponent, exponent","updated_at":{"$date":"2019-12-02T04:31:48.098Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe969"},"name":"alley","created_at":{"$date":"2019-11-19T13:59:11.914Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe96a"},"name":"allocate","created_at":{"$date":"2019-11-19T13:59:11.916Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe96b"},"name":"ambiguous","created_at":{"$date":"2019-11-19T13:59:11.917Z"}}
-{"_id":{"$oid":"5dd3f52f8003acab8a2fe96c"},"name":"alien","created_at":{"$date":"2019-11-19T13:59:11.919Z"}}
+{"_id":{"$oid":"5dd3f52f8003acab8a2fe96c"},"name":"alien","created_at":{"$date":"2019-11-19T13:59:11.919Z"},"thesauri":"exotic","updated_at":{"$date":"2019-12-01T12:38:33.557Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe96d"},"name":"allergy","created_at":{"$date":"2019-11-19T13:59:11.92Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe96e"},"name":"amateur","created_at":{"$date":"2019-11-19T13:59:11.923Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe96f"},"name":"approximate","thesauri":"appropriate","created_at":{"$date":"2019-11-19T13:59:11.926Z"}}
@@ -138,15 +138,15 @@
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe981"},"name":"bond","created_at":{"$date":"2019-11-19T13:59:11.952Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe982"},"name":"bias","created_at":{"$date":"2019-11-19T13:59:11.953Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe983"},"name":"boost","created_at":{"$date":"2019-11-19T13:59:11.954Z"}}
-{"_id":{"$oid":"5dd3f52f8003acab8a2fe984"},"name":"bounce","created_at":{"$date":"2019-11-19T13:59:11.956Z"}}
-{"_id":{"$oid":"5dd3f52f8003acab8a2fe985"},"name":"bound","created_at":{"$date":"2019-11-19T13:59:11.958Z"}}
+{"_id":{"$oid":"5dd3f52f8003acab8a2fe984"},"name":"bounce","created_at":{"$date":"2019-11-19T13:59:11.956Z"},"similar_shaped_words":"bound, boundary","updated_at":{"$date":"2019-11-30T02:49:57.911Z"}}
+{"_id":{"$oid":"5dd3f52f8003acab8a2fe985"},"name":"bound","created_at":{"$date":"2019-11-19T13:59:11.958Z"},"related_words":"boundary","similar_shaped_words":"bounce","updated_at":{"$date":"2019-11-30T02:52:32.318Z"},"derivation":"bind"}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe986"},"name":"breed","created_at":{"$date":"2019-11-19T13:59:11.959Z"},"similar_shaped_words":"breeze"}
-{"_id":{"$oid":"5dd3f52f8003acab8a2fe987"},"name":"bribe","created_at":{"$date":"2019-11-19T13:59:11.96Z"}}
+{"_id":{"$oid":"5dd3f52f8003acab8a2fe987"},"name":"bribe","created_at":{"$date":"2019-11-19T13:59:11.96Z"},"similar_shaped_words":"bride","updated_at":{"$date":"2019-11-30T11:21:48.471Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe988"},"name":"bronze","created_at":{"$date":"2019-11-19T13:59:11.961Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe989"},"name":"bud","created_at":{"$date":"2019-11-19T13:59:11.962Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe98a"},"name":"bully","created_at":{"$date":"2019-11-19T13:59:11.964Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe98b"},"name":"bump","thesauri":"crash","created_at":{"$date":"2019-11-19T13:59:11.966Z"}}
-{"_id":{"$oid":"5dd3f52f8003acab8a2fe98c"},"name":"cabin","thesauri":"shed","created_at":{"$date":"2019-11-19T13:59:11.968Z"}}
+{"_id":{"$oid":"5dd3f52f8003acab8a2fe98c"},"name":"cabin","thesauri":"shed","created_at":{"$date":"2019-11-19T13:59:11.968Z"},"related_words":"booth","updated_at":{"$date":"2019-11-30T02:42:20.026Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe98d"},"name":"bumper","created_at":{"$date":"2019-11-19T13:59:11.969Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe98e"},"name":"bureaucratic","created_at":{"$date":"2019-11-19T13:59:11.97Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe98f"},"name":"burst","created_at":{"$date":"2019-11-19T13:59:11.971Z"}}
@@ -155,7 +155,7 @@
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe992"},"name":"cast","created_at":{"$date":"2019-11-19T13:59:11.976Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe993"},"name":"catalogue","created_at":{"$date":"2019-11-19T13:59:11.977Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe994"},"name":"catalyst","created_at":{"$date":"2019-11-19T13:59:11.978Z"}}
-{"_id":{"$oid":"5dd3f52f8003acab8a2fe995"},"name":"cater","created_at":{"$date":"2019-11-19T13:59:11.98Z"}}
+{"_id":{"$oid":"5dd3f52f8003acab8a2fe995"},"name":"cater","created_at":{"$date":"2019-11-19T13:59:11.98Z"},"similar_shaped_words":"crater","updated_at":{"$date":"2019-12-01T13:41:53.083Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe996"},"name":"cathedral","created_at":{"$date":"2019-11-19T13:59:11.982Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe997"},"name":"cement","created_at":{"$date":"2019-11-19T13:59:11.986Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe998"},"name":"ceramic","created_at":{"$date":"2019-11-19T13:59:11.988Z"}}
@@ -166,12 +166,12 @@
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe99d"},"name":"corridor","thesauri":"hall,  hallway","created_at":{"$date":"2019-11-19T13:59:11.998Z"}}
 {"_id":{"$oid":"5dd3f52f8003acab8a2fe99e"},"name":"counsel","thesauri":"recommend,  advice,  suggestion","created_at":{"$date":"2019-11-19T13:59:11.999Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe99f"},"name":"couple","created_at":{"$date":"2019-11-19T13:59:12.001Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2fe9a0"},"name":"cradle","created_at":{"$date":"2019-11-19T13:59:12.002Z"},"comment":"from cradle to grave","related_words":"grave"}
+{"_id":{"$oid":"5dd3f5308003acab8a2fe9a0"},"name":"cradle","created_at":{"$date":"2019-11-19T13:59:12.002Z"},"comment":"from cradle to grave","related_words":"grave","hardship":5,"updated_at":{"$date":"2019-12-01T14:49:13.731Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9a1"},"name":"convict","created_at":{"$date":"2019-11-19T13:59:12.004Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9a2"},"name":"convince","created_at":{"$date":"2019-11-19T13:59:12.006Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9a3"},"name":"crew","thesauri":"staff","created_at":{"$date":"2019-11-19T13:59:12.009Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9a4"},"name":"cruise","thesauri":"voyage,  journey","created_at":{"$date":"2019-11-19T13:59:12.011Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2fe9a5"},"name":"culminate","similar_shaped_words":"accumulate","thesauri":"climax,  peak,  ","created_at":{"$date":"2019-11-19T13:59:12.012Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2fe9a5"},"name":"culminate","similar_shaped_words":"accumulate, terminate, eliminate","thesauri":"climax,  peak,  ","created_at":{"$date":"2019-11-19T13:59:12.012Z"},"related_words":"ultimate","updated_at":{"$date":"2019-12-01T09:23:35.87Z"},"hardship":12}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9a6"},"name":"crucial","thesauri":"decisive","created_at":{"$date":"2019-11-19T13:59:12.013Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9a7"},"name":"cue","created_at":{"$date":"2019-11-19T13:59:12.014Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9a8"},"name":"cube","created_at":{"$date":"2019-11-19T13:59:12.015Z"}}
@@ -215,7 +215,7 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9ce"},"name":"dismantle","created_at":{"$date":"2019-11-19T13:59:12.086Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9cf"},"name":"dramatic","created_at":{"$date":"2019-11-19T13:59:12.087Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9d0"},"name":"disrupt","thesauri":"disturb","created_at":{"$date":"2019-11-19T13:59:12.091Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2fe9d1"},"name":"diminish","thesauri":"dwindle,  decline,  lessen","created_at":{"$date":"2019-11-19T13:59:12.093Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2fe9d1"},"name":"diminish","thesauri":"dwindle,  decline,  lessen","created_at":{"$date":"2019-11-19T13:59:12.093Z"},"hardship":6,"updated_at":{"$date":"2019-12-01T14:02:29.4Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9d2"},"name":"dispute","created_at":{"$date":"2019-11-19T13:59:12.095Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9d3"},"name":"dissolve","created_at":{"$date":"2019-11-19T13:59:12.098Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9d4"},"name":"dispiriting","created_at":{"$date":"2019-11-19T13:59:12.099Z"}}
@@ -234,7 +234,7 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9e1"},"name":"drain","created_at":{"$date":"2019-11-19T13:59:12.125Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9e2"},"name":"ease","created_at":{"$date":"2019-11-19T13:59:12.126Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9e3"},"name":"elaborate","thesauri":"thorough,  delicate,  careful,  conscientious","created_at":{"$date":"2019-11-19T13:59:12.129Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2fe9e4"},"name":"elusive","thesauri":"hard,  tough","created_at":{"$date":"2019-11-19T13:59:12.13Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2fe9e4"},"name":"elusive","thesauri":"hard,  tough","created_at":{"$date":"2019-11-19T13:59:12.13Z"},"related_words":"rough","updated_at":{"$date":"2019-11-29T10:16:56.036Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9e5"},"name":"embark","thesauri":"board,  engage,  dedicate,  imbark","created_at":{"$date":"2019-11-19T13:59:12.132Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9e6"},"name":"endure","thesauri":"bear,  suffer,  tolerate","created_at":{"$date":"2019-11-19T13:59:12.133Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9e7"},"name":"emphasise","created_at":{"$date":"2019-11-19T13:59:12.134Z"}}
@@ -253,7 +253,7 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9f4"},"name":"ethnic","thesauri":"ethnical,  racial","created_at":{"$date":"2019-11-19T13:59:12.16Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9f5"},"name":"evenly","thesauri":"equally","created_at":{"$date":"2019-11-19T13:59:12.162Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9f6"},"name":"eventually","thesauri":"finally,  ultimately","created_at":{"$date":"2019-11-19T13:59:12.163Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2fe9f7"},"name":"exotic","thesauri":"rare,  unusual","created_at":{"$date":"2019-11-19T13:59:12.164Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2fe9f7"},"name":"exotic","thesauri":"rare,  unusual, alien","created_at":{"$date":"2019-11-19T13:59:12.164Z"},"hardship":5,"updated_at":{"$date":"2019-12-01T12:38:12.661Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9f8"},"name":"expedition","thesauri":"travel,  voyage,  exploration","created_at":{"$date":"2019-11-19T13:59:12.166Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9f9"},"name":"expertise","thesauri":"knowledge,  professionalism","created_at":{"$date":"2019-11-19T13:59:12.167Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fe9fa"},"name":"exterior","thesauri":"interior,  outlook,  appearance,  external","created_at":{"$date":"2019-11-19T13:59:12.168Z"}}
@@ -271,7 +271,7 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2fea06"},"name":"haul","created_at":{"$date":"2019-11-19T13:59:12.188Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea07"},"name":"litter","created_at":{"$date":"2019-11-19T13:59:12.19Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea08"},"name":"minor","created_at":{"$date":"2019-11-19T13:59:12.191Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2fea09"},"name":"peer","derivation":"appear","thesauri":"beer,  stare","created_at":{"$date":"2019-11-19T13:59:12.194Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2fea09"},"name":"peer","derivation":"appear","thesauri":"beer,  stare","created_at":{"$date":"2019-11-19T13:59:12.194Z"},"chinese":"","updated_at":{"$date":"2019-11-30T02:59:01.784Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea0a"},"name":"pitch","derivation":"picture","thesauri":"pick,  throw,  degree,  level","created_at":{"$date":"2019-11-19T13:59:12.195Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea0b"},"name":"resort","derivation":"resource","created_at":{"$date":"2019-11-19T13:59:12.196Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea0c"},"name":"shade","derivation":"shadow","similar_shaped_words":"shape","created_at":{"$date":"2019-11-19T13:59:12.198Z"}}
@@ -283,7 +283,7 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2fea12"},"name":"spin","created_at":{"$date":"2019-11-19T13:59:12.208Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea13"},"name":"spring","created_at":{"$date":"2019-11-19T13:59:12.21Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea14"},"name":"fertile","thesauri":"compost","created_at":{"$date":"2019-11-19T13:59:12.212Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2fea15"},"name":"fleet","thesauri":"Armada","created_at":{"$date":"2019-11-19T13:59:12.214Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2fea15"},"name":"fleet","thesauri":"Armada","created_at":{"$date":"2019-11-19T13:59:12.214Z"},"similar_shaped_words":"flee","updated_at":{"$date":"2019-12-02T07:48:15.455Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea16"},"name":"fluctuate","thesauri":"antonymy: consistency","created_at":{"$date":"2019-11-19T13:59:12.215Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea17"},"name":"forage","thesauri":"fodder,  food","created_at":{"$date":"2019-11-19T13:59:12.216Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea18"},"name":"flash","created_at":{"$date":"2019-11-19T13:59:12.218Z"}}
@@ -307,7 +307,7 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2fea2a"},"name":"grind","thesauri":"grind into grain","created_at":{"$date":"2019-11-19T13:59:12.249Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea2b"},"name":"grip","thesauri":"grab,  grasp,  catch,  seize","created_at":{"$date":"2019-11-19T13:59:12.251Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea2c"},"name":"guarantee","thesauri":"warrant","created_at":{"$date":"2019-11-19T13:59:12.252Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2fea2d"},"name":"habitat","derivation":"habit at","thesauri":"ecosystem,  ecology,  inhabitant,  dweller","created_at":{"$date":"2019-11-19T13:59:12.254Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2fea2d"},"name":"habitat","derivation":"habit at","thesauri":"ecosystem,  ecology,  inhabitant,  dweller","created_at":{"$date":"2019-11-19T13:59:12.254Z"},"hardship":8,"updated_at":{"$date":"2019-12-01T14:12:08.38Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea2e"},"name":"hail","derivation":"hello,cry","thesauri":"a hail of bullets,  hail from,  stem from,  come from","created_at":{"$date":"2019-11-19T13:59:12.256Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea2f"},"name":"grain","created_at":{"$date":"2019-11-19T13:59:12.258Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea30"},"name":"halt","derivation":"hold","thesauri":"stop,  pause","created_at":{"$date":"2019-11-19T13:59:12.262Z"}}
@@ -337,16 +337,16 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2fea48"},"name":"indigenous","thesauri":"native,  original,  indigene","created_at":{"$date":"2019-11-19T13:59:12.301Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea49"},"name":"infection","thesauri":"affection,  effect,  influence","created_at":{"$date":"2019-11-19T13:59:12.302Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea4a"},"name":"ingredient","thesauri":"element,  component,  constituent","created_at":{"$date":"2019-11-19T13:59:12.303Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2fea4b"},"name":"inhabit","thesauri":"dwell","created_at":{"$date":"2019-11-19T13:59:12.304Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2fea4b"},"name":"inhabit","thesauri":"dwell","created_at":{"$date":"2019-11-19T13:59:12.304Z"},"similar_shaped_words":"inhibit","updated_at":{"$date":"2019-12-02T09:04:16.327Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea4c"},"name":"inhabitant","created_at":{"$date":"2019-11-19T13:59:12.308Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea4d"},"name":"initial","created_at":{"$date":"2019-11-19T13:59:12.309Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea4e"},"name":"initiate","created_at":{"$date":"2019-11-19T13:59:12.311Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea4f"},"name":"innocent","thesauri":"naive,  not guilty","created_at":{"$date":"2019-11-19T13:59:12.314Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2fea50"},"name":"inquiry","derivation":"into quest","thesauri":"investigation,  enquiry","created_at":{"$date":"2019-11-19T13:59:12.315Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2fea50"},"name":"inquiry","derivation":"into quest","thesauri":"investigation,  enquiry","created_at":{"$date":"2019-11-19T13:59:12.315Z"},"similar_shaped_words":"require","updated_at":{"$date":"2019-12-01T14:46:27.61Z"},"hardship":7}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea51"},"name":"insight","thesauri":"perception,  notion,  idea","created_at":{"$date":"2019-11-19T13:59:12.316Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea52"},"name":"inspection","thesauri":"checking,  examination","created_at":{"$date":"2019-11-19T13:59:12.318Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea53"},"name":"instantly","thesauri":"immediately,  promptly,  at once","created_at":{"$date":"2019-11-19T13:59:12.319Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2fea54"},"name":"instinct","thesauri":"intuition,  natural ability","created_at":{"$date":"2019-11-19T13:59:12.32Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2fea54"},"name":"instinct","thesauri":"intuition,  natural ability","created_at":{"$date":"2019-11-19T13:59:12.32Z"},"hardship":8,"updated_at":{"$date":"2019-12-01T07:40:19.517Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea55"},"name":"institute","thesauri":"establish,  start,  MIT","created_at":{"$date":"2019-11-19T13:59:12.322Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea56"},"name":"instruction","thesauri":"teaching,  guide,  coaching","created_at":{"$date":"2019-11-19T13:59:12.326Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea57"},"name":"instrument","thesauri":"surgical instruments,  stringed instruments","created_at":{"$date":"2019-11-19T13:59:12.327Z"}}
@@ -398,7 +398,7 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2fea86"},"name":"plain","thesauri":"simple,  unadorned,  frugal","created_at":{"$date":"2019-11-19T13:59:12.409Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea87"},"name":"plausible","derivation":"possible","thesauri":"believable,  paradoxical,  implausible","created_at":{"$date":"2019-11-19T13:59:12.411Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea88"},"name":"plot","derivation":"plan","thesauri":"storyline,  drama,  mark","created_at":{"$date":"2019-11-19T13:59:12.412Z"},"similar_shaped_words":"spot"}
-{"_id":{"$oid":"5dd3f5308003acab8a2fea89"},"name":"plough","derivation":"cow","thesauri":"plow","created_at":{"$date":"2019-11-19T13:59:12.414Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2fea89"},"name":"plough","derivation":"cow","thesauri":"plow","created_at":{"$date":"2019-11-19T13:59:12.414Z"},"hardship":2,"updated_at":{"$date":"2019-12-01T05:13:22.683Z"},"similar_shaped_words":"clown"}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea8a"},"name":"pilot","created_at":{"$date":"2019-11-19T13:59:12.415Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea8b"},"name":"pole","created_at":{"$date":"2019-11-19T13:59:12.416Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea8c"},"name":"pop","thesauri":"pop up,  pop music","created_at":{"$date":"2019-11-19T13:59:12.42Z"}}
@@ -419,7 +419,7 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2fea9b"},"name":"radioactive","created_at":{"$date":"2019-11-19T13:59:12.445Z"},"related_words":"radiation"}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea9c"},"name":"realism","created_at":{"$date":"2019-11-19T13:59:12.447Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea9d"},"name":"retail","derivation":"re tail","thesauri":"tailor","created_at":{"$date":"2019-11-19T13:59:12.45Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2fea9e"},"name":"reveal","derivation":"view","thesauri":"disclose,  show,  indicate,  illustrate","created_at":{"$date":"2019-11-19T13:59:12.451Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2fea9e"},"name":"reveal","derivation":"view","thesauri":"disclose,  show,  indicate,  illustrate","created_at":{"$date":"2019-11-19T13:59:12.451Z"},"related_words":"conceal","updated_at":{"$date":"2019-11-29T09:56:51.553Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fea9f"},"name":"reverse","similar_shaped_words":"revert, divert, diverse","created_at":{"$date":"2019-11-19T13:59:12.452Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaa0"},"name":"rival","thesauri":"competitor,  counterpart,  match,  equal","created_at":{"$date":"2019-11-19T13:59:12.454Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaa1"},"name":"royal","thesauri":"loyal,  regal,  imperial","created_at":{"$date":"2019-11-19T13:59:12.455Z"}}
@@ -430,7 +430,7 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2feaa6"},"name":"sensation","derivation":"sense","thesauri":"stir,  blockbuster","created_at":{"$date":"2019-11-19T13:59:12.464Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaa7"},"name":"sensible","thesauri":"useful,  helpful,  practical","created_at":{"$date":"2019-11-19T13:59:12.465Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaa8"},"name":"sheer","derivation":"sharp","similar_shaped_words":"sheep","thesauri":"steep,  utter,  ","created_at":{"$date":"2019-11-19T13:59:12.467Z"},"comment":"sheer cliff"}
-{"_id":{"$oid":"5dd3f5308003acab8a2feaa9"},"name":"shuttle","thesauri":"shutter","created_at":{"$date":"2019-11-19T13:59:12.469Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feaa9"},"name":"shuttle","thesauri":"","created_at":{"$date":"2019-11-19T13:59:12.469Z"},"related_words":"commute","similar_shaped_words":"shutter, shatter","updated_at":{"$date":"2019-11-29T09:48:17.272Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaaa"},"name":"skeleton","thesauri":"frame,  outline,  sketch,  skeptical","created_at":{"$date":"2019-11-19T13:59:12.47Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaab"},"name":"slip","thesauri":"slide","created_at":{"$date":"2019-11-19T13:59:12.473Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaac"},"name":"sole","similar_shaped_words":"role, pole","thesauri":"unique,  only,  single,  exclude,  ","created_at":{"$date":"2019-11-19T13:59:12.476Z"}}
@@ -438,13 +438,13 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2feaae"},"name":"shelf","created_at":{"$date":"2019-11-19T13:59:12.478Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaaf"},"name":"snap","created_at":{"$date":"2019-11-19T13:59:12.48Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feab0"},"name":"spectrum","created_at":{"$date":"2019-11-19T13:59:12.481Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feab1"},"name":"struggle","thesauri":"endeavor","created_at":{"$date":"2019-11-19T13:59:12.484Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feab1"},"name":"struggle","thesauri":"endeavor","created_at":{"$date":"2019-11-19T13:59:12.484Z"},"similar_shaped_words":"strive, strike","updated_at":{"$date":"2019-11-30T02:16:26.009Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feab2"},"name":"suffer","thesauri":"endure,  bear","created_at":{"$date":"2019-11-19T13:59:12.485Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feab3"},"name":"sum","thesauri":"gross","created_at":{"$date":"2019-11-19T13:59:12.486Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feab4"},"name":"swan","thesauri":"black swan","created_at":{"$date":"2019-11-19T13:59:12.487Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feab5"},"name":"statistics","created_at":{"$date":"2019-11-19T13:59:12.489Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feab6"},"name":"strand","created_at":{"$date":"2019-11-19T13:59:12.49Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feab7"},"name":"stretch","created_at":{"$date":"2019-11-19T13:59:12.492Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feab7"},"name":"stretch","created_at":{"$date":"2019-11-19T13:59:12.492Z"},"similar_shaped_words":"scratch","updated_at":{"$date":"2019-12-01T15:16:13.829Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feab8"},"name":"synthesis","thesauri":"combination,  mixture,  compound","created_at":{"$date":"2019-11-19T13:59:12.496Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feab9"},"name":"tablet","thesauri":"slab,  plaque,  pill,  capsule","created_at":{"$date":"2019-11-19T13:59:12.497Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaba"},"name":"tap","thesauri":"faucet,  knock,  pat,  slap,  exploit","created_at":{"$date":"2019-11-19T13:59:12.498Z"}}
@@ -453,9 +453,9 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2feabd"},"name":"theatre","thesauri":"theater, playhouse,  stage,  hall,  scene","created_at":{"$date":"2019-11-19T13:59:12.502Z"},"similar_shaped_words":"threat, threaten"}
 {"_id":{"$oid":"5dd3f5308003acab8a2feabe"},"name":"tone","similar_shaped_words":"toe","thesauri":"timbre,  mood,  ","created_at":{"$date":"2019-11-19T13:59:12.503Z"},"related_words":"accent"}
 {"_id":{"$oid":"5dd3f5308003acab8a2feabf"},"name":"tongue","derivation":"tone","created_at":{"$date":"2019-11-19T13:59:12.504Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feac0"},"name":"temporal","created_at":{"$date":"2019-11-19T13:59:12.507Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feac0"},"name":"temporal","created_at":{"$date":"2019-11-19T13:59:12.507Z"},"thesauri":"profane","updated_at":{"$date":"2019-12-02T06:39:08.757Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feac1"},"name":"transmit","thesauri":"transfer,  transport,  convey","created_at":{"$date":"2019-11-19T13:59:12.511Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feac2"},"name":"trek","derivation":"track","thesauri":"tramp,  journey,  expedition,  voyage","created_at":{"$date":"2019-11-19T13:59:12.512Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feac2"},"name":"trek","derivation":"track","thesauri":"tramp,  journey,  expedition,  voyage","created_at":{"$date":"2019-11-19T13:59:12.512Z"},"updated_at":{"$date":"2019-12-01T13:17:31.77Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feac3"},"name":"tune","derivation":"turn","similar_shaped_words":"tone","created_at":{"$date":"2019-11-19T13:59:12.514Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feac4"},"name":"tunnel","similar_shaped_words":"funnel","created_at":{"$date":"2019-11-19T13:59:12.515Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feac5"},"name":"verbal","thesauri":"oral,  spoken","created_at":{"$date":"2019-11-19T13:59:12.518Z"}}
@@ -466,10 +466,10 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2feaca"},"name":"venture","created_at":{"$date":"2019-11-19T13:59:12.526Z"},"related_words":"adventure"}
 {"_id":{"$oid":"5dd3f5308003acab8a2feacb"},"name":"witness","created_at":{"$date":"2019-11-19T13:59:12.527Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feacc"},"name":"accumulate","thesauri":"pile up,  collect,  amass","created_at":{"$date":"2019-11-19T13:59:12.531Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feacd"},"name":"aesthetic","thesauri":"artistic,  tasteful","created_at":{"$date":"2019-11-19T13:59:12.533Z"},"derivation":"a+esthe(sense)+tic"}
+{"_id":{"$oid":"5dd3f5308003acab8a2feacd"},"name":"aesthetic","thesauri":"artistic,  tasteful","created_at":{"$date":"2019-11-19T13:59:12.533Z"},"derivation":"a+esthe(sense)+tic","hardship":14,"updated_at":{"$date":"2019-12-02T08:26:10.992Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feace"},"name":"afflict","thesauri":"bother,  burden,  distress","created_at":{"$date":"2019-11-19T13:59:12.534Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feacf"},"name":"agenda","thesauri":"schedule","created_at":{"$date":"2019-11-19T13:59:12.536Z"},"similar_shaped_words":"agency, agent"}
-{"_id":{"$oid":"5dd3f5308003acab8a2fead0"},"name":"airborne","thesauri":"flying","created_at":{"$date":"2019-11-19T13:59:12.537Z"},"related_words":"airy"}
+{"_id":{"$oid":"5dd3f5308003acab8a2fead0"},"name":"airborne","thesauri":"flying","created_at":{"$date":"2019-11-19T13:59:12.537Z"},"related_words":"airy, disperse, disseminate","updated_at":{"$date":"2019-12-01T07:59:13.604Z"},"hardship":10}
 {"_id":{"$oid":"5dd3f5308003acab8a2fead1"},"name":"acid","created_at":{"$date":"2019-11-19T13:59:12.538Z"},"similar_shaped_words":"aid, accident"}
 {"_id":{"$oid":"5dd3f5308003acab8a2fead2"},"name":"alga","thesauri":"algae","created_at":{"$date":"2019-11-19T13:59:12.544Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2fead3"},"name":"amass","thesauri":"accumulate","created_at":{"$date":"2019-11-19T13:59:12.545Z"}}
@@ -490,7 +490,7 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2feae2"},"name":"apparatus","thesauri":"equipment,  tackle","created_at":{"$date":"2019-11-19T13:59:12.572Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feae3"},"name":"anniversary","created_at":{"$date":"2019-11-19T13:59:12.573Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feae4"},"name":"appeasement","derivation":"ap+pease+ment","thesauri":"appeasement policy","created_at":{"$date":"2019-11-19T13:59:12.579Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feae5"},"name":"appliance","derivation":"apply+ance","thesauri":"machine,  instrument","created_at":{"$date":"2019-11-19T13:59:12.581Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feae5"},"name":"appliance","derivation":"apply+ance","thesauri":"equipment, machine,  instrument","created_at":{"$date":"2019-11-19T13:59:12.581Z"},"hardship":5,"updated_at":{"$date":"2019-12-01T05:05:59.973Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feae6"},"name":"apprentice","thesauri":"trainee,  novice,  pupil","created_at":{"$date":"2019-11-19T13:59:12.582Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feae7"},"name":"aptitude","thesauri":"talent,  gift","created_at":{"$date":"2019-11-19T13:59:12.584Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feae8"},"name":"archaeology","derivation":"arch+aeo+logy","created_at":{"$date":"2019-11-19T13:59:12.585Z"},"similar_shaped_words":"architecture"}
@@ -502,14 +502,14 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2feaee"},"name":"ascertain","thesauri":"deduce,  discover","created_at":{"$date":"2019-11-19T13:59:12.595Z"},"derivation":"as(strengthen) + certain","similar_shaped_words":"reassure"}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaef"},"name":"ascribe","similar_shaped_words":"describe, prescribe","thesauri":"attribute,  ","created_at":{"$date":"2019-11-19T13:59:12.597Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaf0"},"name":"ashamed","derivation":"shame","thesauri":"guilty,  embarrassed","created_at":{"$date":"2019-11-19T13:59:12.599Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feaf1"},"name":"aspiration","thesauri":"desire,  yearning,  ambition","created_at":{"$date":"2019-11-19T13:59:12.6Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feaf1"},"name":"aspiration","thesauri":"desire,  yearning,  ambition","created_at":{"$date":"2019-11-19T13:59:12.6Z"},"hardship":8,"updated_at":{"$date":"2019-12-02T09:08:59.093Z"},"similar_shaped_words":"inspiration"}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaf2"},"name":"astonishing","thesauri":"amazing,  astounding","created_at":{"$date":"2019-11-19T13:59:12.602Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaf3"},"name":"attainment","thesauri":"achievement","created_at":{"$date":"2019-11-19T13:59:12.603Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaf4"},"name":"attendance","thesauri":"participation","created_at":{"$date":"2019-11-19T13:59:12.604Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaf5"},"name":"ash","created_at":{"$date":"2019-11-19T13:59:12.606Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaf6"},"name":"assert","created_at":{"$date":"2019-11-19T13:59:12.61Z"},"similar_shaped_words":"assess"}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaf7"},"name":"attachment","created_at":{"$date":"2019-11-19T13:59:12.611Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feaf8"},"name":"audio","thesauri":"auditory,  acoustic","created_at":{"$date":"2019-11-19T13:59:12.614Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feaf8"},"name":"audio","thesauri":"auditory,  acoustic","created_at":{"$date":"2019-11-19T13:59:12.614Z"},"similar_shaped_words":"audit, adult","updated_at":{"$date":"2019-12-01T13:38:20.436Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feaf9"},"name":"authentic","thesauri":"genuine,  valid","created_at":{"$date":"2019-11-19T13:59:12.615Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feafa"},"name":"autonomy","thesauri":"self government,  independence","created_at":{"$date":"2019-11-19T13:59:12.616Z"},"chinese":"自治","derivation":"auto(by oneself) + nom(norm, law) + y","comment":"香港自治"}
 {"_id":{"$oid":"5dd3f5308003acab8a2feafb"},"name":"aviation","thesauri":"flight,  piloting","created_at":{"$date":"2019-11-19T13:59:12.618Z"}}
@@ -534,25 +534,25 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2feb0e"},"name":"blur","derivation":"blue","similar_shaped_words":"fur","created_at":{"$date":"2019-11-19T13:59:12.647Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb0f"},"name":"bombard","derivation":"bomb","thesauri":"assail,  assault,  strike","created_at":{"$date":"2019-11-19T13:59:12.649Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb10"},"name":"bonus","thesauri":"perk,  benefit,  allowance","created_at":{"$date":"2019-11-19T13:59:12.65Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb11"},"name":"booth","derivation":"boot","created_at":{"$date":"2019-11-19T13:59:12.651Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb11"},"name":"booth","derivation":"boot","created_at":{"$date":"2019-11-19T13:59:12.651Z"},"related_words":"cabin","updated_at":{"$date":"2019-11-30T02:42:41.693Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb12"},"name":"botanist","derivation":"botany","created_at":{"$date":"2019-11-19T13:59:12.652Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb13"},"name":"beneficiary","created_at":{"$date":"2019-11-19T13:59:12.653Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb14"},"name":"biographer","created_at":{"$date":"2019-11-19T13:59:12.655Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb14"},"name":"biographer","created_at":{"$date":"2019-11-19T13:59:12.655Z"},"similar_shaped_words":"biology","updated_at":{"$date":"2019-11-30T02:45:23.469Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb15"},"name":"boundary","derivation":"bound","similar_shaped_words":"bundle, bunch","thesauri":"border,  edge,  frontier,  ","created_at":{"$date":"2019-11-19T13:59:12.659Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb16"},"name":"brew","derivation":"grow","created_at":{"$date":"2019-11-19T13:59:12.661Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb17"},"name":"brick","thesauri":"block,  firebrick,  adobe","created_at":{"$date":"2019-11-19T13:59:12.662Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb18"},"name":"brochure","thesauri":"booklet,  pamphlet,  leaflet","created_at":{"$date":"2019-11-19T13:59:12.664Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb19"},"name":"browse","thesauri":"graze","created_at":{"$date":"2019-11-19T13:59:12.665Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb19"},"name":"browse","thesauri":"graze","created_at":{"$date":"2019-11-19T13:59:12.665Z"},"related_words":"browser","updated_at":{"$date":"2019-11-30T03:09:15.605Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb1a"},"name":"Buddhism","derivation":"buddha","created_at":{"$date":"2019-11-19T13:59:12.666Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb1b"},"name":"buffet","thesauri":"smorgasbord,  selfServe","created_at":{"$date":"2019-11-19T13:59:12.667Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb1c"},"name":"bulk","derivation":"bucket","thesauri":"majority","created_at":{"$date":"2019-11-19T13:59:12.668Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb1b"},"name":"buffet","thesauri":"smorgasbord,  self serve","created_at":{"$date":"2019-11-19T13:59:12.667Z"},"derivation":"buffet(\"不费\")","updated_at":{"$date":"2019-11-30T03:01:38.404Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb1c"},"name":"bulk","derivation":"bucket","thesauri":"majority","created_at":{"$date":"2019-11-19T13:59:12.668Z"},"similar_shaped_words":"bulb","updated_at":{"$date":"2019-11-30T03:04:21.78Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb1d"},"name":"bulletin","derivation":"bullet in","thesauri":"bulletin board","created_at":{"$date":"2019-11-19T13:59:12.669Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb1e"},"name":"bulb","created_at":{"$date":"2019-11-19T13:59:12.67Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb1f"},"name":"burglar","thesauri":"Hamburg,  ","created_at":{"$date":"2019-11-19T13:59:12.675Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb20"},"name":"burial","derivation":"bury","thesauri":"interment","created_at":{"$date":"2019-11-19T13:59:12.677Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb1e"},"name":"bulb","created_at":{"$date":"2019-11-19T13:59:12.67Z"},"similar_shaped_words":"bulk","updated_at":{"$date":"2019-11-30T03:03:24.359Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb1f"},"name":"burglar","thesauri":"Hamburg,  ","created_at":{"$date":"2019-11-19T13:59:12.675Z"},"related_words":"burgle","updated_at":{"$date":"2019-11-30T09:38:35.54Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb20"},"name":"burial","derivation":"bury","thesauri":"interment, entombment","created_at":{"$date":"2019-11-19T13:59:12.677Z"},"updated_at":{"$date":"2019-11-30T03:56:08.484Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb21"},"name":"cab","derivation":"carriage","similar_shaped_words":"cap","thesauri":"cabin,  ","created_at":{"$date":"2019-11-19T13:59:12.678Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb22"},"name":"cabinet","thesauri":"cabin,  shed","created_at":{"$date":"2019-11-19T13:59:12.679Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb23"},"name":"canal","derivation":"channel","created_at":{"$date":"2019-11-19T13:59:12.681Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb23"},"name":"canal","derivation":"channel","created_at":{"$date":"2019-11-19T13:59:12.681Z"},"related_words":"irrigate","updated_at":{"$date":"2019-11-30T04:04:08.749Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb24"},"name":"candidate","derivation":"candid","created_at":{"$date":"2019-11-19T13:59:12.682Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb25"},"name":"canteen","derivation":"can+teen","created_at":{"$date":"2019-11-19T13:59:12.683Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb26"},"name":"bush","created_at":{"$date":"2019-11-19T13:59:12.684Z"}}
@@ -561,11 +561,11 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2feb29"},"name":"capsule","derivation":"cpas","thesauri":"pill,  tablet","created_at":{"$date":"2019-11-19T13:59:12.691Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb2a"},"name":"carbohydrate","derivation":"carbo+hydrate","created_at":{"$date":"2019-11-19T13:59:12.693Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb2b"},"name":"cassette","derivation":"case+set","thesauri":"recorder","created_at":{"$date":"2019-11-19T13:59:12.694Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb2c"},"name":"casualty","derivation":"casual","thesauri":"victim,  fatality","created_at":{"$date":"2019-11-19T13:59:12.696Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb2c"},"name":"casualty","derivation":"casual","thesauri":"victim,  fatality, toll","created_at":{"$date":"2019-11-19T13:59:12.696Z"},"updated_at":{"$date":"2019-11-30T16:10:00.948Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb2d"},"name":"categorise","derivation":"category","thesauri":"classify","created_at":{"$date":"2019-11-19T13:59:12.697Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb2e"},"name":"cavern","derivation":"cave","thesauri":"cavity","created_at":{"$date":"2019-11-19T13:59:12.698Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb2f"},"name":"cease","derivation":"cede","thesauri":"stop,  pause","created_at":{"$date":"2019-11-19T13:59:12.7Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb30"},"name":"census","thesauri":"inspectation,  demographic","created_at":{"$date":"2019-11-19T13:59:12.701Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb30"},"name":"census","thesauri":"inspectation,  demographic","created_at":{"$date":"2019-11-19T13:59:12.701Z"},"related_words":"censor","similar_shaped_words":"censure","updated_at":{"$date":"2019-12-02T08:20:57.752Z"},"hardship":10}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb31"},"name":"cereal","thesauri":"grain,  crop","created_at":{"$date":"2019-11-19T13:59:12.702Z"},"derivation":"ce(cell) + real -> 为细胞提供养分的"}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb32"},"name":"ceremony","created_at":{"$date":"2019-11-19T13:59:12.704Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb33"},"name":"certify","created_at":{"$date":"2019-11-19T13:59:12.705Z"},"thesauri":"qualify"}
@@ -578,8 +578,8 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2feb3a"},"name":"civic","derivation":"city","similar_shaped_words":"civil","thesauri":"urban,  ","created_at":{"$date":"2019-11-19T13:59:12.717Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb3b"},"name":"clarity","derivation":"clear","created_at":{"$date":"2019-11-19T13:59:12.718Z"},"similar_shaped_words":"charity"}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb3c"},"name":"clash","derivation":"crash","thesauri":"crush,  confrontation,  skirmish,  fight","created_at":{"$date":"2019-11-19T13:59:12.719Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb3d"},"name":"cliff","derivation":"climb","created_at":{"$date":"2019-11-19T13:59:12.721Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb3e"},"name":"clown","derivation":"clumsy","thesauri":"comedian,  jester,  comic","created_at":{"$date":"2019-11-19T13:59:12.723Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb3d"},"name":"cliff","derivation":"climb","created_at":{"$date":"2019-11-19T13:59:12.721Z"},"similar_shaped_words":"stiff","updated_at":{"$date":"2019-11-29T16:02:27.354Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb3e"},"name":"clown","derivation":"clumsy","thesauri":"comedian,  jester,  comic","created_at":{"$date":"2019-11-19T13:59:12.723Z"},"hardship":1,"updated_at":{"$date":"2019-12-01T05:12:53.77Z"},"similar_shaped_words":"plow"}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb3f"},"name":"clue","thesauri":"cue,  hint","created_at":{"$date":"2019-11-19T13:59:12.724Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb40"},"name":"coarse","derivation":"cough","thesauri":"rough,  scratchy","created_at":{"$date":"2019-11-19T13:59:12.726Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb41"},"name":"coexist","derivation":"co+exist","created_at":{"$date":"2019-11-19T13:59:12.728Z"}}
@@ -587,42 +587,42 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2feb43"},"name":"cohesion","thesauri":"unity,  solidarity,  coherence","created_at":{"$date":"2019-11-19T13:59:12.732Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb44"},"name":"coil","derivation":"c+oil","thesauri":"loop,  twist,  curl,  spiral","created_at":{"$date":"2019-11-19T13:59:12.733Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb45"},"name":"collaborate","thesauri":"cooperate","created_at":{"$date":"2019-11-19T13:59:12.734Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb46"},"name":"collate","thesauri":"collect,  accumulate,  compare,  revise","created_at":{"$date":"2019-11-19T13:59:12.736Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb46"},"name":"collate","thesauri":"collect,  accumulate,  compare,  revise","created_at":{"$date":"2019-11-19T13:59:12.736Z"},"updated_at":{"$date":"2019-12-01T12:57:53.303Z"},"hardship":11}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb47"},"name":"collision","derivation":"collide","related_words":"crash, bump, wreck","thesauri":"clash","created_at":{"$date":"2019-11-19T13:59:12.737Z"},"similar_shaped_words":"collapse, corruption"}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb48"},"name":"comedy","thesauri":"satire","created_at":{"$date":"2019-11-19T13:59:12.738Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb49"},"name":"commence","thesauri":"begin,  start,  embark on,  launch","created_at":{"$date":"2019-11-19T13:59:12.741Z"},"similar_shaped_words":"commerce","updated_at":{"$date":"2019-11-29T09:36:54.467Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb4a"},"name":"commentary","derivation":"comment","created_at":{"$date":"2019-11-19T13:59:12.743Z"},"thesauri":"narration, report, explanation, explication, elucidation","updated_at":{"$date":"2019-11-29T09:31:53.411Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb4b"},"name":"commerce","derivation":"com+merchant","thesauri":"trade,  business","created_at":{"$date":"2019-11-19T13:59:12.744Z"},"similar_shaped_words":"commence","updated_at":{"$date":"2019-11-29T09:37:10.695Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb4c"},"name":"commodity","derivation":"common thing","thesauri":"goods,  product","created_at":{"$date":"2019-11-19T13:59:12.747Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb4c"},"name":"commodity","derivation":"common thing","thesauri":"goods,  product, freight","created_at":{"$date":"2019-11-19T13:59:12.747Z"},"updated_at":{"$date":"2019-12-01T12:11:46.191Z"},"hardship":11}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb4d"},"name":"commonplace","thesauri":"banal,  ordinary,  usual","created_at":{"$date":"2019-11-19T13:59:12.748Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb4e"},"name":"commute","similar_shaped_words":"mutual","thesauri":"shuttle,  travle,  lessen,  lighten,  ","created_at":{"$date":"2019-11-19T13:59:12.75Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb4e"},"name":"commute","similar_shaped_words":"mutual","thesauri":"shuttle,  travel,  lessen,  lighten,  ","created_at":{"$date":"2019-11-19T13:59:12.75Z"},"comment":"","derivation":"com(common) + mute(move)","updated_at":{"$date":"2019-11-29T09:47:16.682Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb4f"},"name":"compass","thesauri":"scope,  range,  magnetic compass","created_at":{"$date":"2019-11-19T13:59:12.751Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb50"},"name":"compassionate","derivation":"com+passion+ate","created_at":{"$date":"2019-11-19T13:59:12.752Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb51"},"name":"compatible","thesauri":"wellMatched,  reconcilable","created_at":{"$date":"2019-11-19T13:59:12.753Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb52"},"name":"compensate","derivation":"com+pens(spend)+ate","thesauri":"counteract,  recompense","created_at":{"$date":"2019-11-19T13:59:12.755Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb50"},"name":"compassionate","derivation":"com+passion+ate","created_at":{"$date":"2019-11-19T13:59:12.752Z"},"thesauri":"pitying, sympathetic, empathetic","updated_at":{"$date":"2019-11-29T09:53:14.625Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb51"},"name":"compatible","thesauri":"well matched,  reconcilable","created_at":{"$date":"2019-11-19T13:59:12.753Z"},"updated_at":{"$date":"2019-11-29T09:59:03.102Z"},"similar_shaped_words":"compact, impact","related_words":"compatibility"}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb52"},"name":"compensate","derivation":"com+pens(spend)+ate","thesauri":"counteract,  recompense","created_at":{"$date":"2019-11-19T13:59:12.755Z"},"similar_shaped_words":"pension","updated_at":{"$date":"2019-11-29T10:01:11.183Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb53"},"name":"compile","thesauri":"compose,  edit","created_at":{"$date":"2019-11-19T13:59:12.757Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb54"},"name":"complain","derivation":"com+pla(gue)+n","similar_shaped_words":"explain","thesauri":"lament,  grumble,  ","created_at":{"$date":"2019-11-19T13:59:12.758Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb55"},"name":"complement","derivation":"comple(te)+ment","similar_shaped_words":"implement","thesauri":"supplement,  ","created_at":{"$date":"2019-11-19T13:59:12.76Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb55"},"name":"complement","derivation":"comple(te)+ment","similar_shaped_words":"implement","thesauri":"supplement,  ","created_at":{"$date":"2019-11-19T13:59:12.76Z"},"related_words":"replenish","updated_at":{"$date":"2019-11-29T10:02:36.932Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb56"},"name":"comply","derivation":"com+ply(fold, bend)","thesauri":"obey,  conform","created_at":{"$date":"2019-11-19T13:59:12.763Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb57"},"name":"component","thesauri":"constitue","created_at":{"$date":"2019-11-19T13:59:12.764Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb58"},"name":"composition","derivation":"compose","created_at":{"$date":"2019-11-19T13:59:12.765Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb59"},"name":"comprehend","thesauri":"understand,  apprehend","created_at":{"$date":"2019-11-19T13:59:12.767Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb5a"},"name":"compression","derivation":"com+press+ion","created_at":{"$date":"2019-11-19T13:59:12.768Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb5a"},"name":"compression","derivation":"com+press+ion","created_at":{"$date":"2019-11-19T13:59:12.768Z"},"related_words":"condense","updated_at":{"$date":"2019-11-29T14:36:44.845Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb5b"},"name":"conceal","derivation":"con+ceal(seal)","thesauri":"hide,  disguise,  反: reveal","created_at":{"$date":"2019-11-19T13:59:12.769Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb5c"},"name":"conceive","derivation":"con+ceive","thesauri":"compose,  pregnant","created_at":{"$date":"2019-11-19T13:59:12.77Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb5d"},"name":"concur","thesauri":"agree","created_at":{"$date":"2019-11-19T13:59:12.772Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb5c"},"name":"conceive","derivation":"con+ceive","thesauri":"compose,  pregnant","created_at":{"$date":"2019-11-19T13:59:12.77Z"},"hardship":11,"related_words":"conception","updated_at":{"$date":"2019-12-02T08:31:22.139Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb5d"},"name":"concur","thesauri":"agree, consent, support, approve","created_at":{"$date":"2019-11-19T13:59:12.772Z"},"similar_shaped_words":"occur","updated_at":{"$date":"2019-11-30T01:58:00.308Z"},"related_words":""}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb5e"},"name":"condemn","thesauri":"denounce,  convict,  sentence","created_at":{"$date":"2019-11-19T13:59:12.775Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb5f"},"name":"complexity","created_at":{"$date":"2019-11-19T13:59:12.777Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb60"},"name":"condense","thesauri":"congeal","created_at":{"$date":"2019-11-19T13:59:12.781Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb60"},"name":"condense","thesauri":"congeal","created_at":{"$date":"2019-11-19T13:59:12.781Z"},"related_words":"compress","updated_at":{"$date":"2019-11-29T14:36:21.788Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb61"},"name":"confine","derivation":"con+fine(罚款)","thesauri":"limit,  circumscribe,  restrict","created_at":{"$date":"2019-11-19T13:59:12.783Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb62"},"name":"confirm","thesauri":"prove,  verify","created_at":{"$date":"2019-11-19T13:59:12.785Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb63"},"name":"conform","thesauri":"comply,  adapt","created_at":{"$date":"2019-11-19T13:59:12.786Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb64"},"name":"confront","thesauri":"encounter,  face","created_at":{"$date":"2019-11-19T13:59:12.787Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb65"},"name":"congestion","thesauri":"crowding,  jam","created_at":{"$date":"2019-11-19T13:59:12.788Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb64"},"name":"confront","thesauri":"encounter,  face","created_at":{"$date":"2019-11-19T13:59:12.787Z"},"related_words":"undergo","updated_at":{"$date":"2019-11-30T16:36:11.346Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb65"},"name":"congestion","thesauri":"crowding,  jam","created_at":{"$date":"2019-11-19T13:59:12.788Z"},"derivation":"congest + ion","updated_at":{"$date":"2019-11-30T11:24:43.901Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb66"},"name":"conjunction","derivation":"junction","thesauri":"alignment","created_at":{"$date":"2019-11-19T13:59:12.79Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb67"},"name":"consensus","derivation":"consent","thesauri":"accordance,  agreement","created_at":{"$date":"2019-11-19T13:59:12.793Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb68"},"name":"consequent","thesauri":"resultant","created_at":{"$date":"2019-11-19T13:59:12.794Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb69"},"name":"consist","thesauri":"compose","created_at":{"$date":"2019-11-19T13:59:12.795Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb68"},"name":"consequent","thesauri":"resultant","created_at":{"$date":"2019-11-19T13:59:12.794Z"},"comment":"The firm's closure was consequent on its heavy loss.","related_words":"subsequent","similar_shaped_words":"","updated_at":{"$date":"2019-11-29T16:15:24.316Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb69"},"name":"consist","thesauri":"compose","created_at":{"$date":"2019-11-19T13:59:12.795Z"},"similar_shaped_words":"resist, insist, persist","updated_at":{"$date":"2019-11-30T02:01:17.408Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb6a"},"name":"conspicuous","derivation":"spi","thesauri":"perceptive,  noticeable,  discernible","created_at":{"$date":"2019-11-19T13:59:12.798Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb6b"},"name":"contend","thesauri":"fight,  compete,  attend,  assert","created_at":{"$date":"2019-11-19T13:59:12.799Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb6c"},"name":"controversial","thesauri":"debatable","created_at":{"$date":"2019-11-19T13:59:12.8Z"}}
@@ -630,27 +630,27 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2feb6e"},"name":"coordinate","thesauri":"integrate,  harmonize,  cooperate","created_at":{"$date":"2019-11-19T13:59:12.802Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb6f"},"name":"cornerstone","thesauri":"keystone,  foundation","created_at":{"$date":"2019-11-19T13:59:12.804Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb70"},"name":"continuous","created_at":{"$date":"2019-11-19T13:59:12.806Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb71"},"name":"corporation","created_at":{"$date":"2019-11-19T13:59:12.81Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb72"},"name":"correlation","derivation":"correct","thesauri":"association","created_at":{"$date":"2019-11-19T13:59:12.814Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb71"},"name":"corporation","created_at":{"$date":"2019-11-19T13:59:12.81Z"},"chinese":"n. 大公司，市政委员会，大肚腩","updated_at":{"$date":"2019-11-30T09:48:14.54Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb72"},"name":"correlation","derivation":"cor(con, 共同，相互) + relation","thesauri":"relate, relevant, association","created_at":{"$date":"2019-11-19T13:59:12.814Z"},"similar_shaped_words":"correct","updated_at":{"$date":"2019-11-30T11:19:43.404Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb73"},"name":"correspond","thesauri":"coincide,  be consist of,  match up","created_at":{"$date":"2019-11-19T13:59:12.815Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb74"},"name":"council","similar_shaped_words":"counsel","thesauri":"committee,  congress,  ","created_at":{"$date":"2019-11-19T13:59:12.817Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb75"},"name":"countless","thesauri":"numerous,  innumerable","created_at":{"$date":"2019-11-19T13:59:12.819Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb76"},"name":"crane","thesauri":"derrick,  winch,  hoist","created_at":{"$date":"2019-11-19T13:59:12.82Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb77"},"name":"crater","thesauri":"hollow,  bowl","created_at":{"$date":"2019-11-19T13:59:12.821Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb77"},"name":"crater","thesauri":"hollow,  bowl","created_at":{"$date":"2019-11-19T13:59:12.821Z"},"hardship":4,"related_words":"volcano, lava, magma","similar_shaped_words":"cater","updated_at":{"$date":"2019-12-01T13:41:43.037Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb78"},"name":"criterion","thesauri":"standard,  gauge","created_at":{"$date":"2019-11-19T13:59:12.822Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb79"},"name":"corrupt","created_at":{"$date":"2019-11-19T13:59:12.824Z"},"related_words":"collapse"}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb7a"},"name":"county","created_at":{"$date":"2019-11-19T13:59:12.825Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb7b"},"name":"creature","created_at":{"$date":"2019-11-19T13:59:12.826Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb7a"},"name":"county","created_at":{"$date":"2019-11-19T13:59:12.825Z"},"similar_shaped_words":"","updated_at":{"$date":"2019-11-30T11:22:57.459Z"},"related_words":"province, city"}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb7b"},"name":"creature","created_at":{"$date":"2019-11-19T13:59:12.826Z"},"derivation":"creat(create) + ure","related_words":"recreate, recreation","updated_at":{"$date":"2019-11-30T12:00:13.428Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb7c"},"name":"criticize","thesauri":"judge,  assess,  gauge","created_at":{"$date":"2019-11-19T13:59:12.829Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb7d"},"name":"crowd","thesauri":"throng,  mass,  herd","created_at":{"$date":"2019-11-19T13:59:12.83Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb7e"},"name":"crude","derivation":"c+rude","thesauri":"rough,  raw,  primitive","created_at":{"$date":"2019-11-19T13:59:12.832Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb7f"},"name":"cumulative","thesauri":"accumulative","created_at":{"$date":"2019-11-19T13:59:12.833Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb80"},"name":"curriculum","thesauri":"course,  program","created_at":{"$date":"2019-11-19T13:59:12.834Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb7e"},"name":"crude","derivation":"c+rude","thesauri":"rough,  raw,  primitive","created_at":{"$date":"2019-11-19T13:59:12.832Z"},"similar_shaped_words":"tough","updated_at":{"$date":"2019-11-30T12:46:27.383Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb7f"},"name":"cumulative","thesauri":"accumulative","created_at":{"$date":"2019-11-19T13:59:12.833Z"},"related_words":"cumulate, culminate","updated_at":{"$date":"2019-12-01T06:30:43.7Z"},"hardship":13}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb80"},"name":"curriculum","thesauri":"course,  program","created_at":{"$date":"2019-11-19T13:59:12.834Z"},"derivation":"curricu(course) + lum","updated_at":{"$date":"2019-11-30T12:48:58.849Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb81"},"name":"curve","thesauri":"bend,  curl,  twist","created_at":{"$date":"2019-11-19T13:59:12.835Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb82"},"name":"dairy","similar_shaped_words":"diary","created_at":{"$date":"2019-11-19T13:59:12.836Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb83"},"name":"damp","thesauri":"moist,  humid","created_at":{"$date":"2019-11-19T13:59:12.838Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb84"},"name":"decent","thesauri":"proper,  acceptable","created_at":{"$date":"2019-11-19T13:59:12.842Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb85"},"name":"deception","derivation":"deceit","thesauri":"fraud,  trickery","created_at":{"$date":"2019-11-19T13:59:12.844Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb85"},"name":"deception","derivation":"deceit","thesauri":"fraud,  trickery","created_at":{"$date":"2019-11-19T13:59:12.844Z"},"related_words":"deceive, deceit","updated_at":{"$date":"2019-11-30T12:53:37.018Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb86"},"name":"deepen","thesauri":"strengthen","created_at":{"$date":"2019-11-19T13:59:12.847Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb87"},"name":"deficiency","thesauri":"insufficiency,  shortage,  scarcity","created_at":{"$date":"2019-11-19T13:59:12.849Z"},"related_words":"lack, scarce, deficit"}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb88"},"name":"deficit","thesauri":"shortfall","created_at":{"$date":"2019-11-19T13:59:12.85Z"}}
@@ -658,160 +658,160 @@
 {"_id":{"$oid":"5dd3f5308003acab8a2feb8a"},"name":"denounce","thesauri":"condemn,  blame,  censure","created_at":{"$date":"2019-11-19T13:59:12.853Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb8b"},"name":"declaration","created_at":{"$date":"2019-11-19T13:59:12.854Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb8c"},"name":"deforestation","created_at":{"$date":"2019-11-19T13:59:12.855Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb8d"},"name":"degradation","created_at":{"$date":"2019-11-19T13:59:12.856Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb8d"},"name":"degradation","created_at":{"$date":"2019-11-19T13:59:12.856Z"},"derivation":"degrada(degrade) + tion","updated_at":{"$date":"2019-12-02T08:34:26.226Z"},"thesauri":"shame, worsen, deterioration, degeneration, decay, rot","hardship":11}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb8e"},"name":"delivery","created_at":{"$date":"2019-11-19T13:59:12.857Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb8f"},"name":"depict","derivation":"de+pict(ure)","thesauri":"describe,  illustrate,  represent","created_at":{"$date":"2019-11-19T13:59:12.86Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb90"},"name":"deplete","derivation":"de+plete","thesauri":"exhaust,  反: complete","created_at":{"$date":"2019-11-19T13:59:12.862Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb90"},"name":"deplete","derivation":"de+plete","thesauri":"exhaust,  反: complete","created_at":{"$date":"2019-11-19T13:59:12.862Z"},"hardship":12,"updated_at":{"$date":"2019-12-02T07:25:35.39Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb91"},"name":"descendant","derivation":"descend+ant","thesauri":"offspring,  ancestor","created_at":{"$date":"2019-11-19T13:59:12.863Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb92"},"name":"designate","thesauri":"delegate,  depute,  assign","created_at":{"$date":"2019-11-19T13:59:12.864Z"},"related_words":"nominate"}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb93"},"name":"desperate","thesauri":"despairing","created_at":{"$date":"2019-11-19T13:59:12.865Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb94"},"name":"despise","similar_shaped_words":"despite","thesauri":"scorn,  detest,  ","created_at":{"$date":"2019-11-19T13:59:12.866Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb94"},"name":"despise","similar_shaped_words":"despite","thesauri":"scorn,  detest,  ","created_at":{"$date":"2019-11-19T13:59:12.866Z"},"hardship":8,"updated_at":{"$date":"2019-12-01T08:03:25.722Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb95"},"name":"deploy","created_at":{"$date":"2019-11-19T13:59:12.867Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb96"},"name":"depth","created_at":{"$date":"2019-11-19T13:59:12.868Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb97"},"name":"desirable","created_at":{"$date":"2019-11-19T13:59:12.869Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb97"},"name":"desirable","created_at":{"$date":"2019-11-19T13:59:12.869Z"},"related_words":"desire","updated_at":{"$date":"2019-11-30T15:34:09.936Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb98"},"name":"destination","created_at":{"$date":"2019-11-19T13:59:12.872Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb99"},"name":"destruction","thesauri":"ruin,  devastation,  demolition","created_at":{"$date":"2019-11-19T13:59:12.878Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feb9a"},"name":"detect","thesauri":"inspect,  discern,  spot,  conscious,  perceive","created_at":{"$date":"2019-11-19T13:59:12.88Z"},"related_words":"","similar_shaped_words":"defect"}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb9b"},"name":"deter","similar_shaped_words":"defer","thesauri":"discourage,  dissuade,  scare off,  ","created_at":{"$date":"2019-11-19T13:59:12.881Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb9c"},"name":"deteriorate","derivation":"de+terior+ate","thesauri":"decline","created_at":{"$date":"2019-11-19T13:59:12.883Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb9d"},"name":"devastate","thesauri":"destruct,  destroy","created_at":{"$date":"2019-11-19T13:59:12.884Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb9e"},"name":"devise","thesauri":"conceive,  intent","created_at":{"$date":"2019-11-19T13:59:12.885Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feb9f"},"name":"devour","derivation":"de(down)+vour(吃)","thesauri":"eat greedily,  guzzle,  gulp","created_at":{"$date":"2019-11-19T13:59:12.886Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb9b"},"name":"deter","similar_shaped_words":"defer","thesauri":"discourage,  dissuade,  scare off,  ","created_at":{"$date":"2019-11-19T13:59:12.881Z"},"hardship":11,"updated_at":{"$date":"2019-12-02T08:37:06.044Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb9c"},"name":"deteriorate","derivation":"de+terior(terror)+ate","thesauri":"decline, worsen, decay, degrade, decompose","created_at":{"$date":"2019-11-19T13:59:12.883Z"},"hardship":29,"updated_at":{"$date":"2019-12-02T02:45:26.598Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb9d"},"name":"devastate","thesauri":"destruct,  destroy","created_at":{"$date":"2019-11-19T13:59:12.884Z"},"hardship":14,"updated_at":{"$date":"2019-12-01T04:50:19.048Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb9e"},"name":"devise","thesauri":"design, conceive, invent","created_at":{"$date":"2019-11-19T13:59:12.885Z"},"similar_shaped_words":"device, advise","updated_at":{"$date":"2019-12-01T05:09:39.38Z"},"hardship":3}
+{"_id":{"$oid":"5dd3f5308003acab8a2feb9f"},"name":"devour","derivation":"de(down)+vour(吃)","thesauri":"eat greedily,  guzzle,  gulp","created_at":{"$date":"2019-11-19T13:59:12.886Z"},"hardship":5,"updated_at":{"$date":"2019-12-01T05:11:10.108Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feba0"},"name":"diagram","thesauri":"chart,  illustration,  drawing","created_at":{"$date":"2019-11-19T13:59:12.888Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feba1"},"name":"device","created_at":{"$date":"2019-11-19T13:59:12.889Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feba1"},"name":"device","created_at":{"$date":"2019-11-19T13:59:12.889Z"},"thesauri":"equipment, implement, apparatus, appliance","updated_at":{"$date":"2019-12-01T05:05:19.07Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feba2"},"name":"dianose","created_at":{"$date":"2019-11-19T13:59:12.89Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feba3"},"name":"diameter","thesauri":"radius,  circumference","created_at":{"$date":"2019-11-19T13:59:12.893Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feba4"},"name":"differ","thesauri":"vary","created_at":{"$date":"2019-11-19T13:59:12.894Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feba5"},"name":"differentiate","thesauri":"distinguish,  discriminate","created_at":{"$date":"2019-11-19T13:59:12.896Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feba6"},"name":"digest","thesauri":"absorb","created_at":{"$date":"2019-11-19T13:59:12.897Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feba7"},"name":"dilemma","derivation":"di(double)+lemma","thesauri":"quandary,  predicament","created_at":{"$date":"2019-11-19T13:59:12.899Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feba7"},"name":"dilemma","derivation":"di(double)+lemma","thesauri":"quandary,  predicament","created_at":{"$date":"2019-11-19T13:59:12.899Z"},"hardship":14,"updated_at":{"$date":"2019-12-01T06:37:32.454Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2feba8"},"name":"diligent","thesauri":"industrious,  careful","created_at":{"$date":"2019-11-19T13:59:12.9Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2feba9"},"name":"dilute","derivation":"deluge","thesauri":"weaken","created_at":{"$date":"2019-11-19T13:59:12.901Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2feba9"},"name":"dilute","derivation":"deluge","thesauri":"weaken","created_at":{"$date":"2019-11-19T13:59:12.901Z"},"hardship":11,"updated_at":{"$date":"2019-12-01T06:38:54.062Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febaa"},"name":"diet","created_at":{"$date":"2019-11-19T13:59:12.902Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febab"},"name":"digit","created_at":{"$date":"2019-11-19T13:59:12.903Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febab"},"name":"digit","created_at":{"$date":"2019-11-19T13:59:12.903Z"},"comment":"","thesauri":"finger, thumb, toe, extremity, numeral","updated_at":{"$date":"2019-12-01T06:29:34.169Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febac"},"name":"dimension","thesauri":"size","created_at":{"$date":"2019-11-19T13:59:12.909Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febad"},"name":"dine","thesauri":"eat,  dinner","created_at":{"$date":"2019-11-19T13:59:12.912Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febae"},"name":"dinosaur","derivation":"di(die)+saur(lizard)","created_at":{"$date":"2019-11-19T13:59:12.914Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febaf"},"name":"dioxide","derivation":"di+oxide","created_at":{"$date":"2019-11-19T13:59:12.916Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febb0"},"name":"diploma","thesauri":"certificate","created_at":{"$date":"2019-11-19T13:59:12.918Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febaf"},"name":"dioxide","derivation":"di+oxide","created_at":{"$date":"2019-11-19T13:59:12.916Z"},"comment":"carbon dioxide, sulfer dioxide","hardship":7,"related_words":"monoxide","similar_shaped_words":"toxic, toxin","updated_at":{"$date":"2019-12-01T07:27:10.316Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febb0"},"name":"diploma","thesauri":"certificate, licence","created_at":{"$date":"2019-11-19T13:59:12.918Z"},"updated_at":{"$date":"2019-12-01T07:28:30.863Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febb1"},"name":"disabled","thesauri":"deficient","created_at":{"$date":"2019-11-19T13:59:12.919Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febb2"},"name":"disastrous","derivation":"disaster","thesauri":"devastating","created_at":{"$date":"2019-11-19T13:59:12.921Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febb2"},"name":"disastrous","derivation":"disaster","thesauri":"devastating","created_at":{"$date":"2019-11-19T13:59:12.921Z"},"similar_shaped_words":"trousers","updated_at":{"$date":"2019-12-01T07:29:39.994Z"},"hardship":5}
 {"_id":{"$oid":"5dd3f5308003acab8a2febb3"},"name":"discard","thesauri":"abandon,  reject","created_at":{"$date":"2019-11-19T13:59:12.922Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febb4"},"name":"discern","thesauri":"detect,  distinguish","created_at":{"$date":"2019-11-19T13:59:12.923Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febb5"},"name":"discourage","thesauri":"deter","created_at":{"$date":"2019-11-19T13:59:12.925Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febb6"},"name":"discrepancy","derivation":"dis+crep+ancy","thesauri":"distinction,  difference","created_at":{"$date":"2019-11-19T13:59:12.927Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febb7"},"name":"discriminate","thesauri":"distinguish,  separate","created_at":{"$date":"2019-11-19T13:59:12.929Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febb8"},"name":"disguise","similar_shaped_words":"disassemble, dismantle","thesauri":"conceal,  dissemble,  ","created_at":{"$date":"2019-11-19T13:59:12.93Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febb9"},"name":"disperse","thesauri":"dispel,  scatter","created_at":{"$date":"2019-11-19T13:59:12.931Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febba"},"name":"displace","thesauri":"dislodge,  dislocate","created_at":{"$date":"2019-11-19T13:59:12.932Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febbb"},"name":"disproportionate","thesauri":"unbalanced","created_at":{"$date":"2019-11-19T13:59:12.933Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febbc"},"name":"disseminate","thesauri":"disperse,  circulate, airborne","created_at":{"$date":"2019-11-19T13:59:12.934Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febbd"},"name":"dissertation","thesauri":"essay,  thesis","created_at":{"$date":"2019-11-19T13:59:12.935Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febb6"},"name":"discrepancy","derivation":"dis+crep(断裂)+ancy","thesauri":"distinction,  difference, prejudice","created_at":{"$date":"2019-11-19T13:59:12.927Z"},"hardship":5,"updated_at":{"$date":"2019-12-01T09:05:42.007Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febb7"},"name":"discriminate","thesauri":"distinguish,  separate","created_at":{"$date":"2019-11-19T13:59:12.929Z"},"hardship":3,"updated_at":{"$date":"2019-12-01T06:24:17.613Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febb8"},"name":"disguise","similar_shaped_words":"disassemble, dismantle, distinguish","thesauri":"camouflage, conceal,  dissemble, mask, misrepresent","created_at":{"$date":"2019-11-19T13:59:12.93Z"},"hardship":11,"updated_at":{"$date":"2019-12-02T03:24:52.739Z"},"related_words":"pretend"}
+{"_id":{"$oid":"5dd3f5308003acab8a2febb9"},"name":"disperse","thesauri":"dispel,  scatter, spread","created_at":{"$date":"2019-11-19T13:59:12.931Z"},"derivation":"dis(apart) + perse(sparse，稀疏)","updated_at":{"$date":"2019-12-01T07:53:59.981Z"},"hardship":17,"related_words":"dispersal","similar_shaped_words":"desperate"}
+{"_id":{"$oid":"5dd3f5308003acab8a2febba"},"name":"displace","thesauri":"dislodge,  dislocate","created_at":{"$date":"2019-11-19T13:59:12.932Z"},"derivation":"dis(off) + place","hardship":9,"related_words":"replace, displacement","updated_at":{"$date":"2019-12-01T08:01:41.868Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febbb"},"name":"disproportionate","thesauri":"unbalanced","created_at":{"$date":"2019-11-19T13:59:12.933Z"},"hardship":3,"related_words":"imbalance","updated_at":{"$date":"2019-12-01T08:10:29.284Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febbc"},"name":"disseminate","thesauri":"disperse,  circulate, airborne, advertise","created_at":{"$date":"2019-11-19T13:59:12.934Z"},"derivation":"dis(depart, separate) + semin(seed) + ate","updated_at":{"$date":"2019-12-01T07:59:56.443Z"},"hardship":16}
+{"_id":{"$oid":"5dd3f5308003acab8a2febbd"},"name":"dissertation","thesauri":"essay,  thesis","created_at":{"$date":"2019-11-19T13:59:12.935Z"},"hardship":11,"updated_at":{"$date":"2019-12-01T08:10:59.669Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febbe"},"name":"dispersal","created_at":{"$date":"2019-11-19T13:59:12.936Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febbf"},"name":"disposable","created_at":{"$date":"2019-11-19T13:59:12.937Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febc0"},"name":"distinguished","thesauri":"eminent,  famous","created_at":{"$date":"2019-11-19T13:59:12.942Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febc1"},"name":"disturbance","derivation":"disturb+ance","thesauri":"interfere","created_at":{"$date":"2019-11-19T13:59:12.944Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febbf"},"name":"disposable","created_at":{"$date":"2019-11-19T13:59:12.937Z"},"chinese":"","comment":"disposable capital, disposable personal income, disposable nappies","derivation":"dis(separate) + pos(pose) + able","hardship":10,"related_words":"dispose","updated_at":{"$date":"2019-12-01T08:08:23.305Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febc0"},"name":"distinguished","thesauri":"eminent,  famous","created_at":{"$date":"2019-11-19T13:59:12.942Z"},"similar_shaped_words":"disguise","updated_at":{"$date":"2019-12-01T07:47:09.177Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febc1"},"name":"disturbance","derivation":"disturb+ance","thesauri":"interfere, mess","created_at":{"$date":"2019-11-19T13:59:12.944Z"},"updated_at":{"$date":"2019-12-01T13:55:39.448Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febc2"},"name":"division","derivation":"divide","created_at":{"$date":"2019-11-19T13:59:12.946Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febc3"},"name":"domain","thesauri":"territory,  field","created_at":{"$date":"2019-11-19T13:59:12.948Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febc4"},"name":"dominate","thesauri":"govern,  rule","created_at":{"$date":"2019-11-19T13:59:12.95Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febc5"},"name":"drought","derivation":"dro(drain)+ught(out)","thesauri":"dry","created_at":{"$date":"2019-11-19T13:59:12.951Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febc5"},"name":"drought","derivation":"dro(drain)+ught(out)","thesauri":"dry","created_at":{"$date":"2019-11-19T13:59:12.951Z"},"hardship":7,"updated_at":{"$date":"2019-12-01T13:58:01.751Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febc6"},"name":"durable","thesauri":"enduring","created_at":{"$date":"2019-11-19T13:59:12.953Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febc7"},"name":"dweller","thesauri":"inhabitant,  resident","created_at":{"$date":"2019-11-19T13:59:12.954Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febc7"},"name":"dweller","thesauri":"inhabitant,  resident","created_at":{"$date":"2019-11-19T13:59:12.954Z"},"hardship":5,"updated_at":{"$date":"2019-12-01T13:58:19.976Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febc8"},"name":"distinctive","created_at":{"$date":"2019-11-19T13:59:12.955Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febc9"},"name":"dwindle","thesauri":"diminish,  decrease,  decline","created_at":{"$date":"2019-11-19T13:59:12.958Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febca"},"name":"dye","derivation":"eye","thesauri":"colorant,  pigment","created_at":{"$date":"2019-11-19T13:59:12.96Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febcb"},"name":"dynasty","thesauri":"ancestry","created_at":{"$date":"2019-11-19T13:59:12.961Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febcc"},"name":"earnest","thesauri":"serious,  keen","created_at":{"$date":"2019-11-19T13:59:12.962Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febc9"},"name":"dwindle","thesauri":"diminish,  decrease,  decline","created_at":{"$date":"2019-11-19T13:59:12.958Z"},"hardship":8,"updated_at":{"$date":"2019-12-01T14:02:01.62Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febca"},"name":"dye","derivation":"eye","thesauri":"colorant,  pigment","created_at":{"$date":"2019-11-19T13:59:12.96Z"},"hardship":8,"updated_at":{"$date":"2019-12-01T14:02:52.321Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febcb"},"name":"dynasty","thesauri":"reign","created_at":{"$date":"2019-11-19T13:59:12.961Z"},"hardship":3,"updated_at":{"$date":"2019-12-01T14:07:59.657Z"},"related_words":"ancestry, dynamic"}
+{"_id":{"$oid":"5dd3f5308003acab8a2febcc"},"name":"earnest","thesauri":"serious,  keen","created_at":{"$date":"2019-11-19T13:59:12.962Z"},"hardship":3,"updated_at":{"$date":"2019-12-01T14:09:18.339Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febcd"},"name":"echo","thesauri":"reverberation","created_at":{"$date":"2019-11-19T13:59:12.963Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febce"},"name":"ecological","thesauri":"natural","created_at":{"$date":"2019-11-19T13:59:12.964Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febcf"},"name":"ecosystem","thesauri":"terrestrial ecosystem","created_at":{"$date":"2019-11-19T13:59:12.965Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febd0"},"name":"echolocation","created_at":{"$date":"2019-11-19T13:59:12.966Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febd1"},"name":"elastic","thesauri":"pliant,  flexible","created_at":{"$date":"2019-11-19T13:59:12.969Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febd2"},"name":"electron","thesauri":"neutron,  proton","created_at":{"$date":"2019-11-19T13:59:12.97Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febd3"},"name":"elevate","thesauri":"lift,  raise,  promote","created_at":{"$date":"2019-11-19T13:59:12.971Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febd4"},"name":"eligibility","thesauri":"eligible,  qualified","created_at":{"$date":"2019-11-19T13:59:12.974Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febd5"},"name":"eliminate","thesauri":"terminate,  eradicate","created_at":{"$date":"2019-11-19T13:59:12.976Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febd6"},"name":"elite","derivation":"elect","thesauri":"best,  gist","created_at":{"$date":"2019-11-19T13:59:12.978Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febd7"},"name":"elucidate","derivation":"e(out)+lucid+ate","thesauri":"illustrate,  elaborate, explicate, narrate","created_at":{"$date":"2019-11-19T13:59:12.979Z"},"updated_at":{"$date":"2019-11-29T09:35:46.403Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febd8"},"name":"electric","created_at":{"$date":"2019-11-19T13:59:12.981Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febd3"},"name":"elevate","thesauri":"lift,  raise,  promote","created_at":{"$date":"2019-11-19T13:59:12.971Z"},"hardship":7,"related_words":"elevator, elevation, altitude","updated_at":{"$date":"2019-12-01T14:18:20.452Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febd4"},"name":"eligibility","thesauri":"eligible,  qualified, capable","created_at":{"$date":"2019-11-19T13:59:12.974Z"},"hardship":3,"updated_at":{"$date":"2019-12-02T06:42:30.531Z"},"similar_shaped_words":"elite"}
+{"_id":{"$oid":"5dd3f5308003acab8a2febd5"},"name":"eliminate","thesauri":"terminate,  eradicate","created_at":{"$date":"2019-11-19T13:59:12.976Z"},"similar_shaped_words":"culminate","updated_at":{"$date":"2019-12-01T09:24:15.389Z"},"hardship":11}
+{"_id":{"$oid":"5dd3f5308003acab8a2febd6"},"name":"elite","derivation":"elect","thesauri":"best,  gist","created_at":{"$date":"2019-11-19T13:59:12.978Z"},"hardship":6,"similar_shaped_words":"erect, eligible","updated_at":{"$date":"2019-12-02T06:42:54.274Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febd7"},"name":"elucidate","derivation":"e(out)+lucid+ate","thesauri":"illustrate,  elaborate, explicate, narrate","created_at":{"$date":"2019-11-19T13:59:12.979Z"},"updated_at":{"$date":"2019-12-01T14:25:03.556Z"},"hardship":12}
+{"_id":{"$oid":"5dd3f5308003acab8a2febd8"},"name":"electric","created_at":{"$date":"2019-11-19T13:59:12.981Z"},"hardship":6,"related_words":"electron, electronic","updated_at":{"$date":"2019-12-01T14:16:36.675Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febd9"},"name":"electronic","created_at":{"$date":"2019-11-19T13:59:12.983Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febda"},"name":"embarrass","thesauri":"abash","created_at":{"$date":"2019-11-19T13:59:12.986Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febdb"},"name":"embed","derivation":"em+bed","created_at":{"$date":"2019-11-19T13:59:12.987Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febdc"},"name":"emerge","derivation":"e(ex,out)+merge","thesauri":"appear,  emergency","created_at":{"$date":"2019-11-19T13:59:12.988Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febdc"},"name":"emerge","derivation":"e(ex,out)+merge","thesauri":"appear,  emergency","created_at":{"$date":"2019-11-19T13:59:12.988Z"},"hardship":10,"updated_at":{"$date":"2019-12-01T14:29:25.677Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febdd"},"name":"eminent","thesauri":"distinguished","created_at":{"$date":"2019-11-19T13:59:12.989Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febde"},"name":"emit","thesauri":"eject,  release","created_at":{"$date":"2019-11-19T13:59:12.991Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febde"},"name":"emit","thesauri":"eject, erupt, release","created_at":{"$date":"2019-11-19T13:59:12.991Z"},"hardship":7,"updated_at":{"$date":"2019-12-01T15:08:50.164Z"}}
 {"_id":{"$oid":"5dd3f5308003acab8a2febdf"},"name":"empire","derivation":"em+pire(power)","created_at":{"$date":"2019-11-19T13:59:12.992Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febe0"},"name":"empirical","thesauri":"experimental","created_at":{"$date":"2019-11-19T13:59:12.993Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febe1"},"name":"encase","derivation":"en(in)+case","created_at":{"$date":"2019-11-19T13:59:12.994Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febe2"},"name":"enclose","thesauri":"surround","created_at":{"$date":"2019-11-19T13:59:12.995Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febe0"},"name":"empirical","thesauri":"experimental","created_at":{"$date":"2019-11-19T13:59:12.993Z"},"similar_shaped_words":"empire","updated_at":{"$date":"2019-12-01T14:34:48.349Z"},"hardship":9}
+{"_id":{"$oid":"5dd3f5308003acab8a2febe1"},"name":"encase","derivation":"en(in)+case","created_at":{"$date":"2019-11-19T13:59:12.994Z"},"hardship":2,"updated_at":{"$date":"2019-12-01T14:35:36.948Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febe2"},"name":"enclose","thesauri":"surround","created_at":{"$date":"2019-11-19T13:59:12.995Z"},"hardship":2,"updated_at":{"$date":"2019-12-02T08:40:51.14Z"},"related_words":"disclose"}
 {"_id":{"$oid":"5dd3f5308003acab8a2febe3"},"name":"encode","created_at":{"$date":"2019-11-19T13:59:12.997Z"}}
-{"_id":{"$oid":"5dd3f5308003acab8a2febe4"},"name":"encompass","derivation":"en(in)+compass","thesauri":"include,  contain","created_at":{"$date":"2019-11-19T13:59:12.999Z"}}
+{"_id":{"$oid":"5dd3f5308003acab8a2febe4"},"name":"encompass","derivation":"en(in)+compass","thesauri":"include,  contain, surround, enclose","created_at":{"$date":"2019-11-19T13:59:12.999Z"},"hardship":6,"updated_at":{"$date":"2019-12-01T14:40:01.215Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2febe5"},"name":"endless","thesauri":"eternal,  interminable","created_at":{"$date":"2019-11-19T13:59:13Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2febe6"},"name":"endorse","derivation":"en(in)+dorse(back)","thesauri":"support,  sign","created_at":{"$date":"2019-11-19T13:59:13.002Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2febe6"},"name":"endorse","derivation":"en(in)+dorse(back)","thesauri":"support,  sign","created_at":{"$date":"2019-11-19T13:59:13.002Z"},"comment":"the cheque should be endorsed and sent the to third party.","hardship":8,"updated_at":{"$date":"2019-12-01T13:09:56.258Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2febe7"},"name":"endurance","derivation":"en(in)+dur(during)+ance","thesauri":"strength","created_at":{"$date":"2019-11-19T13:59:13.003Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2febe8"},"name":"engrave","derivation":"en+grave(cut)","thesauri":"carve,  inscribe","created_at":{"$date":"2019-11-19T13:59:13.004Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2febe8"},"name":"engrave","derivation":"en+grave(cut)","thesauri":"carve,  inscribe","created_at":{"$date":"2019-11-19T13:59:13.004Z"},"hardship":6,"updated_at":{"$date":"2019-12-01T14:48:57.772Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2febe9"},"name":"enhance","thesauri":"heighten,  strengthen","created_at":{"$date":"2019-11-19T13:59:13.008Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2febea"},"name":"enlarge","thesauri":"inflate,  expand","created_at":{"$date":"2019-11-19T13:59:13.01Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2febeb"},"name":"enlighten","thesauri":"instruct,  adivse,  illuminate","created_at":{"$date":"2019-11-19T13:59:13.011Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2febec"},"name":"enquiry","thesauri":"inquiry","created_at":{"$date":"2019-11-19T13:59:13.013Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2febeb"},"name":"enlighten","thesauri":"instruct,  advise,  illuminate","created_at":{"$date":"2019-11-19T13:59:13.011Z"},"hardship":4,"updated_at":{"$date":"2019-12-01T14:45:43.549Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2febec"},"name":"enquiry","thesauri":"inquiry","created_at":{"$date":"2019-11-19T13:59:13.013Z"},"similar_shaped_words":"require","updated_at":{"$date":"2019-11-30T03:00:02.49Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2febed"},"name":"enrich","thesauri":"enhance,  better","created_at":{"$date":"2019-11-19T13:59:13.014Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2febee"},"name":"ensue","derivation":"en(in)+sue(sequence)","similar_shaped_words":"ensure","thesauri":"result,  subsequent,  consequent,  consecutive,  ","created_at":{"$date":"2019-11-19T13:59:13.018Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2febef"},"name":"entrust","thesauri":"charge,  endow","created_at":{"$date":"2019-11-19T13:59:13.019Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2febf0"},"name":"envision","thesauri":"plan,  imagine","created_at":{"$date":"2019-11-19T13:59:13.02Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2febf1"},"name":"envy","thesauri":"jealousy","created_at":{"$date":"2019-11-19T13:59:13.022Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2febf2"},"name":"equator","derivation":"equa+tor","created_at":{"$date":"2019-11-19T13:59:13.024Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2febf3"},"name":"erect","thesauri":"build,  upright","created_at":{"$date":"2019-11-19T13:59:13.025Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2febf4"},"name":"erupt","derivation":"e(ex,out)+rupt(break)","thesauri":"explode","created_at":{"$date":"2019-11-19T13:59:13.026Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2febf5"},"name":"entrepreneur","created_at":{"$date":"2019-11-19T13:59:13.028Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2febee"},"name":"ensue","derivation":"en(in)+sue(sequence)","similar_shaped_words":"ensure","thesauri":"result,  subsequent,  consequent,  consecutive,  ","created_at":{"$date":"2019-11-19T13:59:13.018Z"},"comment":"a fierce argument ensued from his remark.","hardship":8,"related_words":"","updated_at":{"$date":"2019-12-01T14:55:51.205Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2febef"},"name":"entrust","thesauri":"delegate, assign, charge,  endow","created_at":{"$date":"2019-11-19T13:59:13.019Z"},"hardship":6,"updated_at":{"$date":"2019-12-01T15:03:14.958Z"},"related_words":""}
+{"_id":{"$oid":"5dd3f5318003acab8a2febf0"},"name":"envision","thesauri":"plan,  imagine","created_at":{"$date":"2019-11-19T13:59:13.02Z"},"hardship":7,"updated_at":{"$date":"2019-12-01T15:04:44.739Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2febf1"},"name":"envy","thesauri":"jealousy","created_at":{"$date":"2019-11-19T13:59:13.022Z"},"hardship":2,"updated_at":{"$date":"2019-12-01T15:05:22.992Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2febf2"},"name":"equator","derivation":"equa+tor","created_at":{"$date":"2019-11-19T13:59:13.024Z"},"hardship":8,"updated_at":{"$date":"2019-12-01T15:06:00.059Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2febf3"},"name":"erect","thesauri":"build,  upright","created_at":{"$date":"2019-11-19T13:59:13.025Z"},"hardship":12,"updated_at":{"$date":"2019-12-01T14:23:08.698Z"},"similar_shaped_words":"elect, elite"}
+{"_id":{"$oid":"5dd3f5318003acab8a2febf4"},"name":"erupt","derivation":"e(ex,out)+rupt(break)","thesauri":"explode, emit, eject","created_at":{"$date":"2019-11-19T13:59:13.026Z"},"hardship":7,"related_words":"volcano","similar_shaped_words":"corrupt","updated_at":{"$date":"2019-12-02T08:44:52.014Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2febf5"},"name":"entrepreneur","created_at":{"$date":"2019-11-19T13:59:13.028Z"},"hardship":1,"related_words":"enterprise, corporate","thesauri":"","updated_at":{"$date":"2019-12-01T15:00:42.248Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2febf6"},"name":"equality","created_at":{"$date":"2019-11-19T13:59:13.029Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2febf7"},"name":"escalate","derivation":"e+scal(scale)+ate","thesauri":"surge","created_at":{"$date":"2019-11-19T13:59:13.031Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2febf7"},"name":"escalate","derivation":"e+scal(scale)+ate","thesauri":"surge, exacerbate","created_at":{"$date":"2019-11-19T13:59:13.031Z"},"updated_at":{"$date":"2019-12-02T07:17:32.969Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2febf8"},"name":"estate","derivation":"e+state(stand)","thesauri":"asset, property","created_at":{"$date":"2019-11-19T13:59:13.033Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2febf9"},"name":"ethic","thesauri":"moral","created_at":{"$date":"2019-11-19T13:59:13.034Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2febfa"},"name":"evaporate","derivation":"e(ex,out)+vapor+ate","thesauri":"disappear,  vanish","created_at":{"$date":"2019-11-19T13:59:13.035Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2febfb"},"name":"evoke","thesauri":"cause,  arouse,  invoke","created_at":{"$date":"2019-11-19T13:59:13.036Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2febfc"},"name":"exacerbate","derivation":"ex+acerb+ate","thesauri":"worsen","created_at":{"$date":"2019-11-19T13:59:13.037Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2febfc"},"name":"exacerbate","derivation":"ex+acerb+ate","thesauri":"worsen","created_at":{"$date":"2019-11-19T13:59:13.037Z"},"related_words":"escalate","updated_at":{"$date":"2019-12-02T07:20:14.28Z"},"hardship":10}
 {"_id":{"$oid":"5dd3f5318003acab8a2febfd"},"name":"exact","thesauri":"extract,  extort","created_at":{"$date":"2019-11-19T13:59:13.039Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2febfe"},"name":"exaggerate","derivation":"exa+ggerate","thesauri":"overstate","created_at":{"$date":"2019-11-19T13:59:13.044Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2febff"},"name":"exceptional","thesauri":"unusual","created_at":{"$date":"2019-11-19T13:59:13.045Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec00"},"name":"evergreen","created_at":{"$date":"2019-11-19T13:59:13.047Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec00"},"name":"evergreen","created_at":{"$date":"2019-11-19T13:59:13.047Z"},"related_words":"perennial","updated_at":{"$date":"2019-12-02T07:14:15.537Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec01"},"name":"excessive","thesauri":"extreme","created_at":{"$date":"2019-11-19T13:59:13.05Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec02"},"name":"exclusive","thesauri":"sole,  only","created_at":{"$date":"2019-11-19T13:59:13.051Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec03"},"name":"excursion","thesauri":"trip,  hike","created_at":{"$date":"2019-11-19T13:59:13.053Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec04"},"name":"exemplify","thesauri":"demostrate,  illustrate","created_at":{"$date":"2019-11-19T13:59:13.054Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec05"},"name":"exempt","derivation":"exem+pt","thesauri":"immune","created_at":{"$date":"2019-11-19T13:59:13.055Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec06"},"name":"exert","thesauri":"exercise,  use","created_at":{"$date":"2019-11-19T13:59:13.056Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec07"},"name":"exhaust","derivation":"ex+haust","created_at":{"$date":"2019-11-19T13:59:13.057Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec08"},"name":"explicit","thesauri":"clear,  definite","created_at":{"$date":"2019-11-19T13:59:13.058Z"},"related_words":"explicate"}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec05"},"name":"exempt","derivation":"exem+pt","thesauri":"immune, waive","created_at":{"$date":"2019-11-19T13:59:13.055Z"},"hardship":4,"updated_at":{"$date":"2019-12-01T09:18:56.122Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec06"},"name":"exert","thesauri":"exercise,  use, inflict","created_at":{"$date":"2019-11-19T13:59:13.056Z"},"hardship":14,"updated_at":{"$date":"2019-12-02T07:31:47.092Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec07"},"name":"exhaust","derivation":"ex+haust","created_at":{"$date":"2019-11-19T13:59:13.057Z"},"thesauri":"deplete","updated_at":{"$date":"2019-11-30T14:57:19.599Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec08"},"name":"explicit","thesauri":"clear,  definite, elaborate","created_at":{"$date":"2019-11-19T13:59:13.058Z"},"related_words":"explicate","hardship":2,"similar_shaped_words":"implicit, implicative","updated_at":{"$date":"2019-12-02T06:51:53.234Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec09"},"name":"expectancy","created_at":{"$date":"2019-11-19T13:59:13.059Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec0a"},"name":"expense","created_at":{"$date":"2019-11-19T13:59:13.06Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec0b"},"name":"extinct","similar_shaped_words":"distinct","created_at":{"$date":"2019-11-19T13:59:13.063Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec0b"},"name":"extinct","similar_shaped_words":"distinct","created_at":{"$date":"2019-11-19T13:59:13.063Z"},"hardship":15,"related_words":"eliminate","updated_at":{"$date":"2019-12-02T07:34:53.815Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec0c"},"name":"facilitate","derivation":"facility","thesauri":"aid,  promote","created_at":{"$date":"2019-11-19T13:59:13.065Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec0d"},"name":"familiarise","thesauri":"acquaint","created_at":{"$date":"2019-11-19T13:59:13.066Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec0e"},"name":"fatal","derivation":"fate","thesauri":"lethal,  mortal","created_at":{"$date":"2019-11-19T13:59:13.067Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec0f"},"name":"fatigue","derivation":"fat+igue","thesauri":"tireness","created_at":{"$date":"2019-11-19T13:59:13.068Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec10"},"name":"feasible","thesauri":"viable","created_at":{"$date":"2019-11-19T13:59:13.069Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec11"},"name":"feat","thesauri":"achievement","created_at":{"$date":"2019-11-19T13:59:13.07Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec10"},"name":"feasible","thesauri":"viable, workable","created_at":{"$date":"2019-11-19T13:59:13.069Z"},"hardship":5,"updated_at":{"$date":"2019-12-02T07:39:42.657Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec11"},"name":"feat","thesauri":"achievement","created_at":{"$date":"2019-11-19T13:59:13.07Z"},"hardship":9,"updated_at":{"$date":"2019-12-02T07:41:55.159Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec12"},"name":"feeble","thesauri":"faint","created_at":{"$date":"2019-11-19T13:59:13.071Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec13"},"name":"fetus","thesauri":"embryo","created_at":{"$date":"2019-11-19T13:59:13.075Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec14"},"name":"facial","created_at":{"$date":"2019-11-19T13:59:13.077Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec15"},"name":"fibre","thesauri":"fiber,  thread","created_at":{"$date":"2019-11-19T13:59:13.08Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec16"},"name":"flee","thesauri":"fly,  run away","created_at":{"$date":"2019-11-19T13:59:13.082Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec16"},"name":"flee","thesauri":"fly,  run away","created_at":{"$date":"2019-11-19T13:59:13.082Z"},"hardship":10,"similar_shaped_words":"fleet","updated_at":{"$date":"2019-12-02T07:47:07.794Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec17"},"name":"flourish","thesauri":"prosper,  thrive","created_at":{"$date":"2019-11-19T13:59:13.084Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec18"},"name":"fictional","created_at":{"$date":"2019-11-19T13:59:13.086Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec19"},"name":"fin","created_at":{"$date":"2019-11-19T13:59:13.087Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec19"},"name":"fin","created_at":{"$date":"2019-11-19T13:59:13.087Z"},"hardship":9,"updated_at":{"$date":"2019-12-02T07:49:31.66Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec1a"},"name":"financial","created_at":{"$date":"2019-11-19T13:59:13.088Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec1b"},"name":"fishery","created_at":{"$date":"2019-11-19T13:59:13.089Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec1c"},"name":"fitness","created_at":{"$date":"2019-11-19T13:59:13.09Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec1d"},"name":"flour","created_at":{"$date":"2019-11-19T13:59:13.091Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec1e"},"name":"folklore","thesauri":"legend","created_at":{"$date":"2019-11-19T13:59:13.094Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec1f"},"name":"forbidding","thesauri":"hostile","created_at":{"$date":"2019-11-19T13:59:13.095Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec20"},"name":"forgo","thesauri":"waive,  relinquish","created_at":{"$date":"2019-11-19T13:59:13.096Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec21"},"name":"forthcoming","thesauri":"impending","created_at":{"$date":"2019-11-19T13:59:13.097Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec1f"},"name":"forbidding","thesauri":"hostile","created_at":{"$date":"2019-11-19T13:59:13.095Z"},"comment":"a forbidding appearance","hardship":8,"updated_at":{"$date":"2019-12-01T09:15:14.022Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec20"},"name":"forgo","thesauri":"waive,  relinquish, give up, abandon","created_at":{"$date":"2019-11-19T13:59:13.096Z"},"updated_at":{"$date":"2019-12-02T06:33:00.588Z"},"hardship":9,"derivation":"let go...","similar_shaped_words":"forthcoming"}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec21"},"name":"forthcoming","thesauri":"impending, prospective","created_at":{"$date":"2019-11-19T13:59:13.097Z"},"hardship":4,"updated_at":{"$date":"2019-12-02T06:32:43.966Z"},"similar_shaped_words":"forgo"}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec22"},"name":"fossil","derivation":"fo(for)+ssil(soil)","thesauri":"relic","created_at":{"$date":"2019-11-19T13:59:13.098Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec23"},"name":"fragile","derivation":"frag(farct,break)+ile","thesauri":"weak,  feeble","created_at":{"$date":"2019-11-19T13:59:13.1Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec24"},"name":"freight","derivation":"fr+eight(weight)","thesauri":"cargo,  good","created_at":{"$date":"2019-11-19T13:59:13.101Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec25"},"name":"frontier","created_at":{"$date":"2019-11-19T13:59:13.102Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec26"},"name":"functional","created_at":{"$date":"2019-11-19T13:59:13.103Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec23"},"name":"fragile","derivation":"frag(farct,break)+ile","thesauri":"weak,  feeble, delicate","created_at":{"$date":"2019-11-19T13:59:13.1Z"},"hardship":10,"updated_at":{"$date":"2019-12-01T12:08:06.781Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec24"},"name":"freight","derivation":"fr+eight(weight)","thesauri":"cargo,  good, commodity","created_at":{"$date":"2019-11-19T13:59:13.101Z"},"hardship":11,"updated_at":{"$date":"2019-12-01T12:10:51.702Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec25"},"name":"frontier","created_at":{"$date":"2019-11-19T13:59:13.102Z"},"hardship":7,"thesauri":"boundary","updated_at":{"$date":"2019-12-01T12:09:07.664Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec26"},"name":"functional","created_at":{"$date":"2019-11-19T13:59:13.103Z"},"thesauri":"practical, utility","updated_at":{"$date":"2019-12-01T12:30:22.244Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec27"},"name":"garage","derivation":"gar+age","created_at":{"$date":"2019-11-19T13:59:13.108Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec28"},"name":"genre","derivation":"gender","thesauri":"style","created_at":{"$date":"2019-11-19T13:59:13.11Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec29"},"name":"glucose","derivation":"gluc(grape)+ose","thesauri":"carbohydrate,  protein","created_at":{"$date":"2019-11-19T13:59:13.112Z"}}
@@ -857,19 +857,19 @@
 {"_id":{"$oid":"5dd3f5318003acab8a2fec51"},"name":"humid","thesauri":"wet,  moist,  damp","created_at":{"$date":"2019-11-19T13:59:13.179Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec52"},"name":"hygienic","derivation":"health","thesauri":"sanitary","created_at":{"$date":"2019-11-19T13:59:13.181Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec53"},"name":"hypothesis","derivation":"hypo(under)+the(theory)+sis","thesauri":"theory","created_at":{"$date":"2019-11-19T13:59:13.182Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec54"},"name":"ignite","thesauri":"ignite to illuminate","created_at":{"$date":"2019-11-19T13:59:13.183Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec54"},"name":"ignite","thesauri":"ignite to illuminate, combust, kindle, burn","created_at":{"$date":"2019-11-19T13:59:13.183Z"},"updated_at":{"$date":"2019-12-02T08:23:20.643Z"},"hardship":11}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec55"},"name":"ignorant","derivation":"ig(no)+nor(know)+rant","thesauri":"uninformed,  illiterate,  ignore","created_at":{"$date":"2019-11-19T13:59:13.185Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec56"},"name":"illiterate","derivation":"il(no)+literate","thesauri":"ignorant","created_at":{"$date":"2019-11-19T13:59:13.186Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec57"},"name":"immense","derivation":"im+men(measure)+se","created_at":{"$date":"2019-11-19T13:59:13.188Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec57"},"name":"immense","derivation":"im+men(measure)+se","created_at":{"$date":"2019-11-19T13:59:13.188Z"},"hardship":3,"updated_at":{"$date":"2019-12-01T07:21:50.548Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec58"},"name":"immerse","derivation":"im+merse(merge)","created_at":{"$date":"2019-11-19T13:59:13.19Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec59"},"name":"immigrant","derivation":"im+migr(move)+ant","created_at":{"$date":"2019-11-19T13:59:13.191Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec5a"},"name":"impede","derivation":"im+pede(foot)","thesauri":"hinder","created_at":{"$date":"2019-11-19T13:59:13.193Z"},"related_words":"deter"}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec5a"},"name":"impede","derivation":"im+pede(foot)","thesauri":"hinder, inhibit","created_at":{"$date":"2019-11-19T13:59:13.193Z"},"related_words":"deter","hardship":17,"updated_at":{"$date":"2019-12-02T09:05:00.28Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec5b"},"name":"impetus","derivation":"im+pet(拍打)+us","similar_shaped_words":"perpetuate","created_at":{"$date":"2019-11-19T13:59:13.194Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec5c"},"name":"impulse","derivation":"im(onto)+pul(push)+se","created_at":{"$date":"2019-11-19T13:59:13.195Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec5d"},"name":"imaginative","created_at":{"$date":"2019-11-19T13:59:13.196Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec5e"},"name":"imbalance","created_at":{"$date":"2019-11-19T13:59:13.197Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec5f"},"name":"impress","created_at":{"$date":"2019-11-19T13:59:13.199Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec60"},"name":"indispensable","derivation":"in+dispens(dispense)+able","thesauri":"integral,  essential,  vital","created_at":{"$date":"2019-11-19T13:59:13.2Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec60"},"name":"indispensable","derivation":"in+dispens(dispense)+able","thesauri":"integral,  essential,  vital","created_at":{"$date":"2019-11-19T13:59:13.2Z"},"hardship":40,"updated_at":{"$date":"2019-12-02T09:21:15.025Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec61"},"name":"induce","thesauri":"persuade,  cause","created_at":{"$date":"2019-11-19T13:59:13.202Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec62"},"name":"indulge","derivation":"in(towards)+dulge(倒着)","created_at":{"$date":"2019-11-19T13:59:13.203Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec63"},"name":"inadequate","created_at":{"$date":"2019-11-19T13:59:13.204Z"}}
@@ -889,29 +889,29 @@
 {"_id":{"$oid":"5dd3f5318003acab8a2fec71"},"name":"informative","derivation":"information","created_at":{"$date":"2019-11-19T13:59:13.228Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec72"},"name":"infrastructure","derivation":"infra+structure","thesauri":"foundation","created_at":{"$date":"2019-11-19T13:59:13.229Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec73"},"name":"informal","created_at":{"$date":"2019-11-19T13:59:13.23Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec74"},"name":"ingenuity","derivation":"ingenious","created_at":{"$date":"2019-11-19T13:59:13.233Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec75"},"name":"inhibit","derivation":"in+hab(hold)+it","created_at":{"$date":"2019-11-19T13:59:13.234Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec74"},"name":"ingenuity","derivation":"ingenious","created_at":{"$date":"2019-11-19T13:59:13.233Z"},"hardship":18,"related_words":"genius","similar_shaped_words":"genuine","updated_at":{"$date":"2019-12-02T09:03:24.95Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec75"},"name":"inhibit","derivation":"in+hab(hold)+it","created_at":{"$date":"2019-11-19T13:59:13.234Z"},"similar_shaped_words":"inhabit","updated_at":{"$date":"2019-12-02T09:06:17.894Z"},"hardship":16}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec76"},"name":"innate","derivation":"in+nate(native)","thesauri":"inborn","created_at":{"$date":"2019-11-19T13:59:13.235Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec77"},"name":"insomnia","derivation":"insom(因丧母)+nia(病)","created_at":{"$date":"2019-11-19T13:59:13.236Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec78"},"name":"inspiration","derivation":"in+spir(breathe)+ation","created_at":{"$date":"2019-11-19T13:59:13.237Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec79"},"name":"instalment","derivation":"instal(安置)+ment","created_at":{"$date":"2019-11-19T13:59:13.241Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec77"},"name":"insomnia","derivation":"insom(因丧母)+nia(病)","created_at":{"$date":"2019-11-19T13:59:13.236Z"},"hardship":15,"updated_at":{"$date":"2019-12-02T09:07:59.368Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec78"},"name":"inspiration","derivation":"in+spir(breathe)+ation","created_at":{"$date":"2019-11-19T13:59:13.237Z"},"similar_shaped_words":"aspiration","updated_at":{"$date":"2019-12-02T09:08:39.366Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec79"},"name":"instalment","derivation":"instal(安置)+ment","created_at":{"$date":"2019-11-19T13:59:13.241Z"},"hardship":16,"related_words":"","thesauri":"mortgage, collateral","updated_at":{"$date":"2019-12-02T09:12:10.742Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec7a"},"name":"inherit","created_at":{"$date":"2019-11-19T13:59:13.243Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec7b"},"name":"integral","thesauri":"indispensable","created_at":{"$date":"2019-11-19T13:59:13.247Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec7c"},"name":"intellectual","derivation":"intellect+ual","created_at":{"$date":"2019-11-19T13:59:13.249Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec7d"},"name":"intend","derivation":"in(toward)+tend(attend)","created_at":{"$date":"2019-11-19T13:59:13.251Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec7e"},"name":"intensify","derivation":"in+tens(stretch)+ify","created_at":{"$date":"2019-11-19T13:59:13.253Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec7f"},"name":"intent","derivation":"intend","created_at":{"$date":"2019-11-19T13:59:13.254Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec80"},"name":"intention","thesauri":"purpose,  goal","created_at":{"$date":"2019-11-19T13:59:13.255Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec81"},"name":"interfere","derivation":"inter(between)+fere(fee)","thesauri":"disturbance","created_at":{"$date":"2019-11-19T13:59:13.256Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec7e"},"name":"intensify","derivation":"in+tens(stretch)+ify","created_at":{"$date":"2019-11-19T13:59:13.253Z"},"thesauri":"strengthen, enhance","updated_at":{"$date":"2019-12-02T09:16:56.712Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec7f"},"name":"intent","derivation":"intend","created_at":{"$date":"2019-11-19T13:59:13.254Z"},"related_words":"intention","updated_at":{"$date":"2019-12-02T09:17:52.511Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec80"},"name":"intention","thesauri":"purpose,  goal, intent","created_at":{"$date":"2019-11-19T13:59:13.255Z"},"hardship":15,"related_words":"intend","updated_at":{"$date":"2019-12-02T09:18:20.561Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec81"},"name":"interfere","derivation":"inter(between)+fere(fee)","thesauri":"disturbance, intervene","created_at":{"$date":"2019-11-19T13:59:13.256Z"},"hardship":12,"updated_at":{"$date":"2019-12-02T09:20:10.831Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec82"},"name":"interact","created_at":{"$date":"2019-11-19T13:59:13.258Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec83"},"name":"interchangeable","created_at":{"$date":"2019-11-19T13:59:13.259Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec84"},"name":"interface","created_at":{"$date":"2019-11-19T13:59:13.26Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec85"},"name":"intervene","derivation":"inter(between)+vene(vent,come)","thesauri":"interfere,  mediate","created_at":{"$date":"2019-11-19T13:59:13.263Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec85"},"name":"intervene","derivation":"inter(between)+vene(vent,come)","thesauri":"interfere,  mediate","created_at":{"$date":"2019-11-19T13:59:13.263Z"},"hardship":12,"updated_at":{"$date":"2019-12-02T09:19:28.262Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec86"},"name":"intimate","derivation":"inti(internal)+mate","thesauri":"close,  dear","created_at":{"$date":"2019-11-19T13:59:13.264Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec87"},"name":"intricately","derivation":"in+tric(trick)+ate+ly","created_at":{"$date":"2019-11-19T13:59:13.265Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec88"},"name":"intrigue","derivation":"in+trigue(trick)","created_at":{"$date":"2019-11-19T13:59:13.266Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec89"},"name":"intrinsic","derivation":"intrin(intra, within)+sic","thesauri":"inherent,  innate,  inborn","created_at":{"$date":"2019-11-19T13:59:13.267Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec8a"},"name":"intuition","derivation":"intui(into)+tion","thesauri":"instinct","created_at":{"$date":"2019-11-19T13:59:13.269Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec89"},"name":"intrinsic","derivation":"intrin(intra, within)+sic","thesauri":"inherent,  innate,  inborn","created_at":{"$date":"2019-11-19T13:59:13.267Z"},"hardship":20,"updated_at":{"$date":"2019-12-02T09:06:44.82Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec8a"},"name":"intuition","derivation":"intui(into)+tion","thesauri":"instinct","created_at":{"$date":"2019-11-19T13:59:13.269Z"},"hardship":8,"related_words":"tuition, tutor","updated_at":{"$date":"2019-12-01T07:41:23.295Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec8b"},"name":"interior","created_at":{"$date":"2019-11-19T13:59:13.27Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec8c"},"name":"interrupt","created_at":{"$date":"2019-11-19T13:59:13.272Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec8d"},"name":"interval","created_at":{"$date":"2019-11-19T13:59:13.276Z"}}
@@ -919,7 +919,7 @@
 {"_id":{"$oid":"5dd3f5318003acab8a2fec8f"},"name":"involved","derivation":"in(into)+volv(roll)+ed","related_words":"evoke, invoke, dissolve","created_at":{"$date":"2019-11-19T13:59:13.281Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec90"},"name":"irony","derivation":"iron+y","created_at":{"$date":"2019-11-19T13:59:13.282Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec91"},"name":"irrational","derivation":"ir+ration+al","created_at":{"$date":"2019-11-19T13:59:13.284Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fec92"},"name":"irrigate","derivation":"ir+rig(rain)+ate","created_at":{"$date":"2019-11-19T13:59:13.286Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fec92"},"name":"irrigate","derivation":"ir+rig(rain)+ate","created_at":{"$date":"2019-11-19T13:59:13.286Z"},"related_words":"canal","updated_at":{"$date":"2019-11-30T04:03:51.128Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec93"},"name":"investigation","created_at":{"$date":"2019-11-19T13:59:13.287Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec94"},"name":"irrelevant","created_at":{"$date":"2019-11-19T13:59:13.288Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fec95"},"name":"irreversible","created_at":{"$date":"2019-11-19T13:59:13.289Z"},"chinese":"不可逆的","derivation":"ir(not)+reversi(reverse,逆转)+ble","related_words":"reversible","thesauri":"irreparable, permanent"}
@@ -989,7 +989,7 @@
 {"_id":{"$oid":"5dd3f5318003acab8a2fecd5"},"name":"notational","derivation":"notation(symbols,annotation)+al","created_at":{"$date":"2019-11-19T13:59:13.424Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fecd6"},"name":"notion","similar_shaped_words":"nation, notation","thesauri":"idea,  concept,  ","created_at":{"$date":"2019-11-19T13:59:13.425Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fecd7"},"name":"normal","created_at":{"$date":"2019-11-19T13:59:13.427Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fecd8"},"name":"notoriously","derivation":"noto(note)+rious+ly","thesauri":"disfamous,  disreputable","created_at":{"$date":"2019-11-19T13:59:13.429Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fecd8"},"name":"notoriously","derivation":"noto(note)+rious+ly","thesauri":"disfamous,  disreputable","created_at":{"$date":"2019-11-19T13:59:13.429Z"},"hardship":15,"updated_at":{"$date":"2019-12-01T06:43:19.656Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fecd9"},"name":"numerous","derivation":"numer(number)+ous","thesauri":"plenty","created_at":{"$date":"2019-11-19T13:59:13.431Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fecda"},"name":"obesity","derivation":"ob(over)+es(ese, eat)+ity","related_words":"obese","thesauri":"fatness,  ","created_at":{"$date":"2019-11-19T13:59:13.432Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fecdb"},"name":"obligation","thesauri":"duty","created_at":{"$date":"2019-11-19T13:59:13.433Z"}}
@@ -1002,7 +1002,7 @@
 {"_id":{"$oid":"5dd3f5318003acab8a2fece2"},"name":"odd","derivation":"old","thesauri":"bizarre,  weird","created_at":{"$date":"2019-11-19T13:59:13.445Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fece3"},"name":"odor","thesauri":"smell","created_at":{"$date":"2019-11-19T13:59:13.447Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fece4"},"name":"offend","derivation":"of(against)+fend(strike)","thesauri":"affront","created_at":{"$date":"2019-11-19T13:59:13.448Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fece5"},"name":"omit","similar_shaped_words":"emit","thesauri":"eliminate,  exclude,  ","created_at":{"$date":"2019-11-19T13:59:13.45Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fece5"},"name":"omit","similar_shaped_words":"emit","thesauri":"eliminate,  exclude,  ","created_at":{"$date":"2019-11-19T13:59:13.45Z"},"hardship":7,"updated_at":{"$date":"2019-12-01T14:32:05.071Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fece6"},"name":"opt","derivation":"option","thesauri":"select","created_at":{"$date":"2019-11-19T13:59:13.451Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fece7"},"name":"optical","derivation":"opt(eye)+ical","created_at":{"$date":"2019-11-19T13:59:13.452Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fece8"},"name":"optimism","derivation":"optim(optimum)+ism","created_at":{"$date":"2019-11-19T13:59:13.453Z"}}
@@ -1028,7 +1028,7 @@
 {"_id":{"$oid":"5dd3f5318003acab8a2fecfc"},"name":"parallel","created_at":{"$date":"2019-11-19T13:59:13.481Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fecfd"},"name":"partial","created_at":{"$date":"2019-11-19T13:59:13.482Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fecfe"},"name":"partnership","created_at":{"$date":"2019-11-19T13:59:13.483Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fecff"},"name":"passionate","created_at":{"$date":"2019-11-19T13:59:13.486Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fecff"},"name":"passionate","created_at":{"$date":"2019-11-19T13:59:13.486Z"},"related_words":"compassionate","updated_at":{"$date":"2019-11-30T02:32:17.431Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed00"},"name":"passive","derivation":"passion,suffering","thesauri":"negative","created_at":{"$date":"2019-11-19T13:59:13.489Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed01"},"name":"patent","derivation":"protect","created_at":{"$date":"2019-11-19T13:59:13.492Z"},"similar_shaped_words":"potent"}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed02"},"name":"patience","derivation":"patien(patient,passion,suffering)+ce","thesauri":"patient","created_at":{"$date":"2019-11-19T13:59:13.494Z"}}
@@ -1040,7 +1040,7 @@
 {"_id":{"$oid":"5dd3f5318003acab8a2fed08"},"name":"percentage","thesauri":"ratio,  proportion","created_at":{"$date":"2019-11-19T13:59:13.501Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed09"},"name":"pattern","created_at":{"$date":"2019-11-19T13:59:13.503Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed0a"},"name":"perceptual","derivation":"perceive","thesauri":"mental","created_at":{"$date":"2019-11-19T13:59:13.506Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed0b"},"name":"perennial","derivation":"per(thorough)+ennial(annual)","thesauri":"annual","created_at":{"$date":"2019-11-19T13:59:13.507Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed0b"},"name":"perennial","derivation":"per(thorough)+ennial(annual)","thesauri":"","created_at":{"$date":"2019-11-19T13:59:13.507Z"},"hardship":8,"related_words":"annual, evergreen","updated_at":{"$date":"2019-12-02T07:14:48.814Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed0c"},"name":"perpetuate","derivation":"per(thorough)+petu(push)+ate","related_words":"persevere,","similar_shaped_words":"impetus","created_at":{"$date":"2019-11-19T13:59:13.508Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed0d"},"name":"persistently","derivation":"per(thorough)+sis(stand)+ent+ly","related_words":"persevere,","similar_shaped_words":"consistently","thesauri":"constantly,  perpetually,  ","created_at":{"$date":"2019-11-19T13:59:13.51Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed0e"},"name":"personalise","thesauri":"individualise","created_at":{"$date":"2019-11-19T13:59:13.512Z"}}
@@ -1126,8 +1126,8 @@
 {"_id":{"$oid":"5dd3f5318003acab8a2fed5e"},"name":"questionnaire","created_at":{"$date":"2019-11-19T13:59:13.643Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed5f"},"name":"radar","created_at":{"$date":"2019-11-19T13:59:13.644Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed60"},"name":"radiation","derivation":"radi(ray)+ation","created_at":{"$date":"2019-11-19T13:59:13.647Z"},"similar_shaped_words":"radical"}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed61"},"name":"realm","derivation":"rule","thesauri":"kindom","created_at":{"$date":"2019-11-19T13:59:13.648Z"},"related_words":"regime"}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed62"},"name":"reassure","derivation":"re(again)+assure","created_at":{"$date":"2019-11-19T13:59:13.649Z"},"similar_shaped_words":"ascertain"}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed61"},"name":"realm","derivation":"rule","thesauri":"kindom","created_at":{"$date":"2019-11-19T13:59:13.648Z"},"related_words":"regime, reign","hardship":5,"updated_at":{"$date":"2019-12-01T14:14:26.408Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed62"},"name":"reassure","derivation":"re(again)+assure","created_at":{"$date":"2019-11-19T13:59:13.649Z"},"similar_shaped_words":"ascertain, ensure, ensue","updated_at":{"$date":"2019-12-01T14:58:21.063Z"},"hardship":4}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed63"},"name":"reckless","derivation":"reck(care)+less","thesauri":"rash","created_at":{"$date":"2019-11-19T13:59:13.65Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed64"},"name":"recommend","derivation":"re(again)+commend(称赞)","thesauri":"advocate","created_at":{"$date":"2019-11-19T13:59:13.651Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed65"},"name":"radius","created_at":{"$date":"2019-11-19T13:59:13.653Z"}}
@@ -1135,17 +1135,17 @@
 {"_id":{"$oid":"5dd3f5318003acab8a2fed67"},"name":"ratio","created_at":{"$date":"2019-11-19T13:59:13.655Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed68"},"name":"rational","created_at":{"$date":"2019-11-19T13:59:13.657Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed69"},"name":"ray","created_at":{"$date":"2019-11-19T13:59:13.659Z"},"related_words":"radiation"}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed6a"},"name":"recreational","derivation":"re(again)+creation+nal","created_at":{"$date":"2019-11-19T13:59:13.662Z"},"related_words":"entertainment, amusement","thesauri":""}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed6a"},"name":"recreational","derivation":"re(again)+creation+nal","created_at":{"$date":"2019-11-19T13:59:13.662Z"},"related_words":"entertainment, amusement, recreate","thesauri":"","updated_at":{"$date":"2019-11-30T11:58:57.791Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed6b"},"name":"recruit","derivation":"re+cruit(create)","created_at":{"$date":"2019-11-19T13:59:13.663Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed6c"},"name":"rectangular","derivation":"rect(right)+angul(angle)+ar","thesauri":"triangular","created_at":{"$date":"2019-11-19T13:59:13.664Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed6c"},"name":"rectangular","derivation":"rect(right)+angul(angle)+ar","thesauri":"triangular","created_at":{"$date":"2019-11-19T13:59:13.664Z"},"related_words":"rectangle","updated_at":{"$date":"2019-11-30T16:28:10.296Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed6d"},"name":"reel","related_words":"wheel","created_at":{"$date":"2019-11-19T13:59:13.666Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed6e"},"name":"refrain","derivation":"re(back)+frain(free)","created_at":{"$date":"2019-11-19T13:59:13.667Z"},"thesauri":"abstain, restrict"}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed6e"},"name":"refrain","derivation":"re(back)+frain(free)","created_at":{"$date":"2019-11-19T13:59:13.667Z"},"thesauri":"abstain, restrict","related_words":"confine","updated_at":{"$date":"2019-12-01T13:13:28.36Z"},"hardship":10}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed6f"},"name":"refund","derivation":"re(back)+fund","thesauri":"reimburse","created_at":{"$date":"2019-11-19T13:59:13.668Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed70"},"name":"reinforce","thesauri":"strengthen","created_at":{"$date":"2019-11-19T13:59:13.669Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed71"},"name":"recycle","created_at":{"$date":"2019-11-19T13:59:13.67Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed72"},"name":"redundant","created_at":{"$date":"2019-11-19T13:59:13.671Z"},"similar_shaped_words":"abundant"}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed73"},"name":"regime","created_at":{"$date":"2019-11-19T13:59:13.672Z"},"related_words":"realm"}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed74"},"name":"relevant","derivation":"re(加强)+lev(lever)+ant","created_at":{"$date":"2019-11-19T13:59:13.674Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed74"},"name":"relevant","derivation":"re(加强)+lev(lever)+ant","created_at":{"$date":"2019-11-19T13:59:13.674Z"},"related_words":"relate, correlate","updated_at":{"$date":"2019-11-30T12:09:55.421Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed75"},"name":"reliable","derivation":"reli(rely)+able","thesauri":"high available, trustworthy","created_at":{"$date":"2019-11-19T13:59:13.676Z"},"related_words":"reliance"}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed76"},"name":"relics","derivation":"re(back)+lics(leave)","created_at":{"$date":"2019-11-19T13:59:13.677Z"},"thesauri":"fossil","similar_shaped_words":"relief"}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed77"},"name":"renaissance","derivation":"re(again)+naiss(new)+ance","created_at":{"$date":"2019-11-19T13:59:13.678Z"}}
@@ -1155,40 +1155,40 @@
 {"_id":{"$oid":"5dd3f5318003acab8a2fed7b"},"name":"relate","created_at":{"$date":"2019-11-19T13:59:13.682Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed7c"},"name":"reliance","created_at":{"$date":"2019-11-19T13:59:13.683Z"},"derivation":"reli(rely) + ance","related_words":"reliable"}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed7d"},"name":"rental","created_at":{"$date":"2019-11-19T13:59:13.684Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed7e"},"name":"replenish","derivation":"re(again)+plen(plenty)+ish","created_at":{"$date":"2019-11-19T13:59:13.688Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed7e"},"name":"replenish","derivation":"re(again)+plen(plenty)+ish","created_at":{"$date":"2019-11-19T13:59:13.688Z"},"related_words":"complete, complement","updated_at":{"$date":"2019-11-29T10:03:32.154Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed7f"},"name":"replicate","derivation":"re(again)+pli(ply)+cate","created_at":{"$date":"2019-11-19T13:59:13.69Z"},"thesauri":"reproduce"}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed80"},"name":"represent","derivation":"re(again)+present","created_at":{"$date":"2019-11-19T13:59:13.692Z"},"thesauri":"delegate, depict"}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed81"},"name":"reproduce","thesauri":"copy,  replicate","created_at":{"$date":"2019-11-19T13:59:13.694Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed82"},"name":"require","thesauri":"desire,  ","created_at":{"$date":"2019-11-19T13:59:13.696Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed82"},"name":"require","thesauri":"desire,  ","created_at":{"$date":"2019-11-19T13:59:13.696Z"},"similar_shaped_words":"inquire, enquire","updated_at":{"$date":"2019-11-30T03:00:26.78Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed83"},"name":"rescue","derivation":"re(again)+scure(secure)","created_at":{"$date":"2019-11-19T13:59:13.698Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed84"},"name":"resemble","derivation":"re(加强)+sem(seem)+ble","thesauri":"like,  akin,  近似: assemble,  dissasemble,  dissemble","created_at":{"$date":"2019-11-19T13:59:13.699Z"},"related_words":"seemingly"}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed84"},"name":"resemble","derivation":"re(加强)+sem(seem)+ble","thesauri":"like,  akin","created_at":{"$date":"2019-11-19T13:59:13.699Z"},"related_words":"seemingly","hardship":12,"similar_shaped_words":"assemble,  disassemble,  dissemble","updated_at":{"$date":"2019-12-01T07:46:10.97Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed85"},"name":"reservoir","derivation":"reserv(reserve)+oir","created_at":{"$date":"2019-11-19T13:59:13.7Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed86"},"name":"residence","derivation":"resid(reside)+ence","thesauri":"habitant,  inhabitant,  dweller","created_at":{"$date":"2019-11-19T13:59:13.702Z"},"similar_shaped_words":"preside, residue"}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed87"},"name":"residue","derivation":"re(back)+sid(sit)+ue","thesauri":"surplus","created_at":{"$date":"2019-11-19T13:59:13.703Z"},"similar_shaped_words":"reside, preside"}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed88"},"name":"resilience","derivation":"re(again)+sili(leap)+ence","thesauri":"flexibility","created_at":{"$date":"2019-11-19T13:59:13.705Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed89"},"name":"resonance","derivation":"re(repeat)+son(sound)+ance","thesauri":"reverberation,  echo","created_at":{"$date":"2019-11-19T13:59:13.707Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed8a"},"name":"respond","derivation":"re(back)+spond(sound)","thesauri":"reply","created_at":{"$date":"2019-11-19T13:59:13.708Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed8b"},"name":"retain","derivation":"re(加强)+tain(hold)","thesauri":"keep,  save","created_at":{"$date":"2019-11-19T13:59:13.709Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed8c"},"name":"retreat","derivation":"retract","created_at":{"$date":"2019-11-19T13:59:13.71Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed8d"},"name":"retrenchment","derivation":"re(back)+trench(cut)+ment","thesauri":"saving","created_at":{"$date":"2019-11-19T13:59:13.711Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed8e"},"name":"resolve","created_at":{"$date":"2019-11-19T13:59:13.713Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed8b"},"name":"retain","derivation":"re(加强)+tain(hold)","thesauri":"keep,  save, remain","created_at":{"$date":"2019-11-19T13:59:13.709Z"},"updated_at":{"$date":"2019-11-29T14:53:09.403Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed8c"},"name":"retreat","derivation":"retract","created_at":{"$date":"2019-11-19T13:59:13.71Z"},"thesauri":"fallback","updated_at":{"$date":"2019-11-29T14:55:06.465Z"},"comment":"team, fallback!"}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed8d"},"name":"retrenchment","derivation":"re(back)+trench(cut)+ment","thesauri":"saving","created_at":{"$date":"2019-11-19T13:59:13.711Z"},"related_words":"","similar_shaped_words":"","updated_at":{"$date":"2019-11-29T14:56:15.127Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed8e"},"name":"resolve","created_at":{"$date":"2019-11-19T13:59:13.713Z"},"comment":"solve, solute, solution, resolution","similar_shaped_words":"revolve, involve, invoke","updated_at":{"$date":"2019-11-29T15:01:43.978Z"},"thesauri":"settle, determine, decide, solve, decide by vote"}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed8f"},"name":"resource","created_at":{"$date":"2019-11-19T13:59:13.715Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed90"},"name":"respondent","created_at":{"$date":"2019-11-19T13:59:13.716Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed91"},"name":"restore","created_at":{"$date":"2019-11-19T13:59:13.717Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed92"},"name":"revenue","derivation":"re(back)+venue(come)","created_at":{"$date":"2019-11-19T13:59:13.719Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed93"},"name":"revise","derivation":"re(again)+vise(view)","thesauri":"alter,  change","created_at":{"$date":"2019-11-19T13:59:13.721Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed94"},"name":"revolve","derivation":"re(加强)+volve(roll)","similar_shaped_words":"resolve, involve","thesauri":"rotate,  ","created_at":{"$date":"2019-11-19T13:59:13.725Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed92"},"name":"revenue","derivation":"re(back)+venue(come)","created_at":{"$date":"2019-11-19T13:59:13.719Z"},"comment":"annual income","hardship":3,"thesauri":"income","updated_at":{"$date":"2019-12-01T12:49:17.868Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed93"},"name":"revise","derivation":"re(again)+vise(view)","thesauri":"alter,  change, collate","created_at":{"$date":"2019-11-19T13:59:13.721Z"},"updated_at":{"$date":"2019-11-29T15:54:40.285Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed94"},"name":"revolve","derivation":"re(加强)+volve(roll)","similar_shaped_words":"resolve, involve","thesauri":"rotate,  ","created_at":{"$date":"2019-11-19T13:59:13.725Z"},"comment":"","updated_at":{"$date":"2019-11-29T14:46:04.035Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed95"},"name":"rhythm","derivation":"rhyt(run,pace)+hm","thesauri":"pattern,  beat","created_at":{"$date":"2019-11-19T13:59:13.727Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed96"},"name":"rigorous","derivation":"rigo(严格的)+ous","similar_shaped_words":"vigorous","thesauri":"conscientious,  diligent,  strict,  ","created_at":{"$date":"2019-11-19T13:59:13.729Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed96"},"name":"rigorous","derivation":"rigo(严格的)+ous","similar_shaped_words":"vigorous","thesauri":"conscientious,  diligent,  strict","created_at":{"$date":"2019-11-19T13:59:13.729Z"},"related_words":"severe, severity","updated_at":{"$date":"2019-11-29T16:01:50.581Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed97"},"name":"roam","derivation":"Rome","thesauri":"wander,  ramble","created_at":{"$date":"2019-11-19T13:59:13.73Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed98"},"name":"robust","thesauri":"strong,  vigorous","created_at":{"$date":"2019-11-19T13:59:13.732Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed99"},"name":"rotate","thesauri":"revolve","created_at":{"$date":"2019-11-19T13:59:13.733Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed9a"},"name":"rudimentary","derivation":"rudi(rude)+ment+ary","thesauri":"basic,  fundamental","created_at":{"$date":"2019-11-19T13:59:13.734Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed9a"},"name":"rudimentary","derivation":"rudi(rude)+ment+ary","thesauri":"basic,  fundamental","created_at":{"$date":"2019-11-19T13:59:13.734Z"},"updated_at":{"$date":"2019-11-29T15:55:43.718Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed9b"},"name":"Roman","created_at":{"$date":"2019-11-19T13:59:13.736Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed9c"},"name":"rural","related_words":"urban, suburb","thesauri":"country,  ","created_at":{"$date":"2019-11-19T13:59:13.739Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed9d"},"name":"salary","derivation":"sal(salt)+ary","thesauri":"income,  wage,  payroll","created_at":{"$date":"2019-11-19T13:59:13.74Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fed9e"},"name":"sanitation","derivation":"sani(sane)+tation","thesauri":"hygiene,  health","created_at":{"$date":"2019-11-19T13:59:13.741Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fed9f"},"name":"scarce","derivation":"scant","thesauri":"lack, insufficient, deficient","created_at":{"$date":"2019-11-19T13:59:13.742Z"},"similar_shaped_words":"scare","related_words":""}
+{"_id":{"$oid":"5dd3f5318003acab8a2fed9f"},"name":"scarce","derivation":"scant","thesauri":"lack, insufficient, deficient","created_at":{"$date":"2019-11-19T13:59:13.742Z"},"similar_shaped_words":"scare, stare","related_words":"","updated_at":{"$date":"2019-12-01T07:33:07.653Z"},"hardship":8}
 {"_id":{"$oid":"5dd3f5318003acab8a2feda0"},"name":"scout","derivation":"sc(spy)+out","thesauri":"detect","created_at":{"$date":"2019-11-19T13:59:13.744Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2feda1"},"name":"scrutiny","derivation":"security","thesauri":"observation,  inspection","created_at":{"$date":"2019-11-19T13:59:13.745Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2feda2"},"name":"seafaring","derivation":"sea+far(fare)+ing","thesauri":"marine,  nautical","created_at":{"$date":"2019-11-19T13:59:13.746Z"}}
@@ -1202,18 +1202,18 @@
 {"_id":{"$oid":"5dd3f5318003acab8a2fedaa"},"name":"sensitive","thesauri":"conscious","created_at":{"$date":"2019-11-19T13:59:13.758Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedab"},"name":"sequence","derivation":"sequ(follow)+ence","thesauri":"series","created_at":{"$date":"2019-11-19T13:59:13.759Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedac"},"name":"settle","derivation":"sett(sit)+le","thesauri":"resolve,  pay,  colonize,  inhabit","created_at":{"$date":"2019-11-19T13:59:13.76Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fedad"},"name":"severity","derivation":"sever(severe)+ity","thesauri":"gravity,  fury","created_at":{"$date":"2019-11-19T13:59:13.761Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fedad"},"name":"severity","derivation":"sever(severe)+ity","thesauri":"gravity,  fury, rigor","created_at":{"$date":"2019-11-19T13:59:13.761Z"},"related_words":"","updated_at":{"$date":"2019-11-29T15:59:56.213Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedae"},"name":"sex","thesauri":"gender","created_at":{"$date":"2019-11-19T13:59:13.763Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedaf"},"name":"secrecy","created_at":{"$date":"2019-11-19T13:59:13.764Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedb0"},"name":"shallow","derivation":"shal(shall,trend)+low","created_at":{"$date":"2019-11-19T13:59:13.767Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedb1"},"name":"sharp","derivation":"shark","thesauri":"keen,  incisive","created_at":{"$date":"2019-11-19T13:59:13.768Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fedb2"},"name":"shatter","thesauri":"break,  crack","created_at":{"$date":"2019-11-19T13:59:13.769Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fedb2"},"name":"shatter","thesauri":"break,  crack","created_at":{"$date":"2019-11-19T13:59:13.769Z"},"similar_shaped_words":"shutter, shuttle","updated_at":{"$date":"2019-11-29T09:49:08.63Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedb3"},"name":"shell","thesauri":"hull,  armor","created_at":{"$date":"2019-11-19T13:59:13.772Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedb4"},"name":"shelter","derivation":"shel(shell)+ter","thesauri":"haven","created_at":{"$date":"2019-11-19T13:59:13.773Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedb5"},"name":"shrink","derivation":"shr(shirt)+ink(墨水)","thesauri":"cower","created_at":{"$date":"2019-11-19T13:59:13.775Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedb6"},"name":"silent","thesauri":"quiet","created_at":{"$date":"2019-11-19T13:59:13.776Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedb7"},"name":"silly","thesauri":"foolish,  idiotic","created_at":{"$date":"2019-11-19T13:59:13.777Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fedb8"},"name":"silt","derivation":"salt","thesauri":"sediment","created_at":{"$date":"2019-11-19T13:59:13.779Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fedb8"},"name":"silt","derivation":"salt","thesauri":"sediment","created_at":{"$date":"2019-11-19T13:59:13.779Z"},"hardship":7,"updated_at":{"$date":"2019-12-01T09:30:57.789Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedb9"},"name":"silver","derivation":"shine","related_words":"silversmith","created_at":{"$date":"2019-11-19T13:59:13.78Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedba"},"name":"situated","derivation":"sit+uat+ed","thesauri":"located,  installed","created_at":{"$date":"2019-11-19T13:59:13.782Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedbb"},"name":"skyscraper","derivation":"sky+scraper","related_words":"scrape","created_at":{"$date":"2019-11-19T13:59:13.784Z"}}
@@ -1227,22 +1227,22 @@
 {"_id":{"$oid":"5dd3f5318003acab8a2fedc3"},"name":"specialise","created_at":{"$date":"2019-11-19T13:59:13.794Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedc4"},"name":"split","thesauri":"divide,  separate","created_at":{"$date":"2019-11-19T13:59:13.8Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedc5"},"name":"static","derivation":"stat(stand)+ic","thesauri":"still","created_at":{"$date":"2019-11-19T13:59:13.804Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fedc6"},"name":"steady","thesauri":"regular,  settled","created_at":{"$date":"2019-11-19T13:59:13.806Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fedc6"},"name":"steady","thesauri":"stable, even, balanced, regular,  settled","created_at":{"$date":"2019-11-19T13:59:13.806Z"},"updated_at":{"$date":"2019-12-01T15:23:31.851Z"},"hardship":4}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedc7"},"name":"steel","derivation":"stay","thesauri":"iron,  stainless steel","created_at":{"$date":"2019-11-19T13:59:13.81Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedc8"},"name":"straight","derivation":"stretch","thesauri":"consecutive","created_at":{"$date":"2019-11-19T13:59:13.811Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedc9"},"name":"strict","thesauri":"rigorous","created_at":{"$date":"2019-11-19T13:59:13.813Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedca"},"name":"striking","thesauri":"outstanding,  noticeable","created_at":{"$date":"2019-11-19T13:59:13.814Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fedcb"},"name":"strive","derivation":"s+trive(drive)","similar_shaped_words":"strike","thesauri":"endeavor,  ","created_at":{"$date":"2019-11-19T13:59:13.815Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fedcb"},"name":"strive","derivation":"s+trive(drive)","similar_shaped_words":"strike, struggle","thesauri":"endeavor,  ","created_at":{"$date":"2019-11-19T13:59:13.815Z"},"updated_at":{"$date":"2019-11-30T02:16:03.946Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedcc"},"name":"storm","created_at":{"$date":"2019-11-19T13:59:13.816Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedcd"},"name":"strengthen","created_at":{"$date":"2019-11-19T13:59:13.818Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedce"},"name":"stress","created_at":{"$date":"2019-11-19T13:59:13.819Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedcf"},"name":"subject","created_at":{"$date":"2019-11-19T13:59:13.82Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fedd0"},"name":"subsequent","derivation":"sub(下面的)+sequ(跟随)+ent","thesauri":"ensue,  following,  succeeding","created_at":{"$date":"2019-11-19T13:59:13.823Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fedd0"},"name":"subsequent","derivation":"sub(下面的)+sequ(跟随)+ent","thesauri":"ensue,  following,  succeeding","created_at":{"$date":"2019-11-19T13:59:13.823Z"},"comment":"Subsequent events proved her wrong.","updated_at":{"$date":"2019-12-01T14:56:15.578Z"},"similar_shaped_words":"consequent","hardship":3}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedd1"},"name":"substance","thesauri":"alloy,  matter","created_at":{"$date":"2019-11-19T13:59:13.825Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedd2"},"name":"substantial","derivation":"substance","created_at":{"$date":"2019-11-19T13:59:13.827Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedd3"},"name":"successive","derivation":"succeed","thesauri":"consecutive,  sequent,  continuous","created_at":{"$date":"2019-11-19T13:59:13.828Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedd4"},"name":"sudden","derivation":"thunder","thesauri":"abrupt","created_at":{"$date":"2019-11-19T13:59:13.831Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fedd5"},"name":"sufficient","derivation":"suf+ficient","thesauri":"abundant,  enough","created_at":{"$date":"2019-11-19T13:59:13.832Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fedd5"},"name":"sufficient","derivation":"suffici(suffice, satisfy) + ent","thesauri":"abundant,  enough","created_at":{"$date":"2019-11-19T13:59:13.832Z"},"related_words":"","updated_at":{"$date":"2019-11-30T01:55:50.632Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedd6"},"name":"suitable","thesauri":"appropriate","created_at":{"$date":"2019-11-19T13:59:13.834Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedd7"},"name":"summarise","thesauri":"sum up,  outline","created_at":{"$date":"2019-11-19T13:59:13.835Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedd8"},"name":"superior","thesauri":"greater,  higher","created_at":{"$date":"2019-11-19T13:59:13.836Z"}}
@@ -1255,16 +1255,16 @@
 {"_id":{"$oid":"5dd3f5318003acab8a2feddf"},"name":"suspect","derivation":"sus(在下面)+pect(看)","created_at":{"$date":"2019-11-19T13:59:13.849Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fede0"},"name":"suspense","derivation":"suspend","created_at":{"$date":"2019-11-19T13:59:13.851Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fede1"},"name":"sustainable","derivation":"sustain","thesauri":"renewable,  recycling","created_at":{"$date":"2019-11-19T13:59:13.852Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fede2"},"name":"swift","derivation":"shift","thesauri":"fast,  rapid","created_at":{"$date":"2019-11-19T13:59:13.853Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fede3"},"name":"supportive","created_at":{"$date":"2019-11-19T13:59:13.854Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fede2"},"name":"swift","derivation":"shift","thesauri":"fast,  rapid","created_at":{"$date":"2019-11-19T13:59:13.853Z"},"similar_shaped_words":"twist","updated_at":{"$date":"2019-11-30T02:23:52.718Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fede3"},"name":"supportive","created_at":{"$date":"2019-11-19T13:59:13.854Z"},"derivation":"support + ive","related_words":"support, agree, concur, approve","updated_at":{"$date":"2019-11-30T02:00:43.761Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fede4"},"name":"sympathetic","derivation":"sym(mutual)+pathe(pathos)+tic","thesauri":"approving","created_at":{"$date":"2019-11-19T13:59:13.857Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fede5"},"name":"systematic","thesauri":"methodic","created_at":{"$date":"2019-11-19T13:59:13.858Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fede6"},"name":"tackle","derivation":"tack(take)+le","thesauri":"undertake,  deal with","created_at":{"$date":"2019-11-19T13:59:13.86Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fede7"},"name":"talent","derivation":"tal(tall)+ent","thesauri":"prodigy,  skill","created_at":{"$date":"2019-11-19T13:59:13.861Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fede8"},"name":"taxi","derivation":"tax+i","created_at":{"$date":"2019-11-19T13:59:13.863Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fede9"},"name":"telescope","derivation":"tele(far)+scope","created_at":{"$date":"2019-11-19T13:59:13.865Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fedea"},"name":"temperate","derivation":"temper+ate","thesauri":"moderate","created_at":{"$date":"2019-11-19T13:59:13.866Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fedeb"},"name":"temple","thesauri":"church,  mosque","created_at":{"$date":"2019-11-19T13:59:13.867Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fedea"},"name":"temperate","derivation":"temper+ate","thesauri":"moderate","created_at":{"$date":"2019-11-19T13:59:13.866Z"},"similar_shaped_words":"temporary, temple","updated_at":{"$date":"2019-12-01T07:21:31.216Z"},"related_words":"tropical","hardship":4}
+{"_id":{"$oid":"5dd3f5318003acab8a2fedeb"},"name":"temple","thesauri":"church,  mosque","created_at":{"$date":"2019-11-19T13:59:13.867Z"},"similar_shaped_words":"temperate, temporary","updated_at":{"$date":"2019-11-30T02:31:24.552Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedec"},"name":"temporary","derivation":"tempo(time)+rary","thesauri":"transient","created_at":{"$date":"2019-11-19T13:59:13.868Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2feded"},"name":"symbol","created_at":{"$date":"2019-11-19T13:59:13.869Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedee"},"name":"tendency","derivation":"tend+ency","thesauri":"trend,  inclination","created_at":{"$date":"2019-11-19T13:59:13.875Z"}}
@@ -1283,11 +1283,11 @@
 {"_id":{"$oid":"5dd3f5318003acab8a2fedfb"},"name":"timber","derivation":"time","thesauri":"timberline","created_at":{"$date":"2019-11-19T13:59:13.896Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedfc"},"name":"timetable","derivation":"time+table","thesauri":"schedule,  agenda","created_at":{"$date":"2019-11-19T13:59:13.898Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedfd"},"name":"tissue","derivation":"issue","thesauri":"muscle tissue","created_at":{"$date":"2019-11-19T13:59:13.9Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fedfe"},"name":"toll","thesauri":"charge,  fare,  fee","created_at":{"$date":"2019-11-19T13:59:13.902Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fedfe"},"name":"toll","thesauri":"charge,  fare,  fee, casualty","created_at":{"$date":"2019-11-19T13:59:13.902Z"},"similar_shaped_words":"toy, toil","updated_at":{"$date":"2019-12-02T07:55:37.442Z"},"hardship":15}
 {"_id":{"$oid":"5dd3f5318003acab8a2fedff"},"name":"touching","thesauri":"moving","created_at":{"$date":"2019-11-19T13:59:13.903Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee00"},"name":"tourism","related_words":"travel, agritourism","created_at":{"$date":"2019-11-19T13:59:13.904Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee01"},"name":"title","created_at":{"$date":"2019-11-19T13:59:13.906Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fee02"},"name":"toxic","derivation":"tox+ic","thesauri":"poisonous,  venomous","created_at":{"$date":"2019-11-19T13:59:13.909Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fee02"},"name":"toxic","derivation":"tox+ic","thesauri":"poisonous,  venomous","created_at":{"$date":"2019-11-19T13:59:13.909Z"},"hardship":5,"updated_at":{"$date":"2019-12-01T07:24:36.983Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee03"},"name":"traffic","related_words":"traffic jam, trafficker","created_at":{"$date":"2019-11-19T13:59:13.911Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee04"},"name":"tragic","derivation":"tragedy","thesauri":"fatal,  disastrous","created_at":{"$date":"2019-11-19T13:59:13.912Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee05"},"name":"trait","derivation":"trace","thesauri":"feature,  characteristic","created_at":{"$date":"2019-11-19T13:59:13.913Z"}}
@@ -1301,19 +1301,19 @@
 {"_id":{"$oid":"5dd3f5318003acab8a2fee0d"},"name":"treadmill","derivation":"tread(踩踏)+mill(磨坊)","created_at":{"$date":"2019-11-19T13:59:13.925Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee0e"},"name":"tremendous","derivation":"trem(抖动)+endous(的)","thesauri":"enormous,  immense","created_at":{"$date":"2019-11-19T13:59:13.928Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee0f"},"name":"trial","derivation":"try","thesauri":"experiment,  a murder trial","created_at":{"$date":"2019-11-19T13:59:13.929Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fee10"},"name":"triangular","derivation":"tri(三)+angular(有角的)","created_at":{"$date":"2019-11-19T13:59:13.931Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fee10"},"name":"triangular","derivation":"tri(三)+angular(有角的)","created_at":{"$date":"2019-11-19T13:59:13.931Z"},"related_words":"triangle","updated_at":{"$date":"2019-11-30T16:27:45.087Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee11"},"name":"trick","thesauri":"treat or trick","created_at":{"$date":"2019-11-19T13:59:13.932Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fee12"},"name":"tropical","derivation":"trop(转)+ical","created_at":{"$date":"2019-11-19T13:59:13.934Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fee12"},"name":"tropical","derivation":"trop(转)+ical","created_at":{"$date":"2019-11-19T13:59:13.934Z"},"related_words":"temperate","updated_at":{"$date":"2019-11-30T16:29:45.152Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee13"},"name":"troublesome","thesauri":"annoying,  irritating","created_at":{"$date":"2019-11-19T13:59:13.935Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee14"},"name":"treatment","created_at":{"$date":"2019-11-19T13:59:13.936Z"},"thesauri":"cure, remedy"}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee15"},"name":"trend","created_at":{"$date":"2019-11-19T13:59:13.937Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fee16"},"name":"trousers","derivation":"trouser","created_at":{"$date":"2019-11-19T13:59:13.94Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fee17"},"name":"tuition","derivation":"tutor","thesauri":"fees,  coaching","created_at":{"$date":"2019-11-19T13:59:13.942Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fee16"},"name":"trousers","derivation":"trouser","created_at":{"$date":"2019-11-19T13:59:13.94Z"},"similar_shaped_words":"disastrous","updated_at":{"$date":"2019-12-01T07:36:50.064Z"},"hardship":2}
+{"_id":{"$oid":"5dd3f5318003acab8a2fee17"},"name":"tuition","derivation":"tutor","thesauri":"fees,  coaching","created_at":{"$date":"2019-11-19T13:59:13.942Z"},"similar_shaped_words":"intuition","updated_at":{"$date":"2019-12-01T07:41:48.606Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee18"},"name":"tyre","related_words":"wheel","thesauri":"tire,  ","created_at":{"$date":"2019-11-19T13:59:13.943Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fee19"},"name":"ultimate","derivation":"ulti(ultra)+mate","thesauri":"eventual,  final","created_at":{"$date":"2019-11-19T13:59:13.944Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fee1a"},"name":"undergo","thesauri":"suffer,  encounter","created_at":{"$date":"2019-11-19T13:59:13.946Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fee1b"},"name":"undermine","thesauri":"spoil,  damage","created_at":{"$date":"2019-11-19T13:59:13.948Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fee1c"},"name":"undertake","thesauri":"dedicate,  tackle,  promise,  agree","created_at":{"$date":"2019-11-19T13:59:13.949Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fee19"},"name":"ultimate","derivation":"ulti(ultra)+mate","thesauri":"eventual,  final","created_at":{"$date":"2019-11-19T13:59:13.944Z"},"related_words":"culminate","updated_at":{"$date":"2019-12-01T06:39:04.915Z"},"hardship":10}
+{"_id":{"$oid":"5dd3f5318003acab8a2fee1a"},"name":"undergo","thesauri":"suffer,  encounter","created_at":{"$date":"2019-11-19T13:59:13.946Z"},"related_words":"confront, undertake","updated_at":{"$date":"2019-11-30T16:36:34.666Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fee1b"},"name":"undermine","thesauri":"spoil,  damage","created_at":{"$date":"2019-11-19T13:59:13.948Z"},"derivation":"under + mine（在下面埋雷哦，想干什么？）","updated_at":{"$date":"2019-12-01T04:49:29.398Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fee1c"},"name":"undertake","thesauri":"dedicate,  tackle,  promise,  agree","created_at":{"$date":"2019-11-19T13:59:13.949Z"},"related_words":"undergo","updated_at":{"$date":"2019-11-30T16:36:25.794Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee1d"},"name":"uniform","derivation":"uni(单一的)+form","created_at":{"$date":"2019-11-19T13:59:13.95Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee1e"},"name":"unique","derivation":"uni(单一)+que","thesauri":"distinct,  single,  sole","created_at":{"$date":"2019-11-19T13:59:13.951Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee1f"},"name":"unit","created_at":{"$date":"2019-11-19T13:59:13.952Z"}}
@@ -1322,92 +1322,91 @@
 {"_id":{"$oid":"5dd3f5318003acab8a2fee22"},"name":"upgrade","created_at":{"$date":"2019-11-19T13:59:13.965Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee23"},"name":"vertical","thesauri":"erect,  upright","created_at":{"$date":"2019-11-19T13:59:13.969Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee24"},"name":"via","derivation":"way","thesauri":"through","created_at":{"$date":"2019-11-19T13:59:13.97Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fee25"},"name":"vicinity","derivation":"village","thesauri":"nearness,  neighborhood","created_at":{"$date":"2019-11-19T13:59:13.972Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fee25"},"name":"vicinity","derivation":"village","thesauri":"nearness,  neighborhood","created_at":{"$date":"2019-11-19T13:59:13.972Z"},"hardship":12,"updated_at":{"$date":"2019-12-01T13:00:21.749Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee26"},"name":"violent","similar_shaped_words":"violin","thesauri":"intense,  severe,  ","created_at":{"$date":"2019-11-19T13:59:13.973Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee27"},"name":"vital","derivation":"vit(life)+al","thesauri":"fatal,  essential,  crucial","created_at":{"$date":"2019-11-19T13:59:13.974Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee28"},"name":"vocabulary","derivation":"voca(vocal)+bulary(body)","created_at":{"$date":"2019-11-19T13:59:13.975Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fee29"},"name":"volcano","derivation":"不敢去那儿","thesauri":"active or extinct volcano","created_at":{"$date":"2019-11-19T13:59:13.976Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fee29"},"name":"volcano","derivation":"不敢去那儿","thesauri":"active/extinct volcano","created_at":{"$date":"2019-11-19T13:59:13.976Z"},"related_words":"volcanic, lava, magma, crater","updated_at":{"$date":"2019-12-01T13:42:16.604Z"},"hardship":5}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee2a"},"name":"Venus","created_at":{"$date":"2019-11-19T13:59:13.978Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee2b"},"name":"visible","created_at":{"$date":"2019-11-19T13:59:13.979Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee2c"},"name":"visual","created_at":{"$date":"2019-11-19T13:59:13.98Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fee2d"},"name":"voyage","derivation":"voy(way)+age","thesauri":"sail,  cruise,  expedition,  trek","created_at":{"$date":"2019-11-19T13:59:13.982Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fee2e"},"name":"vulnerable","thesauri":"fragile,  susceptible","created_at":{"$date":"2019-11-19T13:59:13.984Z"}}
+{"_id":{"$oid":"5dd3f5318003acab8a2fee2d"},"name":"voyage","derivation":"voy(way)+age","thesauri":"sail,  cruise,  expedition,  trek, trip","created_at":{"$date":"2019-11-19T13:59:13.982Z"},"similar_shaped_words":"volley, volleyball","updated_at":{"$date":"2019-12-02T04:46:30.442Z"},"hardship":7,"related_words":"hike"}
+{"_id":{"$oid":"5dd3f5318003acab8a2fee2e"},"name":"vulnerable","thesauri":"fragile,  susceptible","created_at":{"$date":"2019-11-19T13:59:13.984Z"},"hardship":10,"updated_at":{"$date":"2019-12-01T13:19:37.085Z"},"derivation":"哇，那么薄！"}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee2f"},"name":"waist","derivation":"waste(容易长废肉的地方)","created_at":{"$date":"2019-11-19T13:59:13.985Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee30"},"name":"wealthy","derivation":"wealth+y","thesauri":"rich,  prosperous,  affluent","created_at":{"$date":"2019-11-19T13:59:13.986Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee31"},"name":"welfare","derivation":"wel(well)+fare(饭菜)","thesauri":"wellBeing","created_at":{"$date":"2019-11-19T13:59:13.987Z"}}
-{"_id":{"$oid":"5dd3f5318003acab8a2fee32"},"name":"wellBeing","thesauri":"welfare","created_at":{"$date":"2019-11-19T13:59:13.988Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee33"},"name":"whale","thesauri":"sperm whale","created_at":{"$date":"2019-11-19T13:59:13.991Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee34"},"name":"wheel","derivation":"reel","thesauri":"grinding wheel,  steering wheel","created_at":{"$date":"2019-11-19T13:59:13.994Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee35"},"name":"website","created_at":{"$date":"2019-11-19T13:59:13.996Z"}}
 {"_id":{"$oid":"5dd3f5318003acab8a2fee36"},"name":"width","derivation":"wide","created_at":{"$date":"2019-11-19T13:59:13.999Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee37"},"name":"wilderness","derivation":"wild+er+ness","created_at":{"$date":"2019-11-19T13:59:14.001Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee37"},"name":"wilderness","derivation":"wild+er+ness","created_at":{"$date":"2019-11-19T13:59:14.001Z"},"comment":"to be a voice(crying) in the wilderness.","updated_at":{"$date":"2019-12-01T13:27:48.465Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee38"},"name":"wise","derivation":"wide","thesauri":"intelligent,  clever","created_at":{"$date":"2019-11-19T13:59:14.002Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee39"},"name":"withstand","derivation":"with(加强)+stand","thesauri":"endure,  tolerate","created_at":{"$date":"2019-11-19T13:59:14.004Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee3a"},"name":"worm","derivation":"warm","created_at":{"$date":"2019-11-19T13:59:14.005Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee3b"},"name":"worthwhile","thesauri":"worthy","created_at":{"$date":"2019-11-19T13:59:14.007Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee3c"},"name":"zone","thesauri":"region,  area","created_at":{"$date":"2019-11-19T13:59:14.008Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee3d"},"name":"ankle","derivation":"angle","created_at":{"$date":"2019-11-19T13:59:14.009Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee3d"},"name":"ankle","derivation":"angle","created_at":{"$date":"2019-11-19T13:59:14.009Z"},"comment":"to angle for salmon","updated_at":{"$date":"2019-12-01T13:31:20.309Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee3e"},"name":"approval","derivation":"ap(ad)+prov(prove,test)+al","thesauri":"support","created_at":{"$date":"2019-11-19T13:59:14.01Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee3f"},"name":"ascend","derivation":"as(加强)+cend(climb,爬)","related_words":"descend","created_at":{"$date":"2019-11-19T13:59:14.011Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee40"},"name":"asymmetrical","derivation":"a(not)+sym(together)+metri(measure)+cal","related_words":"symmetrical","thesauri":"imbalanced","created_at":{"$date":"2019-11-19T13:59:14.015Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee40"},"name":"asymmetrical","derivation":"a(not)+sym(together)+metri(measure)+cal","related_words":"symmetrical","thesauri":"imbalanced, unbalanced","created_at":{"$date":"2019-11-19T13:59:14.015Z"},"hardship":14,"updated_at":{"$date":"2019-12-01T13:49:21.037Z"},"comment":"asymmetric algorithm"}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee41"},"name":"atomic","derivation":"atom+ic","related_words":"molecule","created_at":{"$date":"2019-11-19T13:59:14.016Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee42"},"name":"augment","derivation":"aug(increase)+ment","similar_shaped_words":"argument","thesauri":"expand,  amplify ","created_at":{"$date":"2019-11-19T13:59:14.017Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee42"},"name":"augment","derivation":"aug(increase)+ment","similar_shaped_words":"argument","thesauri":"expand,  amplify ","created_at":{"$date":"2019-11-19T13:59:14.017Z"},"hardship":10,"updated_at":{"$date":"2019-12-01T13:50:22.603Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee43"},"name":"automobile","derivation":"auto(self)+mobile(动 )","thesauri":"vehicle","created_at":{"$date":"2019-11-19T13:59:14.019Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee44"},"name":"await","derivation":"a(to)+wait","thesauri":"expect","created_at":{"$date":"2019-11-19T13:59:14.02Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee45"},"name":"bandage","derivation":"band(绷带)+age","similar_shaped_words":"bondage","created_at":{"$date":"2019-11-19T13:59:14.021Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee46"},"name":"audit","created_at":{"$date":"2019-11-19T13:59:14.022Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee47"},"name":"bachelor","created_at":{"$date":"2019-11-19T13:59:14.025Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee47"},"name":"bachelor","created_at":{"$date":"2019-11-19T13:59:14.025Z"},"related_words":"dissertation, diploma","updated_at":{"$date":"2019-12-01T13:43:00.161Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee48"},"name":"ballet","created_at":{"$date":"2019-11-19T13:59:14.028Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee49"},"name":"banquet","derivation":"ban(bench)+quet(queen)","thesauri":"feast,  dinner","created_at":{"$date":"2019-11-19T13:59:14.032Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee49"},"name":"banquet","derivation":"ban(bench)+quet(queen)","thesauri":"feast,  dinner","created_at":{"$date":"2019-11-19T13:59:14.032Z"},"hardship":14,"updated_at":{"$date":"2019-12-02T07:57:30.507Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee4a"},"name":"beard","derivation":"bear+d","thesauri":"moustache","created_at":{"$date":"2019-11-19T13:59:14.033Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee4b"},"name":"bid","derivation":"bet","created_at":{"$date":"2019-11-19T13:59:14.035Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee4c"},"name":"breadth","derivation":"bread(broad)+th","thesauri":"width,  extent","created_at":{"$date":"2019-11-19T13:59:14.036Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee4d"},"name":"brood","derivation":"breed","thesauri":"hatch","created_at":{"$date":"2019-11-19T13:59:14.038Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee4b"},"name":"bid","derivation":"bet","created_at":{"$date":"2019-11-19T13:59:14.035Z"},"hardship":9,"related_words":"bargain, budge, budget","similar_shaped_words":"badge","updated_at":{"$date":"2019-12-02T08:20:37.437Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee4c"},"name":"breadth","derivation":"bread(broad)+th","thesauri":"width,  extent","created_at":{"$date":"2019-11-19T13:59:14.036Z"},"hardship":13,"updated_at":{"$date":"2019-12-02T08:21:42.038Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee4d"},"name":"brood","derivation":"breed","thesauri":"hatch","created_at":{"$date":"2019-11-19T13:59:14.038Z"},"hardship":10,"related_words":"","similar_shaped_words":"blood","updated_at":{"$date":"2019-12-02T08:17:45.74Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee4e"},"name":"casual","derivation":"cas(case)+ual","thesauri":"occasional","created_at":{"$date":"2019-11-19T13:59:14.039Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee4f"},"name":"censor","derivation":"scissor","thesauri":"examine","created_at":{"$date":"2019-11-19T13:59:14.04Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee4f"},"name":"censor","derivation":"scissor","thesauri":"examine, editor, inspector","created_at":{"$date":"2019-11-19T13:59:14.04Z"},"related_words":"census","updated_at":{"$date":"2019-11-29T14:09:33.196Z"},"similar_shaped_words":"censure"}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee50"},"name":"colonize","thesauri":"settle,  migrate,  inhabit","created_at":{"$date":"2019-11-19T13:59:14.041Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee51"},"name":"bloom","created_at":{"$date":"2019-11-19T13:59:14.042Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee52"},"name":"cashier","created_at":{"$date":"2019-11-19T13:59:14.043Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee53"},"name":"combustion","derivation":"com(together)+bust(burn)+ion","thesauri":"burning,  kindling,  ignition","created_at":{"$date":"2019-11-19T13:59:14.046Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee53"},"name":"combustion","derivation":"com(together)+bust(burn)+ion","thesauri":"burning,  kindling,  ignition","created_at":{"$date":"2019-11-19T13:59:14.046Z"},"hardship":14,"updated_at":{"$date":"2019-12-02T08:23:28.59Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee54"},"name":"comic","derivation":"comedy","created_at":{"$date":"2019-11-19T13:59:14.048Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee55"},"name":"commonsense","derivation":"common(普通的)+sense(认知)","related_words":"consensus","created_at":{"$date":"2019-11-19T13:59:14.049Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee56"},"name":"concede","derivation":"con+cede","thesauri":"compromise","created_at":{"$date":"2019-11-19T13:59:14.05Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee56"},"name":"concede","derivation":"con+cede","thesauri":"compromise","created_at":{"$date":"2019-11-19T13:59:14.05Z"},"hardship":13,"updated_at":{"$date":"2019-12-02T08:35:40.851Z"},"related_words":"concession"}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee57"},"name":"conception","derivation":"conceive","thesauri":"pregnancy","created_at":{"$date":"2019-11-19T13:59:14.052Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee58"},"name":"concession","derivation":"concede","thesauri":"compromise,  reduction","created_at":{"$date":"2019-11-19T13:59:14.053Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee59"},"name":"contaminate","derivation":"con(together)+tamin(touch)+ate","thesauri":"pollute,  stain,  infect,  defile,  foul","created_at":{"$date":"2019-11-19T13:59:14.054Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee5a"},"name":"conversion","derivation":"convert","similar_shaped_words":"conversation","created_at":{"$date":"2019-11-19T13:59:14.055Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee5b"},"name":"crown","similar_shaped_words":"cow, crow","created_at":{"$date":"2019-11-19T13:59:14.057Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee5c"},"name":"decay","derivation":"de(not)+cay(care)","similar_shaped_words":"delay","thesauri":"decompose,  rot,  perish,  fester,  tooth decay,  ","created_at":{"$date":"2019-11-19T13:59:14.06Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee5d"},"name":"deceive","thesauri":"cheat,  betray","created_at":{"$date":"2019-11-19T13:59:14.065Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee5b"},"name":"crown","similar_shaped_words":"cow, crow","created_at":{"$date":"2019-11-19T13:59:14.057Z"},"hardship":11,"updated_at":{"$date":"2019-12-02T08:33:50.715Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee5c"},"name":"decay","derivation":"de(not)+cay(care)","similar_shaped_words":"delay","thesauri":"decompose,  rot,  perish,  fester,  tooth decay,  ","created_at":{"$date":"2019-11-19T13:59:14.06Z"},"hardship":14,"updated_at":{"$date":"2019-12-02T08:34:39.861Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee5d"},"name":"deceive","thesauri":"cheat,  betray","created_at":{"$date":"2019-11-19T13:59:14.065Z"},"related_words":"deceit, deception, rebel","updated_at":{"$date":"2019-12-02T08:36:08.519Z"},"hardship":16}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee5e"},"name":"decompose","derivation":"de(down)+compose","thesauri":"decay,  rot","created_at":{"$date":"2019-11-19T13:59:14.067Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee5f"},"name":"defer","derivation":"de(not)+fer(carry)","similar_shaped_words":"deter","thesauri":"postpone,  delay,  ","created_at":{"$date":"2019-11-19T13:59:14.069Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee60"},"name":"dental","derivation":"dent(凹痕)+al","thesauri":"teeth","created_at":{"$date":"2019-11-19T13:59:14.071Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee61"},"name":"detour","derivation":"de(away)+tour","related_words":"contour","thesauri":"bypass,  ","created_at":{"$date":"2019-11-19T13:59:14.072Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee5f"},"name":"defer","derivation":"de(not)+fer(carry)","similar_shaped_words":"deter","thesauri":"postpone,  delay,  ","created_at":{"$date":"2019-11-19T13:59:14.069Z"},"hardship":11,"updated_at":{"$date":"2019-12-02T08:36:50.642Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee60"},"name":"dental","derivation":"dent(凹痕)+al","thesauri":"teeth","created_at":{"$date":"2019-11-19T13:59:14.071Z"},"hardship":12,"related_words":"dentist","updated_at":{"$date":"2019-12-02T08:39:27.007Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee61"},"name":"detour","derivation":"de(away)+tour","related_words":"contour","thesauri":"bypass,  ","created_at":{"$date":"2019-11-19T13:59:14.072Z"},"hardship":15,"updated_at":{"$date":"2019-12-02T08:40:10.163Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee62"},"name":"disapprove","derivation":"dis(not)+approve","thesauri":"oppose,  disfavor","created_at":{"$date":"2019-11-19T13:59:14.074Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee63"},"name":"disclose","derivation":"dis(not)+close","thesauri":"reveal,  expose","created_at":{"$date":"2019-11-19T13:59:14.075Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee64"},"name":"disqualify","derivation":"dis(cancel)+qualify","created_at":{"$date":"2019-11-19T13:59:14.076Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee65"},"name":"dormant","derivation":"dorm+ant","thesauri":"inactive,  hibernating","created_at":{"$date":"2019-11-19T13:59:14.077Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee66"},"name":"edible","derivation":"edi(eat)+ble","thesauri":"eatable","created_at":{"$date":"2019-11-19T13:59:14.078Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee67"},"name":"ejection","derivation":"e(ex,out)+ject+ion","created_at":{"$date":"2019-11-19T13:59:14.082Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee68"},"name":"embassy","related_words":"ambassador","created_at":{"$date":"2019-11-19T13:59:14.084Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee69"},"name":"endeavor","derivation":"en+deav(debt)+or","thesauri":"strive,  diligent","created_at":{"$date":"2019-11-19T13:59:14.085Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee64"},"name":"disqualify","derivation":"dis(cancel)+qualify","created_at":{"$date":"2019-11-19T13:59:14.076Z"},"hardship":9,"updated_at":{"$date":"2019-12-02T08:41:10.989Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee65"},"name":"dormant","derivation":"dorm+ant","thesauri":"inactive,  hibernating","created_at":{"$date":"2019-11-19T13:59:14.077Z"},"hardship":35,"updated_at":{"$date":"2019-12-02T08:41:31.093Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee66"},"name":"edible","derivation":"edi(eat)+ble","thesauri":"eatable","created_at":{"$date":"2019-11-19T13:59:14.078Z"},"hardship":4,"updated_at":{"$date":"2019-12-02T08:42:08.935Z"},"related_words":"inedible"}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee67"},"name":"ejection","derivation":"e(ex,out)+ject+ion","created_at":{"$date":"2019-11-19T13:59:14.082Z"},"related_words":"injection","updated_at":{"$date":"2019-12-02T08:56:43.28Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee68"},"name":"embassy","related_words":"ambassador","created_at":{"$date":"2019-11-19T13:59:14.084Z"},"hardship":11,"similar_shaped_words":"embarrass","updated_at":{"$date":"2019-12-02T08:46:15.135Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee69"},"name":"endeavor","derivation":"en+deav(debt)+or","thesauri":"strive,  diligent","created_at":{"$date":"2019-11-19T13:59:14.085Z"},"hardship":8,"updated_at":{"$date":"2019-12-02T08:46:29.707Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee6a"},"name":"expenditure","derivation":"ex(out)+pend(spend)+iture","thesauri":"cost,  expense","created_at":{"$date":"2019-11-19T13:59:14.086Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee6b"},"name":"extinguish","derivation":"extinct","created_at":{"$date":"2019-11-19T13:59:14.087Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee6c"},"name":"fabulous","derivation":"fabul(fable)+ous","thesauri":"unbelievable,  amazing","created_at":{"$date":"2019-11-19T13:59:14.089Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee6b"},"name":"extinguish","derivation":"extinct","created_at":{"$date":"2019-11-19T13:59:14.087Z"},"hardship":14,"related_words":"eliminate","similar_shaped_words":"distinct, distinguish, disguise","updated_at":{"$date":"2019-12-02T08:49:02.771Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee6c"},"name":"fabulous","derivation":"fabul(fable)+ous","thesauri":"unbelievable,  amazing","created_at":{"$date":"2019-11-19T13:59:14.089Z"},"hardship":16,"updated_at":{"$date":"2019-12-02T08:49:49.104Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee6d"},"name":"feminism","derivation":"femin(female)+ism","thesauri":"feminist","created_at":{"$date":"2019-11-19T13:59:14.092Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee6e"},"name":"glacial","derivation":"glacier","created_at":{"$date":"2019-11-19T13:59:14.095Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee6f"},"name":"execute","created_at":{"$date":"2019-11-19T13:59:14.097Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee70"},"name":"hinder","derivation":"hind(后面的)+er","thesauri":"hamper,  impede","created_at":{"$date":"2019-11-19T13:59:14.1Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee71"},"name":"inedible","derivation":"in+edible(eatable)","created_at":{"$date":"2019-11-19T13:59:14.102Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee71"},"name":"inedible","derivation":"in+edible(eatable)","created_at":{"$date":"2019-11-19T13:59:14.102Z"},"hardship":4,"updated_at":{"$date":"2019-12-01T07:23:24.815Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee72"},"name":"infect","derivation":"in(into)+fect(affect)","created_at":{"$date":"2019-11-19T13:59:14.104Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee73"},"name":"inflict","derivation":"in(upon)+flict(strike)","created_at":{"$date":"2019-11-19T13:59:14.105Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee73"},"name":"inflict","derivation":"in(upon)+flict(strike)","created_at":{"$date":"2019-11-19T13:59:14.105Z"},"hardship":14,"updated_at":{"$date":"2019-12-02T08:59:45.156Z"},"chinese":"v. 带来，强加，折磨","related_words":"afflict"}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee74"},"name":"injection","derivation":"in(into)+ject(投掷)+ion","created_at":{"$date":"2019-11-19T13:59:14.107Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee75"},"name":"instability","derivation":"in(not)+stabli(stable)+ty","thesauri":"imbalanced","created_at":{"$date":"2019-11-19T13:59:14.108Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee76"},"name":"invalid","derivation":"in(not)+val(value)+id","thesauri":"没有价值的,  无效的","created_at":{"$date":"2019-11-19T13:59:14.109Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee77"},"name":"jewellery","thesauri":"jewelry","created_at":{"$date":"2019-11-19T13:59:14.11Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee78"},"name":"Jupiter","thesauri":"Mercury,  Venus,  Earth,  Mars,  Saturn,  Uranus,  Neptune","created_at":{"$date":"2019-11-19T13:59:14.111Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee79"},"name":"glacier","created_at":{"$date":"2019-11-19T13:59:14.112Z"},"derivation":"gl(glow)+aci(ice)+er","related_words":"glacial","similar_shaped_words":"grace, graze, grass, glass"}
-{"_id":{"$oid":"5dd3f5328003acab8a2fee7a"},"name":"lava","derivation":"lave","thesauri":"magma","created_at":{"$date":"2019-11-19T13:59:14.115Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee79"},"name":"glacier","created_at":{"$date":"2019-11-19T13:59:14.112Z"},"derivation":"gl(glow)+aci(ice)+er","related_words":"glacial","similar_shaped_words":"grace, graze, grass, glass","hardship":15,"updated_at":{"$date":"2019-12-02T08:51:03.327Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2fee7a"},"name":"lava","derivation":"lave","thesauri":"magma","created_at":{"$date":"2019-11-19T13:59:14.115Z"},"updated_at":{"$date":"2019-12-01T13:11:05.446Z"},"related_words":"volcano, volcanic","hardship":4}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee7b"},"name":"lethal","derivation":"leth(勒死)+al","thesauri":"fatal,  mortal","created_at":{"$date":"2019-11-19T13:59:14.116Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee7c"},"name":"liberal","derivation":"liber(labor)+al","thesauri":"open mind","created_at":{"$date":"2019-11-19T13:59:14.117Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2fee7d"},"name":"magnet","derivation":"magic","created_at":{"$date":"2019-11-19T13:59:14.118Z"}}
@@ -1462,7 +1461,7 @@
 {"_id":{"$oid":"5dd3f5328003acab8a2feeae"},"name":"prompt","derivation":"pro(forward)+mpt(move)","created_at":{"$date":"2019-11-19T13:59:14.214Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2feeaf"},"name":"propel","derivation":"pro(forward)+pel(push)","related_words":"repel","thesauri":"push,  shove,  ","created_at":{"$date":"2019-11-19T13:59:14.216Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2feeb0"},"name":"provoke","derivation":"pro(forward)+voke(voice)","thesauri":"arouse,  goad,  evoke","created_at":{"$date":"2019-11-19T13:59:14.217Z"}}
-{"_id":{"$oid":"5dd3f5328003acab8a2feeb1"},"name":"prudent","derivation":"provident,prude","thesauri":"cautious,  wary","created_at":{"$date":"2019-11-19T13:59:14.218Z"}}
+{"_id":{"$oid":"5dd3f5328003acab8a2feeb1"},"name":"prudent","derivation":"provident, prude","thesauri":"cautious,  wary","created_at":{"$date":"2019-11-19T13:59:14.218Z"},"updated_at":{"$date":"2019-11-30T12:44:55.72Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2feeb2"},"name":"publicize","derivation":"public+ize","thesauri":"broadcast,  promote,  advertise","created_at":{"$date":"2019-11-19T13:59:14.219Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2feeb3"},"name":"pulse","derivation":"pel,push","thesauri":"throb,  impulse","created_at":{"$date":"2019-11-19T13:59:14.221Z"}}
 {"_id":{"$oid":"5dd3f5328003acab8a2feeb4"},"name":"punctual","derivation":"punct(point)+ual","thesauri":"accurate","created_at":{"$date":"2019-11-19T13:59:14.226Z"}}
@@ -1500,3 +1499,6 @@
 {"_id":{"$oid":"5dd4915b5530014f3d618429"},"name":"aquatic","chinese":"adj. 水生的，水上的","thesauri":"marine, maritime","related_words":"aquarium, terrestrial","created_at":{"$date":"2019-11-20T01:05:31.153Z"}}
 {"_id":{"$oid":"5dd4b77d5530014f3d61842a"},"created_at":{"$date":"2019-11-20T03:48:13.295Z"},"derivation":"moment","name":"monument","thesauri":"memorial,  headstone"}
 {"_id":{"$oid":"5dde237d481e2f56dd36057e"},"name":"snack","chinese":"n. 快餐，点心. vi. 吃快餐","thesauri":"fast food","created_at":{"$date":"2019-11-27T07:19:25.073Z"},"similar_shaped_words":"snake"}
+{"_id":{"$oid":"5de239dc3d4f3f66584c8c85"},"created_at":{"$date":"2019-11-30T09:43:56.592Z"},"name":"corporate","derivation":"corpor(body) + ate","related_words":"corporation, corp, incorporate","updated_at":{"$date":"2019-11-30T09:46:46.057Z"},"chinese":"adj. 公司的，法人的，全体的. n. 企业集团"}
+{"_id":{"$oid":"5de3645cc626668ec843bde3"},"name":"profane","chinese":"adj. 世俗的，亵渎的； vi. 亵渎，玷污","hardship":13,"updated_at":{"$date":"2019-12-02T06:38:53.371Z"},"created_at":{"$date":"2019-12-01T06:57:32.733Z"},"related_words":"coarse, rude, crude, stain","thesauri":"temporal"}
+{"_id":{"$oid":"5de3bec8428d625b5a0e6485"},"created_at":{"$date":"2019-12-01T13:23:20.828Z"},"name":"well-being","thesauri":"welfare","updated_at":{"$date":"2019-12-01T13:23:20.828Z"}}
