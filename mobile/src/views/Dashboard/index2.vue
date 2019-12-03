@@ -29,7 +29,7 @@
                                     <v-list-item-subtitle v-text="word.derivation"></v-list-item-subtitle>
                                     <v-list-item-action-text
                                         @click="go(word.name)"
-                                    >{{word.chinese}} > {{word.thesauri}} > {{word.related_words}} > {{word.similar_shaped_words}} > {{word.comment}}</v-list-item-action-text>
+                                    >{{word.chinese}} > {{word.thesauri}} > {{word.related_words}} > {{word.similar_shaped_words}} > {{word.comment}} > {{word.hardship}}</v-list-item-action-text>
                                 </v-list-item-content>
 
                                 <v-list-item-action>
