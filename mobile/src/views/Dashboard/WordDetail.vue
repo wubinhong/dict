@@ -55,7 +55,8 @@ export default {
             v =>
                 (v && v.length <= 100) ||
                 "Name must be less than 100 characters"
-        ]
+        ],
+        ctrlKeyHoldOn: false
     }),
 
     methods: {
@@ -93,12 +94,19 @@ export default {
         }
     },
     mounted: function() {
-        window.onkeyup = e => {
-            // 用户按 "enter" 键后，自动提交表单
-            if (e.key === "Enter") {
+        window.onkeydown = e => {   // 用户每次按键都会触发该事件，所以对于组合键的检测，需要配合使用onkeydown和onkeyup事件来实现
+            if(e.key === 'Meta' || e.key === 'Control') {
+                this.ctrlKeyHoldOn = true;
+            }
+            // 用户按 "Meta + enter"或者"Control + enter" 组合键后，自动提交表单
+            if(this.ctrlKeyHoldOn && e.key === "Enter") {
                 this.$refs.submitBtn.click(document.createEvent("MouseEvent"));
                 // console.log(this.$refs.submitBtn.click())
             }
+        }
+        window.onkeyup = () => {
+            // 重置组合键
+            this.ctrlKeyHoldOn = false;
         };
     }
 };
