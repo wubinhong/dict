@@ -25,7 +25,7 @@
                         <v-list-item :key="word.name">
                             <template>
                                 <v-list-item-content>
-                                    <v-list-item-title v-text="word.name"></v-list-item-title>
+                                    <v-list-item-title v-text="word.name" @click="play(word.name)"></v-list-item-title>
                                     <v-list-item-subtitle v-text="word.derivation"></v-list-item-subtitle>
                                     <v-list-item-action-text
                                         @click="go(word.name)"
@@ -106,11 +106,16 @@ export default {
             // console.log(word);
             this.$router.push({
                 path: `/dashboard/word`,
-                query: {name: name}
+                query: { name: name }
             });
         },
+        play(name) {
+            new Audio(
+                `http://dict.youdao.com/dictvoice?audio=${name}&type=1`
+            ).play();
+        },
         scrollWords(words, keyword, skip, cb) {
-            keyword = keyword.trim()
+            keyword = keyword.trim();
             this.$axios
                 .get(
                     `/backend/words/fuzzy?keyword=${keyword}&skip=${skip}&limit=${this.limit}`

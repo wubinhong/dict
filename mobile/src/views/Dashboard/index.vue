@@ -40,7 +40,10 @@
                         </thead>
                         <tbody>
                             <tr v-for="(word, index) in words" :key="index">
-                                <td>{{ word.name }}</td>
+                                <td
+                                    @click="play(word.name)"
+                                    style="cursor: pointer;"
+                                >{{ word.name }}</td>
                                 <td @click="go(word.name)">
                                     {{ word.derivation }} > {{ word.chinese }} > {{ word.thesauri }} >
                                     {{ word.related_words }} > {{ word.similar_shaped_words }} > {{ word.comment }} > {{word.hardship}}
@@ -118,6 +121,11 @@ export default {
                 path: `/dashboard/word`,
                 query: { name: name }
             });
+        },
+        play(name) {
+            new Audio(
+                `http://dict.youdao.com/dictvoice?audio=${name}&type=1`
+            ).play();
         },
         scrollWords(words, keyword, skip, cb) {
             keyword = keyword.trim();
