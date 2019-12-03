@@ -25,6 +25,9 @@ done
 ## Launch nginx server
 service nginx start
 
+## Start cron daemon service
+service cron start
+
 ## Launch python app
 originalArgOne="$1"
 if [ "$originalArgOne" = 'dict' ]; then
