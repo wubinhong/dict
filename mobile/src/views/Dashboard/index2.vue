@@ -25,8 +25,10 @@
                         <v-list-item :key="word.name">
                             <template>
                                 <v-list-item-content>
-                                    <v-list-item-title v-text="word.name" @click="play(word.name)"></v-list-item-title>
-                                    <v-list-item-subtitle v-text="word.derivation"></v-list-item-subtitle>
+                                    <div @click="play(word.name)">
+                                        <v-list-item-title v-text="word.name"></v-list-item-title>
+                                        <v-list-item-subtitle v-text="word.derivation"></v-list-item-subtitle>
+                                    </div>
                                     <v-list-item-action-text
                                         @click="go(word.name)"
                                     >{{word.chinese}} > {{word.thesauri}} > {{word.related_words}} > {{word.similar_shaped_words}} > {{word.comment}} > {{word.hardship}}</v-list-item-action-text>
