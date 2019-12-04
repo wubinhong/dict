@@ -1,7 +1,7 @@
 # /etc/crontab: system-wide crontab. More detail refer to /etc/crontab
 #
 ## Backup at 22:00 everyday.
-## Note: 2>&1 means that error message(2) will be redirected to pip 1 which point to file /var/log/cron.log
+## Note: 2>&1 means that error message(2) will be redirected to pip 1 which point to console of docker: /proc/1/fd/1
 # m h dom mon dow user	command
-0 22	* * *	root    /app/cron_backup.sh >> /var/log/cron.log 2>&1
+0 22	* * *	root    /app/cron_backup.sh >> /proc/1/fd/1 2>&1
 # An empty line is required at the end of this file for a valid cron file.
