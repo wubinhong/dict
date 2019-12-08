@@ -26,7 +26,13 @@
                                 <v-text-field v-model="word.thesauri" label="同义词"></v-text-field>
                                 <v-text-field v-model="word.related_words" label="相关词"></v-text-field>
                                 <v-text-field v-model="word.similar_shaped_words" label="近形词"></v-text-field>
-                                <v-text-field v-model="word.comment" label="备注"></v-text-field>
+                                <v-textarea
+                                    v-model="word.comment"
+                                    clearable
+                                    clear-icon="mdi-backspace"
+                                    rows="2"
+                                    label="备注"
+                                ></v-textarea>
                                 <v-slider
                                     v-model="word.hardship"
                                     :label="`难度`"

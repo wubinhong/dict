@@ -33,6 +33,7 @@
                     <template v-slot:default>
                         <thead>
                             <tr>
+                                <th class="text-left">No</th>
                                 <th class="text-left">Name</th>
                                 <th class="text-left">详情</th>
                                 <th class="text-left">操作</th>
@@ -40,6 +41,7 @@
                         </thead>
                         <tbody>
                             <tr v-for="(word, index) in words" :key="index">
+                                <td> {{index + 1}} </td>
                                 <td
                                     @click="play(word.name)"
                                     style="cursor: pointer;"
