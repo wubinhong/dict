@@ -119,7 +119,7 @@ export default {
             ).play();
         },
         scrollWords(words, keyword, skip, cb) {
-            keyword = keyword.trim();
+            keyword = keyword ? keyword.trim() : '';
             this.$axios
                 .get(
                     `/backend/api/words/fuzzy?keyword=${keyword}&skip=${skip}&limit=${this.limit}`
