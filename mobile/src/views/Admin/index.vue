@@ -2,13 +2,6 @@
     <!-- class="fill-height" can make child element justify to center in verticle -->
     <!-- <v-container class="fill-height" fluid> -->
     <v-container>
-        <v-alert
-            :type="alert.type"
-            v-show="alert.showed"
-            outlined
-            text
-            dismissible
-        >{{alert.message}}</v-alert>
         <v-row>
             <v-col cols="12">
                 <!-- <v-text-field color="success" loading disabled dark></v-text-field> -->
@@ -16,7 +9,7 @@
                     v-model="keyword"
                     @input="querySearch(keyword)"
                     ref="queryInput"
-                    label="请输入单词"
+                    label="请输入关键字，支持按用户名、昵称还有token模糊匹配"
                     filled
                     shaped
                     :loading="loading"
@@ -25,11 +18,11 @@
                     <v-icon slot="append">mdi-magnify</v-icon>
                 </v-text-field>
 
-                <v-btn fab fixed top right color="indigo" class="add-btn" @click="onNewWordAdd()">
+                <v-btn fab fixed top right color="indigo" class="add-btn" @click="go()">
                     <v-icon dark>mdi-plus</v-icon>
                 </v-btn>
 
-                <v-simple-table fixed-header height="700px" v-if="words && words.length !== 0">
+                <v-simple-table fixed-header height="700px">
                     <template v-slot:default>
                         <thead>
                             <tr>
@@ -39,25 +32,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for="(word, index) in words" :key="index">
-                                <td
-                                    @click="play(word.name)"
-                                    style="cursor: pointer;"
-                                >{{ word.name }}</td>
-                                <td @click="go(word.name)">
-                                    {{ word.derivation }} > {{ word.chinese }} > {{ word.thesauri }} >
-                                    {{ word.related_words }} > {{ word.similar_shaped_words }} > {{ word.comment }} > {{word.hardship}}
+                            <tr v-for="(admin, index) in admins" :key="index">
+                                <td>{{ admin.name }}</td>
+                                <td>
+                                    <ul>
+                                        <li>{{ admin.nick }}</li>
+                                        <li>{{ admin.token }}</li>
+                                        <li>{{ admin.login_time }}</li>
+                                    </ul>
                                 </td>
                                 <td>
-                                    <v-btn
-                                        x-small
-                                        outlined
-                                        color="error"
-                                        @click="onWordDeleteConfirm(word)"
-                                    >删除</v-btn>
+                                    <v-btn color="indigo" fab small @click="go(admin._id)">
+                                        <v-icon>mdi-pencil</v-icon>
+                                    </v-btn>
+                                    <v-btn color="pink" fab small @click="onDeleteConfirm(admin._id)">
+                                        <v-icon>mdi-delete</v-icon>
+                                    </v-btn>
                                 </td>
                             </tr>
-                            <tr v-if="!noMoreData" @click="loadMoreData">
+                            <tr v-if="!loading && !noMoreData" @click="loadMoreData">
                                 <td colspan="3">
                                     <v-alert
                                         :color="`success`"
@@ -70,24 +63,17 @@
                         </tbody>
                     </template>
                 </v-simple-table>
-
-                <!-- 解决组件初次加载时，页面会闪一下添加单词按钮 -->
-                <div v-else-if="!loading" class="d-flex pa-2">
-                    <v-btn color="indigo" width="100%" @click="onNewWordAdd(keyword)">添加该单词到单词库</v-btn>
-                </div>
             </v-col>
         </v-row>
-        <v-btn fixed fab bottom right color="pink" @click="loadMoreData">
-            <v-icon>mdi-unfold-more-horizontal</v-icon>
-        </v-btn>
+
         <v-row justify="center">
             <v-dialog v-model="dialog" persistent max-width="320">
                 <v-card>
-                    <v-card-title class="headline">删除单词！</v-card-title>
-                    <v-card-text>此操作将永久删除单词, 是否继续?</v-card-text>
+                    <v-card-title class="headline">删除管理员！</v-card-title>
+                    <v-card-text>此操作将永久删除该管理员, 是否继续?</v-card-text>
                     <v-card-actions>
                         <v-spacer></v-spacer>
-                        <v-btn color="green darken-1" text @click="onWordDelete">确定</v-btn>
+                        <v-btn color="green darken-1" text @click="onDelete">确定</v-btn>
                         <v-btn color="green darken-1" text @click="dialog = false">取消</v-btn>
                     </v-card-actions>
                 </v-card>
@@ -106,37 +92,29 @@ export default {
         limit: 20,
         noMoreData: false,
         loading: true,
-        words: [],
+        admins: [],
         dialog: false,
-        alert: {
-            showed: false,
-            message: "Alert message!"
-        }
+        deleteId: ""
     }),
     methods: {
         ...mapMutations(["showSnackbar"]),
-        go(name) {
+        go(id) {
             // console.log(word);
             this.$router.push({
-                path: `/dashboard/word`,
-                query: { name: name }
+                name: `adminDetail`,
+                query: { id: id }
             });
         },
-        play(name) {
-            new Audio(
-                `http://dict.youdao.com/dictvoice?audio=${name}&type=1`
-            ).play();
-        },
-        scrollWords(words, keyword, skip, cb) {
+        scrollAdmins(admins, keyword, skip, cb) {
             keyword = keyword.trim();
             this.$axios
                 .get(
-                    `/backend/api/words/fuzzy?keyword=${keyword}&skip=${skip}&limit=${this.limit}`
+                    `/backend/api/admins/fuzzy?keyword=${keyword}&skip=${skip}&limit=${this.limit}`
                 )
                 .then(response => {
                     if (response.data.rc === 0) {
                         // 调用 callback 返回建议列表的数据
-                        words.push(...response.data.data);
+                        admins.push(...response.data.data);
                         if (response.data.data.length < this.limit) {
                             this.noMoreData = true;
                         } else {
@@ -144,7 +122,7 @@ export default {
                         }
                     }
                     if (cb) {
-                        cb(response.data.data, words);
+                        cb(response.data.data, admins);
                     }
                 });
         },
@@ -155,8 +133,8 @@ export default {
             this.timeout = setTimeout(() => {
                 this.loading = true;
                 this.skip = 0;
-                this.scrollWords([], keyword, this.skip, ajaxWords => {
-                    this.words = ajaxWords;
+                this.scrollAdmins([], keyword, this.skip, ajaxAdmins => {
+                    this.admins = ajaxAdmins;
                     this.loading = false;
                 });
             }, timeout);
@@ -169,36 +147,25 @@ export default {
                 });
             } else {
                 this.skip += this.limit;
-                this.scrollWords(this.words, this.keyword, this.skip);
+                this.scrollAdmins(this.admins, this.keyword, this.skip);
             }
         },
-        onNewWordAdd(name) {
-            this.$router.push({
-                name: "wordDetail",
-                query: { name: name }
-            });
-        },
-        onWordDeleteConfirm(word) {
+        onDeleteConfirm(_id) {
             this.dialog = true;
-            this.deleteWordName = word.name;
+            this.deleteId = _id;
         },
-        onWordDelete() {
+        onDelete() {
             let vm = this;
             this.$axios
-                .delete(`/backend/api/words/${this.deleteWordName}`)
+                .delete(`/backend/api/admins/${this.deleteId}`)
                 .then(response => {
                     if (response.status === 200 && response.data.rc === 0) {
                         vm.dialog = false;
                         vm.querySearch(vm.keyword, 0); // Reload data
-                        vm.alert = {
-                            showed: true,
-                            type: "success",
+                        this.showSnackbar({
+                            color: "success",
                             message: response.data.msg
-                        };
-                        clearTimeout(vm.timeout2);
-                        vm.timeout2 = setTimeout(() => {
-                            vm.alert.showed = false;
-                        }, 1000);
+                        });
                     }
                 });
         }

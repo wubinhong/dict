@@ -6,44 +6,21 @@
                     <v-col cols="12" sm="8" md="4">
                         <v-card class="elevation-12">
                             <v-toolbar color="primary" dark flat>
-                                <v-toolbar-title>Login form</v-toolbar-title>
+                                <v-toolbar-title>欢迎登录</v-toolbar-title>
                                 <v-spacer />
-                                <v-tooltip bottom>
-                                    <template v-slot:activator="{ on }">
-                                        <v-btn :href="source" icon large target="_blank" v-on="on">
-                                            <v-icon>mdi-code-tags</v-icon>
-                                        </v-btn>
-                                    </template>
-                                    <span>Source</span>
-                                </v-tooltip>
-                                <v-tooltip right>
-                                    <template v-slot:activator="{ on }">
-                                        <v-btn
-                                            icon
-                                            large
-                                            href="https://codepen.io/johnjleider/pen/pMvGQO"
-                                            target="_blank"
-                                            v-on="on"
-                                        >
-                                            <v-icon>mdi-codepen</v-icon>
-                                        </v-btn>
-                                    </template>
-                                    <span>Codepen</span>
-                                </v-tooltip>
                             </v-toolbar>
                             <v-card-text>
                                 <v-form>
                                     <v-text-field
                                         label="Login"
-                                        name="login"
+                                        v-model="name"
                                         type="text">
                                         <v-icon slot="prepend">mdi-account</v-icon>
                                         </v-text-field>
 
                                     <v-text-field
-                                        id="password"
                                         label="Password"
-                                        name="password"
+                                        v-model="password"
                                         type="password">
                                         <v-icon slot="prepend">mdi-lock</v-icon>
                                     </v-text-field>
@@ -51,7 +28,7 @@
                             </v-card-text>
                             <v-card-actions>
                                 <v-spacer />
-                                <v-btn color="primary">Login</v-btn>
+                                <v-btn color="primary" ref="loginBtn" @click="login">登录</v-btn>
                             </v-card-actions>
                         </v-card>
                     </v-col>
@@ -62,12 +39,46 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
-    props: {
-        source: String
+    data: () => ({
+        name: '',
+        password: ''
+    }),
+    methods: {
+        ...mapMutations(["showSnackbar"]),
+        login() {
+            if(this.name && this.password) {
+                this.$axios
+                    .post(`/backend/api/auth/login`, {
+                        name: this.name, password: this.password
+                    })
+                    .then(response => {
+                        if (response.data.rc === 0) {
+                            localStorage.setItem('admin', JSON.stringify(response.data.data));
+                           this.$router.push('/')
+                            // window.location.href = '/';
+                        }
+                    });
+            } else {
+                this.showSnackbar({
+                    color: "error",
+                    message: '用户名、密码必填'
+                });
+            }
+        }
     },
     created() {
         this.$vuetify.theme.dark = true;
+    },
+    mounted: function() {
+        window.onkeydown = e => {
+            // 用户按 "enter"后，自动提交表单
+            if (e.key === "Enter") {
+                this.$refs.loginBtn.click(document.createEvent("MouseEvent"));
+            }
+        };
     }
 };
 </script>

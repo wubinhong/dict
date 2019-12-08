@@ -20,6 +20,14 @@
                         <v-list-item-title>Dashboard2</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
+                <v-list-item link @click="go('/admin')">
+                    <v-list-item-action>
+                        <v-icon>mdi-account-supervisor</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                        <v-list-item-title>Admin</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
                 <v-list-item link @click="go('/home/settings')">
                     <v-list-item-action>
                         <v-icon>mdi-settings</v-icon>
@@ -48,14 +56,17 @@
         </v-navigation-drawer>
 
         <v-app-bar app clipped-left :collapse-on-scroll="collapseOnScroll">
-            <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-            <v-toolbar-title>私人字典</v-toolbar-title>
-            <v-spacer />
+            <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
+            <v-toolbar-title>私人字典({{admin.name}})</v-toolbar-title>
+            <v-spacer/>
             <v-switch v-model="collapseOnScroll" inset hide-details :label="``"></v-switch>
+            <v-btn icon color="pink" @click="logout">
+                <v-icon>mdi-exit-to-app</v-icon>
+            </v-btn>
         </v-app-bar>
 
         <v-content>
-            <router-view />
+            <router-view/>
         </v-content>
 
         <v-footer app v-show="false">
@@ -65,21 +76,30 @@
 </template>
 
 <script>
-export default {
-    props: {},
-    data: () => ({
-        drawer: null,
-        collapseOnScroll: false
-    }),
-    methods: {
-        go(path) {
-            if (this.$route.path !== path) {
-                this.$router.push({ path: path });
+    export default {
+        props: {},
+        data: () => ({
+            drawer: null,
+            collapseOnScroll: false,
+            admin: localStorage.getItem('admin') ? JSON.parse(localStorage.getItem('admin')) : {}
+        }),
+        methods: {
+            go(path) {
+                if (this.$route.path !== path) {
+                    this.$router.push({path: path});
+                }
+            },
+            logout() {
+                this.$axios.delete(`/backend/api/auth/logout`).then(response => {
+                    if (response.data.rc === 0) {
+                        localStorage.removeItem('admin');
+                        window.location.href = '/login';
+                    }
+                });
             }
+        },
+        created() {
+            this.$vuetify.theme.dark = true;
         }
-    },
-    created() {
-        this.$vuetify.theme.dark = true;
-    }
-};
+    };
 </script>

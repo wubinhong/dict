@@ -10,58 +10,65 @@ import store from '../store/index.js'
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 let config = {
-  // baseURL: process.env.baseURL || process.env.apiUrl || ""
-  // timeout: 60 * 1000, // Timeout
-  // withCredentials: true, // Check cross-site Access-Control
+    // baseURL: process.env.baseURL || process.env.apiUrl || ""
+    // timeout: 60 * 1000, // Timeout
+    // withCredentials: true, // Check cross-site Access-Control
 };
 
 const _axios = axios.create(config);
 
 _axios.interceptors.request.use(
-  function (config) {
-    // Do something before request is sent
-    return config;
-  },
-  function (error) {
-    // Do something with request error
-    return Promise.reject(error);
-  }
+    function (config) {
+        // Do something before request is sent
+        let admin = localStorage.getItem('admin');
+        if (admin) {
+            config.headers = {...config.headers, 'x-hucat-token': JSON.parse(admin).token}
+        }
+        return config;
+    },
+    function (error) {
+        // Do something with request error
+        return Promise.reject(error);
+    }
 );
 
 // Add a response interceptor
 _axios.interceptors.response.use(
-  function (response) {
-    // Do something with response data
-    if (response.data.rc !== 0) {
-      store.commit('showSnackbar', { color: 'error', message: response.data.msg })
+    function (response) {
+        // Do something with response data
+        if (response.data.rc !== 0) {
+            store.commit('showSnackbar', {color: 'error', message: response.data.msg});
+            if (window.location.pathname !== '/login') {
+                window.location.href = '/login';
+            }
+        }
+        return response;
+    },
+    function (error) {
+        // Do something with response error
+        store.commit('showSnackbar', {color: 'error', message: error.message});
+        return Promise.reject(error);
     }
-    return response;
-  },
-  function (error) {
-    // Do something with response error
-    store.commit('showSnackbar', { color: 'error', message: error.message })
-    return Promise.reject(error);
-  }
 );
 
 Plugin.install = function (Vue) {
-  Vue.axios = _axios;
-  window.axios = _axios;
-  Object.defineProperties(Vue.prototype, {
-    axios: {
-      get() {
-        return _axios;
-      }
-    },
-    $axios: {
-      get() {
-        return _axios;
-      }
-    },
-  });
+    Vue.axios = _axios;
+    window.axios = _axios;
+    Object.defineProperties(Vue.prototype, {
+        axios: {
+            get() {
+                return _axios;
+            }
+        },
+        $axios: {
+            get() {
+                return _axios;
+            }
+        },
+    });
 };
 
-Vue.use(Plugin)
+Vue.use(Plugin);
 
 export default Plugin;
 

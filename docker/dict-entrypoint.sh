@@ -22,6 +22,9 @@ while true; do
     sleep 1
 done
 
+## Launch redis server
+service redis-server start
+
 ## Launch nginx server
 service nginx start
 

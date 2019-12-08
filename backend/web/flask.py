@@ -5,9 +5,10 @@ from bson.objectid import ObjectId
 from flasgger import Swagger
 from flask import Flask
 from pymongo import MongoClient
+from redis import Redis
 
 from web.util import get_logger
-from web.setting import MONGO_URI
+from web.setting import MONGO_URI, REDIS_OPTS
 
 log = get_logger(__name__)
 flask = Flask(__name__)
@@ -18,6 +19,7 @@ swagger = Swagger(flask)
 
 # pymongo
 dict_db = MongoClient(MONGO_URI, tz_aware=True)['dict']
+redis = Redis(**REDIS_OPTS)
 
 
 class JSONEncoder(json.JSONEncoder):

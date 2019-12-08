@@ -20,7 +20,7 @@
             </v-btn>
 
             <v-list two-line dense>
-                <v-list-item-group v-if="words.length !== 0" active-class="blue--text">
+                <v-list-item-group v-if="words && words.length !== 0" active-class="blue--text">
                     <template v-for="(word, index) in words">
                         <v-list-item :key="word.name">
                             <template>
@@ -120,7 +120,7 @@ export default {
             keyword = keyword.trim();
             this.$axios
                 .get(
-                    `/backend/words/fuzzy?keyword=${keyword}&skip=${skip}&limit=${this.limit}`
+                    `/backend/api/words/fuzzy?keyword=${keyword}&skip=${skip}&limit=${this.limit}`
                 )
                 .then(response => {
                     if (response.data.rc === 0) {
@@ -159,7 +159,7 @@ export default {
         onWordDelete() {
             let vm = this;
             this.$axios
-                .delete(`/backend/words/${this.deleteWordName}`)
+                .delete(`/backend/api/words/${this.deleteWordName}`)
                 .then(response => {
                     if (response.status === 200 && response.data.rc === 0) {
                         vm.dialog = false;

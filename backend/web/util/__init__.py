@@ -1,6 +1,12 @@
 import datetime
-import pytz
 import logging
+import random as __random
+import string
+from hashlib import sha256 as __sha256
+
+import pytz
+from bson import json_util
+
 local_tz = pytz.timezone('Asia/Shanghai')
 
 FORMAT = '%(asctime)s %(levelname)s %(process)d -- [%(threadName)s] [%(name)s:%(lineno)s] : %(message)s'
@@ -47,3 +53,34 @@ def china_tz(dt: datetime) -> datetime:
     if dt.tzinfo is not None:
         return dt.astimezone(local_tz)
     return local_tz.localize(dt, is_dst=None)
+
+
+def make_msg(rc: int = 0, data=None, msg: str = 'Response success!') -> dict:
+    return dict(rc=rc, data=data, msg=msg, ts=datetime.datetime.now().timestamp())
+
+
+def random(count: int, letters: bool, numbers: bool, seed=''):
+    if letters:
+        seed += string.ascii_uppercase + string.ascii_lowercase
+    if numbers:
+        seed += string.digits
+    return ''.join(__random.choices(seed, k=count))
+
+
+def random_alphanumeric(count=16):
+    return random(count, True, True)
+
+
+def to_json(obj: dict) -> str:
+    return json_util.dumps(obj)
+
+
+def parse_json(obj: str) -> dict:
+    return json_util.loads(obj)
+
+
+def sha256_pwd(password: str, salt: str):
+    """
+    sha256算法加密密码
+    """
+    return __sha256((password + salt).encode(encoding='utf-8')).hexdigest()

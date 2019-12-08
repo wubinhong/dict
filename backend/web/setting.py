@@ -10,11 +10,20 @@ FLASK_DEBUG = True
 FLASK_PORT = 5000
 
 MONGO_URI = 'mongodb://root:123456@127.0.0.1:27017/dict'
+REDIS_OPTS = {
+    'host': '127.0.0.1', 'port': 6379, 'password': None, 'socket_connect_timeout': 8, 'decode_responses': True
+}
+AUTH_TOKEN_PREFIX = 'auth_token_'
 # swagger settings
 # swagger docs default access url: http://localhost:5000/apidocs
 SWAGGER = {
     'title': 'My API',
-    'uiversion': 2
+    'uiversion': 2,
+    'securityDefinitions': {
+        'token': {
+            'type': 'apiKey', 'in': 'header', 'name': 'x-hucat-token'
+        }
+    }
 }
 
 mode = environ.get('PYTHON_ENV')

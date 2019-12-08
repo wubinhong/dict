@@ -1,13 +1,13 @@
 from flask import request, jsonify, make_response
 
-from web.util import get_logger
+from web.util import get_logger, make_msg
 from web.flask import flask
 from web.model import words
 
 log = get_logger(__name__)
 
 
-@flask.route("/words/fuzzy", methods=["GET"])
+@flask.route("/api/words/fuzzy", methods=["GET"])
 def get_words_fuzzy():
     """Get word list with fuzzy matching
     Sorted by field updated_at
@@ -44,7 +44,7 @@ def get_words_fuzzy():
           created_at:
             type: datetime
             description: 单词录入时间
-          created_at:
+          updated_at:
             type: datetime
             description: 单词最近一次更新（修订）的时间
     parameters:
@@ -69,12 +69,13 @@ def get_words_fuzzy():
     keyword = request.args.get('keyword')
     skip = request.args.get('skip', type=int)
     limit = request.args.get('limit', type=int)
-    resp = make_response(jsonify(dict(rc=0, data=words.find_fuzzy(keyword, skip, limit), msg='success')))
+    
+    resp = make_response(jsonify(make_msg(data=words.find_fuzzy(keyword, skip, limit))))
     resp.headers['Access-Control-Allow-Origin'] = '*'
     return resp
 
 
-@flask.route("/words/<string:name>", methods=["GET"])
+@flask.route("/api/words/<string:name>", methods=["GET"])
 def get_word_by_name(name):
     """Get word detail by name
     As title
@@ -92,10 +93,10 @@ def get_word_by_name(name):
         schema:
           $ref: '#/definitions/Word'
     """
-    return jsonify(dict(rc=0, data=words.find_by_name(name), msg='success'))
+    return jsonify(make_msg(data=words.find_by_name(name)))
 
 
-@flask.route("/words/<string:name>", methods=["PUT"])
+@flask.route("/api/words/<string:name>", methods=["PUT"])
 def put_word(name):
     """Save word and update if exits
     As title
@@ -122,10 +123,10 @@ def put_word(name):
     """
     w = request.json
     log.info('Put word: %s | %s', name, w)
-    return jsonify(dict(rc=0, data=words.save(w), msg='success'))
+    return jsonify(make_msg(data=words.save(w)))
 
 
-@flask.route("/words/<string:name>", methods=["DELETE"])
+@flask.route("/api/words/<string:name>", methods=["DELETE"])
 def delete_word(name):
     """Delete word by name
     As title
@@ -153,4 +154,4 @@ def delete_word(name):
         schema:
           $ref: '#/definitions/MongoRawResult'
     """
-    return jsonify(dict(rc=0, data=words.delete_by_name(name), msg='success'))
+    return jsonify(make_msg(data=words.delete_by_name(name)))

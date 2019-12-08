@@ -88,7 +88,7 @@ export default {
                 let vm = this;
                 let w = this.word;
                 this.$axios
-                    .put(`/backend/words/${w.name}`, w)
+                    .put(`/backend/api/words/${w.name}`, w)
                     .then(response => {
                         if (response.status === 200 && response.data.rc === 0) {
                             vm.$router.go(-1);
@@ -104,7 +104,7 @@ export default {
         let name = this.$route.query.name;
         if (name) {
             // Get word from remote server.
-            this.$axios.get(`/backend/words/${name}`).then(res => {
+            this.$axios.get(`/backend/api/words/${name}`).then(res => {
                 if (res.data.rc === 0 && res.data.data) {
                     this.word = res.data.data;
                 } else {
