@@ -19,6 +19,8 @@
                     label="请输入单词"
                     filled
                     shaped
+                    clearable
+                    clear-icon="mdi-close-circle"
                     :loading="loading"
                 >
                     <!-- <v-icon slot="prepend" color="green">mdi-magnify</v-icon> -->
@@ -130,7 +132,7 @@ export default {
             ).play();
         },
         scrollWords(words, keyword, skip, cb) {
-            keyword = keyword.trim();
+            keyword = keyword ? keyword.trim() : '';
             this.$axios
                 .get(
                     `/backend/api/words/fuzzy?keyword=${keyword}&skip=${skip}&limit=${this.limit}`

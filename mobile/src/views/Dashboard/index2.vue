@@ -10,6 +10,8 @@
                 label="请输入单词，支持按所有字段模糊查询"
                 filled
                 hide-details
+                clearable
+                clear-icon="mdi-close-circle"
                 :loading="loading"
             >
                 <!-- <v-icon slot="prepend" color="green">mdi-magnify</v-icon> -->

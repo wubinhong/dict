@@ -29,7 +29,7 @@
                                 <v-textarea
                                     v-model="word.comment"
                                     clearable
-                                    clear-icon="mdi-backspace"
+                                    clear-icon="mdi-close-circle"
                                     rows="2"
                                     label="备注"
                                 ></v-textarea>
