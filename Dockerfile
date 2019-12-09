@@ -10,7 +10,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # Basic flask environment
 COPY ./docker/sources.list /etc/apt/
 RUN apt-get update -y
-RUN apt-get install -y python3-pip python3-dev curl tree cron nginx-full redis-server && rm -rf /var/lib/apt/lists/*
+RUN apt-get install -y python3-pip python3-dev curl tree vim cron nginx-full redis-server && rm -rf /var/lib/apt/lists/*
 #RUN apt-get install -y build-essential
 
 # Nginx component setting: redirect logger to container's std in/out which can be checkeout out via command docker logs
