@@ -24,10 +24,11 @@
                     :loading="loading"
                 >
                     <!-- <v-icon slot="prepend" color="green">mdi-magnify</v-icon> -->
-                    <v-icon slot="append">mdi-magnify</v-icon>
+                    <v-icon slot="append" v-show="!keyword">mdi-magnify</v-icon>
+                    <v-icon slot="append" v-show="keyword" @click="play(keyword)">mdi-volume-high</v-icon>
                 </v-text-field>
 
-                <v-btn fab fixed top right color="indigo" class="add-btn" @click="onNewWordAdd()">
+                <v-btn fab fixed top right color="indigo" class="add-btn" v-show="!keyword" @click="onNewWordAdd()">
                     <v-icon dark>mdi-plus</v-icon>
                 </v-btn>
 
@@ -128,7 +129,7 @@ export default {
         },
         play(name) {
             new Audio(
-                `http://dict.youdao.com/dictvoice?audio=${name}&type=1`
+                `/youdao/dictvoice?audio=${name}&type=1`
             ).play();
         },
         scrollWords(words, keyword, skip, cb) {

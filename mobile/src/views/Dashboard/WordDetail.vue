@@ -7,18 +7,7 @@
                         <v-card :elevation="hover ? 24 : 6" class="mx-auto pa-6">
                             <v-form ref="form" v-model="valid" lazy-validation>
                                 <v-text-field v-model="word.name" :rules="nameRules" label="单词">
-                                    <template v-slot:append>
-                                        <audio
-                                            controls
-                                            style="height: 30px; max-width: 100px;"
-                                            hidden
-                                            autoplay
-                                            :src="`http://dict.youdao.com/dictvoice?audio=${word.name}&type=1`"
-                                        >
-                                            Your browser does not support the
-                                            <code>audio</code> element.
-                                        </audio>
-                                    </template>
+                                    <v-icon slot="append" v-show="word.name" @click="play(word.name)">mdi-volume-high</v-icon>
                                 </v-text-field>
 
                                 <v-text-field v-model="word.derivation" label="词根"></v-text-field>
@@ -88,6 +77,11 @@ export default {
     }),
 
     methods: {
+        play(name) {
+            new Audio(
+                `/youdao/dictvoice?audio=${name}&type=1`
+            ).play();
+        },
         onWordSave() {
             // console.log(this.word, this.$refs.form);
             if (this.$refs.form.validate()) {
