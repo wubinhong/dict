@@ -36,7 +36,7 @@ def log_request_info(response):
     # logger.debug('api access stats: \nHeaders: %20s', request.headers)
     headers = request.headers
     content_type = response.content_type
-    if auth_request(request.path) and content_type and content_type.find('application/json') != -1:
+    if content_type and content_type.find('application/json') != -1:
         stats_info = OrderedDict()
         stats_info['from'] = request.remote_addr
         stats_info['req'] = '%s %s' % (request.method, request.path)
@@ -72,7 +72,7 @@ def error(err):
     return jsonify(make_msg(rc=err.rc, msg=err.msg))
 
 
-@flask.errorhandler(500)
+@flask.errorhandler(Exception)
 def error(err):
     log.exception(err)
     log.error('system error: %s', err)

@@ -69,7 +69,7 @@ def get_words_fuzzy():
     keyword = request.args.get('keyword')
     skip = request.args.get('skip', type=int)
     limit = request.args.get('limit', type=int)
-    
+
     resp = make_response(jsonify(make_msg(data=words.find_fuzzy(keyword, skip, limit))))
     resp.headers['Access-Control-Allow-Origin'] = '*'
     return resp
