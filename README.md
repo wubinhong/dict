@@ -29,6 +29,32 @@ mongoexport --uri=mongodb://root:123456@127.0.0.1:27017/dict -c Word -o Word.jso
 mongoimport --uri=mongodb://root:123456@127.0.0.1:27017/dict -c Word Word.json
 ```
 
+- Dump / restore mongodb database
+
+```bash
+# Dump to local file system as a directory. Both of the following two command are Okay.
+# Note: Acoording to mongo docs, user with options "--authenticationDatabase=admin" has the highest privileges to access all database.
+# In the other word, user who barely authenticated by specified db only have privilege to access to authenticated db.
+# According above, user root merely authenticated by db dict can only dump and restore db dict.
+# Unlike mongoexport, mongodump will generate a separate dir for each db and both bson and json files for each collection in the meantime.
+mongodump --uri=mongodb://root:123456@127.0.0.1:27017/dict -o 20191209_0922
+mongodump -h 127.0.0.1 -u root -p 123456 --authenticationDatabase=dict -d dict -o 20191209_0922
+
+$ tree 20191209_0922
+20191209_0922
+└── dict
+    ├── Admin.bson
+    ├── Admin.metadata.json
+    ├── Word.bson
+    └── Word.metadata.json
+
+# Restore from dumped directory.
+# Note: mongorestore will scan sub dirs in dir 20191209_0922 and restore to corresponding db, so user should have the privileges to all restored dbs.
+mongorestore -h 127.0.0.1 -u root -p 123456 --authenticationDatabase=dict 20191209_0922
+# Only restore specified db and collection
+mongorestore -h 127.0.0.1 -u root -p 123456 --authenticationDatabase=dict -d dict -c Word 20191209_0922/dict/Word.bson
+```
+
 ## Product mode with docker
 
 - Build docker image dict:v1 with Dockerfile and take current directory build context directory.

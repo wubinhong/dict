@@ -2,11 +2,35 @@
 
 ## Logger with timestamp
 log() {
-    echo "`date -Isecond`    ${1}"
+    echo "`date -Isecond`    CronTask  ${1}"
 }
 
-# Backup mongodb
-backup_file="/data/configdb/Word_$(date +%Y%m%d_%H:%M:%S).json"
-log ">> Backup mongodb to: ${backup_file}"
-mongoexport --uri=mongodb://127.0.0.1:27017/dict -c Word -o ${backup_file}
-log "<< Backup finish!"
+dump() {
+    # Backup mongodb
+    dump_dir="/data/configdb/$(date +%Y%m%d_%H%M%S)"
+    log ">> Dump mongodb to: ${dump_dir}"
+    # mongodump -h 127.0.0.1 -o 20191209_0922
+    mongodump -h 127.0.0.1 -o ${dump_dir}
+    log "<< Dump finish!"
+}
+
+restore() {
+    mongorestore -h 127.0.0.1 ${1}
+}
+
+case "${1-''}" in
+    dump)
+        dump
+        ;;
+    restore)
+        log "restore"
+        if [ -z "${2}" ]; then
+            log "Example: ./cron_backup.sh restore /data/configdb/20191209_092359"
+            exit 1
+        fi
+        restore ${2}
+        ;;
+    *)
+        log "Usage: ./cron_backup.sh <dump | restore 20191209_092359 >"
+        ;;
+esac
