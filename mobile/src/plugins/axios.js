@@ -20,7 +20,7 @@ const _axios = axios.create(config);
 _axios.interceptors.request.use(
     function (config) {
         // Do something before request is sent
-        let admin = localStorage.getItem('admin');
+        let admin = localStorage.getItem(window.location.host + '_admin');
         if (admin) {
             config.headers = {...config.headers, 'x-hucat-token': JSON.parse(admin).token}
         }

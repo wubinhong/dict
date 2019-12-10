@@ -81,7 +81,7 @@
         data: () => ({
             drawer: null,
             collapseOnScroll: false,
-            admin: localStorage.getItem('admin') ? JSON.parse(localStorage.getItem('admin')) : {}
+            admin: localStorage.getItem(window.location.host + '_admin') ? JSON.parse(localStorage.getItem(window.location.host + '_admin')) : {}
         }),
         methods: {
             go(path) {
@@ -92,7 +92,7 @@
             logout() {
                 this.$axios.delete(`/backend/api/auth/logout`).then(response => {
                     if (response.data.rc === 0) {
-                        localStorage.removeItem('admin');
+                        localStorage.removeItem(window.location.host + '_admin');
                         window.location.href = '/login';
                     }
                 });

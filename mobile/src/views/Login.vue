@@ -56,7 +56,7 @@ export default {
                     })
                     .then(response => {
                         if (response.data.rc === 0) {
-                            localStorage.setItem('admin', JSON.stringify(response.data.data));
+                            localStorage.setItem(window.location.host + '_admin', JSON.stringify(response.data.data));
                            this.$router.push('/')
                             // window.location.href = '/';
                         }

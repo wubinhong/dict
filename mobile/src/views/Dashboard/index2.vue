@@ -27,8 +27,8 @@
                     <template v-for="(word, index) in words">
                         <v-list-item :key="word.name">
                             <template>
-                                <v-list-item-content>
-                                    <div @click="play(word.name)">
+                                <v-list-item-content @click="play(word.name)">
+                                    <div>
                                         <v-list-item-title v-text="word.name"></v-list-item-title>
                                         <v-list-item-subtitle v-text="word.derivation"></v-list-item-subtitle>
                                     </div>
