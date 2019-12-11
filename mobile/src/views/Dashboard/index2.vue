@@ -18,9 +18,6 @@
                 <v-icon slot="append" v-show="!keyword">mdi-magnify</v-icon>
                 <v-icon slot="append" v-show="keyword" @click="play(keyword)">mdi-volume-high</v-icon>
             </v-text-field>
-            <v-btn fab fixed top right color="indigo" class="add-btn" v-show="!keyword" @click="onNewWordAdd()">
-                <v-icon dark>mdi-plus</v-icon>
-            </v-btn>
 
             <v-list two-line dense>
                 <v-list-item-group v-if="words && words.length !== 0" active-class="blue--text">
@@ -33,6 +30,7 @@
                                         <v-list-item-subtitle v-text="word.derivation"></v-list-item-subtitle>
                                     </div>
                                     <v-list-item-action-text
+                                        v-show="showDetail"
                                         @click="go(word.name)"
                                     >{{word.chinese}} > {{word.thesauri}} > {{word.related_words}} > {{word.similar_shaped_words}} > {{word.comment}} > {{word.hardship}}</v-list-item-action-text>
                                 </v-list-item-content>
@@ -72,9 +70,31 @@
             v-if="noMoreData"
         >你碰到我底线了！</v-alert>
 
-        <v-btn fixed fab bottom right color="pink" @click="scrollToTop">
-            <v-icon>mdi-chevron-up</v-icon>
-        </v-btn>
+        <v-speed-dial
+            v-model="fab"
+            :bottom="`bottom`"
+            fixed
+            right="right"
+            direction="top"
+            transition="slide-y-reverse-transition"
+        >
+            <template v-slot:activator>
+                <v-btn v-model="fab" color="blue darken-2" dark fab>
+                    <v-icon v-if="fab">mdi-close</v-icon>
+                    <v-icon v-else>mdi-account-circle</v-icon>
+                </v-btn>
+            </template>
+            <v-btn fab dark small color="green" @click="showDetail = !showDetail">
+                <v-icon v-if="showDetail">mdi-eye</v-icon>
+                <v-icon v-else>mdi-eye-off</v-icon>
+            </v-btn>
+            <v-btn fab dark small color="indigo" @click="onNewWordAdd()">
+                <v-icon>mdi-plus</v-icon>
+            </v-btn>
+            <v-btn fab dark small color="red" @click="scrollToTop">
+                <v-icon>mdi-chevron-up</v-icon>
+            </v-btn>
+        </v-speed-dial>
 
         <v-row justify="center">
             <v-dialog v-model="dialog" persistent max-width="320">
@@ -103,7 +123,9 @@ export default {
         noMoreData: false,
         words: [],
         dialog: false,
-        loading: true
+        loading: true,
+        fab: false,
+        showDetail: false
     }),
     methods: {
         ...mapMutations(["showSnackbar", "closeSnackbar"]),
@@ -115,12 +137,10 @@ export default {
             });
         },
         play(name) {
-            new Audio(
-                `/youdao/dictvoice?audio=${name}&type=1`
-            ).play();
+            new Audio(`/youdao/dictvoice?audio=${name}&type=1`).play();
         },
         scrollWords(words, keyword, skip, cb) {
-            keyword = keyword ? keyword.trim() : '';
+            keyword = keyword ? keyword.trim() : "";
             this.$axios
                 .get(
                     `/backend/api/words/fuzzy?keyword=${keyword}&skip=${skip}&limit=${this.limit}`
@@ -218,14 +238,5 @@ export default {
 // 去掉不能选文本，不然mac不能使用三个手指点击look up单词了
 .v-list-item {
     user-select: text;
-}
-
-.add-btn {
-    margin-top: 70px;
-}
-@media screen and (max-width: 375px) {
-    .add-btn {
-        margin-top: 50px;
-    }
 }
 </style>
