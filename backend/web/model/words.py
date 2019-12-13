@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from bson import json_util
+from bson import json_util, ObjectId
 from bson.codec_options import CodecOptions
 from pymongo import ASCENDING, DESCENDING
 
@@ -57,4 +57,10 @@ def find_by_name(name: str):
 def delete_by_name(name: str):
     result = word_collection.delete_one({'name': name}).raw_result
     log.info('Delete document: %s | %s', name, result)
+    return result
+
+
+def delete_by_id(_id: str):
+    result = word_collection.delete_one({'_id': ObjectId(_id)}).raw_result
+    log.info('Delete document: %s | %s', _id, result)
     return result

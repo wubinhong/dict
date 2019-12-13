@@ -155,3 +155,36 @@ def delete_word(name):
           $ref: '#/definitions/MongoRawResult'
     """
     return jsonify(make_msg(data=words.delete_by_name(name)))
+
+
+@flask.route("/api/words/batch", methods=["DELETE"])
+def delete_word_by_ids():
+    """Delete word by name
+    As title
+    ---
+    definitions:
+      BatchIds:
+        type: array
+        items:
+          type: string
+          description: id array.
+    tags: [word]
+    parameters:
+      - name: req
+        description: 根据id批量删除
+        in: body
+        type: json
+        required: true
+        schema:
+          $ref: '#/definitions/BatchIds'
+    responses:
+      200:
+        description: Delete word.
+        schema:
+          $ref: '#/definitions/MongoRawResult'
+    """
+    log.info('Delete documents: %s', request.json)
+    result = []
+    for id in request.json:
+        result.append(words.delete_by_id(id))
+    return jsonify(make_msg(data=result))

@@ -20,11 +20,16 @@
             </v-text-field>
 
             <v-list two-line dense>
-                <v-list-item-group v-if="words && words.length !== 0" active-class="blue--text">
+                <v-list-item-group
+                    v-model="selected"
+                    multiple
+                    v-if="words && words.length !== 0"
+                    active-class="blue--text"
+                >
                     <template v-for="(word, index) in words">
                         <v-list-item :key="word.name">
-                            <template>
-                                <v-list-item-content @click="play(word.name)">
+                            <template v-slot:default="{ active, toggle }">
+                                <v-list-item-content @click="play(word.name, active)">
                                     <div>
                                         <v-list-item-title v-text="word.name"></v-list-item-title>
                                         <v-list-item-subtitle v-text="word.derivation"></v-list-item-subtitle>
@@ -35,18 +40,12 @@
                                     >{{word.chinese}} > {{word.thesauri}} > {{word.related_words}} > {{word.similar_shaped_words}} > {{word.comment}} > {{word.hardship}}</v-list-item-action-text>
                                 </v-list-item-content>
 
-                                <v-list-item-action>
-                                    <!-- <v-list-item-action-text v-text=""></v-list-item-action-text> -->
-                                    <v-btn
-                                        small
-                                        outlined
-                                        fab
-                                        color="red lighten-1"
-                                        @click="onWordDeleteConfirm(word)"
-                                    >
+                                <!-- <v-list-item-action>
+                                    <v-list-item-action-text v-text="xx"></v-list-item-action-text>
+                                    <v-btn small outlined fab color="red lighten-1">
                                         <v-icon>mdi-delete</v-icon>
                                     </v-btn>
-                                </v-list-item-action>
+                                </v-list-item-action>-->
                             </template>
                         </v-list-item>
                         <v-divider v-if="index + 1 < words.length" :key="index"></v-divider>
@@ -88,6 +87,9 @@
                 <v-icon v-if="showDetail">mdi-eye</v-icon>
                 <v-icon v-else>mdi-eye-off</v-icon>
             </v-btn>
+            <v-btn fab dark small color="pink" @click="onWordDeleteConfirm()">
+                <v-icon>mdi-delete</v-icon>
+            </v-btn>
             <v-btn fab dark small color="indigo" @click="onNewWordAdd()">
                 <v-icon>mdi-plus</v-icon>
             </v-btn>
@@ -100,7 +102,12 @@
             <v-dialog v-model="dialog" persistent max-width="320">
                 <v-card>
                     <v-card-title class="headline">删除单词！</v-card-title>
-                    <v-card-text>此操作将永久删除单词, 是否继续?</v-card-text>
+                    <v-card-text>
+                        此操作将永久以下, 是否继续?
+                        <ul v-for="selected_word in selected_words" :key="selected_word.id">
+                            <li>{{selected_word.name}}</li>
+                        </ul>
+                    </v-card-text>
                     <v-card-actions>
                         <v-spacer></v-spacer>
                         <v-btn color="green darken-1" text @click="onWordDelete">确定</v-btn>
@@ -122,6 +129,8 @@ export default {
         limit: 20,
         noMoreData: false,
         words: [],
+        selected: [],
+        selected_words: [],
         dialog: false,
         loading: true,
         fab: false,
@@ -136,8 +145,11 @@ export default {
                 query: { name: name }
             });
         },
-        play(name) {
-            new Audio(`/youdao/dictvoice?audio=${name}&type=1`).play();
+        play(name, active) {
+            if (!active) {
+                // 注意：此时的active是上一次的状态，所以需要取反
+                new Audio(`/youdao/dictvoice?audio=${name}&type=1`).play();
+            }
         },
         scrollWords(words, keyword, skip, cb) {
             keyword = keyword ? keyword.trim() : "";
@@ -175,14 +187,19 @@ export default {
                 query: { name: name }
             });
         },
-        onWordDeleteConfirm(word) {
+        onWordDeleteConfirm() {
+            this.selected_words = [];
+            this.selected.forEach(idx => {
+                this.selected_words.push(this.words[idx]);
+            });
             this.dialog = true;
-            this.deleteWordName = word.name;
         },
         onWordDelete() {
             let vm = this;
             this.$axios
-                .delete(`/backend/api/words/${this.deleteWordName}`)
+                .delete(`/backend/api/words/batch`, {
+                    data: this.selected_words.map(w => w._id)
+                })
                 .then(response => {
                     if (response.status === 200 && response.data.rc === 0) {
                         vm.dialog = false;
