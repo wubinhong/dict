@@ -83,7 +83,7 @@
                     <v-icon v-else>mdi-settings</v-icon>
                 </v-btn>
             </template>
-            <v-btn fab dark small color="green" @click="showDetail = !showDetail">
+            <v-btn fab dark small color="green" @click="toggleShowWordDetail">
                 <v-icon v-if="showDetail">mdi-eye</v-icon>
                 <v-icon v-else>mdi-eye-off</v-icon>
             </v-btn>
@@ -133,11 +133,15 @@ export default {
         selected_words: [],
         dialog: false,
         loading: true,
-        fab: false,
-        showDetail: false
+        fab: false
     }),
+    computed: {
+        showDetail() {
+            return this.$store.state.setting.showWordDetail;
+        }
+    },
     methods: {
-        ...mapMutations(["showSnackbar", "closeSnackbar"]),
+        ...mapMutations(["showSnackbar", "closeSnackbar", "toggleShowWordDetail"]),
         go(name) {
             // console.log(word);
             this.$router.push({
