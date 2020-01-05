@@ -75,7 +75,7 @@ docker build --target app -t dict:v1 -f Dockerfile .
 > * Note: We usually do this process at the target server where the app run.
 >
 ```bash
-docker run --name dict_server1 -d -p 9000:80 -v /data/container/db:/data/db -v /data/container/configdb:/data/configdb dict:v1
+docker run --name dict_server1 -d -p 9000:80 -v /data/container/dict:/data -v /data/container/dict/db:/data/db dict:v1
 ```
 
 > **Importance: A `build.sh` shell script was written to make building work more convenient.**
@@ -120,3 +120,9 @@ find . -type d -name __pycache__ -exec rm -r {} +
 
 [vuejs](https://vuejs.org/v2/guide/)
 [element-ui](https://element.eleme.cn/#/zh-CN)
+
+- Click event modification
+
+- Docker volume setting
+
+- Add nginx cache

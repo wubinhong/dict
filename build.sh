@@ -63,7 +63,7 @@ case "${1-''}" in
     container)
         remove_container
         echo "Start make container <${container_name}> ..."
-        docker run --name ${container_name} -d -p 9000:80 -v /data/container/db:/data/db -v /data/container/configdb:/data/configdb ${image_app}
+        docker run --name ${container_name} -d -p 9000:80 -v /data/container/dict:/data -v /data/container/dict/db:/data/db ${image_app}
         echo "Container <${container_name}> made successfully!"
         ;;
     *)

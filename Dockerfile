@@ -18,6 +18,9 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log && ln -sf /dev/stderr /var/log/
 # Disable IPv6 for redis-server
 RUN sed -i "s/bind .*/bind 127.0.0.1/g" /etc/redis/redis.conf
 
+# Volume
+VOLUME [ "/data" ]
+
 ### =================== New Stage =========================== ###
 # Stage two building
 FROM dict:base AS app
@@ -31,6 +34,7 @@ COPY ./$FRONTEND_PROJECT/dist/ /app/frontend/
 COPY ./backend/ /app/backend/
 COPY ./docker/pip-requirements.txt /app/backend
 COPY ./docker/dict-entrypoint.sh /usr/local/bin
+COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 COPY ./docker/dict.conf /etc/nginx/sites-available/default
 COPY ./docker/cron_backup.sh /app
 COPY ./docker/cron_task /etc/cron.d/backup-task
