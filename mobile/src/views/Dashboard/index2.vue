@@ -36,7 +36,6 @@
                                     </div>
                                     <v-list-item-action-text
                                         v-show="showDetail"
-                                        @click="go(word.name)"
                                     >{{word.chinese}} > {{word.thesauri}} > {{word.related_words}} > {{word.similar_shaped_words}} > {{word.comment}} > {{word.hardship}}</v-list-item-action-text>
                                 </v-list-item-content>
 
@@ -86,6 +85,9 @@
             <v-btn fab dark small color="green" @click="toggleShowWordDetail">
                 <v-icon v-if="showDetail">mdi-eye</v-icon>
                 <v-icon v-else>mdi-eye-off</v-icon>
+            </v-btn>
+            <v-btn fab dark small color="blue" @click="go()">
+                <v-icon>mdi-magnify</v-icon>
             </v-btn>
             <v-btn fab dark small color="pink" @click="onWordDeleteConfirm()">
                 <v-icon>mdi-delete</v-icon>
@@ -141,13 +143,24 @@ export default {
         }
     },
     methods: {
-        ...mapMutations(["showSnackbar", "closeSnackbar", "toggleShowWordDetail"]),
-        go(name) {
-            // console.log(word);
-            this.$router.push({
-                path: `/dashboard/word`,
-                query: { name: name }
-            });
+        ...mapMutations([
+            "showSnackbar",
+            "closeSnackbar",
+            "toggleShowWordDetail"
+        ]),
+        go() {
+            console.log(this.selected);
+            if (this.selected.length === 0) {
+                this.showSnackbar({
+                    color: "warning",
+                    message: '请先选择单词！'
+                });
+            } else {
+                this.$router.push({
+                    path: `/dashboard/word`,
+                    query: { name: this.words[this.selected[0]].name }
+                });
+            }
         },
         play(name, active) {
             if (!active) {

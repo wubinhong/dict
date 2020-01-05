@@ -120,9 +120,3 @@ find . -type d -name __pycache__ -exec rm -r {} +
 
 [vuejs](https://vuejs.org/v2/guide/)
 [element-ui](https://element.eleme.cn/#/zh-CN)
-
-- Click event modification
-
-- Docker volume setting
-
-- Add nginx cache
