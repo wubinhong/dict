@@ -87,7 +87,7 @@
                 <v-icon v-else>mdi-eye-off</v-icon>
             </v-btn>
             <v-btn fab small color="blue" @click="onWordViewConfirm()" v-if="selected.length > 0">
-                <v-icon>mdi-magnify</v-icon>
+                <v-icon>mdi-pencil</v-icon>
             </v-btn>
             <v-btn fab small color="pink" @click="onWordDeleteConfirm()" v-if="selected.length > 0">
                 <v-icon>mdi-delete</v-icon>
@@ -103,13 +103,15 @@
         <v-row justify="center">
             <v-dialog v-model="dialog2" persistent max-width="320">
                 <v-card>
-                    <v-card-title class="headline">查看单词！</v-card-title>
+                    <v-card-title class="headline">编辑单词！</v-card-title>
                     <v-card-text>
-                        点击查看以下选中单词
+                        点击编辑以下选中单词
                         <ul v-for="selected_word in selected_words" :key="selected_word.id">
-                            <a :href="`/dashboard/word?name=${selected_word.name}`">
+                            <router-link
+                                :to="{path: '/dashboard/word', query: {name: selected_word.name}}"
+                            >
                                 <li>{{selected_word.name}}</li>
-                            </a>
+                            </router-link>
                         </ul>
                     </v-card-text>
                     <v-card-actions>
