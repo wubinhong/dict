@@ -201,6 +201,7 @@ export default {
                 this.skip = 0;
                 this.noMoreData = false;
                 this.scrollWords([], keyword, this.skip, ajaxWords => {
+                    this.selected = [];
                     this.words = ajaxWords;
                     this.loading = false;
                 });
