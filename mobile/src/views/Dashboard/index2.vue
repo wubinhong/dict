@@ -86,10 +86,10 @@
                 <v-icon v-if="showDetail">mdi-eye</v-icon>
                 <v-icon v-else>mdi-eye-off</v-icon>
             </v-btn>
-            <v-btn fab dark small color="blue" @click="go()">
+            <v-btn fab small color="blue" @click="onWordViewConfirm()" v-if="selected.length > 0">
                 <v-icon>mdi-magnify</v-icon>
             </v-btn>
-            <v-btn fab dark small color="pink" @click="onWordDeleteConfirm()">
+            <v-btn fab small color="pink" @click="onWordDeleteConfirm()" v-if="selected.length > 0">
                 <v-icon>mdi-delete</v-icon>
             </v-btn>
             <v-btn fab dark small color="indigo" @click="onNewWordAdd()">
@@ -101,11 +101,30 @@
         </v-speed-dial>
 
         <v-row justify="center">
+            <v-dialog v-model="dialog2" persistent max-width="320">
+                <v-card>
+                    <v-card-title class="headline">查看单词！</v-card-title>
+                    <v-card-text>
+                        点击查看以下选中单词
+                        <ul v-for="selected_word in selected_words" :key="selected_word.id">
+                            <a :href="`/dashboard/word?name=${selected_word.name}`">
+                                <li>{{selected_word.name}}</li>
+                            </a>
+                        </ul>
+                    </v-card-text>
+                    <v-card-actions>
+                        <v-spacer></v-spacer>
+                        <v-btn color="green darken-1" text @click="dialog2 = false">关闭</v-btn>
+                    </v-card-actions>
+                </v-card>
+            </v-dialog>
+        </v-row>
+        <v-row justify="center">
             <v-dialog v-model="dialog" persistent max-width="320">
                 <v-card>
                     <v-card-title class="headline">删除单词！</v-card-title>
                     <v-card-text>
-                        此操作将永久以下, 是否继续?
+                        此操作将永久删除以下单词, 是否继续?
                         <ul v-for="selected_word in selected_words" :key="selected_word.id">
                             <li>{{selected_word.name}}</li>
                         </ul>
@@ -134,6 +153,7 @@ export default {
         selected: [],
         selected_words: [],
         dialog: false,
+        dialog2: false,
         loading: true,
         fab: false
     }),
@@ -148,20 +168,6 @@ export default {
             "closeSnackbar",
             "toggleShowWordDetail"
         ]),
-        go() {
-            console.log(this.selected);
-            if (this.selected.length === 0) {
-                this.showSnackbar({
-                    color: "warning",
-                    message: '请先选择单词！'
-                });
-            } else {
-                this.$router.push({
-                    path: `/dashboard/word`,
-                    query: { name: this.words[this.selected[0]].name }
-                });
-            }
-        },
         play(name, active) {
             if (!active) {
                 // 注意：此时的active是上一次的状态，所以需要取反
@@ -203,6 +209,13 @@ export default {
                 name: "wordDetail",
                 query: { name: name }
             });
+        },
+        onWordViewConfirm() {
+            this.selected_words = [];
+            this.selected.forEach(idx => {
+                this.selected_words.push(this.words[idx]);
+            });
+            this.dialog2 = true;
         },
         onWordDeleteConfirm() {
             this.selected_words = [];
