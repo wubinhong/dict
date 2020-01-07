@@ -7,7 +7,8 @@ log() {
 
 dump() {
     # Backup mongodb
-    dump_dir="/data/configdb/$(date +%Y%m%d_%H%M%S)"
+    mkdir /data/db_back
+    dump_dir="/data/db_back/$(date +%Y%m%d_%H%M%S)"
     log ">> Dump mongodb to: ${dump_dir}"
     # mongodump -h 127.0.0.1 -o 20191209_0922
     mongodump -h 127.0.0.1 -o ${dump_dir}
@@ -25,7 +26,7 @@ case "${1-''}" in
     restore)
         log "restore"
         if [ -z "${2}" ]; then
-            log "Example: ./cron_backup.sh restore /data/configdb/20191209_092359"
+            log "Example: ./cron_backup.sh restore /data/db_back/20191209_092359"
             exit 1
         fi
         restore ${2}
