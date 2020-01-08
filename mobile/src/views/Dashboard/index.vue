@@ -28,7 +28,16 @@
                     <v-icon slot="append" v-show="keyword" @click="play(keyword)">mdi-volume-high</v-icon>
                 </v-text-field>
 
-                <v-btn fab fixed top right color="indigo" class="add-btn" v-show="!keyword" @click="onNewWordAdd()">
+                <v-btn
+                    fab
+                    fixed
+                    top
+                    right
+                    color="indigo"
+                    class="add-btn"
+                    v-show="!keyword"
+                    @click="onNewWordAdd()"
+                >
                     <v-icon dark>mdi-plus</v-icon>
                 </v-btn>
 
@@ -44,14 +53,17 @@
                         </thead>
                         <tbody>
                             <tr v-for="(word, index) in words" :key="index">
-                                <td> {{index + 1}} </td>
+                                <td>{{index + 1}}</td>
                                 <td
                                     @click="play(word.name)"
                                     style="cursor: pointer;"
                                 >{{ word.name }}</td>
-                                <td @click="go(word.name)">
+                                <td>
                                     {{ word.derivation }} > {{ word.chinese }} > {{ word.thesauri }} >
-                                    {{ word.related_words }} > {{ word.similar_shaped_words }} > {{ word.comment }} > {{word.hardship}}
+                                    {{ word.related_words }} > {{ word.similar_shaped_words }} > {{ word.comment }} > {{word.hardship}} >
+                                    <router-link
+                                        :to="{path: '/dashboard/word', query: {name: word.name}}"
+                                    >编辑</router-link>
                                 </td>
                                 <td>
                                     <v-btn
@@ -120,20 +132,11 @@ export default {
     }),
     methods: {
         ...mapMutations(["showSnackbar"]),
-        go(name) {
-            // console.log(word);
-            this.$router.push({
-                path: `/dashboard/word`,
-                query: { name: name }
-            });
-        },
         play(name) {
-            new Audio(
-                `/youdao/dictvoice?audio=${name}&type=1`
-            ).play();
+            new Audio(`/youdao/dictvoice?audio=${name}&type=1`).play();
         },
         scrollWords(words, keyword, skip, cb) {
-            keyword = keyword ? keyword.trim() : '';
+            keyword = keyword ? keyword.trim() : "";
             this.$axios
                 .get(
                     `/backend/api/words/fuzzy?keyword=${keyword}&skip=${skip}&limit=${this.limit}`
