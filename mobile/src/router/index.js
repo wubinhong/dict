@@ -6,6 +6,7 @@ import Dashboard2 from '../views/Dashboard/index2.vue'
 import WordDetail from '../views/Dashboard/WordDetail.vue'
 import Admin from '../views/Admin/index.vue'
 import AdminDetail from '../views/Admin/AdminDetail.vue'
+import Tool from '../views/Tool/index.vue'
 // @ is an alias to /src
 import Settings from '@/views/Home/Settings.vue'
 
@@ -29,6 +30,8 @@ const routes = [
             path: 'admin', component: Admin
         }, {
             path: 'admin/detail', component: AdminDetail, name: 'adminDetail'
+        }, {
+            path: 'tool', component: Tool
         }]
     },
     {
