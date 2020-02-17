@@ -64,7 +64,7 @@ export default {
                     // Resolve speak's asynchronous problem
                     this.utter.onend = () => {
                         // Take effect instantly for last iteration
-                        if(this.words.length === 0) {
+                        if (this.words.length === 0) {
                             this.speakWords();
                         } else {
                             setTimeout(() => {
@@ -85,16 +85,16 @@ export default {
                 });
             } else {
                 if (this.words.length == 0) {
-                    let words = this.speakText
-                        .replace(/\r\n|\r|\n/, this.separator)
-                        .split(this.separator);
-                    for (let i = 0; i < words.length; i++) {
-                        let word = words[i].trim();
-                        if (word) {
-                            words[i] = word;
-                        }
-                    }
-                    this.words = words;
+                    this.words = [];
+                    this.speakText
+                        .replace(/(\r\n|\n|\r)/g, this.separator)
+                        .split(this.separator)
+                        .forEach(w => {
+                            w = w.trim();
+                            if (w) {
+                                this.words.push(w);
+                            }
+                        });
                     this.speakCaption = "Speaking";
                     this.speakWords();
                 } else if (this.speakCaption === "Speaking") {
