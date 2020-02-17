@@ -31,6 +31,7 @@
                             </v-tooltip>
                         </template>
                     </v-slider>
+                    <v-text-field v-model="separator" label="分隔符"></v-text-field>
                 </v-form>
             </v-card-text>
             <v-card-actions>
@@ -46,6 +47,7 @@ import { mapMutations } from "vuex";
 export default {
     data: () => ({
         speakText: "",
+        separator: ",",
         utter: new SpeechSynthesisUtterance(),
         wordDelay: 1
     }),
@@ -55,9 +57,12 @@ export default {
             if (words && words.length > 0) {
                 this.utter.text = words.shift(0);
                 window.speechSynthesis.speak(this.utter);
-                setTimeout(() => {
-                    this.speakWords(words);
-                }, this.wordDelay * 1000);
+                // Resolve speak's asynchronous problem
+                this.utter.onend = () => {
+                    setTimeout(() => {
+                        this.speakWords(words);
+                    }, this.wordDelay * 1000);
+                };
             }
         },
         speakOut() {
@@ -67,11 +72,14 @@ export default {
                     message: "Please input text for speaker!"
                 });
             } else {
-                let words = this.speakText.replace("\n", ",").split(",");
-                // let words = this.speakText.split(',');
+                let words = this.speakText
+                    .replace(/\r\n|\r|\n/, this.separator)
+                    .split(this.separator);
                 for (let i = 0; i < words.length; i++) {
-                    const word = words[i];
-                    words[i] = word.trim();
+                    let word = words[i].trim();
+                    if (word) {
+                        words[i] = word;
+                    }
                 }
                 this.speakWords(words);
             }
