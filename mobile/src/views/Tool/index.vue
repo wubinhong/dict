@@ -63,9 +63,14 @@ export default {
                     window.speechSynthesis.speak(this.utter);
                     // Resolve speak's asynchronous problem
                     this.utter.onend = () => {
-                        setTimeout(() => {
+                        // Take effect instantly for last iteration
+                        if(this.words.length === 0) {
                             this.speakWords();
-                        }, this.wordDelay * 1000);
+                        } else {
+                            setTimeout(() => {
+                                this.speakWords();
+                            }, this.wordDelay * 1000);
+                        }
                     };
                 }
             } else {
