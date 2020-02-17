@@ -35,7 +35,8 @@
                 </v-form>
             </v-card-text>
             <v-card-actions>
-                <v-btn text @click="speakOut">Speak</v-btn>
+                <v-btn text @click="speakOut">{{speakCaption}}</v-btn>
+                <v-btn text @click="words = []; speakWords()">Stop</v-btn>
             </v-card-actions>
         </v-card>
     </v-container>
@@ -47,22 +48,28 @@ import { mapMutations } from "vuex";
 export default {
     data: () => ({
         speakText: "",
+        words: [],
+        speakCaption: "Speak",
         separator: ",",
         utter: new SpeechSynthesisUtterance(),
         wordDelay: 1
     }),
     methods: {
         ...mapMutations(["showSnackbar"]),
-        speakWords(words) {
-            if (words && words.length > 0) {
-                this.utter.text = words.shift(0);
-                window.speechSynthesis.speak(this.utter);
-                // Resolve speak's asynchronous problem
-                this.utter.onend = () => {
-                    setTimeout(() => {
-                        this.speakWords(words);
-                    }, this.wordDelay * 1000);
-                };
+        speakWords() {
+            if (this.words.length > 0) {
+                if (this.speakCaption === "Speaking") {
+                    this.utter.text = this.words.shift(0);
+                    window.speechSynthesis.speak(this.utter);
+                    // Resolve speak's asynchronous problem
+                    this.utter.onend = () => {
+                        setTimeout(() => {
+                            this.speakWords();
+                        }, this.wordDelay * 1000);
+                    };
+                }
+            } else {
+                this.speakCaption = "Speak";
             }
         },
         speakOut() {
@@ -72,16 +79,25 @@ export default {
                     message: "Please input text for speaker!"
                 });
             } else {
-                let words = this.speakText
-                    .replace(/\r\n|\r|\n/, this.separator)
-                    .split(this.separator);
-                for (let i = 0; i < words.length; i++) {
-                    let word = words[i].trim();
-                    if (word) {
-                        words[i] = word;
+                if (this.words.length == 0) {
+                    let words = this.speakText
+                        .replace(/\r\n|\r|\n/, this.separator)
+                        .split(this.separator);
+                    for (let i = 0; i < words.length; i++) {
+                        let word = words[i].trim();
+                        if (word) {
+                            words[i] = word;
+                        }
                     }
+                    this.words = words;
+                    this.speakCaption = "Speaking";
+                    this.speakWords();
+                } else if (this.speakCaption === "Speaking") {
+                    this.speakCaption = "Pause";
+                } else if (this.speakCaption === "Pause") {
+                    this.speakCaption = "Speaking";
+                    this.speakWords();
                 }
-                this.speakWords(words);
             }
         }
     },
