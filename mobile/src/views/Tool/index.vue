@@ -14,7 +14,7 @@
                     ></v-textarea>
                     <v-slider
                         v-model="wordDelay"
-                        :label="`阅读延时（毫秒）`"
+                        :label="`阅读延时`"
                         thumb-label
                         style="padding: 12px 0"
                         color="orange darken-3"
@@ -31,7 +31,20 @@
                             </v-tooltip>
                         </template>
                     </v-slider>
-                    <v-text-field v-model="separator" label="分隔符"></v-text-field>
+                    <v-row>
+                        <v-col>
+                            <v-text-field v-model="separator" label="分隔符"></v-text-field>
+                        </v-col>
+                        <v-col>
+                            <v-select
+                                label="Voice"
+                                v-model="utter.voice"
+                                :items="availableVoices"
+                                :item-text="item => item.name"
+                                return-object
+                            ></v-select>
+                        </v-col>
+                    </v-row>
                 </v-form>
             </v-card-text>
             <v-card-actions>
@@ -51,6 +64,7 @@ export default {
         words: [],
         speakCaption: "Speak",
         separator: ",",
+        availableVoices: [],
         utter: new SpeechSynthesisUtterance(),
         wordDelay: 1
     }),
@@ -109,16 +123,13 @@ export default {
     created() {
         let vm = this;
         function initVoice() {
-            let availableVoices = window.speechSynthesis
+            vm.availableVoices = window.speechSynthesis
                 .getVoices()
                 .filter(v => v.lang === "en-US");
-            if (availableVoices && availableVoices.length > 0) {
-                vm.utter.voice = availableVoices.pop();
-            } else {
+            if (vm.availableVoices.length === 0) {
                 vm.showSnackbar({
                     color: "error",
-                    message:
-                        "No speaker voice found for Google UK English Male!"
+                    message: "No speaker voice found for en-US!"
                 });
             }
         }
