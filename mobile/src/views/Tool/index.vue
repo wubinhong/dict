@@ -36,13 +36,13 @@
                             <v-text-field v-model="separator" label="分隔符"></v-text-field>
                         </v-col>
                         <v-col>
-                            <v-select
+                            <v-combobox
                                 label="Voice"
                                 v-model="utter.voice"
                                 :items="availableVoices"
-                                :item-text="item => item.name"
+                                :item-text="item => item.lang + `: ` + item.name"
                                 return-object
-                            ></v-select>
+                            ></v-combobox>
                         </v-col>
                     </v-row>
                 </v-form>
@@ -125,11 +125,11 @@ export default {
         function initVoice() {
             vm.availableVoices = window.speechSynthesis
                 .getVoices()
-                .filter(v => v.lang === "en-US");
+                .filter(v => v.lang.match(/^en-/g));
             if (vm.availableVoices.length === 0) {
                 vm.showSnackbar({
                     color: "error",
-                    message: "No speaker voice found for en-US!"
+                    message: "No speaker voice found for en-!"
                 });
             }
         }
