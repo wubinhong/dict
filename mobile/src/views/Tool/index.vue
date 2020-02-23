@@ -101,7 +101,7 @@ export default {
                 if (this.words.length == 0) {
                     this.words = [];
                     this.speakText
-                        .replace(/(\r\n|\n|\r)/g, this.separator)
+                        .replace(/(\r\n|\n|\r|>|:)/g, this.separator)
                         .split(this.separator)
                         .forEach(w => {
                             w = w.trim();
