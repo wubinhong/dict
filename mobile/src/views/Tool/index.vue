@@ -48,8 +48,8 @@
                 </v-form>
             </v-card-text>
             <v-card-actions>
-                <v-btn text @click="speakOut">{{speakCaption}}</v-btn>
-                <v-btn text @click="words = []; speakWords()">Stop</v-btn>
+                <v-btn text ref="speakOutButton" @click="speakOut">{{speakCaption}}</v-btn>
+                <v-btn text ref="stopButton" @click="words = []; speakWords()">Stop</v-btn>
             </v-card-actions>
         </v-card>
     </v-container>
@@ -147,6 +147,26 @@ export default {
             initVoice();
         }
     },
-    mounted() {}
+    mounted() {
+        // speakOutButton
+        window.onkeydown = e => {
+            // 用户每次按键都会触发该事件，所以对于组合键的检测，需要配合使用onkeydown和onkeyup事件来实现
+            if (e.key === "Control") {
+                this.ctrlKeyHoldOn = true;
+            }
+            // 用户按 "Control + space" 组合键后，模拟点击Speak按钮
+            if (this.ctrlKeyHoldOn && e.code === "Space") {
+                this.$refs.speakOutButton.click(document.createEvent("MouseEvent"));
+            }
+            // 用户按 "Control + enter" 组合键后，模拟点击Stop按钮
+            if (this.ctrlKeyHoldOn && e.code === "Enter") {
+                this.$refs.stopButton.click(document.createEvent("MouseEvent"));
+            }
+        };
+        window.onkeyup = () => {
+            // 重置组合键
+            this.ctrlKeyHoldOn = false;
+        };
+    }
 };
 </script>
