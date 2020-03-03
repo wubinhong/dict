@@ -163,9 +163,11 @@ export default {
                 this.$refs.stopButton.click(document.createEvent("MouseEvent"));
             }
         };
-        window.onkeyup = () => {
+        window.onkeyup = (e) => {
             // 重置组合键
-            this.ctrlKeyHoldOn = false;
+            if (e.key === "Control") {
+                this.ctrlKeyHoldOn = false;
+            }
         };
     }
 };
