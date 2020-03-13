@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-card class="mx-auto" max-width="80%">
+        <v-card class="mx-auto" max-width="95%">
             <v-card-text>
                 <p class="display-1 text--primary">Speak Out Tool</p>
                 <v-form>
