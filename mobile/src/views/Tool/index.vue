@@ -12,6 +12,18 @@
                         auto-grow
                         label="输入朗读文本"
                     ></v-textarea>
+                    <div clear-icon="mdi-close-circle">
+                        <v-chip
+                            v-for="(word, index) in words"
+                            v-bind:key="index"
+                            link
+                            small
+                            class="ma-2"
+                            :color="currentIndex === index ? `red` : `undefined`"
+                            @click="speak(index, true)"
+                            @click:close="remove(index)"
+                        >{{word}}</v-chip>
+                    </div>
                     <v-slider
                         v-model="wordDelay"
                         :label="`阅读延时`"
@@ -49,7 +61,8 @@
             </v-card-text>
             <v-card-actions>
                 <v-btn text ref="speakOutButton" @click="speakOut">{{speakCaption}}</v-btn>
-                <v-btn text ref="stopButton" @click="words = []; speakWords()">Stop</v-btn>
+                <v-btn text ref="injectButton" @click="injectWords">Inject</v-btn>
+                <v-btn text @click="words = [];">Clear</v-btn>
             </v-card-actions>
         </v-card>
     </v-container>
@@ -62,7 +75,9 @@ export default {
     data: () => ({
         speakText: "",
         words: [],
+        currentIndex: 0,
         speakCaption: "Speak",
+        timeoutHandlers: [],
         separator: ",",
         availableVoices: [],
         utter: new SpeechSynthesisUtterance(),
@@ -70,52 +85,61 @@ export default {
     }),
     methods: {
         ...mapMutations(["showSnackbar"]),
-        speakWords() {
-            if (this.words.length > 0) {
-                if (this.speakCaption === "Speaking") {
-                    this.utter.text = this.words.shift(0);
-                    window.speechSynthesis.speak(this.utter);
-                    // Resolve speak's asynchronous problem
-                    this.utter.onend = () => {
-                        // Take effect instantly for last iteration
-                        if (this.words.length === 0) {
-                            this.speakWords();
-                        } else {
-                            setTimeout(() => {
-                                this.speakWords();
-                            }, this.wordDelay * 1000);
-                        }
-                    };
-                }
-            } else {
-                this.speakCaption = "Speak";
+        injectWords() {
+            this.words = [];
+            this.speakText
+                .replace(/(\r\n|\n|\r|>|:)/g, this.separator)
+                .split(this.separator)
+                .forEach(w => {
+                    w = w.trim();
+                    if (w) {
+                        this.words.push(w);
+                    }
+                });
+        },
+        clearAllTimeout() {
+            while (this.timeoutHandlers.length > 0) {
+                clearTimeout(this.timeoutHandlers.shift());
             }
         },
+        speak(index, clearTimeoutHandle) {
+            if (clearTimeoutHandle) {
+                this.clearAllTimeout();
+            }
+            this.speakCaption = "Speaking";
+            this.currentIndex = index;
+            this.utter.text = this.words[index];
+            window.speechSynthesis.speak(this.utter);
+            // Resolve speak's asynchronous problem
+            this.utter.onend = () => {
+                // Finish the recursion when iteration reach the end
+                if (index + 1 < this.words.length) {
+                    if (this.speakCaption === "Speaking") {
+                        this.timeoutHandlers.push(
+                            setTimeout(() => {
+                                this.speak(++index, false);
+                            }, this.wordDelay * 1000)
+                        );
+                    }
+                } else {
+                    this.speakCaption = "Speak";
+                    this.currentIndex = 0;
+                }
+            };
+        },
         speakOut() {
-            if (!this.speakText) {
+            if (this.words.length === 0) {
                 this.showSnackbar({
                     color: "error",
-                    message: "Please input text for speaker!"
+                    message: "No injection found from input text for speaker!"
                 });
             } else {
-                if (this.words.length == 0) {
-                    this.words = [];
-                    this.speakText
-                        .replace(/(\r\n|\n|\r|>|:)/g, this.separator)
-                        .split(this.separator)
-                        .forEach(w => {
-                            w = w.trim();
-                            if (w) {
-                                this.words.push(w);
-                            }
-                        });
+                if (this.speakCaption === "Speaking") {
+                    this.clearAllTimeout();
+                    this.speakCaption = "Speak";
+                } else if (this.speakCaption === "Speak") {
                     this.speakCaption = "Speaking";
-                    this.speakWords();
-                } else if (this.speakCaption === "Speaking") {
-                    this.speakCaption = "Pause";
-                } else if (this.speakCaption === "Pause") {
-                    this.speakCaption = "Speaking";
-                    this.speakWords();
+                    this.speak(this.currentIndex);
                 }
             }
         }
@@ -156,14 +180,12 @@ export default {
             }
             // 用户按 "Control + space" 组合键后，模拟点击Speak按钮
             if (this.ctrlKeyHoldOn && e.code === "Space") {
-                this.$refs.speakOutButton.click(document.createEvent("MouseEvent"));
-            }
-            // 用户按 "Control + enter" 组合键后，模拟点击Stop按钮
-            if (this.ctrlKeyHoldOn && e.code === "Enter") {
-                this.$refs.stopButton.click(document.createEvent("MouseEvent"));
+                this.$refs.speakOutButton.click(
+                    document.createEvent("MouseEvent")
+                );
             }
         };
-        window.onkeyup = (e) => {
+        window.onkeyup = e => {
             // 重置组合键
             if (e.key === "Control") {
                 this.ctrlKeyHoldOn = false;
