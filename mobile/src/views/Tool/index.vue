@@ -60,7 +60,12 @@
                 </v-form>
             </v-card-text>
             <v-card-actions>
-                <v-btn text ref="speakOutButton" @click="speakOut">{{speakCaption}}</v-btn>
+                <v-btn
+                    text
+                    ref="speakOutButton"
+                    @click="speakOut"
+                    :disabled="words.length === 0"
+                >{{speakCaption}}</v-btn>
                 <v-btn text ref="injectButton" @click="injectWords">Inject</v-btn>
                 <v-btn text @click="words = [];">Clear</v-btn>
             </v-card-actions>
@@ -99,7 +104,7 @@ export default {
         },
         clearAllTimeout() {
             while (this.timeoutHandlers.length > 0) {
-                clearTimeout(this.timeoutHandlers.shift());
+                clearTimeout(this.timeoutHandlers.pop());
             }
         },
         speak(index, clearTimeoutHandle) {
@@ -115,6 +120,9 @@ export default {
                 // Finish the recursion when iteration reach the end
                 if (index + 1 < this.words.length) {
                     if (this.speakCaption === "Speaking") {
+                        // Clear all time out events to make it mutual exclusive for the concurrency of two events
+                        this.clearAllTimeout();
+                        // Collect timeout event handlers
                         this.timeoutHandlers.push(
                             setTimeout(() => {
                                 this.speak(++index, false);
@@ -139,7 +147,7 @@ export default {
                     this.speakCaption = "Speak";
                 } else if (this.speakCaption === "Speak") {
                     this.speakCaption = "Speaking";
-                    this.speak(this.currentIndex);
+                    this.speak(this.currentIndex, true);
                 }
             }
         }
