@@ -32,7 +32,7 @@
                                 <v-list-item-content @click="play(word.name, active)">
                                     <div>
                                         <v-list-item-title v-text="word.name"></v-list-item-title>
-                                        <v-list-item-subtitle> {{word.derivation}} > {{word.hardship}} </v-list-item-subtitle>
+                                        <v-list-item-subtitle>{{word.derivation}} > {{word.hardship}}</v-list-item-subtitle>
                                     </div>
                                     <v-list-item-action-text
                                         v-show="showDetail"
@@ -263,9 +263,10 @@ export default {
         // Infinite scroll implement
         window.onscroll = () => {
             let element = document.documentElement;
-            let reachBottomOfWindow =
-                element.scrollTop + window.innerHeight === element.offsetHeight;
-            if (!this.noMoreData && reachBottomOfWindow) {
+            // 是用差值解决 huawei pad pro 滑动时，无法触底的问题
+            let offset =
+                element.offsetHeight - (element.scrollTop + window.innerHeight);
+            if (!this.noMoreData && offset < 2) {
                 //appending data to the array
                 this.skip += this.limit;
                 this.scrollWords(
