@@ -107,33 +107,46 @@ export default {
                 clearTimeout(this.timeoutHandlers.pop());
             }
         },
+        nextSpeak(index) {
+            // Finish the recursion when iteration reach the end
+            if (index + 1 < this.words.length) {
+                if (this.speakCaption === "Speaking") {
+                    // Clear all time out events to make it mutual exclusive for the concurrency of two events
+                    this.clearAllTimeout();
+                    // Collect timeout event handlers
+                    this.timeoutHandlers.push(
+                        setTimeout(() => {
+                            this.speak(++index, false);
+                        }, this.wordDelay * 1000)
+                    );
+                }
+            } else {
+                this.speakCaption = "Speak";
+                this.currentIndex = 0;
+            }
+        },
         speak(index, clearTimeoutHandle) {
             if (clearTimeoutHandle) {
                 this.clearAllTimeout();
             }
             this.speakCaption = "Speaking";
             this.currentIndex = index;
-            this.utter.text = this.words[index];
-            window.speechSynthesis.speak(this.utter);
-            // Resolve speak's asynchronous problem
-            this.utter.onend = () => {
-                // Finish the recursion when iteration reach the end
-                if (index + 1 < this.words.length) {
-                    if (this.speakCaption === "Speaking") {
-                        // Clear all time out events to make it mutual exclusive for the concurrency of two events
-                        this.clearAllTimeout();
-                        // Collect timeout event handlers
-                        this.timeoutHandlers.push(
-                            setTimeout(() => {
-                                this.speak(++index, false);
-                            }, this.wordDelay * 1000)
-                        );
-                    }
-                } else {
-                    this.speakCaption = "Speak";
-                    this.currentIndex = 0;
-                }
-            };
+            if (this.availableVoices.length === 0) {
+                let audio = new Audio(
+                    `/youdao/dictvoice?audio=${this.words[index]}&type=1`
+                );
+                audio.play();
+                audio.onended = () => {
+                    this.nextSpeak(index);
+                };
+            } else {
+                this.utter.text = this.words[index];
+                window.speechSynthesis.speak(this.utter);
+                // Resolve speak's asynchronous problem
+                this.utter.onend = () => {
+                    this.nextSpeak(index);
+                };
+            }
         },
         speakOut() {
             if (this.words.length === 0) {
@@ -153,6 +166,10 @@ export default {
         }
     },
     created() {
+        if (!window.speechSynthesis) {
+            // For browsers' compatibility
+            return;
+        }
         let vm = this;
         function initVoice() {
             vm.availableVoices = window.speechSynthesis
@@ -161,7 +178,8 @@ export default {
             if (vm.availableVoices.length === 0) {
                 vm.showSnackbar({
                     color: "error",
-                    message: "No speaker voice found for en-!"
+                    message:
+                        "No speaker voice found for en-, system will take youdao as an alternate"
                 });
             }
         }
