@@ -12,7 +12,7 @@
                         auto-grow
                         label="输入朗读文本"
                     ></v-textarea>
-                    <div clear-icon="mdi-close-circle">
+                    <div v-if="words.length > 0">
                         <v-chip
                             v-for="(word, index) in words"
                             v-bind:key="index"
@@ -23,6 +23,7 @@
                             @click="speak(index, true)"
                             @click:close="remove(index)"
                         >{{word}}</v-chip>
+                        <div>total: {{words.length}}</div>
                     </div>
                     <v-slider
                         v-model="wordDelay"
