@@ -19,8 +19,8 @@
                             link
                             small
                             class="ma-2"
-                            :color="currentIndex === index ? `red` : `undefined`"
-                            @click="speak(index, true)"
+                            :color="currentIndex === index ? `green` : `undefined`"
+                            @click="speakClick(index)"
                             @click:close="remove(index)"
                         >{{word}}</v-chip>
                         <div>total: {{words.length}}</div>
@@ -81,7 +81,7 @@ export default {
     data: () => ({
         speakText: "",
         words: [],
-        currentIndex: 0,
+        currentIndex: -1,
         speakCaption: "Speak",
         timeoutHandlers: [],
         separator: ",",
@@ -123,7 +123,7 @@ export default {
                 }
             } else {
                 this.speakCaption = "Speak";
-                this.currentIndex = 0;
+                this.currentIndex = -1;
             }
         },
         speak(index, clearTimeoutHandle) {
@@ -149,6 +149,17 @@ export default {
                 };
             }
         },
+        speakClick(index) {
+            if (this.currentIndex === index) {
+                this.speakOut();
+                // Only when tbe program is speaking, it need to reset
+                if (this.speakCaption === "Speak") {
+                    this.currentIndex = -1;
+                }
+            } else {
+                this.speak(index, true);
+            }
+        },
         speakOut() {
             if (this.words.length === 0) {
                 this.showSnackbar({
@@ -156,6 +167,10 @@ export default {
                     message: "No injection found from input text for speaker!"
                 });
             } else {
+                if (this.currentIndex === -1) {
+                    // Reset to the first one element
+                    this.currentIndex = 0;
+                }
                 if (this.speakCaption === "Speaking") {
                     this.clearAllTimeout();
                     this.speakCaption = "Speak";
