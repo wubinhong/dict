@@ -13,6 +13,16 @@
                         label="输入朗读文本"
                     ></v-textarea>
                     <div v-if="words.length > 0">
+                        <v-progress-linear
+                            height="25"
+                            color="success"
+                            striped
+                            :value="progressIndex / words.length * 100"
+                        >
+                            <template>
+                                <strong>{{progressIndex}} / {{words.length}}</strong>
+                            </template>
+                        </v-progress-linear>
                         <v-chip
                             v-for="(word, index) in words"
                             v-bind:key="index"
@@ -23,7 +33,6 @@
                             @click="speakClick(index)"
                             @click:close="remove(index)"
                         >{{word}}</v-chip>
-                        <div>total: {{words.length}}</div>
                     </div>
                     <v-slider
                         v-model="wordDelay"
@@ -89,6 +98,12 @@ export default {
         utter: new SpeechSynthesisUtterance(),
         wordDelay: 1
     }),
+    computed: {
+        progressIndex: function() {
+            // More flexible to handle the data props
+            return this.currentIndex + 1;
+        }
+    },
     methods: {
         ...mapMutations(["showSnackbar"]),
         injectWords() {
