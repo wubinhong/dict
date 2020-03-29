@@ -22,7 +22,7 @@ _axios.interceptors.request.use(
         // Do something before request is sent
         let admin = localStorage.getItem(window.location.host + '_admin');
         if (admin) {
-            config.headers = {...config.headers, 'x-hucat-token': JSON.parse(admin).token}
+            config.headers = { ...config.headers, 'x-hucat-token': JSON.parse(admin).token }
         }
         return config;
     },
@@ -36,17 +36,20 @@ _axios.interceptors.request.use(
 _axios.interceptors.response.use(
     function (response) {
         // Do something with response data
-        if (response.data.rc !== 0) {
-            store.commit('showSnackbar', {color: 'error', message: response.data.msg});
+        // Handle unauth access action
+        if (response.data.rc === 10000 || response.data.rc === 10001) {
+            store.commit('showSnackbar', { color: 'error', message: response.data.msg });
             if (window.location.pathname !== '/login') {
                 window.location.href = '/login';
             }
+        } else if (response.data.rc != 0) { // Handle server error
+            store.commit('showSnackbar', { color: 'error', message: response.data.msg });
         }
         return response;
     },
     function (error) {
         // Do something with response error
-        store.commit('showSnackbar', {color: 'error', message: error.message});
+        store.commit('showSnackbar', { color: 'error', message: error.message });
         return Promise.reject(error);
     }
 );

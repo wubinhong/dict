@@ -77,7 +77,8 @@
                     :disabled="words.length === 0"
                 >{{speakCaption}}</v-btn>
                 <v-btn text ref="injectButton" @click="injectWords">Inject</v-btn>
-                <v-btn text @click="words = [];">Clear</v-btn>
+                <v-btn text @click="clearAllTimeout(); words = [];">Clear</v-btn>
+                <v-btn text @click="clearAllTimeout(); $router.push('/tool/history')">History</v-btn>
             </v-card-actions>
         </v-card>
     </v-container>
@@ -225,6 +226,17 @@ export default {
         } else {
             // languages list available, no need to wait
             initVoice();
+        }
+
+        // Load from history by history id
+        let historyId = this.$route.query.historyId;
+        if (historyId) {
+            // Get word from remote server.
+            this.$axios.get(`/backend/api/tool/history/${historyId}`).then(res => {
+                if (res.data.rc === 0 && res.data.data) {
+                    this.speakText = res.data.data.content;
+                }
+            });
         }
     },
     mounted() {

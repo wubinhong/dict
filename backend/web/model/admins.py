@@ -28,7 +28,7 @@ def save_by_name(admin: dict):
     """
     name = admin.get('name')
     if not name:
-        raise Error(10001, 'Field name required!')
+        raise Error(10003, 'Field name required!')
     admin['updated_at'] = china_tz(datetime.now())
     admin['created_at'] = china_tz(datetime.now())
     if '_id' in admin:

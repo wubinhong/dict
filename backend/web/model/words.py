@@ -27,7 +27,7 @@ def save(word: dict):
     name = word.get('name')
     word['updated_at'] = china_tz(datetime.now())
     if not name:
-        raise Error(10001, 'Field name required!')
+        raise Error(10003, 'Field name required!')
     word['created_at'] = china_tz(datetime.now())
     if '_id' in word:
         del word['_id']
