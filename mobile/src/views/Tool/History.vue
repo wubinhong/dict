@@ -22,7 +22,12 @@
                 </v-form>
             </v-card-text>
             <v-card-actions>
-                <v-btn text color="success" :disabled="!valid" @click="saveHistoryForm(history)">Save</v-btn>
+                <v-btn
+                    text
+                    color="success"
+                    :disabled="!valid"
+                    @click="saveHistoryForm(history)"
+                >Save</v-btn>
             </v-card-actions>
         </v-card>
         <br />
@@ -111,14 +116,18 @@ export default {
             this.$router.push({
                 path: "/tool",
                 query: { historyId: historyId }
-            })
+            });
         },
         saveHistoryForm(history) {
             if (this.$refs.form.validate()) {
-                this.saveHistory(history);
+                this.saveHistory(history, res => {
+                    if (res.status === 200 && res.data.rc === 0) {
+                        this.$refs.form.reset();
+                    }
+                });
             }
         },
-        saveHistory(history) {
+        saveHistory(history, cb) {
             this.$axios
                 .put(`/backend/api/tool/histories`, history)
                 .then(response => {
@@ -128,6 +137,9 @@ export default {
                             color: "success",
                             message: "Save history successfully!"
                         });
+                    }
+                    if (cb) {
+                        cb(response);
                     }
                 });
         },
@@ -179,7 +191,29 @@ export default {
     created() {
         this.queryHistory(this.keyword, 0);
     },
-    mounted() {}
+    mounted() {
+        // Infinite scroll implement
+        window.onscroll = () => {
+            let element = document.documentElement;
+            // 是用差值解决 huawei pad pro 滑动时，无法触底的问题
+            let offset =
+                element.offsetHeight - (element.scrollTop + window.innerHeight);
+            if (!this.noMoreData && offset < 2) {
+                //appending data to the array
+                this.skip += this.limit;
+                this.scrollHistories(
+                    this.histories,
+                    this.keyword,
+                    this.skip,
+                    ajaxWords => {
+                        if (ajaxWords.length === 0) {
+                            this.noMoreData = true;
+                        }
+                    }
+                );
+            }
+        };
+    }
 };
 </script>
 
