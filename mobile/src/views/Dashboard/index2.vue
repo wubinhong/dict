@@ -157,7 +157,8 @@ export default {
         dialog: false,
         dialog2: false,
         loading: true,
-        fab: false
+        fab: false,
+        audio: new Audio()
     }),
     computed: {
         showDetail() {
@@ -173,7 +174,8 @@ export default {
         play(name, active) {
             if (!active) {
                 // 注意：此时的active是上一次的状态，所以需要取反
-                new Audio(`/youdao/dictvoice?audio=${name}&type=1`).play();
+                this.audio.src = `/youdao/dictvoice?audio=${name}&type=1`;
+                this.audio.play();
             }
         },
         scrollWords(words, keyword, skip, cb) {

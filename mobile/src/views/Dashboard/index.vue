@@ -128,12 +128,14 @@ export default {
         alert: {
             showed: false,
             message: "Alert message!"
-        }
+        },
+        audio: new Audio()
     }),
     methods: {
         ...mapMutations(["showSnackbar"]),
         play(name) {
-            new Audio(`/youdao/dictvoice?audio=${name}&type=1`).play();
+            this.audio.src = `/youdao/dictvoice?audio=${name}&type=1`;
+            this.audio.play();
         },
         scrollWords(words, keyword, skip, cb) {
             keyword = keyword ? keyword.trim() : "";

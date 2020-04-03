@@ -79,13 +79,25 @@
                                     v-else
                                     @click="saveHistory(h); historyEditable = !historyEditable"
                                 >Save</v-btn>
-                                <v-btn text color="error" @click="deleteHistory(h._id)">Delete</v-btn>
+                                <v-btn text color="error" @click="deleteConfirm(h._id)">Delete</v-btn>
                             </v-card-actions>
                         </v-list-item-content>
                     </v-list-item>
                 </v-list-group>
             </v-list>
         </v-card>
+
+        <v-dialog v-model="dialogShowed" persistent max-width="320">
+            <v-card>
+                <v-card-title class="headline">删除历史！</v-card-title>
+                <v-card-text>此操作将永久删除该条历史记录, 是否继续?</v-card-text>
+                <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn color="green darken-1" text @click="deleteHistory">确定</v-btn>
+                    <v-btn color="green darken-1" text @click="dialogShowed = false">取消</v-btn>
+                </v-card-actions>
+            </v-card>
+        </v-dialog>
     </v-container>
 </template>
 
@@ -108,7 +120,8 @@ export default {
         noMoreData: false,
         loading: true,
         histories: [],
-        historyEditable: false
+        historyEditable: false,
+        dialogShowed: false,
     }),
     methods: {
         ...mapMutations(["showSnackbar"]),
@@ -143,11 +156,16 @@ export default {
                     }
                 });
         },
-        deleteHistory(id) {
+        deleteConfirm(id) {
+            this.dialogShowed = true;
+            this.deleteHistoryId = id;
+        },
+        deleteHistory() {
             this.$axios
-                .delete(`/backend/api/tool/history/${id}`)
+                .delete(`/backend/api/tool/history/${this.deleteHistoryId}`)
                 .then(response => {
                     if (response.status === 200 && response.data.rc === 0) {
+                        this.dialogShowed = false;
                         this.queryHistory(this.keyword, 0); // Reload data
                         this.showSnackbar({
                             color: "success",
