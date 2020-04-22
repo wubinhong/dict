@@ -12,7 +12,7 @@ export default new Vuex.Store({
             message: "Default snackbar message!"
         },
         setting: {
-            showWordDetail: false
+            showWordDetail: true
         }
     },
     mutations: {

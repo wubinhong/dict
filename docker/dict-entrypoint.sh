@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ## Launch mongodb without journal to miminize db space in hard disk, don't do this in product env.
-docker-entrypoint.sh mongod --nojournal &
+docker-entrypoint.sh mongod --nojournal --setParameter diagnosticDataCollectionDirectorySizeMB=40 &
 ### Checkout whether mongod start up, the following coding copy from docker-entrypoint.sh in image mongo:bionic
 mongoRes=( mongo --host 127.0.0.1 --port 27017 --quiet )
 tries=30
