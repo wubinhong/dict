@@ -20,6 +20,7 @@
                                     clearable
                                     clear-icon="mdi-close-circle"
                                     rows="2"
+                                    auto-grow
                                     label="备注"
                                 ></v-textarea>
                                 <v-slider

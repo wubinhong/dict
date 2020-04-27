@@ -55,6 +55,7 @@
                         <v-list-item-content>
                             <v-card-text>
                                 <pre v-if="!historyEditable">{{h.content}}</pre>
+                                <v-text-field v-if="historyEditable" v-model="h.title"></v-text-field>
                                 <v-textarea
                                     v-if="historyEditable"
                                     v-model="h.content"
@@ -121,7 +122,7 @@ export default {
         loading: true,
         histories: [],
         historyEditable: false,
-        dialogShowed: false,
+        dialogShowed: false
     }),
     methods: {
         ...mapMutations(["showSnackbar"]),

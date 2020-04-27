@@ -33,7 +33,12 @@ def save_by_title(history: dict):
     history['updated_at'] = china_tz(datetime.now())
     history['created_at'] = china_tz(datetime.now())
     if '_id' in history:
+        _id = ObjectId(history['_id'])
         del history['_id']
+        del history['created_at']
+        db.update_one({'_id': _id}, {
+            "$set": history})
+        return find_by_title(title)
     entity = db.find_one({'title': title})
     if entity:
         history['created_at'] = entity['created_at']
@@ -46,7 +51,7 @@ def save_by_title(history: dict):
 
 def find_fuzzy(keyword: str, skip: int, limit: int):
     regex = re.compile(keyword, re.IGNORECASE)
-    sorts = [("updated_at", DESCENDING), ("created_at", DESCENDING)]
+    sorts = [("title", DESCENDING), ("created_at", DESCENDING)]
     result = db.find({'$or': [{'content': regex}]}, __projection).sort(
         sorts).skip(skip).limit(limit)
     return list(result)

@@ -29,9 +29,11 @@ FROM dict:base AS app
 ## Which frontend project we should deploy
 ARG FRONTEND_PROJECT=frontend
 # Sync app
-RUN echo "FRONTEND_PROJECT: $FRONTEND_PROJECT" && mkdir -p /app/backend /app/frontend
+# Configure pip
+RUN echo "FRONTEND_PROJECT: $FRONTEND_PROJECT" && mkdir -p /app/backend /app/frontend && mkdir /root/.pip
 COPY ./$FRONTEND_PROJECT/dist/ /app/frontend/
 COPY ./backend/ /app/backend/
+COPY ./docker/pip.conf /root/.pip/
 COPY ./docker/pip-requirements.txt /app/backend
 COPY ./docker/dict-entrypoint.sh /usr/local/bin
 COPY ./docker/nginx.conf /etc/nginx/nginx.conf
