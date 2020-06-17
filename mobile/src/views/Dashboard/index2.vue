@@ -34,9 +34,12 @@
                                         <v-list-item-title v-text="word.name"></v-list-item-title>
                                         <v-list-item-subtitle>{{word.derivation}} > {{word.hardship}}</v-list-item-subtitle>
                                     </div>
-                                    <v-list-item-action-text
-                                        v-show="showDetail"
-                                    >{{word.chinese}} > {{word.thesauri}} > {{word.related_words}} > {{word.similar_shaped_words}} > {{word.comment}}</v-list-item-action-text>
+                                    <v-list-item-action-text v-show="showDetail">
+                                        {{word.chinese}} > {{word.thesauri}} > {{word.related_words}} > {{word.similar_shaped_words}} > {{word.comment}}
+                                        <router-link
+                                            :to="{path: '/dashboard/word', query: {name: word.name}}"
+                                        >编辑</router-link>
+                                    </v-list-item-action-text>
                                 </v-list-item-content>
 
                                 <!-- <v-list-item-action>
