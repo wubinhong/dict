@@ -85,7 +85,11 @@
                     <v-icon v-else>mdi-settings</v-icon>
                 </v-btn>
             </template>
-            <v-btn fab dark small color="green" @click="toggleShowWordDetail">
+            <v-btn fab small color="purple" @click="onPlayAll()">
+                <v-icon v-if="isAllPlaying">mdi-volume-high</v-icon>
+                <v-icon v-else>mdi-volume-low</v-icon>
+            </v-btn>
+            <v-btn fab small color="green" @click="toggleShowWordDetail">
                 <v-icon v-if="showDetail">mdi-eye</v-icon>
                 <v-icon v-else>mdi-eye-off</v-icon>
             </v-btn>
@@ -161,7 +165,10 @@ export default {
         dialog2: false,
         loading: true,
         fab: false,
-        audio: new Audio()
+        audio: new Audio(),
+        isAllPlaying: false,
+        currentPlayIndex: 0,
+        allPlayDuration: 1000
     }),
     computed: {
         showDetail() {
@@ -174,12 +181,35 @@ export default {
             "closeSnackbar",
             "toggleShowWordDetail"
         ]),
-        play(name, active) {
+        play(name, active, cb) {
             if (!active) {
                 // 注意：此时的active是上一次的状态，所以需要取反
                 this.audio.src = `/youdao/dictvoice?audio=${name}&type=1`;
                 this.audio.play();
+                if (cb) {
+                    this.audio.onended = cb;
+                }
             }
+        },
+        playRecursive() {
+            this.playTimeout = setTimeout(() => {
+                this.selected = [];
+                this.selected.push(this.currentPlayIndex);
+                this.play(this.words[this.currentPlayIndex++].name, false, () => {
+                    if(this.isAllPlaying && this.currentPlayIndex < this.words.length) {
+                        this.playRecursive();
+                    }
+                });
+            }, this.allPlayDuration);
+        },
+        onPlayAll() {
+            if(!this.isAllPlaying) {
+                if(this.currentPlayIndex === this.words.length) {
+                    this.currentPlayIndex = 0;
+                }
+                this.playRecursive();
+            }
+            this.isAllPlaying = !this.isAllPlaying;
         },
         scrollWords(words, keyword, skip, cb) {
             keyword = keyword ? keyword.trim() : "";
@@ -211,6 +241,9 @@ export default {
                     this.loading = false;
                 });
             }, timeout);
+            // Handle play all events
+            clearTimeout(this.playTimeout);
+            this.isAllPlaying = false;
         },
         onNewWordAdd(name) {
             this.$router.push({
