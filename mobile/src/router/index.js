@@ -8,6 +8,7 @@ import Admin from '../views/Admin/index.vue'
 import AdminDetail from '../views/Admin/AdminDetail.vue'
 import Tool from '../views/Tool/index.vue'
 import History from '../views/Tool/History.vue'
+import Dict from '../views/Tool/Dict.vue'
 // @ is an alias to /src
 import Settings from '@/views/Home/Settings.vue'
 
@@ -35,6 +36,8 @@ const routes = [
             path: 'tool', component: Tool
         }, {
             path: 'tool/history', component: History
+        }, {
+            path: 'tool/dict', component: Dict
         }]
     },
     {

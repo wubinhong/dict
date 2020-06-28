@@ -79,6 +79,7 @@
                 <v-btn text ref="injectButton" @click="injectWords">Inject</v-btn>
                 <v-btn text @click="clearAllTimeout(); words = [];">Clear</v-btn>
                 <v-btn text @click="clearAllTimeout(); $router.push('/tool/history')">History</v-btn>
+                <v-btn text @click="clearAllTimeout(); $router.push('/tool/dict')">Dict</v-btn>
             </v-card-actions>
         </v-card>
     </v-container>
@@ -232,11 +233,34 @@ export default {
         let historyId = this.$route.query.historyId;
         if (historyId) {
             // Get word from remote server.
-            this.$axios.get(`/backend/api/tool/history/${historyId}`).then(res => {
-                if (res.data.rc === 0 && res.data.data) {
-                    this.speakText = res.data.data.content;
-                }
-            });
+            this.$axios
+                .get(`/backend/api/tool/history/${historyId}`)
+                .then(res => {
+                    if (res.data.rc === 0 && res.data.data) {
+                        this.speakText = res.data.data.content;
+                    }
+                });
+        }
+        // Load from dict by dictSkip and dictLimit
+        let dictKeyword = this.$route.query.dictKeyword;
+        let dictSkip = this.$route.query.dictSkip;
+        let dictLimit = this.$route.query.dictLimit;
+        if (dictLimit) {
+            // Get word from remote server.
+            this.$axios
+                .get(
+                    `/backend/api/words/fuzzy?keyword=${dictKeyword}&skip=${dictSkip}&limit=${dictLimit}`
+                )
+                .then(response => {
+                    if (response.data.rc === 0) {
+                        // 调用 callback 返回建议列表的数据
+                        this.words = [];
+                        response.data.data.forEach(element => {
+                            this.words.push(element.name);
+                        });
+                        this.speakText = this.words.join(",");
+                    }
+                });
         }
     },
     mounted() {
