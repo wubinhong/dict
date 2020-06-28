@@ -258,7 +258,7 @@ export default {
                         response.data.data.forEach(element => {
                             this.words.push(element.name);
                         });
-                        this.speakText = this.words.join(",");
+                        this.speakText = this.words.join(", ");
                     }
                 });
         }
