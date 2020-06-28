@@ -213,6 +213,8 @@ export default {
             if (!this.isAllPlaying) {
                 if(this.selected.length > 0) {
                     this.currentPlayIndex = Math.max(...this.selected);
+                } else {
+                    this.currentPlayIndex = 0;
                 }
                 this.playRecursive();
             }
