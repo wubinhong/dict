@@ -195,17 +195,24 @@ export default {
             this.playTimeout = setTimeout(() => {
                 this.selected = [];
                 this.selected.push(this.currentPlayIndex);
-                this.play(this.words[this.currentPlayIndex++].name, false, () => {
-                    if(this.isAllPlaying && this.currentPlayIndex < this.words.length) {
-                        this.playRecursive();
+                this.play(
+                    this.words[this.currentPlayIndex++].name,
+                    false,
+                    () => {
+                        if (this.currentPlayIndex === this.words.length) {
+                            this.currentPlayIndex = 0;
+                        }
+                        if (this.isAllPlaying) {
+                            this.playRecursive();
+                        }
                     }
-                });
+                );
             }, this.allPlayDuration);
         },
         onPlayAll() {
-            if(!this.isAllPlaying) {
-                if(this.currentPlayIndex === this.words.length) {
-                    this.currentPlayIndex = 0;
+            if (!this.isAllPlaying) {
+                if(this.selected.length > 0) {
+                    this.currentPlayIndex = Math.max(...this.selected);
                 }
                 this.playRecursive();
             }
@@ -244,6 +251,7 @@ export default {
             // Handle play all events
             clearTimeout(this.playTimeout);
             this.isAllPlaying = false;
+            this.currentPlayIndex = 0;
         },
         onNewWordAdd(name) {
             this.$router.push({
