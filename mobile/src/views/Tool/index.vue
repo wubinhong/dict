@@ -99,7 +99,8 @@ export default {
         availableVoices: [],
         utter: new SpeechSynthesisUtterance(),
         audio: new Audio(),
-        wordDelay: 1
+        wordDelay: 1,
+        arrowJump: 0
     }),
     computed: {
         progressIndex: function() {
@@ -276,6 +277,24 @@ export default {
                     document.createEvent("MouseEvent")
                 );
             }
+            // arrow key press
+            if (/^Arrow/.test(e.code)) {
+                clearTimeout(this.arrowTimeout);
+                if (e.code === "ArrowLeft") {
+                    this.arrowJump--;
+                } else if (e.code === "ArrowRight") {
+                    this.arrowJump++;
+                }
+                this.arrowTimeout = setTimeout(() => {
+                    let idx = this.currentIndex + this.arrowJump;
+                    if (idx < 0 || idx >= this.words.length) {
+                        idx = 0;
+                    }
+                    this.speakClick(idx);
+                    this.arrowJump = 0;
+                }, 500);
+            }
+
         };
         window.onkeyup = e => {
             // 重置组合键
