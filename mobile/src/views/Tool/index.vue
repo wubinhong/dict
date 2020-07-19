@@ -6,6 +6,7 @@
                 <v-form>
                     <v-textarea
                         v-model="speakText"
+                        ref="speakTextInput"
                         clearable
                         clear-icon="mdi-close-circle"
                         row-height="2"
@@ -272,7 +273,11 @@ export default {
                 this.ctrlKeyHoldOn = true;
             }
             // 用户按 "Control + space" 组合键后，模拟点击Speak按钮
-            if (this.ctrlKeyHoldOn && e.code === "Space") {
+            // 或者当用户交点不在speak text input上时，按space，也可以模拟点击Speak按钮
+            if (
+                (this.ctrlKeyHoldOn && e.code === "Space") ||
+                (!this.$refs.speakTextInput.isFocused && e.code === "Space")
+            ) {
                 this.$refs.speakOutButton.click(
                     document.createEvent("MouseEvent")
                 );
@@ -294,7 +299,6 @@ export default {
                     this.arrowJump = 0;
                 }, 500);
             }
-
         };
         window.onkeyup = e => {
             // 重置组合键
