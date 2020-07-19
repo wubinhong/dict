@@ -81,6 +81,7 @@
                 <v-btn text @click="clearAllTimeout(); words = [];">Clear</v-btn>
                 <v-btn text @click="clearAllTimeout(); $router.push('/tool/history')">History</v-btn>
                 <v-btn text @click="clearAllTimeout(); $router.push('/tool/dict')">Dict</v-btn>
+                <v-btn text @click="randomNum()">Num</v-btn>
             </v-card-actions>
         </v-card>
     </v-container>
@@ -197,6 +198,13 @@ export default {
                     this.speak(this.currentIndex, true);
                 }
             }
+        },
+        randomNum() {
+            let arr = [];
+            for(let i=0; i<20; i++) {
+                arr.push(Math.round(Math.random() * 10000))
+            }
+            this.speakText = arr.join(', ');
         }
     },
     created() {
