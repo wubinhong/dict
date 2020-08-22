@@ -8,7 +8,10 @@
 *.pyc
 __pycache__
 .pytest_cache
+venv
 
 ## Visual Studio Code
 .vscode
 
+## Android studio
+*.iml

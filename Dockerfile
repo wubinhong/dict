@@ -23,7 +23,7 @@ VOLUME [ "/data" ]
 
 ### =================== New Stage =========================== ###
 # Stage two building
-FROM dict:base AS app
+FROM wbh/dict:base AS app
 ### =================== New Stage =========================== ###
 # Parse argument
 ## Which frontend project we should deploy

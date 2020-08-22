@@ -17,8 +17,8 @@ prepare_before_docker_build() {
 
 ## Remove container and image
 container_name="dict_server1"
-image_app="dict:v1"
-image_base="dict:base"
+image_app="wbh/dict:v1"
+image_base="wbh/dict:base"
 remove_container() {
     echo "Remove container: ${container_name}"
     [ -z $(docker ps -aq -f "name=${container_name}") ] || docker container rm -f ${container_name}
