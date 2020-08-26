@@ -108,6 +108,22 @@ docker logs dict_server1
 docker exec -it dict_server1 bash
 ```
 
+## IDE Configuration
+
+### Visual Studio Code
+
+- Resolve problem `Pylint “unresolved import” error in Visual Studio Code`
+
+```shell
+vim .vscode/settings.json
+```
+
+```json
+{
+    "python.autoComplete.extraPaths": ["./backend"],
+}
+```
+
 ## Userful command line
 
 - Delete all __pycache__ directory
