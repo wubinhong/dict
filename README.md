@@ -112,17 +112,42 @@ docker exec -it dict_server1 bash
 
 ### Visual Studio Code
 
+- Add python extention support
+  - Found it hard to use default `Python Language Server` when downloading [python extension](https://pvsc.azureedge.net/python-language-server-stable/Python-Language-Server-osx-x64.0.5.51.nupkg)
+  - Use `pylance` as alternative: `cmd + shift + x` --> search `pylance`
+
 - Resolve problem `Pylint “unresolved import” error in Visual Studio Code`
 
-```shell
-vim .vscode/settings.json
-```
+  ```shell
+  vim ${workspaceFolder}/.vscode/settings.json
+  ```
 
-```json
-{
-    "python.autoComplete.extraPaths": ["./backend"],
-}
-```
+  ```json
+  {
+      "python.autoComplete.extraPaths": ["./backend"],
+  }
+  ```
+
+- Add unit test support and disable line characters limitation
+
+  ```shell
+  vim ${workspaceFolder}/.vscode/settings.json
+  ```
+
+  ```json
+  {
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./backend",
+        "-p",
+        "test_*.py"
+    ],
+    "python.linting.pylintArgs": [
+        "--ignore=E501"
+    ],
+  }
+  ```
 
 ## Userful command line
 
