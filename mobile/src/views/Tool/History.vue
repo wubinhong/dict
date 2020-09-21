@@ -45,7 +45,7 @@
                 :loading="loading"
             ></v-text-field>
             <v-list>
-                <v-list-group v-for="h in histories" :key="h.title" prepend-icon="mdi-basket-fill">
+                <v-list-group v-for="h in histories" :key="h._id" prepend-icon="mdi-basket-fill">
                     <template v-slot:activator>
                         <v-list-item-content>
                             <v-list-item-title v-text="h.title"></v-list-item-title>
@@ -185,6 +185,7 @@ export default {
                     if (response.data.rc === 0) {
                         // 调用 callback 返回建议列表的数据
                         histories.push(...response.data.data);
+                        console.log(histories);
                     }
                     if (cb) {
                         cb(response.data.data, histories);
