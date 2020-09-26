@@ -107,20 +107,31 @@ export default {
     },
     created() {
         let name = this.$route.query.name;
+        let on = localStorage.getItem("default_updated_time_on") || true;
+        if (typeof on === "string") {
+            on = eval(on);
+        }
         if (name) {
             // Get word from remote server.
-            this.$axios.get(`/backend/api/words/${name}`).then(res => {
+            this.$axios.get(`/backend/api/words/${name}`).then((res) => {
                 if (res.data.rc === 0 && res.data.data) {
                     this.word = res.data.data;
                     this.word.updated_time_on = true;
                 } else {
                     // 新建的单词，带了name参数过来
-                    this.word = { name: name, updated_time_on: true };
+                    this.word = {
+                        name: name,
+                        updated_time_on: on,
+                        hardship: localStorage.getItem("default_hardship") || 0,
+                    };
                 }
             });
-        } else {
+        } else{
             // 新建单词，没有name参数
-            this.word = {updated_time_on: true};
+            this.word = {
+                updated_time_on: on,
+                hardship: localStorage.getItem("default_hardship") || 0,
+            };
         }
     },
     mounted: function() {
