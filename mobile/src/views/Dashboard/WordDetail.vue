@@ -23,11 +23,15 @@
                                     auto-grow
                                     label="备注"
                                 ></v-textarea>
+                                <v-switch
+                                    v-model="word.updated_time_on"
+                                    :label="`是否更新时间`"
+                                ></v-switch>
                                 <v-slider
                                     v-model="word.hardship"
                                     :label="`难度`"
                                     thumb-label
-                                    style="padding: 12px 0"
+                                    style="padding: 0"
                                     color="orange darken-3"
                                     thumb-color="red"
                                     prepend-icon="mdi-shield-star-outline"
@@ -108,14 +112,15 @@ export default {
             this.$axios.get(`/backend/api/words/${name}`).then(res => {
                 if (res.data.rc === 0 && res.data.data) {
                     this.word = res.data.data;
+                    this.word.updated_time_on = true;
                 } else {
                     // 新建的单词，带了name参数过来
-                    this.word = { name: name };
+                    this.word = { name: name, updated_time_on: true };
                 }
             });
         } else {
             // 新建单词，没有name参数
-            this.word = {};
+            this.word = {updated_time_on: true};
         }
     },
     mounted: function() {

@@ -25,18 +25,25 @@ def save(word: dict):
     :return:
     """
     name = word.get('name')
-    word['updated_at'] = china_tz(datetime.now())
     if not name:
         raise Error(10003, 'Field name required!')
-    word['created_at'] = china_tz(datetime.now())
+    updated_time_on = word.get('updated_time_on')
+    if 'updated_time_on' in word:
+        del word['updated_time_on']
     if '_id' in word:
         del word['_id']
     w = word_collection.find_one({'name': name})
     if w:
         word['created_at'] = w['created_at']
+        if updated_time_on:
+            word['updated_at'] = china_tz(datetime.now())
+        else:
+            word['updated_at'] = w['updated_at']
         word_collection.update_one({'_id': w['_id']}, {
             "$set": word})
     else:
+        word['updated_at'] = china_tz(datetime.now())
+        word['created_at'] = china_tz(datetime.now())
         word_collection.insert_one(word)
     return word
 
