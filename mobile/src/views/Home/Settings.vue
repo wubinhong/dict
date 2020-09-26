@@ -45,17 +45,19 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
     data: () => {
         return {
             msg: "个人设置",
             storage: {
-                default_hardship:
-                    localStorage.getItem("default_hardship") || 50,
+                default_hardship: localStorage.getItem("default_hardship") || 0,
             },
         };
     },
     methods: {
+        ...mapMutations(["showSnackbar"]),
         onLocalStorageSave() {
             localStorage.setItem(
                 "default_hardship",
@@ -65,10 +67,14 @@ export default {
                 "default_updated_time_on",
                 this.storage.updated_time_on
             );
+            this.showSnackbar({
+                color: "success",
+                message: '保存成功！',
+            });
         },
     },
     created() {
-        let on = localStorage.getItem("default_updated_time_on") || true;
+        let on = localStorage.getItem("default_updated_time_on") || false;
         if (typeof on === "string") {
             on = eval(on);
         }

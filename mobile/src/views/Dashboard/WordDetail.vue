@@ -107,7 +107,7 @@ export default {
     },
     created() {
         let name = this.$route.query.name;
-        let on = localStorage.getItem("default_updated_time_on") || true;
+        let on = localStorage.getItem("default_updated_time_on") || false;
         if (typeof on === "string") {
             on = eval(on);
         }
