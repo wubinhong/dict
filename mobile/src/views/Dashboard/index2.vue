@@ -1,6 +1,4 @@
 <template>
-    <!-- class="fill-height" can make child element justify to center in verticle -->
-    <!-- <v-container class="fill-height" fluid> -->
     <v-container>
         <v-card max-width="700" class="mx-auto">
             <v-text-field
@@ -14,7 +12,6 @@
                 clear-icon="mdi-close-circle"
                 :loading="loading"
             >
-                <!-- <v-icon slot="prepend" color="green">mdi-magnify</v-icon> -->
                 <v-icon slot="append" v-show="!keyword">mdi-magnify</v-icon>
                 <v-icon slot="append" v-show="keyword" @click="play(keyword)">mdi-volume-high</v-icon>
             </v-text-field>
@@ -41,13 +38,6 @@
                                         >编辑</router-link>
                                     </v-list-item-action-text>
                                 </v-list-item-content>
-
-                                <!-- <v-list-item-action>
-                                    <v-list-item-action-text v-text="xx"></v-list-item-action-text>
-                                    <v-btn small outlined fab color="red lighten-1">
-                                        <v-icon>mdi-delete</v-icon>
-                                    </v-btn>
-                                </v-list-item-action>-->
                             </template>
                         </v-list-item>
                         <v-divider v-if="index + 1 < words.length" :key="index"></v-divider>

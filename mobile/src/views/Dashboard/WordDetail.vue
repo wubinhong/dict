@@ -4,17 +4,44 @@
             <v-col>
                 <v-hover>
                     <template v-slot="{ hover }">
-                        <v-card :elevation="hover ? 24 : 6" class="mx-auto pa-6">
+                        <v-card
+                            :elevation="hover ? 24 : 6"
+                            class="mx-auto pa-6"
+                        >
                             <v-form ref="form" v-model="valid" lazy-validation>
-                                <v-text-field v-model="word.name" :rules="nameRules" label="单词">
-                                    <v-icon slot="append" v-show="word.name" @click="play(word.name)">mdi-volume-high</v-icon>
+                                <v-text-field
+                                    v-model="word.name"
+                                    :rules="nameRules"
+                                    label="单词"
+                                >
+                                    <v-icon
+                                        slot="append"
+                                        v-show="word.name"
+                                        @click="play(word.name)"
+                                        >mdi-volume-high</v-icon
+                                    >
                                 </v-text-field>
 
-                                <v-text-field v-model="word.derivation" label="词根"></v-text-field>
-                                <v-text-field v-model="word.chinese" label="中文"></v-text-field>
-                                <v-text-field v-model="word.thesauri" label="同义词"></v-text-field>
-                                <v-text-field v-model="word.related_words" label="相关词"></v-text-field>
-                                <v-text-field v-model="word.similar_shaped_words" label="近形词"></v-text-field>
+                                <v-text-field
+                                    v-model="word.derivation"
+                                    label="词根"
+                                ></v-text-field>
+                                <v-text-field
+                                    v-model="word.chinese"
+                                    label="中文"
+                                ></v-text-field>
+                                <v-text-field
+                                    v-model="word.thesauri"
+                                    label="同义词"
+                                ></v-text-field>
+                                <v-text-field
+                                    v-model="word.related_words"
+                                    label="相关词"
+                                ></v-text-field>
+                                <v-text-field
+                                    v-model="word.similar_shaped_words"
+                                    label="近形词"
+                                ></v-text-field>
                                 <v-textarea
                                     v-model="word.comment"
                                     clearable
@@ -26,6 +53,7 @@
                                 <v-switch
                                     v-model="word.updated_time_on"
                                     :label="`是否更新时间`"
+                                    inset
                                 ></v-switch>
                                 <v-slider
                                     v-model="word.hardship"
@@ -39,9 +67,13 @@
                                     <template v-slot:append>
                                         <v-tooltip top>
                                             <template v-slot:activator="{ on }">
-                                                <v-icon v-on="on">mdi-help-circle-outline</v-icon>
+                                                <v-icon v-on="on"
+                                                    >mdi-help-circle-outline</v-icon
+                                                >
                                             </template>
-                                            对单词（ {{word.name}} ）的陌生程度，值越大，在列表里排名越靠前！
+                                            对单词（
+                                            {{ word.name }}
+                                            ）的陌生程度，值越大，在列表里排名越靠前！
                                         </v-tooltip>
                                     </template>
                                 </v-slider>
@@ -51,9 +83,19 @@
                                     class="mr-4"
                                     @click="onWordSave"
                                     ref="submitBtn"
-                                >保存</v-btn>
-                                <v-btn color="warning" class="mr-4" @click="onWordReset">重置</v-btn>
-                                <v-btn color="teal" class="mr-4" @click="$router.go(-1)">
+                                    >保存</v-btn
+                                >
+                                <v-btn
+                                    color="warning"
+                                    class="mr-4"
+                                    @click="onWordReset"
+                                    >重置</v-btn
+                                >
+                                <v-btn
+                                    color="teal"
+                                    class="mr-4"
+                                    @click="$router.go(-1)"
+                                >
                                     <v-icon dark>mdi-arrow-left</v-icon>返回
                                 </v-btn>
                             </v-form>
@@ -70,22 +112,20 @@ export default {
     data: () => ({
         valid: true,
         word: {
-            thesauri: ""
+            thesauri: "",
         },
         nameRules: [
-            v => !!v || "Name is required",
-            v =>
+            (v) => !!v || "Name is required",
+            (v) =>
                 (v && v.length <= 100) ||
-                "Name must be less than 100 characters"
+                "Name must be less than 100 characters",
         ],
-        ctrlKeyHoldOn: false
+        ctrlKeyHoldOn: false,
     }),
 
     methods: {
         play(name) {
-            new Audio(
-                `/youdao/dictvoice?audio=${name}&type=1`
-            ).play();
+            new Audio(`/youdao/dictvoice?audio=${name}&type=1`).play();
         },
         onWordSave() {
             // console.log(this.word, this.$refs.form);
@@ -94,7 +134,7 @@ export default {
                 let w = this.word;
                 this.$axios
                     .put(`/backend/api/words/${w.name}`, w)
-                    .then(response => {
+                    .then((response) => {
                         if (response.status === 200 && response.data.rc === 0) {
                             vm.$router.go(-1);
                         }
@@ -103,7 +143,7 @@ export default {
         },
         onWordReset() {
             this.$refs.form.reset();
-        }
+        },
     },
     created() {
         let name = this.$route.query.name;
@@ -126,7 +166,7 @@ export default {
                     };
                 }
             });
-        } else{
+        } else {
             // 新建单词，没有name参数
             this.word = {
                 updated_time_on: on,
@@ -134,8 +174,8 @@ export default {
             };
         }
     },
-    mounted: function() {
-        window.onkeydown = e => {
+    mounted: function () {
+        window.onkeydown = (e) => {
             // 用户每次按键都会触发该事件，所以对于组合键的检测，需要配合使用onkeydown和onkeyup事件来实现
             if (e.key === "Meta" || e.key === "Control") {
                 this.ctrlKeyHoldOn = true;
@@ -150,6 +190,6 @@ export default {
             // 重置组合键
             this.ctrlKeyHoldOn = false;
         };
-    }
+    },
 };
 </script>

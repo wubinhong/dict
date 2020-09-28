@@ -7,6 +7,7 @@
                     <v-switch
                         v-model="storage.updated_time_on"
                         :label="`是否更新时间`"
+                        inset
                     ></v-switch>
                     <v-slider
                         v-model="storage.default_hardship"
@@ -67,10 +68,7 @@ export default {
                 "default_updated_time_on",
                 this.storage.updated_time_on
             );
-            this.showSnackbar({
-                color: "success",
-                message: '保存成功！',
-            });
+            this.showSnackbar({ color: "success", message: "保存成功！" });
         },
     },
     created() {
