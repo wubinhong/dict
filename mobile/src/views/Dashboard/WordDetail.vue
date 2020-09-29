@@ -51,7 +51,7 @@
                                     label="备注"
                                 ></v-textarea>
                                 <v-switch
-                                    v-model="word.updated_time_on"
+                                    v-model="updated_time_on"
                                     :label="`是否更新时间`"
                                     inset
                                 ></v-switch>
@@ -114,6 +114,7 @@ export default {
         word: {
             thesauri: "",
         },
+        updated_time_on: false,
         nameRules: [
             (v) => !!v || "Name is required",
             (v) =>
@@ -132,13 +133,32 @@ export default {
             if (this.$refs.form.validate()) {
                 let vm = this;
                 let w = this.word;
-                this.$axios
-                    .put(`/backend/api/words/${w.name}`, w)
-                    .then((response) => {
-                        if (response.status === 200 && response.data.rc === 0) {
-                            vm.$router.go(-1);
-                        }
-                    });
+                if (w._id) {
+                    this.$axios
+                        .put(
+                            `/backend/api/words/${w._id}?updated_time_on=${this.updated_time_on}`,
+                            w
+                        )
+                        .then((response) => {
+                            if (
+                                response.status === 200 &&
+                                response.data.rc === 0
+                            ) {
+                                vm.$router.go(-1);
+                            }
+                        });
+                } else {
+                    this.$axios
+                        .post(`/backend/api/words`, w)
+                        .then((response) => {
+                            if (
+                                response.status === 200 &&
+                                response.data.rc === 0
+                            ) {
+                                vm.$router.go(-1);
+                            }
+                        });
+                }
             }
         },
         onWordReset() {
@@ -156,22 +176,22 @@ export default {
             this.$axios.get(`/backend/api/words/${name}`).then((res) => {
                 if (res.data.rc === 0 && res.data.data) {
                     this.word = res.data.data;
-                    this.word.updated_time_on = true;
+                    this.updated_time_on = true;
                 } else {
                     // 新建的单词，带了name参数过来
                     this.word = {
                         name: name,
-                        updated_time_on: on,
                         hardship: localStorage.getItem("default_hardship") || 0,
                     };
+                    this.updated_time_on = on;
                 }
             });
         } else {
             // 新建单词，没有name参数
             this.word = {
-                updated_time_on: on,
                 hardship: localStorage.getItem("default_hardship") || 0,
             };
+            this.updated_time_on = on;
         }
     },
     mounted: function () {

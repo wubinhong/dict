@@ -96,16 +96,46 @@ def get_word_by_name(name):
     return jsonify(make_msg(data=words.find_by_name(name)))
 
 
-@flask.route("/api/words/<string:name>", methods=["PUT"])
-def put_word(name):
-    """Save word and update if exits
+@flask.route('/api/words', methods=["POST"])
+def post_word():
+    """Add a new word
+      As title
+      ---
+      tags: [word]
+      parameters:
+        - name: req
+          description: stored in the playload  with json format and field name will be place by path parameter above.
+          in: body
+          type: json
+          required: true
+          schema:
+            $ref: '#/definitions/Word'
+      responses:
+        200:
+          description: updated word.
+          schema:
+            $ref: '#/definitions/Word'
+      """
+    w = request.json
+    log.info('Add new word: %s', w)
+    return jsonify(make_msg(data=words.add(w)))
+
+
+@flask.route("/api/words/<string:_id>", methods=["PUT"])
+def put_word(_id):
+    """Update an exist word
     As title
     ---
     tags: [word]
     parameters:
-      - name: name
-        description: 单词名字
+      - name: _id
+        description: 单词id
         in: path
+        type: string
+        required: false
+      - name: updated_time_on
+        description: 是否更新updated_time字段
+        in: query
         type: string
         required: true
       - name: req
@@ -121,9 +151,11 @@ def put_word(name):
         schema:
           $ref: '#/definitions/Word'
     """
+    updated_time_on = request.args.get('updated_time_on')
+    updated_time_on = updated_time_on and updated_time_on.lower() == 'true'
     w = request.json
-    log.info('Put word: %s | %s', name, w)
-    return jsonify(make_msg(data=words.save(w)))
+    log.info('Put word: %s | %s | %s', _id, updated_time_on, w)
+    return jsonify(make_msg(data=words.save(_id, updated_time_on, w)))
 
 
 @flask.route("/api/words/<string:name>", methods=["DELETE"])

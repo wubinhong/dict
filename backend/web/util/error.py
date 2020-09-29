@@ -6,7 +6,10 @@ class Error(Exception):
         10003: "Lack of required parameter.",
         # admin module
         10100: "管理员不存在",
-        10101: "用户名、密码不匹配"
+        10101: "用户名、密码不匹配",
+        # Word module
+        10200: "Word exit.",
+        10201: "Word not exit.",
     }
 
     def __init__(self, rc, msg=None):

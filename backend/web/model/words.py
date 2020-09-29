@@ -19,32 +19,46 @@ word_collection.create_index([("name", ASCENDING)], unique=True)
 word_collection.create_index([("derivation", ASCENDING)])
 
 
-def save(word: dict):
+def add(word: dict):
+    """
+    Add a new word
+    :Returns:
+        - Error with code 10003, if name not found in parameter.
+        - Error with code 10200, if a record is found in db with duplicate name.
+    """
+    # Validation
+    name = word.get('name')
+    if not name:
+        raise Error(10003, 'Field name required!')
+    w = word_collection.find_one({'name': name})
+    if w:
+        raise Error(10200, 'Word exit with duplicate name: %s' % name)
+    # Insert data to db
+    word['updated_at'] = china_tz(datetime.now())
+    word['created_at'] = china_tz(datetime.now())
+    word_collection.insert_one(word)
+
+
+def save(_id: str, updated_time_on: bool, word: dict):
     """
     Save a new word with field name as index
     :return:
+        - Error with code 10003, if name not found in parameter.
     """
     name = word.get('name')
     if not name:
         raise Error(10003, 'Field name required!')
-    updated_time_on = word.get('updated_time_on')
-    if 'updated_time_on' in word:
-        del word['updated_time_on']
-    if '_id' in word:
-        del word['_id']
-    w = word_collection.find_one({'name': name})
-    if w:
-        word['created_at'] = w['created_at']
-        if updated_time_on:
-            word['updated_at'] = china_tz(datetime.now())
-        else:
-            word['updated_at'] = w['updated_at']
-        word_collection.update_one({'_id': w['_id']}, {
-            "$set": word})
-    else:
+    w = word_collection.find_one({'_id': ObjectId(_id)})
+    if not w:
+        raise Error(10201, 'Word not found with _id; %s' % _id)
+    word['created_at'] = w['created_at']
+    if updated_time_on:
         word['updated_at'] = china_tz(datetime.now())
-        word['created_at'] = china_tz(datetime.now())
-        word_collection.insert_one(word)
+    else:
+        word['updated_at'] = w['updated_at']
+    del word['_id']
+    word_collection.update_one({'_id': w['_id']}, {
+        "$set": word})
     return word
 
 

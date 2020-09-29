@@ -149,6 +149,19 @@ docker exec -it dict_server1 bash
   }
   ```
 
+- Formatter related global setting
+
+```shell
+vim ~/Library/Application\ Support/Code/User/settings.json
+```
+
+```json
+{
+  "vetur.format.options.tabSize": 4,
+  "python.formatting.autopep8Args": ["--max-line-length=120"]
+}
+```
+
 ## Userful command line
 
 - Delete all __pycache__ directory

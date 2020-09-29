@@ -13,15 +13,19 @@ class TestWebModelWord(TestCase):
     Test case for model word
     """
 
-    def test_save(self):
+    def test_add(self):
         log.info('Test save start...')
-        words.save(dict(name='ascend', derivation='a+scend', chinese='上升, 促进22',
-                        thesauri='up, lift', similar_shaped_words='descend'))
-        words.save(dict(name='descend', derivation='de+scend',
-                        chinese='下降', thesauri='down', similar_shaped_words='descend'))
-        words.save(dict(name='transcend', derivation='tran+scend', chinese='胜过, 超越',
-                        thesauri='surpass, excel', similar_shaped_words='descend'))
-        words.save(dict(name='offspring', chinese='后代', thesauri='descendant'))
+        if not words.find_by_name('ascend'):
+            words.add(dict(name='ascend', derivation='a+scend', chinese='上升, 促进22',
+                           thesauri='up, lift', similar_shaped_words='descend'))
+        if not words.find_by_name('descend'):
+            words.add(dict(name='descend', derivation='de+scend',
+                           chinese='下降', thesauri='down', similar_shaped_words='descend'))
+        if not words.find_by_name('transcend'):
+            words.add(dict(name='transcend', derivation='tran+scend', chinese='胜过, 超越',
+                           thesauri='surpass, excel', similar_shaped_words='descend'))
+        if not words.find_by_name('offspring'):
+            words.add(dict(name='offspring', chinese='后代', thesauri='descendant'))
 
     def test_find_fuzzy(self):
         keyword = 'cend'
