@@ -39,7 +39,7 @@ def add(word: dict):
     word_collection.insert_one(word)
 
 
-def save(_id: str, updated_time_on: bool, word: dict):
+def update(_id: str, updated_time_on: bool, word: dict):
     """
     Save a new word with field name as index
     :return:

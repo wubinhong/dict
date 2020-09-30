@@ -115,6 +115,8 @@ docker exec -it dict_server1 bash
 - Add python extention support
   - Found it hard to use default `Python Language Server` when downloading [python extension](https://pvsc.azureedge.net/python-language-server-stable/Python-Language-Server-osx-x64.0.5.51.nupkg)
   - Use `pylance` as alternative: `cmd + shift + x` --> search `pylance`
+  - Add `flake8` to alternate default `linter` - `pylint`
+  - Add `prettier` extension as default js formatter
 
 - Resolve problem `Pylint “unresolved import” error in Visual Studio Code`
 
@@ -149,18 +151,27 @@ docker exec -it dict_server1 bash
   }
   ```
 
-- Formatter related global setting
+- Global setting relating formatter for vuejs, js and python, as well as node debug attaching
 
-```shell
-vim ~/Library/Application\ Support/Code/User/settings.json
-```
+  ```shell
+  vim ~/Library/Application\ Support/Code/User/settings.json
+  ```
 
-```json
-{
-  "vetur.format.options.tabSize": 4,
-  "python.formatting.autopep8Args": ["--max-line-length=120"]
-}
-```
+  ```json
+  {
+    "vetur.format.options.tabSize": 4,
+    "python.formatting.autopep8Args": ["--max-line-length=120"],
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=120",
+    ],
+    "debug.node.autoAttach": "on",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.tabWidth": 4
+  }
+  ```
 
 ## Userful command line
 

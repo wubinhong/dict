@@ -155,7 +155,7 @@ def put_word(_id):
     updated_time_on = updated_time_on and updated_time_on.lower() == 'true'
     w = request.json
     log.info('Put word: %s | %s | %s', _id, updated_time_on, w)
-    return jsonify(make_msg(data=words.save(_id, updated_time_on, w)))
+    return jsonify(make_msg(data=words.update(_id, updated_time_on, w)))
 
 
 @flask.route("/api/words/<string:name>", methods=["DELETE"])
