@@ -29,12 +29,19 @@ FROM wbh/dict:base AS app
 ## Which frontend project we should deploy
 ARG FRONTEND_PROJECT=frontend
 # Sync app
-# Configure pip
-RUN echo "FRONTEND_PROJECT: $FRONTEND_PROJECT" && mkdir -p /app/backend /app/frontend && mkdir /root/.pip
-COPY ./$FRONTEND_PROJECT/dist/ /app/frontend/
+RUN echo "FRONTEND_PROJECT: ${FRONTEND_PROJECT}" && mkdir -p /app/backend /app/src && mkdir /root/.pip
+### $ tar -cJf node.tar.xz node or $ tar -c node | xz > node2.tar.xz
+## Install nodejs_12
+COPY ./docker/node.tar.xz /app/
+COPY ./docker/.npmrc /root/
+RUN cd /app && tar xf node.tar.xz && rm node.tar.xz
+## Compile frontend project with nodejs
+COPY ./${FRONTEND_PROJECT}/ /app/src/
+RUN (cd /app/src/ && export PATH=$PATH:/app/node/bin && npm install && npm run build && mv dist /app/frontend && rm -r /app/src)
 COPY ./backend/ /app/backend/
-COPY ./docker/pip.conf /root/.pip/
 COPY ./docker/pip-requirements.txt /app/backend
+## Configure pip
+COPY ./docker/pip.conf /root/.pip/
 COPY ./docker/dict-entrypoint.sh /usr/local/bin
 COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 COPY ./docker/dict.conf /etc/nginx/sites-available/default

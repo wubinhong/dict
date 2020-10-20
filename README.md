@@ -108,6 +108,17 @@ docker logs dict_server1
 docker exec -it dict_server1 bash
 ```
 
+> Use docker-composer
+
+```bash
+# Build image and create container running in background.
+$ docker-compose up --build -d
+# Stop and remove container
+$ docker-compose down
+# See loggers
+$ docker-compose logs -f
+```
+
 ## IDE Configuration
 
 ### Visual Studio Code

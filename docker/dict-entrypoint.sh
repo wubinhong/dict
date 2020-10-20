@@ -26,6 +26,7 @@ done
 service redis-server start
 
 ## Launch nginx server
+mkdir -p /data/nginx/cache
 service nginx start
 
 ## Start cron daemon service

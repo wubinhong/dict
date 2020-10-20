@@ -1,0 +1,24 @@
+version: "3.3"
+
+services:
+
+  api:
+    build:
+      context: .
+      args:
+        FRONTEND_PROJECT: mobile
+    image: wbh/dict2
+    env_file: docker-compose.env
+    dns:
+      - 4.4.4.4
+      - 8.8.8.8
+    ports:
+      - 9000:80
+    volumes:
+      - ~/data/container/dict:/data
+      - ~/data/container/dict/db:/data/db
+    environment:
+      PORT: 3500
+
+volumes:
+  data:

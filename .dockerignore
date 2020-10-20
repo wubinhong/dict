@@ -13,10 +13,6 @@ backend/test
 */**/__pycache__
 */**/*.pyc
 
-# frontend: only send frontend/dist to docker temp dir
-# */**/node_modules
-frontend
-!frontend/dist
-
-mobile
-!mobile/dist
+# Exclude dirs node_modules and dist
+*/**/node_modules
+*/**/dist
