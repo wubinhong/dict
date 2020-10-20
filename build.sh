@@ -66,7 +66,29 @@ case "${1-''}" in
         docker run --name ${container_name} -d -p 9000:80 -v ~/data/container/dict:/data -v ~/data/container/dict/db:/data/db ${image_app}
         echo "Container <${container_name}> made successfully!"
         ;;
+    compose)
+        echo "Launching docker-compose..."
+        case "${2-''}" in
+            build)
+                prepare_before_docker_build
+                docker-compose build
+                ;;
+            up)
+                prepare_before_docker_build
+                docker-compose up -d --build
+                ;;
+            down)
+                docker-compose down
+                ;;
+            logs)
+                docker-compose logs -f
+                ;;
+            *)
+                echo "Usage: ./build.sh compose <build|up|down|logs>"
+                ;;
+        esac
+        ;;
     *)
-        echo "Usage: ./build.sh <image <base|app [frontend|mobile]>|container>"
+        echo "Usage: ./build.sh <image|compose>"
         ;;
 esac

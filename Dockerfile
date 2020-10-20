@@ -29,17 +29,24 @@ FROM wbh/dict:base AS app
 ## Which frontend project we should deploy
 ARG FRONTEND_PROJECT=frontend
 # Sync app
-RUN echo "FRONTEND_PROJECT: ${FRONTEND_PROJECT}" && mkdir -p /app/backend /app/src && mkdir /root/.pip
+RUN echo "FRONTEND_PROJECT: ${FRONTEND_PROJECT}" && mkdir -p /root/.pip
 ### $ tar -cJf node.tar.xz node or $ tar -c node | xz > node2.tar.xz
+
+# Compile frontend file in docker image
 ## Install nodejs_12
-COPY ./docker/node.tar.xz /app/
-COPY ./docker/.npmrc /root/
-RUN cd /app && tar xf node.tar.xz && rm node.tar.xz
+# COPY ./docker/node.tar.xz /app/
+# COPY ./docker/.npmrc /root/
+# RUN cd /app && tar xf node.tar.xz && rm node.tar.xz
 ## Compile frontend project with nodejs
-COPY ./${FRONTEND_PROJECT}/ /app/src/
-RUN (cd /app/src/ && export PATH=$PATH:/app/node/bin && npm install && npm run build && mv dist /app/frontend && rm -r /app/src)
-COPY ./backend/ /app/backend/
-COPY ./docker/pip-requirements.txt /app/backend
+# COPY ./${FRONTEND_PROJECT} /app/src
+# RUN (cd /app/src/ && export PATH=$PATH:/app/node/bin && npm install && npm run build && mv dist /app/frontend && rm -r /app/src)
+
+# Copy compiled file from host directly, considering the fact that "npm install & build" takes a long time.
+## This option which is mutually exclusive to the one commented above should be used in accordance with shell `build.sh`
+COPY ./${FRONTEND_PROJECT}/dist /app/frontend
+
+COPY ./backend /app/backend
+COPY ./docker/pip-requirements.txt /app/backend/
 ## Configure pip
 COPY ./docker/pip.conf /root/.pip/
 COPY ./docker/dict-entrypoint.sh /usr/local/bin
