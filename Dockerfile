@@ -38,6 +38,7 @@ COPY ./docker/.npmrc /root/
 RUN cd /app && tar xf node.tar.xz && rm node.tar.xz
 ## Note: Docker's cache process will be utilized by separating "npm install" and "npm build" so as to avoid unnessary building process
 COPY ./${FRONTEND_PROJECT}/package.json /app/src/
+COPY ./${FRONTEND_PROJECT}/package-lock.json /app/src/
 RUN cd /app/src/ && export PATH=$PATH:/app/node/bin && npm install
 
 ## Configure pip
