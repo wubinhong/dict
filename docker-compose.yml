@@ -7,7 +7,7 @@ services:
       context: .
       args:
         FRONTEND_PROJECT: mobile
-    image: wbh/dict2
+    image: wbh/dict
     env_file: docker-compose.env
     dns:
       - 4.4.4.4
@@ -18,7 +18,7 @@ services:
       - ~/data/container/dict:/data
       - ~/data/container/dict/db:/data/db
     environment:
-      PORT: 3500
+      PYTHON_ENV: product
 
 volumes:
   data:

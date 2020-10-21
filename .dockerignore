@@ -15,3 +15,4 @@ backend/test
 
 # Exclude dirs node_modules and dist
 */**/node_modules
+*/**/dist

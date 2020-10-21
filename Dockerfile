@@ -22,43 +22,42 @@ RUN sed -i "s/bind .*/bind 127.0.0.1/g" /etc/redis/redis.conf
 VOLUME [ "/data" ]
 
 ### =================== New Stage =========================== ###
-# Stage two building
-FROM wbh/dict:base AS app
+# Stage two building. Note: 使用docker-compose后，因为有了自己的cache机制，stage这种避免重复构建的办法已经用不上了
+# FROM wbh/dict:base AS app
 ### =================== New Stage =========================== ###
 # Parse argument
 ## Which frontend project we should deploy
 ARG FRONTEND_PROJECT=frontend
 # Sync app
-RUN echo "FRONTEND_PROJECT: ${FRONTEND_PROJECT}" && mkdir -p /root/.pip
-### $ tar -cJf node.tar.xz node or $ tar -c node | xz > node2.tar.xz
+RUN echo "ARG print and make directories. FRONTEND_PROJECT: ${FRONTEND_PROJECT}" && mkdir -p /app/src /root/.pip /app/backend
 
-# Compile frontend file in docker image
-## Install nodejs_12
-# COPY ./docker/node.tar.xz /app/
-# COPY ./docker/.npmrc /root/
-# RUN cd /app && tar xf node.tar.xz && rm node.tar.xz
-## Compile frontend project with nodejs
-# COPY ./${FRONTEND_PROJECT} /app/src
-# RUN (cd /app/src/ && export PATH=$PATH:/app/node/bin && npm install && npm run build && mv dist /app/frontend && rm -r /app/src)
+# Install nodejs_12 and install project
+## $ tar -cJf node.tar.xz node or $ tar -c node | xz > node2.tar.xz
+COPY ./docker/node.tar.xz /app/
+COPY ./docker/.npmrc /root/
+RUN cd /app && tar xf node.tar.xz && rm node.tar.xz
+## Note: Docker's cache process will be utilized by separating "npm install" and "npm build" so as to avoid unnessary building process
+COPY ./${FRONTEND_PROJECT}/package.json /app/src/
+RUN cd /app/src/ && export PATH=$PATH:/app/node/bin && npm install
 
-# Copy compiled file from host directly, considering the fact that "npm install & build" takes a long time.
-## This option which is mutually exclusive to the one commented above should be used in accordance with shell `build.sh`
-COPY ./${FRONTEND_PROJECT}/dist /app/frontend
-
-COPY ./backend /app/backend
-COPY ./docker/pip-requirements.txt /app/backend/
 ## Configure pip
 COPY ./docker/pip.conf /root/.pip/
+COPY ./docker/pip-requirements.txt /app/backend/
+# Install python dependencies
+RUN pip3 install -r /app/backend/pip-requirements.txt
 COPY ./docker/dict-entrypoint.sh /usr/local/bin
 COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 COPY ./docker/dict.conf /etc/nginx/sites-available/default
 COPY ./docker/cron_backup.sh /app
 COPY ./docker/cron_task /etc/cron.d/backup-task
 
-# Install python dependencies and set environment variables
-WORKDIR /app/backend
-ENV PYTHON_ENV=product
-RUN pip3 install -r pip-requirements.txt
+# Update app related files
+WORKDIR /app
+## Update frontend: Compile frontend project with nodejs in docker image
+COPY ./${FRONTEND_PROJECT} /app/src
+RUN cd /app/src/ && export PATH=$PATH:/app/node/bin && npm run build && mv dist /app/frontend && rm -r /app/src
+## Update backend. Note: The longer the layer takes, the foremost the direct should be due to saving time.
+COPY ./backend /app/backend
 EXPOSE 5000
 
 # Health check
