@@ -44,6 +44,7 @@ class TestWrk(TestCase):
     def test_handle_report(self):
         """
         处理wrk的输出.
+        Test in command line: python3 -m unittest -v test.benchmark.test_wrk.TestWrk.test_handle_report
         More info about wrk, please refere to: https://github.com/wg/wrk
         """
         result = 'Concurrency, Latency(ms), Req/Sec, Requests/sec, Transfer/sec(KB)\n'
