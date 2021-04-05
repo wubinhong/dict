@@ -17,6 +17,7 @@ services:
     volumes:
       - ~/data/container/dict:/data
       - ~/data/container/dict/db:/data/db
+      - ~/data/container/dict/redis:/var/lib/redis
     environment:
       PYTHON_ENV: product
 
