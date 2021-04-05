@@ -200,9 +200,10 @@ export default {
             }
         },
         randomNum() {
+            let numBit = localStorage.getItem("default_rand_num_bit") || 4;
             let arr = [];
             for(let i=0; i<20; i++) {
-                arr.push(Math.round(Math.random() * 10000))
+                arr.push(Math.round(Math.random() * 10**numBit))
             }
             this.speakText = arr.join(', ');
         }

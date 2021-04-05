@@ -4,6 +4,7 @@
             <v-card class="mx-auto pa-6">
                 <v-card-title class="headline">Storage设置</v-card-title>
                 <v-form ref="form" lazy-validation>
+                    <v-text-field v-model="storage.rand_num_bit" type="number" label="随机数字位数"></v-text-field>
                     <v-switch
                         v-model="storage.updated_time_on"
                         :label="`是否更新时间`"
@@ -54,6 +55,7 @@ export default {
             msg: "个人设置",
             storage: {
                 default_hardship: localStorage.getItem("default_hardship") || 0,
+                rand_num_bit: localStorage.getItem('default_rand_num_bit')
             },
         };
     },
@@ -67,6 +69,10 @@ export default {
             localStorage.setItem(
                 "default_updated_time_on",
                 this.storage.updated_time_on
+            );
+            localStorage.setItem(
+                "default_rand_num_bit",
+                this.storage.rand_num_bit
             );
             this.showSnackbar({ color: "success", message: "保存成功！" });
         },
