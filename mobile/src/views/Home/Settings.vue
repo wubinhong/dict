@@ -7,14 +7,14 @@
                     <v-row>
                         <v-col>
                             <v-text-field
-                                v-model="storage.random_num_min"
+                                v-model.number="storage.random_num_min"
                                 type="number"
                                 label="最小随机数字位数"
                             ></v-text-field>
                         </v-col>
                         <v-col>
                             <v-text-field
-                                v-model="storage.random_num_max"
+                                v-model.number="storage.random_num_max"
                                 type="number"
                                 label="最大随机数字位数"
                             ></v-text-field>
