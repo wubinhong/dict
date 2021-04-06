@@ -4,14 +4,29 @@
             <v-card class="mx-auto pa-6">
                 <v-card-title class="headline">Storage设置</v-card-title>
                 <v-form ref="form" lazy-validation>
-                    <v-text-field v-model="storage.rand_num_bit" type="number" label="随机数字位数"></v-text-field>
+                    <v-row>
+                        <v-col>
+                            <v-text-field
+                                v-model="storage.random_num_min"
+                                type="number"
+                                label="最小随机数字位数"
+                            ></v-text-field>
+                        </v-col>
+                        <v-col>
+                            <v-text-field
+                                v-model="storage.random_num_max"
+                                type="number"
+                                label="最大随机数字位数"
+                            ></v-text-field>
+                        </v-col>
+                    </v-row>
                     <v-switch
                         v-model="storage.updated_time_on"
                         :label="`是否更新时间`"
                         inset
                     ></v-switch>
                     <v-slider
-                        v-model="storage.default_hardship"
+                        v-model="storage.hardship"
                         :label="`单词默认难度`"
                         thumb-label
                         style="padding: 0"
@@ -53,36 +68,20 @@ export default {
     data: () => {
         return {
             msg: "个人设置",
-            storage: {
-                default_hardship: localStorage.getItem("default_hardship") || 0,
-                rand_num_bit: localStorage.getItem('default_rand_num_bit')
-            },
+            storage: JSON.parse(localStorage.getItem("setting")) || {},
         };
     },
     methods: {
         ...mapMutations(["showSnackbar"]),
         onLocalStorageSave() {
-            localStorage.setItem(
-                "default_hardship",
-                this.storage.default_hardship
-            );
-            localStorage.setItem(
-                "default_updated_time_on",
-                this.storage.updated_time_on
-            );
-            localStorage.setItem(
-                "default_rand_num_bit",
-                this.storage.rand_num_bit
-            );
+            localStorage.setItem("setting", JSON.stringify(this.storage));
             this.showSnackbar({ color: "success", message: "保存成功！" });
         },
     },
     created() {
-        let on = localStorage.getItem("default_updated_time_on") || false;
-        if (typeof on === "string") {
-            on = eval(on);
+        if (!JSON.parse(localStorage.getItem("setting"))) {
+            localStorage.setItem("setting", "{}");
         }
-        this.storage.updated_time_on = on;
     },
 };
 </script>

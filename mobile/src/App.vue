@@ -31,6 +31,12 @@ export default {
             // 关掉前面的snackbar后，里面还有一个，怎么也关不掉
             return this.$store.state.snackbar;
         }
+    },
+    created() {
+        // Generally handle the default setting object stored in the local storage.
+        if (!JSON.parse(localStorage.getItem("setting"))) {
+            localStorage.setItem("setting", "{}");
+        }
     }
 };
 </script>

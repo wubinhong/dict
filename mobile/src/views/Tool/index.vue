@@ -200,10 +200,13 @@ export default {
             }
         },
         randomNum() {
-            let numBit = localStorage.getItem("default_rand_num_bit") || 4;
+            let setting = JSON.parse(localStorage.getItem('setting'));
+            let numMin = setting.random_num_min || 0;
+            let numMax = setting.random_num_max || 100;
             let arr = [];
             for(let i=0; i<20; i++) {
-                arr.push(Math.round(Math.random() * 10**numBit))
+                let num = numMin + (numMax - numMin) * Math.random();
+                arr.push(Math.round(num))
             }
             this.speakText = arr.join(', ');
         }

@@ -167,7 +167,9 @@ export default {
     },
     created() {
         let name = this.$route.query.name;
-        let on = localStorage.getItem("default_updated_time_on") || false;
+        let setting = JSON.parse(localStorage.getItem('setting'));
+        let on = setting.updated_time_on || false;
+        let hardship = setting.hardship || 0;
         if (typeof on === "string") {
             on = eval(on);
         }
@@ -181,7 +183,7 @@ export default {
                     // 新建的单词，带了name参数过来
                     this.word = {
                         name: name,
-                        hardship: localStorage.getItem("default_hardship") || 0,
+                        hardship: hardship,
                     };
                     this.updated_time_on = on;
                 }
@@ -189,7 +191,7 @@ export default {
         } else {
             // 新建单词，没有name参数
             this.word = {
-                hardship: localStorage.getItem("default_hardship") || 0,
+                hardship: hardship,
             };
             this.updated_time_on = on;
         }
