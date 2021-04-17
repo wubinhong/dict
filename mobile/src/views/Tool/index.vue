@@ -62,10 +62,18 @@
                             <v-combobox
                                 label="Voice"
                                 v-model="utter.voice"
+                                :disabled="useYoudao"
                                 :items="availableVoices"
                                 :item-text="item => item.lang + `: ` + item.name"
                                 return-object
                             ></v-combobox>
+                        </v-col>
+                        <v-col>
+                            <v-switch
+                                v-model="useYoudao"
+                                :label="`是否使用有道`"
+                                inset
+                            ></v-switch>
                         </v-col>
                     </v-row>
                 </v-form>
@@ -100,6 +108,7 @@ export default {
         separator: ",",
         availableVoices: [],
         utter: new SpeechSynthesisUtterance(),
+        useYoudao: true,
         audio: new Audio(),
         wordDelay: 1,
         arrowJump: 0
@@ -153,7 +162,7 @@ export default {
             }
             this.speakCaption = "Speaking";
             this.currentIndex = index;
-            if (this.availableVoices.length === 0) {
+            if (this.availableVoices.length === 0 || this.useYoudao) {
                 this.audio.src = `/youdao/dictvoice?audio=${this.words[index]}&type=1`;
                 this.audio.play();
                 this.audio.onended = () => {
