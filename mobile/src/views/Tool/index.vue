@@ -132,6 +132,9 @@ export default {
                         this.words.push(w);
                     }
                 });
+            // Reset speaker
+            this.clearAllTimeout();
+            this.currentIndex = -1;
         },
         clearAllTimeout() {
             while (this.timeoutHandlers.length > 0) {
@@ -180,7 +183,7 @@ export default {
         speakClick(index) {
             if (this.currentIndex === index) {
                 this.speakOut();
-                // Only when tbe program is speaking, it need to reset
+                // Only when the program is speaking, it need to reset
                 if (this.speakCaption === "Speak") {
                     this.currentIndex = -1;
                 }
