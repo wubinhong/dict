@@ -153,7 +153,7 @@ export default {
                 }
             } else {
                 this.speakCaption = "Speak";
-                this.currentIndex = -1;
+                // this.currentIndex = -1;
             }
         },
         speak(index, clearTimeoutHandle) {
@@ -313,8 +313,10 @@ export default {
                 }
                 this.arrowTimeout = setTimeout(() => {
                     let idx = this.currentIndex + this.arrowJump;
-                    if (idx < 0 || idx >= this.words.length) {
+                    if (idx < 0) {
                         idx = 0;
+                    } else if (idx >= this.words.length) {
+                        idx = this.words.length - 1;
                     }
                     this.speakClick(idx);
                     this.arrowJump = 0;
