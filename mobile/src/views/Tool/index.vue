@@ -90,6 +90,7 @@
                 <v-btn text @click="clearAllTimeout(); $router.push('/tool/history')">History</v-btn>
                 <v-btn text @click="clearAllTimeout(); $router.push('/tool/dict')">Dict</v-btn>
                 <v-btn text @click="randomNum()">Num</v-btn>
+                <v-btn text @click="shuffle()">Shuffle</v-btn>
             </v-card-actions>
         </v-card>
     </v-container>
@@ -221,6 +222,17 @@ export default {
                 arr.push(Math.round(num))
             }
             this.speakText = arr.join(', ');
+        },
+        shuffle() {
+            let size = this.words.length;
+            for (let i=0; i<size; i++) {
+                let switchIdx = Math.round(Math.random() * (size - 1));
+                let temp = this.words[i];
+                this.words[i] = this.words[switchIdx];
+                this.words[switchIdx] = temp;
+            }
+            this.words.__ob__.dep.notify();
+            // this.words = Object.assign([], this.words);
         }
     },
     created() {

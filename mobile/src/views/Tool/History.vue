@@ -185,7 +185,6 @@ export default {
                     if (response.data.rc === 0) {
                         // 调用 callback 返回建议列表的数据
                         histories.push(...response.data.data);
-                        console.log(histories);
                     }
                     if (cb) {
                         cb(response.data.data, histories);
